@@ -2,21 +2,23 @@
 
 ## Matematiska
 
-### + Addition.
+### + Addition och konkatenering
 
-```text
-int x = 4 + 6;
+```csharp
+int x = 4 + 6; // Addition
+string s = "hej " + "då" // Konkatenering
+string s2 = "Värdet på x är " + x;
 ```
 
 ### - Subtraktion.
 
-```text
+```csharp
 int x = 6 - 4;
 ```
 
 ### / Division.
 
-```text
+```csharp
 int x = 6 / 3;
 ```
 
@@ -24,7 +26,7 @@ OBS: Om man delar ett heltal \(int eller long\) med ett annat heltal blir result
 
 ### \* Multiplikation.
 
-```text
+```csharp
 int x = 2 * 3;
 ```
 
@@ -32,7 +34,7 @@ int x = 2 * 3;
 
 Räknar ut resten.
 
-```text
+```csharp
 int x = 5 % 2;
 ```
 
@@ -68,7 +70,7 @@ i--;
 
 ### &gt; &lt; Större än, mindre än.
 
-```text
+```csharp
 bool x = 4 > 3;
 ```
 
@@ -76,7 +78,7 @@ bool x = 4 > 3;
 
 Är operanderna **likadana**?
 
-```text
+```csharp
 bool x = 4 == 4; // true eftersom 4 är samma som 4
 ```
 
@@ -84,7 +86,7 @@ bool x = 4 == 4; // true eftersom 4 är samma som 4
 
 Är operanderna **olika**?
 
-```text
+```csharp
 bool x = 4 != 5; // true eftersom det stämmer att 4 och 5 är olika
 ```
 
@@ -94,11 +96,9 @@ bool x = 4 != 5; // true eftersom det stämmer att 4 och 5 är olika
 
 True om **båda** operanderna är true, dvs det är true på båda sidorna om &&.
 
-```text
+```csharp
 bool x = true && true; // resultatet är true
-```
 
-```text
 bool y = true && false; // resultatet är false
 ```
 
@@ -106,11 +106,11 @@ bool y = true && false; // resultatet är false
 
 True om **minst en** av operanderna är true.
 
-```text
+```csharp
 bool x = true || false; // true; det räcker om den ena är true.
-```
 
-```text
-bool y = false || false // false
+bool y = false || false; // false
+
+bool z = (3 == 2) || x; // true; x är true även om 3 inte är samma som 2.
 ```
 

@@ -1,4 +1,4 @@
-# Slump
+# Slump \(Random\)
 
 ## Slumpgenerator
 

@@ -22,8 +22,18 @@
 * [Operatorer](grundlaeggande/operatorer.md)
 * [String-manipulering](grundlaeggande/string-manipulering.md)
 * [Konsollen \(Console\)](grundlaeggande/konsollen-console.md)
-* [Slump](grundlaeggande/slump.md)
 * [If-satser](grundlaeggande/if-satser.md)
+* [Loopar](grundlaeggande/loopar.md)
+* [Listor och arrayer](grundlaeggande/listor-och-arrayer.md)
+* [Egna metoder](grundlaeggande/egna-metoder.md)
+* [Slump \(Random\)](grundlaeggande/slump.md)
+* [Matematik \(Math\)](grundlaeggande/matematik-math.md)
+* [Try-catch](grundlaeggande/try-catch.md)
+* [Tuples](grundlaeggande/tuples.md)
+* [Enum](grundlaeggande/enum.md)
+* [Delegates](grundlaeggande/delegates.md)
+
+## Grafik
 
 ## Filhantering
 

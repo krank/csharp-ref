@@ -36,7 +36,7 @@ Att föra ut data ur en metod så att datan kan användas i koden som anropade m
 
 ### Parameter
 
-Variabel-liknande, används för att föra in data i metoder.
+Variabel-liknande, används för att föra in data i metoder. 
 
 ### Array
 
