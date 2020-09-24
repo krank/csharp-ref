@@ -15,9 +15,15 @@
 
 ## Grundläggande
 
-* [Namngivning](grundlaeggande/namngivning.md)
 * [Begrepp](grundlaeggande/begrepp.md)
+* [Namngivning](grundlaeggande/namngivning.md)
+* [Datatyper](grundlaeggande/datatyper.md)
+* [Typkonvertering](grundlaeggande/typkonvertering.md)
+* [Operatorer](grundlaeggande/operatorer.md)
 * [String-manipulering](grundlaeggande/string-manipulering.md)
+* [Konsollen \(Console\)](grundlaeggande/konsollen-console.md)
+* [Slump](grundlaeggande/slump.md)
+* [If-satser](grundlaeggande/if-satser.md)
 
 ## Filhantering
 

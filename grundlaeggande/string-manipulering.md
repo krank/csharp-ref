@@ -109,5 +109,3 @@ Resultatet av ovanstående blir en string-array med följande innehåll:
 {"micke", "och", "kim", "och", "mimmi"}
 ```
 
-
-

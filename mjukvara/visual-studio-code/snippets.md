@@ -20,7 +20,7 @@ Några inbyggda snippets:
 
 Man kan skapa egna snippets. Man går då till File, Preferences och User Snippets. Där väljer man det språk man vill skapa snippets för. Då öppnas en json-fil där du kan skriva in dina snippets.
 
-```text
+```javascript
 {
   "Readline": {
       "prefix": ["cre", "readline"],
