@@ -35,6 +35,13 @@
 
 ## Grafik
 
+* [RayLib](grafik/raylib/README.md)
+  * [Raylib setup](grafik/raylib/raylib-setup.md)
+  * [Fönster i Raylib](grafik/raylib/foenster-i-raylib.md)
+  * [Grafik](grafik/raylib/grafik.md)
+  * [Input](grafik/raylib/input.md)
+  * [Text](grafik/raylib/text.md)
+
 ## Filhantering
 
 ## Klasser och objektorientering
