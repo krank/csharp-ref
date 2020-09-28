@@ -32,6 +32,14 @@ Om VSCode klagar på att till och med din "using System" är fel, kolla om du ha
 
 \(Nej, jag förstår inte heller varför det funkar, men det gör det tydligen. Om du vill kan du istället avinstallera alla versioner av vanliga Visual Studio, både 2017 och 2019, och sedan ominstallera DotNet SDK\)
 
+## Jag får ingen kodkomplettering i Unity!
+
+Ladda ner och installera [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/thank-you/net471-developer-pack-offline-installer)
+
+## Jag får fel som inte borde finnas!
+
+Testa F1 \(eller Fn+F1\) för att få fram kommandopaletten, och kör "OmniSharp: Restart OmniSharp".
+
 ## The nuclear option
 
 Om ingenting fungerar så kan du testa en fullständig ominstallation.
