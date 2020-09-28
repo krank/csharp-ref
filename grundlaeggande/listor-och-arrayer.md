@@ -24,6 +24,15 @@ Variabel som är inbyggd i arrayer. Har alltid ett värde som är lika med array
 int length = arrayHp.Length;
 ```
 
+### Contains
+
+Ett snabbt sätt att se ifall en sak finns i arrayen.
+
+```csharp
+string choice = Console.ReadLine();
+bool validAnswer = choices.Contains(choice);
+```
+
 ### Att göra om en array till en lista
 
 ```csharp
@@ -31,7 +40,7 @@ int length = arrayHp.Length;
 List<string> lNamn = new List<string>(arrayHp);
 ```
 
-### Flerdimensionella arrayer
+## Flerdimensionella arrayer
 
 En vanlig array är endimensionell – en lista. Varje sak i arrayen identifieras av ett index.
 
@@ -50,9 +59,9 @@ grid[2,2] = 1;
 För att läsa av en flerdimensionell arrays längd i någon dimension, använd GetLength.
 
 ```csharp
-for (int x = 0; x < grid.GetLength(0); x++)
+for (int y = 0; y < grid.GetLength(1); y++)
 {
-  for (int y = 0; y < grid.GetLength(1); y++)
+  for (int x = 0; x < grid.GetLength(0); x++)
   {
     grid[x, y] = 0;
   }
