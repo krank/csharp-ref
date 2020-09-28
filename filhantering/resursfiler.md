@@ -11,7 +11,7 @@ För att automatiskt se till att alla filer kopieras till samma mapp som exe-fil
 1. Skapa en mapp vid namn "assets" i din projektmapp.
 2. Redigera din csproj-fil och stoppa in detta innan &lt;/project&gt;:
 
-```text
+```markup
 <ItemGroup>
   <Content Include="assets\**\*.*">
     <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
