@@ -49,6 +49,7 @@
 * [Filer och mappar](filhantering/filer-och-mappar.md)
 * [Open, close, using](filhantering/open-close-using.md)
 * [XML-serialisering](filhantering/xml-serialisering.md)
+* [Resursfiler](filhantering/resursfiler.md)
 
 ## Klasser och objektorientering
 

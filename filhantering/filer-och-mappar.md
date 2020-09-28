@@ -1,32 +1,58 @@
 # Filer och mappar
 
+Alla dessa kräver att du först inkluderar System.IO i filen där du vill använda dem.
 
-
-#### Exists <a id="h.p_et9sPwDmAsKJ"></a>
-
-File.Exists är en metod som returnerar true om filen som anges som parameter existerar, false om den inte gör det.
-
-```text
-if (File.Exists(@"localfile.txt"))
+```csharp
+using System.IO;
 ```
 
-```text
-{
-```
+## Filer
 
-```text
-  Console.WriteLine("The file exists!");
-```
-
-```text
-}
-```
-
-#### Delete <a id="h.p_vG7QE75sA_i6"></a>
+### File.Delete
 
 Tar bort den fil som anges som parameter.
 
-```text
+```csharp
 File.Delete(@"localfile.txt");
+```
+
+### File.Exists
+
+File.Exists är en metod som returnerar true om filen som anges som parameter existerar, false om den inte gör det.
+
+```csharp
+if (File.Exists(@"localfile.txt"))
+{
+  Console.WriteLine("The file exists!");
+}
+```
+
+## Mappar
+
+### Directory.CreateDirectory
+
+Skapa en mapp.
+
+```csharp
+Directory.Create(@"Savegames");
+```
+
+### Directory.Delete
+
+Ta bort en mapp.
+
+```csharp
+Directory.Delete(@"Savegames");
+```
+
+### Directory.Exists
+
+Kolla om en mapp existerar.
+
+```csharp
+if (Directory.Exists(@"Savegames")
+{
+  /* Stuff */
+}
 ```
 
