@@ -1,7 +1,5 @@
 # Generiska klasser
 
-
-
 ## Färdiga generiska klasser
 
 OBS: För att dessa ska fungera om du kör .NET Core, så behöver du skriva in följande högst upp i din kod:
