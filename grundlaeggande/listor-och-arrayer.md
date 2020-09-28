@@ -24,11 +24,39 @@ Variabel som är inbyggd i arrayer. Har alltid ett värde som är lika med array
 int length = arrayHp.Length;
 ```
 
-### Att göra om en array till en lista;
+### Att göra om en array till en lista
 
 ```csharp
 // Skapa en string-lista baserat på arrayHp, med samma innehåll och storlek
 List<string> lNamn = new List<string>(arrayHp);
+```
+
+### Flerdimensionella arrayer
+
+En vanlig array är endimensionell – en lista. Varje sak i arrayen identifieras av ett index.
+
+En tvådimensionell array är som ett rutnät. Varje sak i arrayen identifieras av två index.
+
+```csharp
+// Skapa en tvådimensionell array med 100 platser; 10 rader med 15 kolumner
+int[,] grid = new int[10,15];
+
+// Bestäm värdet på position 2,2 till 1
+grid[2,2] = 1;
+```
+
+### GetLength
+
+För att läsa av en flerdimensionell arrays längd i någon dimension, använd GetLength.
+
+```csharp
+for (int x = 0; x < grid.GetLength(0); x++)
+{
+  for (int y = 0; y < grid.GetLength(1); y++)
+  {
+    grid[x, y] = 0;
+  }
+}
 ```
 
 ## List
@@ -98,23 +126,13 @@ string[] aNamn = listNamn.ToArray();
 
 För att komma åt ett specifikt värde i en lista eller en array används ett index – en siffra som motsvarar positionen. Det första föremålet i listan har index 0, det andra har index 1, etc.
 
-```text
-// Skapa en string-variabel och tilldela den värdet som är lagrat på den tredje platsen i listan.
-```
-
-```text
+```csharp
+// Skapa en string-variabel och tilldela den 
+// värdet som är lagrat på den tredje platsen i listan.
 string name = listNamn[2];
-```
 
-```text
-
-```
-
-```text
-// Skapa en int-variabel och tilldela den värdet som är lagrat på den andra platsen i arrayen.
-```
-
-```text
+// Skapa en int-variabel och tilldela den 
+// värdet som är lagrat på den andra platsen i arrayen.
 int num = arrayNamn[1];
 ```
 
