@@ -44,6 +44,12 @@
 
 ## Filhantering
 
+* [Filsökvägar](filhantering/filsoekvaegar.md)
+* [Läsa och skriva](filhantering/laesa-och-skriva.md)
+* [Filer och mappar](filhantering/filer-och-mappar.md)
+* [Open, close, using](filhantering/open-close-using.md)
+* [XML-serialisering](filhantering/xml-serialisering.md)
+
 ## Klasser och objektorientering
 
 ---
