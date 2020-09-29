@@ -8,7 +8,7 @@ Tvådimensionella arrayer kan fungera väldigt bra för att lagra alla sorters r
 // Skapar inte en lista, utan ett "rutnät" där varje position 
 // inte har ett utan två index. 
 // Så board[4, 5] är en annan position än board[4, 6].
-int[,] board = new int[20, 10]
+int[,] board = new int[20, 10];
 ```
 
 ## Nästlade loopar

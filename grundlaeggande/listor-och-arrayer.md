@@ -8,7 +8,7 @@ Arrayer har en **fast längd** som bestäms när arrayen skapas.
 
 ```csharp
 // Skapa en int-array med tre tomma platser
-int[] arrayHp = new int[3]
+int[] arrayHp = new int[3];
 
 // Skapa en string-array med tre platser som redan från början ges värden
 string[] choices = {"Start", "Options", "Quit"};
