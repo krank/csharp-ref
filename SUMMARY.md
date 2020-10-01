@@ -74,7 +74,11 @@
 ---
 
 * [RESTful client](restful-client.md)
-* [RESTful server](restful-server.md)
+* [RESTful server](restful-server/README.md)
+  * [Models](restful-server/models.md)
+  * [Controllers](restful-server/controllers.md)
+  * [En SLN för server+klient](restful-server/en-sln-foer-server+klient.md)
+  * [REST och CRUD](restful-server/rest-och-crud.md)
 
 ## Tekniker
 
