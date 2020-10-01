@@ -1,7 +1,7 @@
 # Models
 
 {% hint style="danger" %}
-OBSERVERA: DENNA DEL ÄR EJ FÄRDIG ENS LITEGRANN
+OBSERVERA: DENNA DEL ÄR INTE FÄRDIG
 {% endhint %}
 
 Models, eller modeller, är helt enkelt klasser som används av en REST-server för att beskriva information.

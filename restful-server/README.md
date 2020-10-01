@@ -1,9 +1,5 @@
 # RESTful server
 
-{% hint style="danger" %}
-OBSERVERA: DENNA DEL ÄR EJ FÄRDIG ENS LITEGRANN
-{% endhint %}
-
 Nedan är instruktioner för att skapa en enkel API-server som svarar på GET-anrop.
 
 ## Skapa projektet

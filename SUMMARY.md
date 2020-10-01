@@ -78,7 +78,8 @@
   * [Models](restful-server/models.md)
   * [Controllers](restful-server/controllers.md)
   * [En SLN för server+klient](restful-server/en-sln-foer-server+klient.md)
-  * [REST och CRUD](restful-server/rest-och-crud.md)
+  * [HTTP, REST och CRUD](restful-server/rest-och-crud.md)
+  * [Tester med RESTer](restful-server/tester-med-rester.md)
 
 ## Tekniker
 
