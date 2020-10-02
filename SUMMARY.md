@@ -75,10 +75,10 @@
 
 * [RESTful client](restful-client.md)
 * [RESTful server](restful-server/README.md)
+  * [HTTP, REST och CRUD](restful-server/rest-och-crud.md)
   * [Models](restful-server/models.md)
   * [Controllers](restful-server/controllers.md)
   * [En SLN för server+klient](restful-server/en-sln-foer-server+klient.md)
-  * [HTTP, REST och CRUD](restful-server/rest-och-crud.md)
   * [Tester med RESTer](restful-server/tester-med-rester.md)
 
 ## Tekniker
