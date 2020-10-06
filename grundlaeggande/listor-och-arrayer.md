@@ -47,7 +47,7 @@ En vanlig array är endimensionell – en lista. Varje sak i arrayen identifiera
 En tvådimensionell array är som ett rutnät. Varje sak i arrayen identifieras av två index.
 
 ```csharp
-// Skapa en tvådimensionell array med 100 platser; 10 rader med 15 kolumner
+// Skapa en tvådimensionell array med 150 platser; 10 rader med 15 kolumner
 int[,] grid = new int[10,15];
 
 // Bestäm värdet på position 2,2 till 1
