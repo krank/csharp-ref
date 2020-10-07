@@ -18,5 +18,23 @@ VS Code är väldigt modulärt. Det betyder att det finns en ganska liten "grund
 * [NuGet Gallery](https://www.google.com/url?q=https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3Dpatcx.vscode-nuget-gallery&sa=D&sntz=1&usg=AFQjCNGESnjNCe20EX_KwyQS6_sTUBYv5A) – Underlättar installationen av externa bibliotek och paket, t.ex. Raylib.
 * [Unity Code Snippets](https://www.google.com/url?q=https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3Dkleber-swf.unity-code-snippets&sa=D&sntz=1&usg=AFQjCNE2u9WLWN19d7xU6mnIDKhKTjGKsQ) – Ger lite bättre stöd för Unity, så man t.ex. kan autokomplettera events såsom OnCollisionEnter2d.
 
+## Praktiska inställningar
 
+Under Settings \(Kugghjulet och sen Settings, eller kortkommandot Ctrl+, \) finns en hel massa användbara inställningar.
+
+### Få bort "references"
+
+* Sök efter "lens", och kryssa ur "Csharp › References Code Lens: Enabled".
+
+### Visa mappar ordentligt
+
+VSCode gillar att visa mappar "kompakt". Det betyder att den "sammanfattar" mappstrukturer i vissa fall, så att trädet under Explore blir konstigt.
+
+> ![](../../.gitbook/assets/image%20%2827%29.png)   
+> _Med compact folders_
+
+> ![](../../.gitbook/assets/image%20%2826%29.png)   
+> _Utan compact folders_
+
+* För att stänga av det – sök efter "compact" och kryssa ur "Explorer: Compact Folders".
 
