@@ -41,6 +41,8 @@
   * [Grafik](grafik/raylib/grafik.md)
   * [Input](grafik/raylib/input.md)
   * [Text](grafik/raylib/text.md)
+  * [Rectangle](grafik/raylib/rectangle.md)
+  * [Kollisioner](grafik/raylib/kollisioner.md)
 
 ## Filhantering
 
@@ -84,6 +86,7 @@
 ## Tekniker
 
 * [Begränsa input](tekniker/begraensa-input.md)
+* [Game states](tekniker/game-states.md)
 * [Gå igenom en array](tekniker/ga-igenom-en-array.md)
 * [Länkade listor och andra strukturer](tekniker/laenkade-listor-och-andra-strukturer.md)
 * [2D-spelbräden](tekniker/2d-spelbraeden.md)
