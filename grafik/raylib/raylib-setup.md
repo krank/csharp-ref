@@ -25,7 +25,7 @@ Tryck Enter. SFML.Net laddas ner till ditt projekt, och du kan nu återgå till 
 ### Inkludera Raylib <a id="h.p_jUwPvKT-mpLN"></a>
 
 {% hint style="warning" %}
-**OBSERVERA:** För att du ska kunna använda SFML så måste du skriva in följande bland dina using-rader högst upp i programfilen:
+**OBSERVERA:** För att du ska kunna använda Raylib så måste du skriva in följande bland dina using-rader högst upp i programfilen:
 
 ```csharp
 using Raylib_cs;
@@ -49,12 +49,12 @@ I högerspalten, klicka på Install.
 
 ![](../../.gitbook/assets/image%20%2814%29.png) 
 
-Det dyker nu upp en dialogruta med titeln "Preview changes", och där du får svara på om du vill lägga till RayLib till ditt projekt. Tryck OK.
+Det dyker nu upp en dialogruta med titeln "Preview changes", och där du får svara på om du vill lägga till Raylib till ditt projekt. Tryck OK.
 
 ### Inkludera Raylib <a id="h.p_jUwPvKT-mpLN"></a>
 
 {% hint style="warning" %}
-**OBSERVERA:** För att du ska kunna använda SFML så måste du skriva in följande bland dina using-rader högst upp i programfilen:
+**OBSERVERA:** För att du ska kunna använda Raylib så måste du skriva in följande bland dina using-rader högst upp i programfilen:
 
 ```csharp
 using Raylib_cs;

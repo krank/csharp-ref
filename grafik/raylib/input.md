@@ -6,14 +6,7 @@
 
 Tar emot en tangent som parameter; returnerar true om den angivna tangenten är nedtryckt – false om den inte är det.
 
-```csharp
-if (Raylib.IsKeyDown(263)) // 263 är koden för "vänsterpil"
-{
-  // Kodlogik
-}
-```
-
-Under KeyboardKey finns int-variabler för i princip alla tangenter på tangentbordet. Därmed behöver man inte hålla reda på att t.ex. 263 är vänster piltangent.
+Under KeyboardKey finns variabler för i princip alla tangenter på tangentbordet.
 
 ```csharp
 if (Raylib.IsKeyDown(KeyboardKey.KEY_LEFT))

@@ -2,7 +2,7 @@
 
 ## Implicit konvertering
 
-En del datatyper kan lätt konverteras till andra utan att man behöver göra någon manuell konvertering.
+En del datatyper kan lätt konverteras till andra utan att man behöver göra någon manuell konvertering. Det gäller framför allt när konverteringen inte innebär att man blir av med information eller precision.
 
 ```csharp
 int i = 9;
@@ -15,6 +15,15 @@ long l = i;
 * int → string
 * int → float
 * float → double
+
+## Explicit konvertering / Casting
+
+När konverteringen innebär att man blir av med precision, t.ex. går från en float till en int och blir av med decimaler, så behöver man använda **casting**. Det betyder att man helt enkelt skriver vilken datatyp man vill konvertera till inom parenteser innan värdet som ska konverteras.
+
+```csharp
+float xPos = 3.4f;
+int x = (int) xPos;
+```
 
 ## Konvertera till int
 
