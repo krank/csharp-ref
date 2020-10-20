@@ -11,7 +11,7 @@ bool isOverlapping = Raylib.CheckCollisionRecs(r1, r2);
 
 
 {% hint style="warning" %}
-Inte färdigt ännu!
+Inte helt färdigt ännu!
 {% endhint %}
 
 
