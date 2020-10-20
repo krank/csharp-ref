@@ -39,6 +39,7 @@
   * [Raylib setup](grafik/raylib/raylib-setup.md)
   * [Fönster i Raylib](grafik/raylib/foenster-i-raylib.md)
   * [Grafik](grafik/raylib/grafik.md)
+  * [Bilder och texturer](grafik/raylib/bilder-och-texturer.md)
   * [Input](grafik/raylib/input.md)
   * [Text](grafik/raylib/text.md)
   * [Rectangle](grafik/raylib/rectangle.md)
