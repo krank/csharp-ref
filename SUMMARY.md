@@ -17,21 +17,21 @@
 
 * [Begrepp](grundlaeggande/begrepp.md)
 * [Namngivning](grundlaeggande/namngivning.md)
-* [Datatyper](grundlaeggande/datatyper.md)
+* [Datatyper](grundlaeggande/datatyper/README.md)
+  * [Tuples](grundlaeggande/datatyper/tuples.md)
+  * [Enum](grundlaeggande/datatyper/enum.md)
 * [Typkonvertering](grundlaeggande/typkonvertering.md)
 * [Operatorer](grundlaeggande/operatorer.md)
-* [String-manipulering](grundlaeggande/string-manipulering.md)
 * [Konsollen \(Console\)](grundlaeggande/konsollen-console.md)
+* [String-manipulering](grundlaeggande/string-manipulering.md)
 * [If-satser](grundlaeggande/if-satser.md)
 * [Loopar](grundlaeggande/loopar.md)
 * [Listor och arrayer](grundlaeggande/listor-och-arrayer.md)
 * [Egna metoder](grundlaeggande/egna-metoder.md)
+* [Delegates](grundlaeggande/delegates.md)
 * [Slump \(Random\)](grundlaeggande/slump.md)
 * [Matematik \(Math\)](grundlaeggande/matematik-math.md)
 * [Try-catch](grundlaeggande/try-catch.md)
-* [Tuples](grundlaeggande/tuples.md)
-* [Enum](grundlaeggande/enum.md)
-* [Delegates](grundlaeggande/delegates.md)
 
 ## Grafik
 
