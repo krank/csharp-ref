@@ -64,10 +64,10 @@ En Texture är en bild som är sparad i grafikkortets minne, och är redo att ri
 
 ```csharp
 // Skapar en ny texture baserat på en Image som redan lästs in.
-Texture heroTexture = Raylib.LoadTextureFromImage(originalImage);
+Texture2D heroTexture = Raylib.LoadTextureFromImage(originalImage);
 
 // Läser in en bildfil och skapar en texture direkt från den.
-Texture goombaTexture = Raylib.LoadTexture(@"goomba.png");
+Texture2D goombaTexture = Raylib.LoadTexture(@"goomba.png");
 ```
 
 Images kan manipuleras mer. Textures kan ritas ut till skärmen.
