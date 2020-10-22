@@ -51,5 +51,13 @@ namespace WebApplication1.Controllers
 {% endtab %}
 {% endtabs %}
 
+Resultatet av ovanstående blir att följande JSON-kod skickas med i HTTP-response-bodyn:
+
+```javascript
+{
+    "name": "Pikachu"
+}
+```
+
 ## Listor
 

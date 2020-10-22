@@ -6,6 +6,12 @@ OBSERVERA: DENNA DEL ÄR INTE FÄRDIG ENS LITEGRANN
 
 * Installera Chrome-pluginet [RESTer](https://chrome.google.com/webstore/detail/rester/eejfoncpjfgmeleakejdcanedmefagga).
 * Gå in i RESTer
-* Skriv in din URL och välj metod, t.ex. GET eller POST
+* Välj din metod, t.ex. GET eller POST
+* Skriv in din URL
 * Klicka SEND
+* Resultatet ser du under Response.
+
+![](../.gitbook/assets/image%20%2828%29.png)
+
+## Skicka JSON-data
 
