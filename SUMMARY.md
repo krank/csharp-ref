@@ -44,6 +44,8 @@
   * [Text](grafik/raylib/text.md)
   * [Rectangle](grafik/raylib/rectangle.md)
   * [Kollisioner](grafik/raylib/kollisioner.md)
+  * [Kamera](grafik/raylib/kamera.md)
+  * [Ljud](grafik/raylib/ljud.md)
 
 ## Filhantering
 
@@ -91,4 +93,5 @@
 * [Gå igenom en array](tekniker/ga-igenom-en-array.md)
 * [Länkade listor och andra strukturer](tekniker/laenkade-listor-och-andra-strukturer.md)
 * [2D-spelbräden](tekniker/2d-spelbraeden.md)
+* [Timers](tekniker/timers.md)
 
