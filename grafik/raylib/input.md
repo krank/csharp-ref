@@ -26,6 +26,16 @@ if (Raylib.IsKeyUp(KeyboardKey.KEY_LEFT))
 }
 ```
 
+### SetExitKey
+
+I vanliga fall innebär ett tryck på ESC-knappen att hela spelet avslutas. SetExitKey kan användas för att byta vilken knapp som har den funktionen – eller ta bort den helt.
+
+```csharp
+Raylib.SetExitKey(KeyboardKey.KEY_Q); // Gör så Q avslutar spelet
+
+Raylib.SetExitKey(0); // Gör så att det inte finns någon "avsluta spelet-knapp".
+```
+
 ## Musen
 
 ### GetMouseX, GetMouseY
