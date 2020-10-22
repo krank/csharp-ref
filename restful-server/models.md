@@ -4,7 +4,7 @@
 OBSERVERA: DENNA DEL ÄR INTE FÄRDIG
 {% endhint %}
 
-Models, eller modeller, är helt enkelt klasser som används av en REST-server för att beskriva information.
+Models, eller modeller, är helt enkelt klasser som används av t.ex. en REST-server för att beskriva information.
 
 ## Modellklasser
 
