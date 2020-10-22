@@ -23,3 +23,23 @@ Om timerns värde blivit lika med eller under 0, så skriver programmet ut "Tent
 
 Det här kan såklart byggas vidare på – i Unity eller Raylib kan man låta räknarvärdet vara en float, och dra av mängden tid sedan föregående frame \(i Unity drar man då av `Time.DeltaTime`, i Raylib drar man av `Raylib.GetFrameTime()`.
 
+```csharp
+float timerMaxValue = 1;
+float timerCurrentValue = timerMaxValue;
+
+while (!Raylib.WindowShouldClose())
+{
+  timerCurrentValue -= Raylib.GetFrameTime();
+  if (timerCurrentValue < 0 && Raylib.IsKeyDown(KeyboardKey.KEY_SPACE))
+  {
+    // Gör någonting, t.ex. skjut ett skott (varje sekund)
+    
+    timerCurrentValue = timerMaxValue;
+  }
+  
+  Raylib.BeginDrawing();
+  Raylib.EndDrawing();
+
+}
+```
+
