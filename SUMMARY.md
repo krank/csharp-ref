@@ -60,6 +60,7 @@
 
 ---
 
+* [Lathund för klassdesign](lathund-foer-klassdesign.md)
 * [Klasser och instanser](klasser-och-instanser.md)
 * [Public, private och protected](public-private-och-protected.md)
 * [Klassdiagram](klassdiagram.md)
