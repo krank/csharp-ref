@@ -3,7 +3,7 @@
 ## Klasser
 
 * Vilka SAKER finns i programmet/spelet?
-  * Spelarkaraktär, Fiender, Powerups, Andra objekt, Level/spelplan, Knappar
+  * Spelarkaraktär, Fiender, Powerups, Andra objekt, Level/spelplan, Grafiska knappar
 * Varje klass ska ha namn i **singular**, även om det finns flera i programmet/spelet.
   * Powerup, Player, Enemy, Football, BaseballBat
 * Varje klass beskriver en **kategori** av saker.
@@ -16,12 +16,10 @@
 ### Variabler
 
 * Vilka EGENSKAPER hos de olika sakerna är relevanta för spelet?
-  * Position
-  * Styrka, intelligens etc
-  * Hit points
+  * Position, Styrka, intelligens, Hit points
 * En egenskap som bara är ett enkelt värde \(int, strint, float etc\) bör vara en **variabel**.
   * Exempel: namn, hit points
-* En egenskap som är mer komplex, och i sig har en massa egenskaper/funktionalitet bör vara en **instans av en klass**.
+* En egenskap som är mer komplex, och i sig har en massa egenskaper/funktionalitet bör vara en referens till en **instans av en klass**.
   * Exempel: ett svärd, som har skadevärde, vikt etc
 * Variabler kan leda till djupa hierarkier.
   * I en instans av klassen Game finns en instans av Scene, i instansen av Scene finns en instans av Player…
