@@ -70,7 +70,7 @@ Texture2D heroTexture = Raylib.LoadTextureFromImage(originalImage);
 Texture2D goombaTexture = Raylib.LoadTexture(@"goomba.png");
 ```
 
-Images kan manipuleras mer. Textures kan ritas ut till skärmen.
+Skillnaden är att Images kan _manipuleras mer_. Textures kan _ritas ut till skärmen_.
 
 ### DrawTexture
 
@@ -79,4 +79,24 @@ Images kan manipuleras mer. Textures kan ritas ut till skärmen.
 // y-position 300, utan infärgning (WHITE färgar inte)
 Raylib.DrawTexture(heroTexture, 40, 300, Color.WHITE)
 ```
+
+### DrawTextureEx
+
+En lite mer avancerad version av DrawTexture, som dels använder en vektor för att ange x och y-värden, dels låter oss ange rotation och skalning av texturen.
+
+```csharp
+// Ritar texturen heroTexture till fönstret, på x-position 40 och 
+// y-position 300, utan infärgning (WHITE färgar inte)
+// Använd skalning 0.5 och rotation 0.
+Vector2 position = new Vector2(40, 300);
+Raylib.DrawTexture(heroTexture, position, 0, 0.5f, Color.WHITE)
+```
+
+{% hint style="info" %}
+**OBSERVERA:** För att kunna använda Vector2 så måste du lägga in detta bland dina using-statements:
+
+```csharp
+using System.Numerics;
+```
+{% endhint %}
 
