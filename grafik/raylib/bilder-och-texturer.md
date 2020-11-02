@@ -2,9 +2,11 @@
 
 ## Bilder och texturer
 
-I Raylib skiljer man på _bilder_ och _texturer_.
+I Raylib skiljer man på _Images_ och T_extures_.
 
-### Image
+Skillnaden är att Images kan _manipuleras mer_. Textures kan _ritas ut till skärmen_.
+
+## Image
 
 En Image är en bild som är sparad i datorns arbetsminne, och kan manipuleras på olika sätt.
 
@@ -19,6 +21,8 @@ Image emptyImage = Raylib.GenImageColor(200, 200, Color.RED);
 // OBS! bilden måste ligga i samma mapp som exe-filen (eller projektet)!
 Image filebasedImage = Raylib.LoadImage(@"hero.png");
 ```
+
+För att man ska kunna rita ut den till fönstret behöver man sedan konvertera den till en texture.
 
 ### ImageDrawPixel
 
@@ -58,7 +62,7 @@ Raylib.ImageResize(ref someImage, 400, 400);
 RayLib.ImageResizeNN(ref pixelartImage, pixelartImage * 2, pixelartImage * 2);
 ```
 
-### Texture
+## Texture
 
 En Texture är en bild som är sparad i grafikkortets minne, och är redo att ritas ut på skärmen. Man kan skapa en Texture utifrån en Image eller läsa in en bildfil från hårddisken direkt. Om man ska använda samma Image i flera olika Textures så kan det vara bra att skapa en Image först, så slipper man läsa in den från hårddisken flera gånger.
 
@@ -69,8 +73,6 @@ Texture2D heroTexture = Raylib.LoadTextureFromImage(originalImage);
 // Läser in en bildfil och skapar en texture direkt från den.
 Texture2D goombaTexture = Raylib.LoadTexture(@"goomba.png");
 ```
-
-Skillnaden är att Images kan _manipuleras mer_. Textures kan _ritas ut till skärmen_.
 
 ### DrawTexture
 

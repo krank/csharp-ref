@@ -75,5 +75,5 @@ Eller bara trycka F5.
 
 ## Koppla projektet till Git
 
-Se instruktionerna här. \(Länk kommer\)
+[Se instruktionerna här.](../git-and-github/)
 
