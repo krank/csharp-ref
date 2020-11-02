@@ -95,10 +95,12 @@ Raylib.DrawTexture(heroTexture, position, 0, 0.5f, Color.WHITE)
 ```
 
 {% hint style="info" %}
-**OBSERVERA:** För att kunna använda Vector2 så måste du lägga in detta bland dina using-statements:
+**OBSERVERA:** För att kunna använda [Vector2 ](../../grundlaeggande/vektorer-numerics.md)så måste du lägga in detta bland dina using-statements:
 
 ```csharp
 using System.Numerics;
 ```
 {% endhint %}
+
+
 

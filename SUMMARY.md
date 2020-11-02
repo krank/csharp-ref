@@ -34,19 +34,19 @@
 * [Vektorer \(Numerics\)](grundlaeggande/vektorer-numerics.md)
 * [Try-catch](grundlaeggande/try-catch.md)
 
-## Grafik
+## Raylib
 
-* [RayLib](grafik/raylib/README.md)
-  * [Raylib setup](grafik/raylib/raylib-setup.md)
-  * [Fönster i Raylib](grafik/raylib/foenster-i-raylib.md)
-  * [Grafik](grafik/raylib/grafik.md)
-  * [Bilder och texturer](grafik/raylib/bilder-och-texturer.md)
-  * [Input](grafik/raylib/input.md)
-  * [Text](grafik/raylib/text.md)
-  * [Rectangle](grafik/raylib/rectangle.md)
-  * [Kollisioner](grafik/raylib/kollisioner.md)
-  * [Kamera](grafik/raylib/kamera.md)
-  * [Ljud](grafik/raylib/ljud.md)
+* [RayLib](raylib/raylib/README.md)
+  * [Raylib setup](raylib/raylib/raylib-setup.md)
+  * [Fönster i Raylib](raylib/raylib/foenster-i-raylib.md)
+  * [Grafik](raylib/raylib/grafik.md)
+  * [Bilder och texturer](raylib/raylib/bilder-och-texturer.md)
+  * [Input](raylib/raylib/input.md)
+  * [Text](raylib/raylib/text.md)
+  * [Rectangle](raylib/raylib/rectangle.md)
+  * [Kollisioner](raylib/raylib/kollisioner.md)
+  * [Kamera](raylib/raylib/kamera.md)
+  * [Ljud](raylib/raylib/ljud.md)
 
 ## Filhantering
 
