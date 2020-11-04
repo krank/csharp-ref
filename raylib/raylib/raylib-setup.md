@@ -10,8 +10,6 @@ Skapa ett nytt konsollprojekt som vanligt, med eller utan solution.
 * I galleriet, sök efter Raylib.
 * Kryssa i ditt projekt, klicka Install.
 
-![](https://lh3.googleusercontent.com/g0GRXLLHduG1kDk0wLtjec4ruyvZWnxkqlWSeMjlyu5DEw1RMIRaKRMwqykZFU083GT2krx2Xao24T_YK6VUifM4w6eY444q52HBUsBkz8Ha5Wenhu0=w1280)
-
 ### Alternativ 2: Installera via terminalen <a id="h.p_eZYhfdj2mpDH"></a>
 
 Öppna terminalen och skriv in följande.

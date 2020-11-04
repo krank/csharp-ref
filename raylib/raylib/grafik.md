@@ -4,7 +4,7 @@
 
 Observera att koordinatsystemet i Raylib har **origo i övre vänstra hörnet**, och att **Y-axeln är omvänd** så att positiva värden går nedåt.
 
-Måtten är i pixlar.
+Måtten är i **pixlar**.
 
 ## BeginDrawing\(\), EndDrawing\(\)
 
@@ -49,39 +49,4 @@ Color hotPink = new Color(255, 105, 180, 255);
 ```
 
 Parametrarna är helt enkelt siffror från 0–255 för rött, grönt, blått och alpha \(genomskinlighet\). 0 alpha är helt genomskinlig, 255 är helt ogenomskinlig.
-
-## Enkla geometriska former
-
-### DrawCircle
-
-```csharp
-Raylib.DrawCircle(150, 200, 40, Color.MAGENTA);
-```
-
-Parametrarna är, i tur och ordning: X- och Y-position för cirkelns mitt, cirkelns radie, och cirkelns färg.
-
-### DrawRectangle
-
-```csharp
-Raylib.DrawRectangle(10, 10, 30, 40, Color.ORANGE);
-```
-
-Parametrarna är, i tur och ordning: X- och Y-position för rektangelns övre vänstra hörn, rektangelns bredd och höjd, och dess färg.
-
-### DrawRectangleLines, DrawCircleLines
-
-Fungerar precis som DrawCircle respektive DrawRectangle, men använder färgen för att rita ut respektive forms kanter istället för att fylla dem.
-
-```csharp
-Raylib.DrawCircleLines(150, 200, 40, Color.MAGENTA);
-```
-
-### DrawRectangleRec
-
-Fungerar precis som DrawRectangle, men tar emot ett [Rectangle](rectangle.md)-objekt istället för koordinater och bredd/höjd.
-
-```csharp
-Rectangle r1 = new Rectangle(10,5,30,15);
-Raylib.DrawRectangleRec(r1, Color.PINK);
-```
 

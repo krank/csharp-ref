@@ -41,6 +41,7 @@
   * [Raylib setup](raylib/raylib/raylib-setup.md)
   * [Fönster i Raylib](raylib/raylib/foenster-i-raylib.md)
   * [Grafik](raylib/raylib/grafik.md)
+  * [Geometriska former](raylib/raylib/geometriska-former.md)
   * [Bilder och texturer](raylib/raylib/bilder-och-texturer.md)
   * [Input](raylib/raylib/input.md)
   * [Text](raylib/raylib/text.md)
