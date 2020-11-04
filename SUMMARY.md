@@ -1,6 +1,7 @@
 # Table of contents
 
 * [C\# Snabbreferens](README.md)
+* [Lathund: Skapa projekt](lathund-skapa-projekt.md)
 
 ## Mjukvara
 
