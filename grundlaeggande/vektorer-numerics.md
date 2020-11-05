@@ -6,7 +6,7 @@ Numerics är ett bibliotek som innehåller mer avancerade numeriska typer, som k
 using System.Numerics;
 ```
 
-De används ofta i spel, till exempel sådana man skapar med [Raylib](../raylib/raylib/). Däremot har Unity sina egna Vector-klasser.
+De används ofta i spel, till exempel sådana man skapar med [Raylib](../grafik/raylib/). Däremot har Unity sina egna Vector-klasser.
 
 ## Vector2
 
