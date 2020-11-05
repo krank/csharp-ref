@@ -4,21 +4,9 @@
 
 Skapa ett nytt konsollprojekt som vanligt, med eller utan solution.
 
-### Alternativ 1: Installera via NuGet Gallery
-
-* Ta fram kommandopaletten \(F1\) och sök efter NuGet Gallery.
+* Ta fram kommandopaletten \(F1\) och sök efter NuGet Gallery \(som du såklart [behöver ha installerat](https://marketplace.visualstudio.com/items?itemName=patcx.vscode-nuget-gallery)\).
 * I galleriet, sök efter Raylib.
 * Kryssa i ditt projekt, klicka Install.
-
-### Alternativ 2: Installera via terminalen <a id="h.p_eZYhfdj2mpDH"></a>
-
-Öppna terminalen och skriv in följande.
-
-```text
-dotnet add package Raylib-cs
-```
-
-Tryck Enter. SFML.Net laddas ner till ditt projekt, och du kan nu återgå till din Program.cs-fil.
 
 ### Inkludera Raylib <a id="h.p_jUwPvKT-mpLN"></a>
 
@@ -30,10 +18,19 @@ using Raylib_cs;
 ```
 {% endhint %}
 
+## Via terminalen
+
+Öppna terminalen och skriv in följande.
+
+```text
+dotnet add package Raylib-cs
+```
+
+Tryck Enter. SFML.Net laddas ner till ditt projekt, och du kan nu återgå till din Program.cs-fil.
+
 ## I Visual Studio <a id="h.p_UWqYyuHkiwIc"></a>
 
-Börja med att skapa ett projekt av typen Console App \( .NET Core\). Observera alltså att det ska vara .NET Core och inte .NET Framework!  
- ![](../../.gitbook/assets/image%20%2815%29.png) 
+Börja med att skapa ett projekt av typen Console App \( .NET Core\).
 
 Högerklicka på projektet i Solution Explorer och välj Manage NuGet Packages.
 

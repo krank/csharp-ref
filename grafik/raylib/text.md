@@ -1,6 +1,6 @@
 # Text
 
-## DrawText
+## DrawText\(\)
 
 Ritar ut text.
 
@@ -10,7 +10,7 @@ Ritar ut text.
 Raylib.DrawText("Hello World", 100, 50, 20, Color.ORANGE);
 ```
 
-## LoadFont
+## LoadFont\(\)
 
 Laddar in en typsnittsfil \(ttf eller otf-format\)
 
@@ -18,7 +18,7 @@ Laddar in en typsnittsfil \(ttf eller otf-format\)
 Font f1 = Raylib.LoadFont(@"Metrophobic.ttf");
 ```
 
-## DrawTextEx
+## DrawTextEx\(\)
 
 Mer avancerad variant av DrawText, som använder Vector2 för positionering och tillåter att man anger typsnitt. Kräver att man lagt in `using System.Numerics;` högst upp.
 

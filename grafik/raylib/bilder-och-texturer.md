@@ -2,7 +2,7 @@
 
 ## Bilder och texturer
 
-I Raylib skiljer man på _Images_ och T_extures_.
+I Raylib skiljer man på _Images_ och _Textures_.
 
 Skillnaden är att Images kan _manipuleras mer_. Textures kan _ritas ut till skärmen_.
 
