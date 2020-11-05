@@ -6,6 +6,16 @@ I Raylib skiljer man på _Images_ och T_extures_.
 
 Skillnaden är att Images kan _manipuleras mer_. Textures kan _ritas ut till skärmen_.
 
+### Filformat som stöds
+
+* png
+* bmp
+* tga
+* gif \(dock ej animationer\)
+* dds, hdr, ktx, astc
+
+Observera att det saknas stöd för jpg – detta eftersom jpg är väldigt ovanligt i spel.
+
 ## Image
 
 En Image är en bild som är sparad i datorns arbetsminne, och kan manipuleras på olika sätt.

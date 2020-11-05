@@ -23,9 +23,15 @@ Vector2 enemyPos = new Vector2(20,20);
 bool areOverlapping = Raylib.CheckCollisionCircles(playerPos, 10, enemyPos, 15);
 ```
 
-{% hint style="warning" %}
-Inte helt färdigt ännu!
-{% endhint %}
+## CheckCollisionCircleRec\(\)
 
+Tar emot en positionsvektor och en radie för en cirkel, och en rektangel. Returnerar true om rektangeln och cirkeln överlappar varandra, false om de inte gör det.
 
+```csharp
+Rectangle playerRect = new Rectangle(5,5,10,10);
+Vector2 enemyPos = new Vector2(20,20);
+
+// true
+bool areOverlapping = Raylib.CheckCollisionCircleRec(enemyPos, 15, playerRect);
+```
 
