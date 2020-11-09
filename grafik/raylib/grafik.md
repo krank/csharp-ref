@@ -6,6 +6,14 @@ Observera att koordinatsystemet i Raylib har **origo i övre vänstra hörnet**,
 
 Måtten är i **pixlar**.
 
+## SetTargetFps\(\)
+
+Används normalt utanför spel-loopen, för att begränsa antalet bildrutor per sekund. Är ett av de sätt som finns att få t.ex. förflyttningar att ske lika snabbt på alla datorer.
+
+```csharp
+Raylib.SetTargetFps(60); // Begränsar till 60fps
+```
+
 ## BeginDrawing\(\), EndDrawing\(\)
 
 Används för att påbörja, respektive avsluta, den delen av spelloopen som ritar ut saker till fönstret.
