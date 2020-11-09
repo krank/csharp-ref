@@ -27,7 +27,7 @@ int x = (int) xPos;
 
 ## Konvertera till int
 
-### int.Parse
+### int.Parse\(\)
 
 Många datatyper kan inte konverteras direkt till t.ex. en int. Metodern int.Parse tar emot nästan vad som helst – t.ex. en string – och försöker konvertera den till en int.
 
@@ -36,7 +36,7 @@ string tal = "42";
 int i = int.Parse(tal);
 ```
 
-### int.TryParse
+### int.TryParse\(\)
 
 För en enkel, säker konvertering kan man använda TryParse.
 
@@ -62,7 +62,7 @@ bool onlyContainsNumbers = testLetters.All(char.IsDigit); // Blir false
 
 ## Konvertera till float
 
-### float.Parse
+### float.Parse\(\)
 
 Fungerar motsvarande int.Parse, men omvandlar till floats istället.
 
@@ -71,7 +71,7 @@ string tal = "42.5"
 float f = float.Parse(tal);
 ```
 
-### float.TryParse
+### float.TryParse\(\)
 
 ```csharp
 string tal = "42.5";

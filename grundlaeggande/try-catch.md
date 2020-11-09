@@ -20,11 +20,9 @@ Ett Try-block måste alltid paras ihop med minst ett Catch-block.
 
 ## Att fånga specifika fel
 
-När man får ett körtidsfel så talar C\# alltid om vad det är för fel. I bilden nedan har t.ex. ett fel av typen System.IndexOutOfRangeException inträffat.
+När man får ett körtidsfel så talar C\# alltid om vad det är för fel.
 
-![](https://lh3.googleusercontent.com/YBh2c0FAQfgZVefHm52Pr3pub75d4n8z44t1CC4dlhQA9jgXVxRjd7VhYjeNDjG93ZxW2Bfx-cQUiIrXMOmb34zwfoGh3zdovU9LWl24N5UoTHYpZKg6=w371)
-
-Om du vill skriva ett catch-block för att fånga det specifika felet så specificerar du feltypen inom parenteser.
+Om du vill skriva ett catch-block för att fånga ett specifikt fel så specificerar du feltypen inom parenteser.
 
 ```csharp
 int[] nums = { 4, 5, 7 };

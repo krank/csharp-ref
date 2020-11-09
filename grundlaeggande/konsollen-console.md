@@ -24,7 +24,7 @@ string answer = Console.ReadLine();
 Console.Title = "Mitt fina fönster";
 ```
 
-### Console.Clear
+### Console.Clear\(\)
 
 Rensar skärmen.
 

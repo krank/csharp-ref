@@ -1,8 +1,19 @@
 # Listor och arrayer
 
-## Array
+Både listor och arrayer är samlingar, som \(förenklat\) låter oss lagra flera värden av samma datatyp på samma ställe. Man kan till exempel ha en samling av en massa int-värden som är samlade på samma ställe, eller en samling strings.
 
-Datatyp som innehåller flera värden av samma typ. Till exempel flera int-värden.
+## Indexering
+
+Alla föremål som lagrats i en samling ges normalt ett index, som beskriver föremålets position i samlingen och låter oss komma åt det.
+
+I arrayer och listor är index alltid en siffra – en integer. Det första föremålet i listan har index 0, det andra har index 1, etc.
+
+```csharp
+string[] names = {"Benny", "Jenny", "Kenny", "Anna"};
+// I denna array har Benny index 0, Jenny 1, Kenny 2 och Anna 3.
+```
+
+## Array
 
 Arrayer har en **fast längd** som bestäms när arrayen skapas.
 
@@ -24,7 +35,7 @@ Variabel som är inbyggd i arrayer. Har alltid ett värde som är lika med array
 int length = arrayHp.Length;
 ```
 
-### Contains
+### Contains\(\)
 
 Ett snabbt sätt att se ifall en sak finns i arrayen.
 
@@ -70,8 +81,6 @@ for (int y = 0; y < grid.GetLength(1); y++)
 
 ## List
 
-Datatyp som innehåller flera värden av samma typ. Till exempel flera int-värden.
-
 När listor skapas har de normalt sett en längd på 0, och de **växer dynamiskt** när man lägger till saker i dem.
 
 ```csharp
@@ -82,7 +91,7 @@ List<string> listNamn = new List<string>();
 List<string> choices = new List<string>() {"Start", "Options", "Quit"};
 ```
 
-Mer information om List finns under Generiska klasser \(Länk kommer\).
+Mer information om List finns under [Generiska klasser](../generiska-klasser.md).
 
 {% hint style="info" %}
 **OBSERVERA:** Om du använder .NET Core så behöver du manuellt skriva till detta högst upp i dokumentet för att listor ska fungera:
@@ -92,7 +101,7 @@ using System.Collections.Generic;
 ```
 {% endhint %}
 
-### Add
+### Add\(\)
 
 Metod som är inbyggd i listor. Används för att lägga till nya föremål i listan.
 
@@ -109,7 +118,7 @@ Variabel som är inbyggd i listor. Har alltid ett värde som är lika med listan
 int length = listNamn.Count;
 ```
 
-### Remove
+### Remove\(\)
 
 Metod som är inbyggd i listor. Används för att ta bort föremål från listan.
 
@@ -117,7 +126,7 @@ Metod som är inbyggd i listor. Används för att ta bort föremål från listan
 listNamn.Remove("Kim");
 ```
 
-### RemoveAt
+### RemoveAt\(\)
 
 Metod som är inbyggd i listor. Används för att ta bort föremål på en specifik plats i listan.
 
@@ -125,7 +134,7 @@ Metod som är inbyggd i listor. Används för att ta bort föremål på en speci
 listNamn.RemoveAt(4);
 ```
 
-### RemoveAll
+### RemoveAll\(\)
 
 Metod för att ta bort alla föremål som matchar ett visst kriterium. Kriteriet skrivs som en metod. Metoden tar emot ett värde av samma datatyp som listan innehåller, och returnerar true om kriteriet är uppfyllt och false om det inte är det. Här används med andra ord [delegates](delegates.md).
 
@@ -157,19 +166,5 @@ rects.removeAll(rect => rect.y < 0);
 
 ```csharp
 string[] aNamn = listNamn.ToArray();
-```
-
-## Indexering
-
-För att komma åt ett specifikt värde i en lista eller en array används ett index – en siffra som motsvarar positionen. Det första föremålet i listan har index 0, det andra har index 1, etc.
-
-```csharp
-// Skapa en string-variabel och tilldela den 
-// värdet som är lagrat på den tredje platsen i listan.
-string name = listNamn[2];
-
-// Skapa en int-variabel och tilldela den 
-// värdet som är lagrat på den andra platsen i arrayen.
-int num = arrayNamn[1];
 ```
 
