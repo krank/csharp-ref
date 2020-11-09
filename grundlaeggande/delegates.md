@@ -1,4 +1,4 @@
-# Delegates
+# Delegates och lambdas
 
 Delegates är ett sätt att kunna göra så att variabler pekar mot metoder istället för mot värden eller objekt i minnet.
 
@@ -9,7 +9,7 @@ delegate void Task();
 
 // En metod som passar in på delegaten
 static void SayHello() {
-  System.Console.WriteLine("Hello!");
+  System.WriteLine("Hello!");
 }
 
 static void Main(string[] args)
@@ -63,5 +63,73 @@ static void DoSecond()
 {
   /* .. */
 }
+```
+
+### Anonyma delegater
+
+Anonyma delegater är i praktiken anonyma metoder – metoder som saknar eget namn.
+
+```csharp
+delegate void Task(); 
+
+static void Main(string[] args)
+{
+  Task t = delegate()
+    {
+      System.WriteLine("Hello!");
+    }
+    
+  t();
+}
+```
+
+De är praktiska när man aldrig faktiskt kommer att anropa metoden med dess eget namn, utan bara vill kunna lägga in den i en variabel eller en lista.
+
+```csharp
+Dictionary<string, Action> actions = new Dictionary<string, Action>();
+
+actions.Add("greet", 
+  delegate ()
+  {
+    Console.WriteLine("Hello");
+  }
+);
+
+actions["greet"]();
+```
+
+### Lambdas
+
+Lambda-uttryck är, enkelt uttryckt, ett sätt att skriva väldigt enkla anonyma metoder \(anonyma delegater\) vars returvärden är direkta resultat av deras parametrar.
+
+```csharp
+// Delegat som passar alla metoder som tar emot två int-parametrar och
+// som returnerar en int som resultat
+delegate int Calculation(int x, int y);
+
+static void Main(string[] args)
+{
+  // Lambda-uttrycket => har två inputs på vänster sida, 
+  // och uträkningen på höger sida resulterar i en int.
+  // Därför passar lambda-uttrycket in på delegaten Calculation.
+  Calculation c = (xInput, xOutput) => xInput * xOutput;
+
+  int result = c(10, 5);
+}
+```
+
+Lambdas används väldigt ofta när man till exempel vill filtrera en lista på något sätt.
+
+```csharp
+List<int> numbers = new List<int>() {2,3,4,5,6};
+
+// FindAll returnerar en lista med alla föremål i listan som matchar ett visst
+// kriterium. Kriteriet ska vara utformat som en metod, som tar emot ett
+// föremål av rätt datatyp som parameter och returnerar en bool.
+// lambda-uttrycket nedan tar emot en input på vänster sida (n) och uttrycket
+// på höger sida är en boolsk jämförelse.
+// Därför kommer lowNumbers att innehålla en lista med alla integers från
+// numbers, som är < 4.
+List<int> lowNumbers = numbers.FindAll(n => n < 4);
 ```
 

@@ -100,6 +100,15 @@ Metod som är inbyggd i listor. Används för att lägga till nya föremål i li
 listNamn.Add("Kim");
 ```
 
+### Count
+
+Variabel som är inbyggd i listor. Har alltid ett värde som är lika med listans storlek.
+
+```csharp
+// Skapa en integer-variabel och tilldela den värdet som motsvarar listans storlek
+int length = listNamn.Count;
+```
+
 ### Remove
 
 Metod som är inbyggd i listor. Används för att ta bort föremål från listan.
@@ -116,13 +125,32 @@ Metod som är inbyggd i listor. Används för att ta bort föremål på en speci
 listNamn.RemoveAt(4);
 ```
 
-### Count
+### RemoveAll
 
-Variabel som är inbyggd i listor. Har alltid ett värde som är lika med listans storlek.
+Metod för att ta bort alla föremål som matchar ett visst kriterium. Kriteriet skrivs som en metod. Metoden tar emot ett värde av samma datatyp som listan innehåller, och returnerar true om kriteriet är uppfyllt och false om det inte är det. Här används med andra ord [delegates](delegates.md).
 
 ```csharp
-// Skapa en integer-variabel och tilldela den värdet som motsvarar listans storlek
-int length = listNamn.Count;
+// IsAboveScreen är kriteriet
+static bool IsAboveScreen(Rectangle r)
+{
+  return r.y < 0;
+}
+
+static void Main(string[] args)
+{
+  List<Rectangle> rects = new List<Rectangle>();
+
+  /* ... */
+
+  // Tar bort alla rektanglar som, när de stoppas in 
+  // i metoden, får den att returnera true
+  rects.RemoveAll(IsAboveScreen);
+```
+
+Ett annat sätt är att använda ett [lambda-uttryck](delegates.md#lambdas):
+
+```csharp
+rects.removeAll(rect => rect.y < 0);
 ```
 
 ### Att göra om en lista till en array

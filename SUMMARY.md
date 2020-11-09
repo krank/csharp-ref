@@ -29,7 +29,7 @@
 * [Loopar](grundlaeggande/loopar.md)
 * [Listor och arrayer](grundlaeggande/listor-och-arrayer.md)
 * [Egna metoder](grundlaeggande/egna-metoder.md)
-* [Delegates](grundlaeggande/delegates.md)
+* [Delegates och lambdas](grundlaeggande/delegates.md)
 * [Slump \(Random\)](grundlaeggande/slump.md)
 * [Matematik \(Math\)](grundlaeggande/matematik-math.md)
 * [Vektorer \(Numerics\)](grundlaeggande/vektorer-numerics.md)
