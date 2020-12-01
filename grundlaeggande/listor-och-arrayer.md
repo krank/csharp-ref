@@ -44,6 +44,12 @@ string choice = Console.ReadLine();
 bool validAnswer = choices.Contains(choice);
 ```
 
+{% hint style="info" %}
+OBSERVERA: Contains är en del av biblioteket Linq, så du behöver skriva detta längst upp bland dina andra using-statements:
+
+`using System.Linq;`
+{% endhint %}
+
 ### Att göra om en array till en lista
 
 ```csharp
