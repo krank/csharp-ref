@@ -1,4 +1,4 @@
-# Gå igenom en array
+# Gå igenom en array \(eller lista\)
 
 I en array används index från 0 till X, där X är 1 mindre än antalet saker i arrayen. Om det finns 3 saker så finns index 0, 1 och 2.
 
