@@ -20,12 +20,24 @@ Hur inzoomad kameran ska vara.
 OBSERVERA: Om du inte bestämmer värdet för zoomen, så kommer kameran att bete sig underligt. Ge alltid kameran zoomvärde 1 \(eller något annat\) manuellt!
 {% endhint %}
 
-### offset
+### target
 
-Kamerans offset är en 2d-vektor som beskriver hur långt från världens origo kameran befinner sig – alltså hur långt den ska flyttas från sin ursprungsposition, relativt allt annat.
+Den punkt i världen som kameran ska roteras kring, och som även dess zoom fokuseras på – samt den punkt dess offset ska utgå från.
 
 ```csharp
-camera.offset.X = 10
+camera.target = new Vector2(400, 300);
+```
+
+### offset
+
+Kamerans offset är en 2d-vektor som beskriver hur långt från sin target kamerans övre vänstra hörn befinner sig – alltså hur långt den ska flyttas från sin ursprungsposition, relativt allt annat.
+
+```csharp
+float screenWidth = Raylib.GetScreenWidth();
+float screenHeight = Raylib.GetScreenHeight();
+
+// Gör så att kamerans target hamnar i mitten av skärmen
+camera.offset = new Vector2(screenWidth / 2, screenHeight/2);
 ```
 
 ### rotation
@@ -36,17 +48,7 @@ Hur roterad kameran ska vara.
 camera.rotation = 45; // Roterar kameran 45 grader
 ```
 
-### target
 
-Den punkt i världen som kameran ska roteras kring, och som även dess zoom fokuseras på.
-
-```csharp
-camera.target = new Vector2(400, 300);
-```
-
-{% hint style="warning" %}
-**OBSERVERA:** Om man flyttar kamerans offset, så behöver man antagligen även flytta dess target! 
-{% endhint %}
 
 ### BeginMode2D\(\) / EndMode2D\(\)
 
