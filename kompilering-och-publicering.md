@@ -26,3 +26,24 @@ I ditt projekt bör du nu ha en mapp som heter "bin" och i den finns en mapp som
 
 ![](.gitbook/assets/image%20%2832%29.png) 
 
+### Överkurs: standalone
+
+Vill man ha en exe-fil som inte kräver att man har .NET Core 5 installerat, så kan man redigera sin csproj-fil och lägga till PublishSingleFile och PublishTrimmed till sin PropertyGroup:
+
+```markup
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <PublishSingleFile>true</PublishSingleFile>
+    <PublishTrimmed>true</PublishTrimmed>
+  </PropertyGroup>
+```
+
+Sedan skriver man såhär när man publicerar \(om det nu är windows 10 64-bitarsversionen man bygger till\):
+
+```markup
+dotnet publish -r win-x64 -c Release
+```
+
+Då kommer filerna i publish-mappen fortfarande vara ganska få, men exe-filen kommer att vara betydligt större. Mappstrukturen blir också lite annorlunda, men det bör inte vara svårt att hitta rätt filer att publicera.
+
