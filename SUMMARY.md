@@ -2,6 +2,7 @@
 
 * [C\# Snabbreferens](README.md)
 * [Lathund: Skapa projekt](lathund-skapa-projekt.md)
+* [Kompilering och publicering](kompilering-och-publicering.md)
 
 ## Mjukvara
 
