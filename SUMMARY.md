@@ -6,13 +6,13 @@
 
 ## Mjukvara
 
-* [Visual Studio Code](mjukvara/visual-studio-code/README.md)
+* [Visual Studio Code \[…\]](mjukvara/visual-studio-code/README.md)
   * [Nya projekt](mjukvara/visual-studio-code/nya-projekt.md)
   * [Debugging](mjukvara/visual-studio-code/debugging.md)
   * [Snabbkommandon](mjukvara/visual-studio-code/snabbkommandon.md)
   * [Snippets](mjukvara/visual-studio-code/snippets.md)
   * [Felsökning](mjukvara/visual-studio-code/felsoekning.md)
-* [Git & GitHub](mjukvara/git-and-github/README.md)
+* [Git & GitHub \[…\]](mjukvara/git-and-github/README.md)
   * [Git-begrepp](mjukvara/git-and-github/git-begrepp.md)
 
 ## Grundläggande

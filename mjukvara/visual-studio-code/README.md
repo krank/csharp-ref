@@ -1,4 +1,4 @@
-# Visual Studio Code
+# Visual Studio Code \[…\]
 
 Visual Studio Code \(VS Code\) är en ny kod-editor från Microsoft som är betydligt snabbare och enklare än vanliga Visual Studio. Den funkar också bättre till många saker, även om den saknar en del av de mer avancerade verktygen som finns i det större programmet.
 
