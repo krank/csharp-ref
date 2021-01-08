@@ -19,7 +19,7 @@
 
 * [Begrepp](grundlaeggande/begrepp.md)
 * [Namngivning](grundlaeggande/namngivning.md)
-* [Datatyper](grundlaeggande/datatyper/README.md)
+* [Datatyper \[…\]](grundlaeggande/datatyper/README.md)
   * [Tuples](grundlaeggande/datatyper/tuples.md)
   * [Enum](grundlaeggande/datatyper/enum.md)
 * [Typkonvertering](grundlaeggande/typkonvertering.md)
@@ -36,21 +36,6 @@
 * [Vektorer \(Numerics\)](grundlaeggande/vektorer-numerics.md)
 * [Try-catch](grundlaeggande/try-catch.md)
 
-## Grafik
-
-* [RayLib](grafik/raylib/README.md)
-  * [Raylib setup](grafik/raylib/raylib-setup.md)
-  * [Fönster i Raylib](grafik/raylib/foenster-i-raylib.md)
-  * [Grafik](grafik/raylib/grafik.md)
-  * [Geometriska former](grafik/raylib/geometriska-former.md)
-  * [Bilder och texturer](grafik/raylib/bilder-och-texturer.md)
-  * [Input](grafik/raylib/input.md)
-  * [Text](grafik/raylib/text.md)
-  * [Rectangle](grafik/raylib/rectangle.md)
-  * [Kollisioner](grafik/raylib/kollisioner.md)
-  * [Kamera](grafik/raylib/kamera.md)
-  * [Ljud](grafik/raylib/ljud.md)
-
 ## Filhantering
 
 * [Filsökvägar](filhantering/filsoekvaegar.md)
@@ -62,33 +47,42 @@
 
 ## Klasser och objektorientering
 
----
+* [Lathund för klassdesign](klasser-och-objektorientering/lathund-foer-klassdesign.md)
+* [Klasser och instanser](klasser-och-objektorientering/klasser-och-instanser.md)
+* [Public, private och protected](klasser-och-objektorientering/public-private-och-protected.md)
+* [Klassdiagram](klasser-och-objektorientering/klassdiagram.md)
+* [Klassmetoder](klasser-och-objektorientering/klassmetoder.md)
+* [Kontruktorer](klasser-och-objektorientering/kontruktorer.md)
+* [Arv](klasser-och-objektorientering/arv.md)
+* [Inkapsling och properties](klasser-och-objektorientering/inkapsling-och-properties.md)
+* [Static](klasser-och-objektorientering/static.md)
+* [Polymorfism \[…\]](klasser-och-objektorientering/polymorfism/README.md)
+  * [Virtual, override](klasser-och-objektorientering/polymorfism/virtual-override.md)
+* [Generiska klasser](klasser-och-objektorientering/generiska-klasser.md)
+* [Abstract](klasser-och-objektorientering/abstract.md)
+* [Interface](klasser-och-objektorientering/interface.md)
 
-* [Lathund för klassdesign](lathund-foer-klassdesign.md)
-* [Klasser och instanser](klasser-och-instanser.md)
-* [Public, private och protected](public-private-och-protected.md)
-* [Klassdiagram](klassdiagram.md)
-* [Klassmetoder](klassmetoder.md)
-* [Kontruktorer](kontruktorer.md)
-* [Static](static.md)
-* [Arv](arv.md)
-* [Inkapsling och properties](inkapsling-och-properties.md)
-* [Polymorfism](polymorfism/README.md)
-  * [Virtual, override](polymorfism/virtual-override.md)
-* [Abstract](abstract.md)
-* [Interface](interface.md)
-* [Generiska klasser](generiska-klasser.md)
+## Annat <a id="grafik"></a>
 
-## Nätverk och internet
-
----
-
-* [RESTful client](restful-client.md)
-* [RESTful server](restful-server/README.md)
-  * [HTTP, REST och CRUD](restful-server/rest-och-crud.md)
-  * [Models](restful-server/models.md)
-  * [Controllers](restful-server/controllers.md)
-  * [Tester med RESTer](restful-server/tester-med-rester.md)
+* [RayLib \[…\]](grafik/raylib/README.md)
+  * [Raylib setup](grafik/raylib/raylib-setup.md)
+  * [Fönster i Raylib](grafik/raylib/foenster-i-raylib.md)
+  * [Grafik](grafik/raylib/grafik.md)
+  * [Geometriska former](grafik/raylib/geometriska-former.md)
+  * [Bilder och texturer](grafik/raylib/bilder-och-texturer.md)
+  * [Input](grafik/raylib/input.md)
+  * [Text](grafik/raylib/text.md)
+  * [Rectangle](grafik/raylib/rectangle.md)
+  * [Kollisioner](grafik/raylib/kollisioner.md)
+  * [Kamera](grafik/raylib/kamera.md)
+  * [Ljud](grafik/raylib/ljud.md)
+* [Nätverk och internet \[…\]](grafik/naetverk-och-internet-.../README.md)
+  * [RESTful client](grafik/naetverk-och-internet-.../restful-client.md)
+  * [RESTful server \[…\]](grafik/naetverk-och-internet-.../restful-server/README.md)
+    * [HTTP, REST och CRUD](grafik/naetverk-och-internet-.../restful-server/rest-och-crud.md)
+    * [Models](grafik/naetverk-och-internet-.../restful-server/models.md)
+    * [Controllers](grafik/naetverk-och-internet-.../restful-server/controllers.md)
+    * [Tester med RESTer](grafik/naetverk-och-internet-.../restful-server/tester-med-rester.md)
 
 ## Tekniker
 

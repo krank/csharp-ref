@@ -11,7 +11,7 @@ OBSERVERA: DENNA DEL ÄR INTE FÄRDIG ENS LITEGRANN
 * Klicka SEND
 * Resultatet ser du under Response.
 
-![](../.gitbook/assets/image%20%2828%29.png)
+![](../../../.gitbook/assets/image%20%2828%29.png)
 
 ## Skicka JSON-data
 

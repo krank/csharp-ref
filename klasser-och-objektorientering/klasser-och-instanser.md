@@ -57,11 +57,11 @@ Goomba g3 = new Goomba() {x = 10, y = 6};
 * Högerklicks på ditt projekt
 * Välj "Create file"
 
-![](.gitbook/assets/image%20%2817%29.png) 
+![](../.gitbook/assets/image%20%2817%29.png) 
 
 * Skriv in ett filnamn – lämpligen klassens namn punkt cs.
 
-![](.gitbook/assets/image%20%2818%29.png) 
+![](../.gitbook/assets/image%20%2818%29.png) 
 
 * Om du får upp en lista, välj "Class".
 

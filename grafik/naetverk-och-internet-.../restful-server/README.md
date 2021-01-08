@@ -1,4 +1,4 @@
-# RESTful server
+# RESTful server \[…\]
 
 Nedan är instruktioner för att skapa en enkel API-server som svarar på GET-anrop.
 
@@ -57,7 +57,7 @@ Ok är en metod som returnerar ett färdigt ActionResult med HTTP-koden "ok". Re
 * Ändra localhost till \*
 * Ändra också "launchBrowser" till false.
 
-![](../.gitbook/assets/image%20%2825%29.png)
+![](../../../.gitbook/assets/image%20%2825%29.png)
 
 ### Starta servern
 

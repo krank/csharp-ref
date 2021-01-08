@@ -97,7 +97,7 @@ List<string> listNamn = new List<string>();
 List<string> choices = new List<string>() {"Start", "Options", "Quit"};
 ```
 
-Mer information om List finns under [Generiska klasser](../generiska-klasser.md).
+Mer information om List finns under [Generiska klasser](../klasser-och-objektorientering/generiska-klasser.md).
 
 {% hint style="info" %}
 **OBSERVERA:** Om du använder .NET Core så behöver du manuellt skriva till detta högst upp i dokumentet för att listor ska fungera:

@@ -25,7 +25,7 @@ r1.height = 30;
 
 ## Rectangle och List
 
-Rectangles är inte [klasser](../../klasser-och-instanser.md) – de är Structs. Det betyder att om man lagrar rectangles i en lista, så kan man inte ändra rektanglarna direkt i listan.
+Rectangles är inte [klasser](../../klasser-och-objektorientering/klasser-och-instanser.md) – de är Structs. Det betyder att om man lagrar rectangles i en lista, så kan man inte ändra rektanglarna direkt i listan.
 
 ```csharp
 List<Rectangle> rects = new List<Rectangle>();

@@ -8,7 +8,7 @@ Models, eller modeller, är helt enkelt klasser som används av t.ex. en REST-se
 
 ## Modellklasser
 
-Alla egenskaper som ska returneras av API:t måste vara publika [properties](../inkapsling-och-properties.md#properties).
+Alla egenskaper som ska returneras av API:t måste vara publika [properties](../../../klasser-och-objektorientering/inkapsling-och-properties.md#properties).
 
 {% tabs %}
 {% tab title="Pokemon.cs" %}

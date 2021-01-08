@@ -1,4 +1,4 @@
-# Datatyper
+# Datatyper \[…\]
 
 ## string
 
