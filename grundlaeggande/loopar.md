@@ -42,3 +42,16 @@ for (int i = 0; i < 10; i++)
 }
 ```
 
+## foreach-loop
+
+Foreach-loopar är i princip likadana som for-loopar men är specialdesignade för att gå igenom listor och arrayer. En foreach-loop körs lika många gånger som det finns saker i en lista/array, och varje gång loopen körs så lagras en av sakerna i variabeln som anges.
+
+```csharp
+string[] choices = {"Start", "Options", "Quit"};
+
+foreach (string choice in choices)
+{
+  Console.WriteLine(choice);
+}
+```
+

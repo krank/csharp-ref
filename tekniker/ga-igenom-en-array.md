@@ -7,7 +7,7 @@ Detta kan utnyttjas för att effektivisera kod.
 Istället för att skriva:
 
 ```csharp
-string[] choices = {“Start”, “Options”, “Quit”};
+string[] choices = {"Start", "Options", "Quit"};
 Console.WriteLine(choices[0]);
 Console.WriteLine(choices[1]);
 Console.WriteLine(choices[2]);
@@ -16,7 +16,7 @@ Console.WriteLine(choices[2]);
 Så kan man skapa en loop vars räknare först är 0, sedan 1, sedan 2:
 
 ```csharp
-string[] choices = {“Start”, “Options”, “Quit”};
+string[] choices = {"Start", "Options", "Quit"};
 int i = 0;
 
 while (i < choices.Length)
@@ -31,11 +31,22 @@ Detta gör att även om man skulle lägga till tio nya namn till arrayen så kom
 Detta kan även göras med listor och givetvis fungerar en [for-loop](../grundlaeggande/loopar.md#for-loop) lika bra \(om inte bättre\).
 
 ```csharp
-string[] choices = {“Start”, “Options”, “Quit”};
+string[] choices = {"Start", "Options", "Quit"};
 
 for (int i = 0; i < choices.length; i++)
 {
   Console.WriteLine(choices[i]);
+}
+```
+
+[Foreach-loopar](../grundlaeggande/loopar.md#foreach-loop) är i princip skapade för exakt det här:
+
+```csharp
+string[] choices = {"Start", "Options", "Quit"};
+
+foreach (string choice in choices)
+{
+  Console.WriteLine(choice);
 }
 ```
 
