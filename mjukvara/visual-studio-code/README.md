@@ -16,7 +16,7 @@ VS Code är väldigt modulärt. Det betyder att det finns en ganska liten "grund
 * [Auto-Using for C\#](https://marketplace.visualstudio.com/items?itemName=Fudge.auto-using) – hjälper till att lägga in using-statements när det behövs, t.ex. för listor så lägger den till `using System.Collections.Generic`.
 * [gitignore](https://www.google.com/url?q=https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3Dcodezombiech.gitignore&sa=D&sntz=1&usg=AFQjCNHu8aUEHuuoWIdAZQcCdvDqnSWhSQ) – Underlättar arbetet med git och Visual Studio Code. Om du söker efter den, se till att ta den av CodeZombie!
 * [NuGet Gallery](https://www.google.com/url?q=https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3Dpatcx.vscode-nuget-gallery&sa=D&sntz=1&usg=AFQjCNGESnjNCe20EX_KwyQS6_sTUBYv5A) – Underlättar installationen av externa bibliotek och paket, t.ex. Raylib.
-* [Unity Code Snippets](https://www.google.com/url?q=https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3Dkleber-swf.unity-code-snippets&sa=D&sntz=1&usg=AFQjCNE2u9WLWN19d7xU6mnIDKhKTjGKsQ) – Ger lite bättre stöd för Unity, så man t.ex. kan autokomplettera events såsom OnCollisionEnter2d.
+* [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare) – Realtids-samarbete; flera personer kan skriva kod tillsammans samtidigt.
 
 ## Praktiska inställningar
 
