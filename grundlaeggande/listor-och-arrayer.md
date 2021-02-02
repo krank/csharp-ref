@@ -2,6 +2,9 @@
 
 Både listor och arrayer är samlingar, som \(förenklat\) låter oss lagra flera värden av samma datatyp på samma ställe. Man kan till exempel ha en samling av en massa int-värden som är samlade på samma ställe, eller en samling strings.
 
+* **Arrayer** kom först, är snabba och effektiva, men kan inte växa/krympa – de har ett fast antal platser.
+* **Listor** är en senare uppfinning, är nästan lika snabba, och kan växa/krympa.
+
 ## Indexering
 
 Alla föremål som lagrats i en samling ges normalt ett index, som beskriver föremålets position i samlingen och låter oss komma åt det.
