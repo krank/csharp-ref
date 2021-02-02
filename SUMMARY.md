@@ -80,8 +80,8 @@
   * [RESTful client](grafik/naetverk-och-internet-.../restful-client.md)
   * [RESTful server \[…\]](grafik/naetverk-och-internet-.../restful-server/README.md)
     * [HTTP, REST och CRUD](grafik/naetverk-och-internet-.../restful-server/rest-och-crud.md)
-    * [Models](grafik/naetverk-och-internet-.../restful-server/models.md)
     * [Controllers](grafik/naetverk-och-internet-.../restful-server/controllers.md)
+    * [Models/dataklasser](grafik/naetverk-och-internet-.../restful-server/models.md)
     * [Tester med RESTer](grafik/naetverk-och-internet-.../restful-server/tester-med-rester.md)
 
 ## Tekniker
