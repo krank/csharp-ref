@@ -18,7 +18,7 @@ using Newtonsoft.Json;
 
 ### RestClient – Skapa ett klientobjekt
 
-```text
+```csharp
 RestClient client = new RestClient("https://pokeapi.co/api/v2/");
 ```
 
@@ -26,21 +26,29 @@ Skapar ett klientobjekt som kommer att skicka requests till PokeAPI.
 
 ### RestRequest – Skapa ett request-objekt
 
-```text
-RestRequest request = new RestRequest("pokemon/ditto"); 
+Request-objekt inkluderar vilken resurs och vilka parametrar som ska skickas som en förfrågan till servern.
+
+```csharp
+// Skapar ett request-objekt för resursen pokemon/ditto.
+RestRequest request = new RestRequest("pokemon/ditto");
 ```
 
-Skapar ett request-objekt som kommer att påverka endpointen pokemon/ditto.
+```csharp
+// Lägger till parametern "uid" med värdet "ANMA0000032338"
+request.AddParameter("uid", "ANMA0000032338");
+```
+
+Ofta när ett API kräver att man har en API-nyckel så behöver den anges som parameter.
 
 ### Gör en Get-operation med klienten
 
-```text
+```csharp
 IRestResponse response = client.Get(request);
 ```
 
 ### Använda svarets innehåll som en string
 
-```text
+```csharp
 string content = response.Content;
 Console.WriteLine(content);
 ```
