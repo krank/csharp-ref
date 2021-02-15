@@ -43,6 +43,7 @@
 * [Filer och mappar](filhantering/filer-och-mappar.md)
 * [Open, close, using](filhantering/open-close-using.md)
 * [XML-serialisering](filhantering/xml-serialisering.md)
+* [JSON-serialisering](filhantering/json-serialisering.md)
 * [Resursfiler](filhantering/resursfiler.md)
 
 ## Klasser och objektorientering
@@ -77,10 +78,10 @@
   * [Kamera](grafik/raylib/kamera.md)
   * [Ljud](grafik/raylib/ljud.md)
 * [Nätverk och internet \[…\]](grafik/naetverk-och-internet-.../README.md)
+  * [CRUD, HTTP och REST](grafik/naetverk-och-internet-.../rest-och-crud.md)
   * [URL:er och REST](grafik/naetverk-och-internet-.../url-er-och-rest.md)
   * [RESTful client](grafik/naetverk-och-internet-.../restful-client.md)
   * [RESTful server \[…\]](grafik/naetverk-och-internet-.../restful-server/README.md)
-    * [HTTP, REST och CRUD](grafik/naetverk-och-internet-.../restful-server/rest-och-crud.md)
     * [Controllers](grafik/naetverk-och-internet-.../restful-server/controllers.md)
     * [Models/dataklasser](grafik/naetverk-och-internet-.../restful-server/models.md)
     * [Tester med RESTer](grafik/naetverk-och-internet-.../restful-server/tester-med-rester.md)

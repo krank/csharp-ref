@@ -43,7 +43,7 @@ https://pokeapi.co/api/v2/pokemon/ditto
 
 ## Parametrar och REST
 
-Parametrar kan ge ytterligare information om t.ex. vilket djur man vill ha information om ur Star Trek API:t. Det är också generellt här man anger sin API-nyckel för databaser som kräver en sådan.
+Parametrar kan ge ytterligare information om t.ex. Det är generellt här man anger sin API-nyckel för databaser som kräver en sådan. Det finns API:er som använder parametrar för att specificera vilken resurs man vill hämta eller modifiera, men det är strikt taget inte riktigt REST då.
 
 Parametrar skrivs genom att man först har ett frågetecken som separerar parametrarna från resten, och sedan par av parameter+värde. Paren separeras från varandra med & och parametern separeras från värdet med ett likamed-tecken.
 

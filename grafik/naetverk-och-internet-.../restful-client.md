@@ -1,17 +1,11 @@
 # RESTful client
 
-## Användbara nuggets
+Använd NuGet Gallery för att installera **RestSharp**.
 
-Använd NuGet Gallery för att installera följande:
-
-* RestSharp – för att göra anrop till REST-tjänster
-* Newtonsoft JSON – för att hantera JSON-data
-
-Lägg till dessa using-statements:
+Lägg till detta using-statement:
 
 ```csharp
 using RestSharp;
-using Newtonsoft.Json;
 ```
 
 ## Göra en request
@@ -53,47 +47,21 @@ string content = response.Content;
 Console.WriteLine(content);
 ```
 
-### Deserialisera svarets innehåll till ett objekt
+Denna string kan sedan [deserialiseras till objekt](../../filhantering/json-serialisering.md).
 
-Undersök den JSON-kod man får i svaret.
+## API-nycklar
 
-```javascript
-{
-  "form_name": "",
-  "form_names": [],
-  "form_order": 1,
-  "id": 132,
-  "is_battle_only": false,
-  "is_default": true,
-  "is_mega": false,
-  "name": "ditto",
-  "names": [],
-  "order": 198, 
-(...)
-}
-```
+I de flesta fall där API:er kräver API-nycklar anges de som parametrar i requesten.
 
-Välj ut vilka egenskaper som är intressanta. Skapa en klass som har dessa egenskaper som publika variabler av rätt datatyp.
+## Öppna databas-API:er
 
-Detta är lättast att göra med de som inte är listor/objekt, utan som är av enkel datatyp t.ex. siffror, texter och booleska värden.
-
-{% tabs %}
-{% tab title="Pokemon.cs" %}
-```csharp
-class Pokemon
-{
-  public string name;
-  public int id;
-}
-```
-{% endtab %}
-{% endtabs %}
-
-Använd JsonConvert för att deserialisera JSON-koden från REST-svaret till ett objekt baserat på den klassen:
-
-```csharp
-Pokemon ditto = JsonConvert.DeserializeObject<Pokemon>(result);
-```
-
-Instansens variabler kommer då att ha värden hämtade från REST-tjänsten.
+* [Pokemon API](https://pokeapi.co/)
+* [Digimon API](https://digimon-api.herokuapp.com/)
+* [Star Wars API](https://swapi.dev/)
+* [Star Trek API](http://stapi.co/)
+* Steam-API
+  * [Skaffa en API-nyckel](https://steamcommunity.com/dev/apikey)
+  * [Dokumentation](https://partner.steamgames.com/doc/webapi)
+* [Marvel API](https://developer.marvel.com/)
+* [Superhero API](https://superheroapi.com/)
 
