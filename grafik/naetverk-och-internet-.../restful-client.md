@@ -49,6 +49,17 @@ Console.WriteLine(content);
 
 Denna string kan sedan [deserialiseras till objekt](../../filhantering/json-serialisering.md).
 
+### Svarets status-kod
+
+I response-objektet finns också en StatusCode. Dess datatyp är en [Enum](../../grundlaeggande/datatyper/enum.md) som heter HttpStatusCode och finns i System.Net. Dess möjliga värden är alla existerande, definierade statuskoder från HTTP-standarden. Till exempel Ok och NotFound.
+
+```csharp
+  if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+  {
+    Console.WriteLine("Not found!");
+  }
+```
+
 ## API-nycklar
 
 I de flesta fall där API:er kräver API-nycklar anges de som parametrar i requesten.
