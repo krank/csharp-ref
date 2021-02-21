@@ -34,7 +34,7 @@ Utgå från den JSON-kod du ska deserialisera.
 }
 ```
 
-Skapa en publik klass som har publika variabler som motsvarar de egenskaper du är intresserad av.
+Skapa en publik klass som har publika variabler eller properties som motsvarar de egenskaper du är intresserad av.
 
 {% tabs %}
 {% tab title="Pokemon.cs" %}
@@ -131,5 +131,55 @@ class Pokemon
 
 \[INTE KLART\]
 
+## Användbara attribut
 
+### \[JsonProperty\]
+
+Används för att ändra så att en json-variabel inte måste heta exakt samma sak som sin C\#-variant.
+
+{% tabs %}
+{% tab title="C\#" %}
+```csharp
+public class Pokemon
+{
+  [JsonProperty("name")]
+  public string Name {get; set;}
+  
+  [JsonProperty("is_default")]
+  public bool IsDefault {get; set;}
+}
+```
+{% endtab %}
+
+{% tab title="JSON" %}
+```javascript
+{
+  "name": "ditto",
+  "is_default": true
+}
+```
+{% endtab %}
+{% endtabs %}
+
+### \[JsonIgnore\]
+
+Används för att se till så att en variabel eller property på C\#-sidan inte serialiseras till JSON.
+
+{% tabs %}
+{% tab title="C\#" %}
+```csharp
+public class Pokemon
+{
+  [JsonProperty("name")]
+  public string Name {get; set;}
+  
+  [JsonProperty("is_default")]
+  public bool IsDefault {get; set;}
+  
+  [JsonIgnore]
+  public int CurrentHp {get; set;}
+}
+```
+{% endtab %}
+{% endtabs %}
 
