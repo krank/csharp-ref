@@ -14,7 +14,7 @@ En Vector2 är en tvådimensionell vektor som består av två komposanter, en i 
 
 ```csharp
 // Skapa en vektor med X-värde 20 och Y-värde 30.5
-Vector2 position = new Vector2(20f 30.5f);
+Vector2 position = new Vector2(20f, 30.5f);
 ```
 
 Man kan använda räknesätt med vektorer.
