@@ -82,7 +82,7 @@ Console.WriteLine(mySet.Count());
 
 ### Dictionary
 
-Fungerar som en lista, utom att man kan använda andra datatyper än ints som index.
+Fungerar som en lista, utom att man kan använda andra datatyper än ints som index. I Dictionaries använder man ofta ordet "key" istället för "index".
 
 ```csharp
 Dictionary<string, int> myStats = new Dictionary<string, int>();
@@ -91,10 +91,16 @@ myStats.Add("Strength", 20);
 myStats.Add("Intelligence", 12);
 
 Console.WriteLine(myStats["Strength"]);
+```
 
-foreach (string key in myStats.Keys.ToArray())
+#### Keys
+
+Man kan få fram en samling av alla keys i ett dictionary genom att läsa av egenskapen Keys som är inbyggd i alla Dictionaries.
+
+```csharp
+foreach (string key in myStats.Keys)
 {
-  Console.WriteLine(key + ": " + myStats[key];
+  Console.WriteLine(key + ": " + myStats[key]);
 }
 ```
 
