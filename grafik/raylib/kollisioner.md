@@ -13,7 +13,7 @@ bool areOverlapping = Raylib.CheckCollisionRecs(playerRect, enemyRect); // true
 
 ## GetCollisionRec\(\)
 
-Tar emot två rectangles som parametrar och returnerar en rektangel som motsvarar överlappet mellan dem.
+Tar emot två [Rectangles](rectangle.md) som parametrar och returnerar en Rectangle som motsvarar överlappet mellan dem.
 
 ```csharp
 Rectangle playerRect = new Rectangle(50,50,100,100);
