@@ -8,8 +8,24 @@ Tar emot två [Rectangles ](rectangle.md)som parametrar och returnerar true om d
 Rectangle playerRect = new Rectangle(5,5,10,10);
 Rectangle enemyRect = new Rectangle(10,10,10,10);
 
-bool areOverlapping = Raylib.CheckCollisionRecs(r1, r2); // true
+bool areOverlapping = Raylib.CheckCollisionRecs(playerRect, enemyRect); // true
 ```
+
+## GetCollisionRec\(\)
+
+Tar emot två rectangles som parametrar och returnerar en rektangel som motsvarar överlappet mellan dem.
+
+```csharp
+Rectangle playerRect = new Rectangle(50,50,100,100);
+Rectangle enemyRect = new Rectangle(100,100,100,100);
+Rectangle overlap = Raylib.GetCollisionRec(playerRect, enemyRect);
+
+Raylib.DrawRectangleRec(playerRect, Color.RED);
+Raylib.DrawRectangleRec(enemyRect, Color.BLUE);
+Raylib.DrawRectangleRec(overlap, Color.ORANGE);
+```
+
+![](../../.gitbook/assets/image%20%2833%29.png) 
 
 ## CheckCollisionCircles\(\)
 
