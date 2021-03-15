@@ -69,6 +69,6 @@ bool rightDown = Raylib.IsMouseButtonDown(MouseButton.MOUSE_RIGHT_BUTTON);
 Anropas med en musknapp som parameter; returnerar true om den musknappen tryckts ned någon gång sedan förra gången metoden anropades.
 
 ```csharp
-bool leftWasPressed = Raylib.UsMouseButtonPressed(MouseButton.MOUSE_LEFT_BUTTON);
+bool leftWasPressed = Raylib.IsMouseButtonPressed(MouseButton.MOUSE_LEFT_BUTTON);
 ```
 
