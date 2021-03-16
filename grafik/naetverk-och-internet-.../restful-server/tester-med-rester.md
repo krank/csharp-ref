@@ -26,3 +26,7 @@ Antagligen behöver datan också formateras som JSON. Om man till exempel vill P
 
 Ofta kan man undersöka den output man får från GET för att se hur JSON-datan behöver vara formaterad.
 
+{% hint style="warning" %}
+**OBSERVERA:** Om du skickar in JSON-data, kom ihåg att lägga till en header som säger att Content-Type är "application/json".
+{% endhint %}
+
