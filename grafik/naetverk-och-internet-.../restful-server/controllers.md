@@ -174,6 +174,10 @@ public ActionResult AddPokemon(Pokemon newPokemon)
 
 En \[HttpPost\]-metod brukar normalt returnera via Ok\(\) eller BadRequest\(\).
 
+{% hint style="warning" %}
+**OBSERVERA:** För att servern ska kunna deserialisera inskickad JSON korrekt, måste Content-Type i requesten vara "application/json".
+{% endhint %}
+
 ### \[HttpPut\]
 
 Registrerar en metod som mottagare av PUT-requests. API-servern gör också ett försök att deserialisera inkommande JSON-data \(angiven i requestens body\) till rätt sorts instans.
@@ -205,6 +209,10 @@ public ActionResult UpdatePokemon(int id, Pokemon newPokemon)
 ```
 
 En \[HttpPut\]-metod brukar normalt returnera via Ok\(\), NotFound\(\), NoContent\(\) eller BadRequest\(\).
+
+{% hint style="warning" %}
+**OBSERVERA:** För att servern ska kunna deserialisera inskickad JSON korrekt, måste Content-Type i requesten vara "application/json".
+{% endhint %}
 
 ### \[HttpDelete\]
 
