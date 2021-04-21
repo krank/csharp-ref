@@ -28,7 +28,7 @@ class Hero: Character
 {
   int xp = 0;
   int level = 1;
-  public AddExperience(int amount)
+  public void AddExperience(int amount)
   {
     xp += amount;
     level = 1 + xp / 10;
