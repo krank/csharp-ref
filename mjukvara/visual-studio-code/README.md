@@ -38,3 +38,9 @@ VSCode gillar att visa mappar "kompakt". Det betyder att den "sammanfattar" mapp
 
 * För att stänga av det – sök efter "compact" och kryssa ur "Explorer: Compact Folders".
 
+### Automatiskt pusha commits
+
+För att få VS Code att automatiskt göra en Git Push direkt efter varje Commit \(se [Git](../git-and-github/) för mer info om commit och push\):
+
+Sök efter inställningen "Git: Post Push Command" och välj Push eller Sync istället för None.
+
