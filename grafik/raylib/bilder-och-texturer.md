@@ -112,5 +112,31 @@ using System.Numerics;
 ```
 {% endhint %}
 
+### DrawTexturePro
+
+En ännu mer avancerad version av DrawTexture. Här används två rektanglar, en vektor och en float för att ange vilken del av texturen som ska klippas ut, var den ska placeras och med vilka proportioner, kring vilken punkt den ska roteras och hur mycket den ska roteras.
+
+Det här kan man bland annat använda sig av när man har en bild som är ett s.k. sprite sheet, där alla bildrutor i en karaktärs animation finns med. Man behöver då inte klippa upp animationen i en massa olika bildfiler utan kan istället använda DrawTexturePro för att kopiera en del av bilden till raylibfönstret i taget.
+
+Bilden nedan visar principen:
+
+![](../../.gitbook/assets/drawtexturepro.png)
+
+DrawTexturePro kan också användas för vanliga texturer, som man vill rita ut roterade. Nedan är kod som ritar ut en textur som från början är 200×200 pixlar stor till Raylibfönstret.
+
+{% tabs %}
+{% tab title="C\#" %}
+```csharp
+Raylib.DrawTexturePro(
+  texture, 
+  new Rectangle(0,0,200, 200), // Source
+  new Rectangle(200,200,200,200), // Dest(ination)
+  new Vector2(100,100), // Origin
+  rotation,
+  Color.WHITE );
+```
+{% endtab %}
+{% endtabs %}
+
 
 
