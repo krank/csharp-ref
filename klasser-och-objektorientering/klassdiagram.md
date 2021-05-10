@@ -26,7 +26,7 @@ För att visa [arv ](arv.md)i klassdiagram används pilar.
 
 Pilarna pekar alltid FRÅN subklassen TILL basklassen.
 
-Man behöver generellt inte skriva in alla variabler och metoder som ärvs från basklassen i subklassens diagram. Undantaget är ifall man använder [override](polymorfism/virtual-override.md).
+Subklassernas diagram ritas på samma sätt som basklassens. Man skriver in klassens variabler och metoder, inklusive metoder som använder [override](polymorfism/virtual-override.md). Däremot skriver man inte in variabler eller metoder som bara ärvs från basklassen.
 
 ![](../.gitbook/assets/image%20%2819%29.png) 
 
