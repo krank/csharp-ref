@@ -7,7 +7,8 @@ När man lägger in kod i ett try-block så förhindrar det att programmet avslu
 ```csharp
 int[] nums = {4, 5, 7};
 
-try {
+try
+{
   Console.WriteLine(nums[8]);
 }
 catch
@@ -95,7 +96,7 @@ static int DoThing(int i)
 
 ### Exception-typer är klasser <a id="h.p_-HPGx_Vm4yNb"></a>
 
-`System.IndexOutOfRangeException` är en klass, liksom alla andra sorters exceptions. De har alla System.Exception som basklass. Det gör att man kan fånga in alla exceptions genom att catch:a System.Exception och sedan undersöka felet man fått genom t.ex. `is`.
+`System.IndexOutOfRangeException` är en [klass](../klasser-och-objektorientering/klasser-och-instanser.md), liksom alla andra sorters exceptions. De har alla System.Exception som [basklass](../klasser-och-objektorientering/arv.md). Det gör att man kan fånga in alla exceptions genom att catch:a System.Exception och sedan undersöka felet man fått genom t.ex. `is`.
 
 ```csharp
 int[] nums = { 4, 5, 7 };

@@ -33,8 +33,8 @@ Man kan till och med kombinera vektorer med vanliga siffror och räknesätt.
 Vector2 position = new Vector2(20, 20);
 
 // Skapar en vektor med X-värde 1 och Y-värde 0; 
-// multiplicerar sedan både X och Y med 0.1.
-Vector2 movement = new Vector2(1f, 0f) * 0.1f;
+// multiplicerar sedan både X och Y med 0.5.
+Vector2 movement = new Vector2(1f, 0f) * 0.5f;
 
 position += movement;
 ```
@@ -61,7 +61,7 @@ float l = position.Length(); // 28.284271
 
 ### Vector2.Distance\(\)
 
-Ger avståndet mellan två vektorer
+Ger avståndet mellan två vektorer.
 
 ```csharp
 Vector2 position = new Vector2(20, 20);

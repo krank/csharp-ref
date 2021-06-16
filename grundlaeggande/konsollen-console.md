@@ -40,7 +40,9 @@ Variabel vars värde avgör färgen på texten i konsollfönstret.
 Console.ForegroundColor = ConsoleColor.Cyan;
 ```
 
-OBS – detta gäller enbart text som skrivs efter det att färgen ändrats. Text som redan skrivits ut förändras inte.
+{% hint style="info" %}
+OBSERVERA: detta gäller enbart text som skrivs efter det att färgen ändrats. Text som redan skrivits ut förändras inte.
+{% endhint %}
 
 ### Console.BackgroundColor
 
@@ -50,7 +52,9 @@ Variabel vars värde avgör färgen på texten i konsollfönstret.
 Console.BackgroundColor = ConsoleColor.Magenta;
 ```
 
-OBS – detta gäller enbart text som skrivs efter det att färgen ändrats. Text som redan skrivits ut förändras inte.
+{% hint style="info" %}
+OBSERVERA: detta gäller enbart text som skrivs efter det att färgen ändrats. Text som redan skrivits ut förändras inte.
+{% endhint %}
 
 ### Console.Beep\(\)
 
@@ -74,7 +78,7 @@ Console.CursorLeft -= 5; // Flytta pekaren fem steg åt vänster
 
 ### Console.CursorTop
 
-Pekarens position i y-led, räknat från fönstrets överdel. **OBSERVERA**: y-axeln är **omvänd**! Med andra ord, den första raden är 0, den andra är 1, den tredje är 2…
+Pekarens position i y-led, räknat från fönstrets överdel.
 
 ```csharp
 Console.CursorTop = 10; // Placera pekaren på rad 10
@@ -83,4 +87,8 @@ Console.CursorTop = 10; // Placera pekaren på rad 10
 ```csharp
 Console.CursorTop-- // Flytta pekaren 1 rad uppåt
 ```
+
+{% hint style="info" %}
+OBSERVERA: y-axeln är **omvänd**! Med andra ord, den första raden är 0, den andra är 1, den tredje är 2…
+{% endhint %}
 

@@ -1,6 +1,6 @@
 # Delegates och lambdas
 
-Delegates är ett sätt att kunna göra så att variabler pekar mot metoder istället för mot värden eller objekt i minnet.
+Delegates är ett sätt att kunna göra så att variabler pekar mot metoder istället för mot värden eller objekt i minnet. De är lite överkurs, men ganska användbara.
 
 ```csharp
 // Skapar en delegate som passar in på metoder som 

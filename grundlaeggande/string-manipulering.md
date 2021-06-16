@@ -1,7 +1,5 @@
 # String-manipulering
 
-
-
 En string är i C\# alltid oföränderlig; man kan inte ändra direkt i en string. Men man kan använda olika metoder för att skapa nya versioner av existerande strings.
 
 ## Replace\(\)
@@ -9,6 +7,8 @@ En string är i C\# alltid oföränderlig; man kan inte ändra direkt i en strin
 Byter ut ett tecken eller en del-string.
 
 ```csharp
+string oldString = "Mikael är min programmeringslärare";
+
 string newString = oldString.Replace("Mikael", "Micke");
 ```
 

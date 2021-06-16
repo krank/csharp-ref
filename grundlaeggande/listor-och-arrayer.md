@@ -50,7 +50,7 @@ bool validAnswer = choices.Contains(choice);
 {% hint style="info" %}
 OBSERVERA: Contains är en del av biblioteket Linq, så du behöver skriva detta längst upp bland dina andra using-statements:
 
-`using System.Linq;`
+**`using System.Linq;`**
 {% endhint %}
 
 ### Att göra om en array till en lista
@@ -103,7 +103,7 @@ List<string> choices = new List<string>() {"Start", "Options", "Quit"};
 Mer information om List finns under [Generiska klasser](../klasser-och-objektorientering/generiska-klasser.md).
 
 {% hint style="info" %}
-**OBSERVERA:** Om du använder .NET Core så behöver du manuellt skriva till detta högst upp i dokumentet för att listor ska fungera:
+OBSERVERA: Om du använder .NET Core så behöver du manuellt skriva till detta högst upp i dokumentet för att listor ska fungera:
 
 ```csharp
 using System.Collections.Generic;

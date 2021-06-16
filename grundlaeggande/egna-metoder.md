@@ -19,6 +19,8 @@ MetodensNamn();
 
 "static"-delen behövs _enbart_ om metoden ska kunna anropas från en annan metod som också är static, till exempel Main.
 
+För mer information om vad "static" egentligen betyder – [läs här](../klasser-och-objektorientering/static.md).
+
 ## Parametrar
 
 Genom parametrar kan man föra in information i metoden när den anropas.
