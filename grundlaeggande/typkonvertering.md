@@ -64,14 +64,24 @@ bool onlyContainsNumbers = testLetters.All(char.IsDigit); // Blir false
 
 ### float.Parse\(\)
 
-Fungerar motsvarande int.Parse, men omvandlar till floats istället.
+Tar emot ett värde, och konverterar det till en float – om det går. Resultatet av konverteringen returneras.
 
 ```csharp
 string tal = "42.5"
 float f = float.Parse(tal);
 ```
 
+Om det inte går att konvertera värdet till en float, kommer Parse att ge ifrån sig ett runtime-felmeddelande.
+
 ### float.TryParse\(\)
+
+Tar emot två parametrar – ett värde som ska försöka konverteras till en float, och en "out"-variabel.
+
+Den float som är resultatet av konverteringen lagras i out-variabeln.
+
+Om konverteringen lyckades returnerar TryParse true, om den inte lyckas returneras istället false. Då blir också out-variabeln 0.
+
+Metoden ger alltså två resultat ifrån sig – dels en bool som säger ifall konverteringen lyckades, och dels en float som innehåller resultatet av konverteringen.
 
 ```csharp
 string tal = "42.5";
