@@ -25,7 +25,7 @@ string path = @"c:\temp\exempel.txt";
 
 @-tecknet gör att \-tecknen inte tolkas, utan tas bokstavligt.
 
-#### Filer i samma mapp <a id="h.p_GkVdjQel-LgI"></a>
+#### Filer i samma mapp som programmet <a id="h.p_GkVdjQel-LgI"></a>
 
 När det gäller filer som ligger i samma mapp som programmet så behöver man inte ange mapp eller enhet.
 
@@ -34,6 +34,4 @@ string path = @"localfile.txt";
 ```
 
 För er som läst webbutveckling bör detta vara bekant.
-
-Normalt sett placeras exe-filen i mappen "Debug" i mappen "Bin" i projektmappen.
 
