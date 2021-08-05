@@ -2,48 +2,29 @@
 
 ## Skapa nytt konsollprojekt
 
-Se till att åtminstone C\# och Solution Explorer-tilläggen är installerade i VSCode.
+Se till att åtminstone C\# och C\# Toolbox-tilläggen är installerade i VSCode.
 
-Börja med att gå till mappen där du vill ha ditt projekt, via File → Open folder.
+* Tryck F1 och sök/välj "C\# Toolbox: Create project".
+* Project template: Console application.
+* Project name: skriv något som beskriver projektet. **INGA MELLANSLAG**.
+* Framework: 5.0
 
-**Skapa alltid en ny mapp om du startar ett nytt projekt.**
+Tryck på Create Project. Nu bör ditt nya projekt skapas och öppnas.
 
-Välj sedan en av metoderna nedan.
+Du bör nu uppe i kommandopaletten få välja mellan en sln-fil och en csproj-fil. Välj sln-filen \(egentligen verkar det inte spela så stor roll\).
 
-### Metod 1 \(med solution\):
-
-* Gå till Solution explorer.
-* Högerklicka, välj "Create new empty solution". Ge din solution ett namn. Svara "Yes" på att du vill skapa templates-mapp.
-* Högerklicka på din nya solution, välj "Add new project".
-* Välj "Console application" och "C\#".
-* Ge projektet ett namn. Det kan vara samma namn som din solution.
-* Välj mappnamn för projektet. Det kan vara samma namn som projektet.
-
-### Metod 2 \(utan solution\):
-
-* Tryck F1 \(eller Fn+F1\) för att få fram kommandopaletten.
-* Sök efter, och kör, "Add new project".
-* Välj "Console application" och "C\#".
-* Ge projektet ett namn. Det kan vara samma namn som din solution.
-* Välj mappnamn för projektet. Det kan vara samma namn som projektet.
-
-### Metod 3 \(utan solution\):
-
-* Gå till terminalen \(Högerklicka i mappvyn → Open in Terminal.
-* Skriv, i terminalen, "dotnet new console" och tryck enter.
-
-### Oavsett metod:
+### De första stegen
 
 Gå till din Program.cs.
 
-Första gången du skapar ett nytt C\#-projekt på en ny dator så kommer C\#-tillägget i VSCode att ladda ner OmniSharp, .NET Core Debugger och Razor Language Server. Du kan kolla i Output för att se när det är klart.
+Första gången du skapar ett nytt C\#-projekt på en ny dator, eller ifall C\#-tillägget uppdaterats, så kommer C\#-tillägget i VSCode att ladda ner OmniSharp, .NET Core Debugger och Razor Language Server. Du kan kolla i Output för att se när det är klart.
 
 Du bör få en ruta som meddelar att "required assets to build and debug are missing" och som frågar ifall dessa assets ska läggas till. **Svara "Yes"**.
 
 Om du inte ser den rutan:
 
 * Klicka på den lilla klockan \(🔔\) nere i högra hörnet. Då får du upp alla notifications och kan se om du bara missade den.
-* Man kan göra det manuellt också – Gå till kommandopaletten \(F eller Fn+F1\) och sök efter "assets" så bör du hitta en som heter ".NET: Generate Assets for Build and Debug". Välj den.
+* Man kan göra det manuellt också – Gå till kommandopaletten \(F1 eller Fn+F1\) och sök efter "assets" så bör du hitta en som heter ".NET: Generate Assets for Build and Debug". Välj den.
 
 ## Kompilera och köra
 
