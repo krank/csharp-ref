@@ -10,12 +10,17 @@ För att du ska kunna skapa och kompilera C\#-projekt behöver du också Dotnet 
 
 VS Code är väldigt modulärt. Det betyder att det finns en ganska liten "grund" och sedan lägger man till de funktioner man behöver genom att installera _extensions_.
 
+**Grunduppsättning för C\#:**
+
 * [C\#](https://www.google.com/url?q=https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3Dms-vscode.csharp&sa=D&sntz=1&usg=AFQjCNGOzgSFj14Pbd9ut66JAvh0loJsEw) – Ger Visual Studio Code stöd för C\#
 * [C\# Toolbox of Productivity](https://marketplace.visualstudio.com/items?itemName=RichardZampieriprog.csharp-snippet-productivity) – Lägger till en del extra användbara genvägar och funktioner, t.ex. för att skapa nya projekt och klasser.
-* [Auto-Using for C\#](https://marketplace.visualstudio.com/items?itemName=Fudge.auto-using) – hjälper till att lägga in using-statements när det behövs, t.ex. för listor så lägger den till `using System.Collections.Generic`.
 * [gitignore](https://www.google.com/url?q=https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3Dcodezombiech.gitignore&sa=D&sntz=1&usg=AFQjCNHu8aUEHuuoWIdAZQcCdvDqnSWhSQ) – Underlättar arbetet med git och Visual Studio Code. Om du söker efter den, se till att ta den av CodeZombie!
 * [NuGet Gallery](https://www.google.com/url?q=https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3Dpatcx.vscode-nuget-gallery&sa=D&sntz=1&usg=AFQjCNGESnjNCe20EX_KwyQS6_sTUBYv5A) – Underlättar installationen av externa bibliotek och paket, t.ex. Raylib.
+
+**Bonus:**
+
 * [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare) – Realtids-samarbete; flera personer kan skriva kod tillsammans samtidigt.
+* [Auto-Using for C\#](https://marketplace.visualstudio.com/items?itemName=Fudge.auto-using) – hjälper till att lägga in using-statements när det behövs, t.ex. för listor så lägger den till `using System.Collections.Generic`.
 
 ## Praktiska inställningar
 
