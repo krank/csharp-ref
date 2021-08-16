@@ -34,7 +34,7 @@ Klassen vars instanser ska kunna serialiseras måste vara public.
 ```csharp
 public class Spaceship
 {
-
+  // Lägg som vanligt in variabler, properties, metoder etc här
 }
 ```
 

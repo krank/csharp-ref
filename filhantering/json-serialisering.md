@@ -1,15 +1,40 @@
 # JSON-serialisering
 
-JSON-serialisering och deserialisering följer samma principer som [serialisering och deserialisering av XML.](xml-serialisering.md) Man omvandlar alltså objekt till JSON-kod eller tvärtom. JSON är Javascript Object Notation, så för den som är van vid Javascript kanske det ser bekant ut.
+Serialisering handlar om att ta ett objekt – en instans – och göra om objektet till ren text som kan lagras i en fil eller till exempel skickas via internet. Se nedan för ett exempel på en klass och hur en serialiserad version av klassen skulle se ut.
+
+{% tabs %}
+{% tab title="Spaceship.cs" %}
+```csharp
+public class Spaceship
+{
+ public int Hp {get; set;} = 100;
+ public int MaxHp {get; set;} = 100;
+ public int Speed {get; set;} = 2;
+}
+```
+{% endtab %}
+
+{% tab title="Spaceship.json" %}
+```javascript
+{
+  "Hp": 100,
+  "MaxHp": 100,
+  "Speed": 2
+}
+```
+{% endtab %}
+{% endtabs %}
+
+JSON är Javascript Object Notation, så för den som är van vid Javascript kanske det ser bekant ut.
+
+[Här hittar du Microsofts officiella dokumentation.](https://docs.microsoft.com/en-us/dotnet/standard/serialization/system-text-json-how-to)
 
 ## Bibliotek för enkel deserialisering
-
-Använd NuGet Gallery för att installera **Newtonsoft JSON**.
 
 Lägg till detta using-statement:
 
 ```csharp
-using Newtonsoft.JSON;
+using System.Text.Json;
 ```
 
 ## Deserialisering av JSON
@@ -34,28 +59,67 @@ Utgå från den JSON-kod du ska deserialisera.
 }
 ```
 
-Skapa en publik klass som har publika variabler eller properties som motsvarar de egenskaper du är intresserad av.
+Skapa en publik klass som har publika [properties ](../klasser-och-objektorientering/inkapsling-och-properties.md#properties)som motsvarar de egenskaper du är intresserad av.
 
 {% tabs %}
 {% tab title="Pokemon.cs" %}
 ```csharp
 class Pokemon
 {
-  public string name;
-  public int id;
-  public bool is_default;
+  public string name {get; set;}
+  public int id {get; set;}
+  public bool is_default {get; set;}
 }
 ```
 {% endtab %}
 {% endtabs %}
 
-### DeserializeObject
+### JsonSerializer.Deserialize
 
-Används för att deserialisera ett objekt från en JSON-string
+Används för att deserialisera ett objekt från en JSON-string.
 
 ```csharp
-Pokemon ditto = JsonConvert.DeserializeObject<Pokemon>(jsonString);
+Pokemon ditto = JsonSerializer.Deserialize<Pokemon>(jsonString);
 ```
+
+### Stora och små bokstäver
+
+Properties ska döpas med stor bokstav i C\#, men i json döps egenskaper nästan alltid med liten bokstav. Deserialize är känsligt för skillnader mellan stora och små bokstäver. Det går att stänga av den känsligheten:
+
+```csharp
+var options = new JsonSerializerOptions
+{
+    PropertyNameCaseInsensitive = true
+};
+
+// Nu kan property-namnen i Pokemon.cs döpas med stor bokstav
+Pokemon ditto = JsonSerializer.Deserialize<Pokemon>(jsonString, options);
+```
+
+### Manuell matchning av properties
+
+Med \[JsonPropertyName\(\)\] kan man bestämma att en C\#-klass' property ska matchas mot ett JSON-värde med annat namn.
+
+{% hint style="info" %}
+**OBS:** detta kräver att du inkluderar `System.Text.Json.Serialization`.
+{% endhint %}
+
+{% tabs %}
+{% tab title="Pokemon.cs" %}
+```csharp
+using System.Text.Json.Serialization;
+
+class Pokemon
+{
+  public string Name {get; set;}
+  public int Id {get; set;}
+  
+  [JsonPropertyName("is_default")]
+  public bool IsDefault {get; set;}
+}
+```
+{% endtab %}
+{% endtabs %}
 
 ### Deserialisering av objekt i flera led
 
@@ -79,8 +143,8 @@ För att deserialisera dessa, skapa klasser som beskriver de inre objekten.
 ```csharp
 class PokemonSpecies
 {
-  public string name;
-  public string url;
+  public string Name {get; set;}
+  public string Url {get; set;}
 }
 ```
 {% endtab %}
@@ -91,8 +155,8 @@ class PokemonSpecies
 ```csharp
 class Pokemon
 {
-  public string name;
-  public PokemonSpecies species  
+  public string Name {get; set;}
+  public PokemonSpecies Species {get; set;}
 }
 ```
 {% endtab %}
@@ -120,8 +184,8 @@ För att deserialisera dessa, skapa helt enkelt publika [listor ](../grundlaegga
 ```csharp
 class Pokemon
 {
-  public string name;
-  public List<string> forms;
+  public string Name {get; set;}
+  public List<string> Forms {get; set;}
 }
 ```
 {% endtab %}
@@ -129,37 +193,46 @@ class Pokemon
 
 ## Serialisering till JSON
 
-\[INTE KLART\]
+### JsonSerializer.Serialize
+
+Används för att serialisera ett objekt till en JSON-string.
+
+```csharp
+  Pokemon poke = new Pokemon()
+  {
+    Name = "Ditto",
+    Id = 132,
+    IsDefault = true,
+    Species = new PokemonSpecies() {
+      Name = "ditto",
+      Url = "https://pokeapi.co/api/v2/pokemon-species/132/"
+    }
+  };
+
+  string json = JsonSerializer.Serialize<Pokemon>(poke);
+```
+
+Denna string kan sedan lagras i en textfil eller t.ex. skickas som svar på ett [REST](../grafik/naetverk-och-internet-.../restful-server/)-anrop.
+
+{% hint style="info" %}
+OBS: Det finns inget sätt att automatiskt förvandla namnen på properties till snake\_case, vilket ju ofta används i JSON. Vill du serialisera med snake\_case så får du med andra ord använda JsonPropertyName-attributet.
+{% endhint %}
+
+### Användbara SerializationOptions
+
+```csharp
+JsonSerializerOptions options = new JsonSerializerOptions() {
+  // serialiserar properties med camelCase
+  PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+  
+  // Gör JSON-koden snygg och läsbar
+  WriteIndented = true 
+};
+
+string json = JsonSerializer.Serialize<Pokemon>(poke, options);
+```
 
 ## Användbara attribut
-
-### \[JsonProperty\]
-
-Används för att ändra så att en json-variabel inte måste heta exakt samma sak som sin C\#-variant.
-
-{% tabs %}
-{% tab title="C\#" %}
-```csharp
-public class Pokemon
-{
-  [JsonProperty("name")]
-  public string Name {get; set;}
-  
-  [JsonProperty("is_default")]
-  public bool IsDefault {get; set;}
-}
-```
-{% endtab %}
-
-{% tab title="JSON" %}
-```javascript
-{
-  "name": "ditto",
-  "is_default": true
-}
-```
-{% endtab %}
-{% endtabs %}
 
 ### \[JsonIgnore\]
 
@@ -170,10 +243,7 @@ Används för att se till så att en variabel eller property på C\#-sidan inte 
 ```csharp
 public class Pokemon
 {
-  [JsonProperty("name")]
   public string Name {get; set;}
-  
-  [JsonProperty("is_default")]
   public bool IsDefault {get; set;}
   
   [JsonIgnore]
