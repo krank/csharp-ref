@@ -60,31 +60,6 @@ public class Pokemon
 {% endtab %}
 {% endtabs %}
 
-### \[JsonPropertyName\(\)\]
-
-Med attributet `[JsonPropertyName()]` kan man bestämma att en C\#-klass' property ska matchas mot ett JSON-värde med annat namn.
-
-{% hint style="info" %}
-**OBS:** detta kräver att du inkluderar `System.Text.Json.Serialization`.
-{% endhint %}
-
-{% tabs %}
-{% tab title="Pokemon.cs" %}
-```csharp
-using System.Text.Json.Serialization;
-
-class Pokemon
-{
-  public string Name {get; set;}
-  public int Id {get; set;}
-  
-  [JsonPropertyName("is_default")]
-  public bool IsDefault {get; set;}
-}
-```
-{% endtab %}
-{% endtabs %}
-
 ## JsonSerializer.Serialize
 
 Används för att serialisera ett objekt till en JSON-string.
@@ -110,31 +85,6 @@ Denna string kan sedan lagras i en textfil eller t.ex. skickas som svar på ett 
 OBS: Det finns inget sätt att automatiskt förvandla namnen på properties till snake\_case, vilket ju ofta används i JSON. Vill du serialisera med snake\_case så får du med andra ord använda JsonPropertyName-attributet.
 {% endhint %}
 
-### \[JsonIgnore\]
-
-Används för att se till så att en variabel eller property på C\#-sidan inte serialiseras till JSON.
-
-{% hint style="info" %}
-**OBS:** detta kräver att du inkluderar `System.Text.Json.Serialization`.
-{% endhint %}
-
-{% tabs %}
-{% tab title="C\#" %}
-```csharp
-using System.Text.Json.Serialization;
-
-public class Pokemon
-{
-  public string Name {get; set;}
-  public bool IsDefault {get; set;}
-  
-  [JsonIgnore]
-  public int CurrentHp {get; set;}
-}
-```
-{% endtab %}
-{% endtabs %}
-
 ## JsonSerializer.Deserialize
 
 Används för att deserialisera ett objekt från en JSON-string.
@@ -158,6 +108,81 @@ var options = new JsonSerializerOptions
 // Nu kan property-namnen i Pokemon.cs döpas med stor bokstav
 Pokemon ditto = JsonSerializer.Deserialize<Pokemon>(jsonString, options);
 ```
+
+## Attribut
+
+Mer om attribut [här](../../klasser-och-objektorientering/attribut.md).
+
+{% hint style="info" %}
+**OBS:** dessa kräver att du inkluderar `System.Text.Json.Serialization`.
+{% endhint %}
+
+### \[JsonIgnore\]
+
+Används för att se till så att en variabel eller property på C\#-sidan inte serialiseras till JSON.
+
+```javascript
+using System.Text.Json.Serialization;
+
+public class Pokemon
+{
+  public string Name {get; set;}
+  public bool IsDefault {get; set;}
+  
+  [JsonIgnore]
+  public int CurrentHp {get; set;}
+}
+```
+
+### \[JsonPropertyName\(\)\]
+
+Med attributet `[JsonPropertyName()]` kan man bestämma att en C\#-klass' property ska matchas mot ett JSON-värde med annat namn.
+
+{% tabs %}
+{% tab title="Pokemon.cs" %}
+```csharp
+using System.Text.Json.Serialization;
+
+class Pokemon
+{
+  public string Name {get; set;}
+  public int Id {get; set;}
+  
+  [JsonPropertyName("is_default")]
+  public bool IsDefault {get; set;}
+}
+```
+{% endtab %}
+{% endtabs %}
+
+## Deserialisering av listor
+
+Ibland beskriver JSON-kod listor av objekt eller värden. De kännetecknas av att ge omges av hakparenteser `[]`.
+
+```javascript
+{
+  "name": "ditto",
+  "forms":
+  [
+    0: "Ditto"
+    1: "Exempel"
+  ]
+}
+```
+
+För att deserialisera dessa, skapa helt enkelt publika [listor ](../../grundlaeggande/listor-och-arrayer.md#list)i klassen.
+
+{% tabs %}
+{% tab title="Pokemon.cs" %}
+```csharp
+class Pokemon
+{
+  public string Name {get; set;}
+  public List<string> Forms {get; set;}
+}
+```
+{% endtab %}
+{% endtabs %}
 
 ## Deserialisering av objekt i flera led
 
@@ -195,35 +220,6 @@ class Pokemon
 {
   public string Name {get; set;}
   public PokemonSpecies Species {get; set;}
-}
-```
-{% endtab %}
-{% endtabs %}
-
-## Deserialisering av listor
-
-Ibland beskriver JSON-kod listor av objekt eller värden. De kännetecknas av att ge omges av hakparenteser `[]`.
-
-```javascript
-{
-  "name": "ditto",
-  "forms":
-  [
-    0: "Ditto"
-    1: "Exempel"
-  ]
-}
-```
-
-För att deserialisera dessa, skapa helt enkelt publika [listor ](../../grundlaeggande/listor-och-arrayer.md#list)i klassen.
-
-{% tabs %}
-{% tab title="Pokemon.cs" %}
-```csharp
-class Pokemon
-{
-  public string Name {get; set;}
-  public List<string> Forms {get; set;}
 }
 ```
 {% endtab %}

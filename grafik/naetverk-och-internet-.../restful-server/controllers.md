@@ -21,7 +21,7 @@ public class SomethingController : ControllerBase
 
 ## Attribut
 
-Används för att säga saker **om** klasser, variabler och metoder.
+Mer om attribut [här](../../../klasser-och-objektorientering/attribut.md).
 
 ### \[ApiController\]
 
