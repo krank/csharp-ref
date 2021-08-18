@@ -19,7 +19,7 @@ public class SomethingController : ControllerBase
 }
 ```
 
-## Dekorationer
+## Attribut
 
 Används för att säga saker **om** klasser, variabler och metoder.
 
