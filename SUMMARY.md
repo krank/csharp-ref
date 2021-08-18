@@ -43,8 +43,9 @@
 * [Läsa och skriva](filhantering/laesa-och-skriva.md)
 * [Filer och mappar](filhantering/filer-och-mappar.md)
 * [Open, close, using](filhantering/open-close-using.md)
-* [JSON-serialisering](filhantering/json-serialisering.md)
-* [XML-serialisering](filhantering/xml-serialisering.md)
+* [Serialisering \[…\]](filhantering/serialisering-.../README.md)
+  * [JSON-serialisering](filhantering/serialisering-.../json-serialisering.md)
+  * [XML-serialisering](filhantering/serialisering-.../xml-serialisering.md)
 * [Resursfiler](filhantering/resursfiler.md)
 
 ## Klasser och objektorientering

@@ -47,7 +47,7 @@ string content = response.Content;
 Console.WriteLine(content);
 ```
 
-Denna string kan sedan [deserialiseras till objekt](../../filhantering/json-serialisering.md).
+Denna string kan sedan [deserialiseras till objekt](../../filhantering/serialisering-.../json-serialisering.md).
 
 ### Svarets status-kod
 
