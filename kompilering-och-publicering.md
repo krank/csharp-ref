@@ -36,3 +36,9 @@ dotnet publish -r win-x64 -c Release -p:PublishSingleFile=true -p:PublishTrimmed
 
 Då kommer filerna i publish-mappen fortfarande vara ganska få, men exe-filen kommer att vara betydligt större. Mappstrukturen blir också lite annorlunda, men det bör inte vara svårt att hitta rätt filer att publicera.
 
+Vill man verkligen bara ha _en_ exe-fil så kan man lägga till ytterligare en parameter:
+
+```markup
+dotnet publish -r win-x64 -c Release -p:PublishSingleFile=true -p:PublishTrimmed=true -p:IncludeNativeLibrariesForSelfExtract=true --self-contained true
+```
+
