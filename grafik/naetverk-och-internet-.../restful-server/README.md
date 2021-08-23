@@ -6,16 +6,6 @@ Nedan är instruktioner för att skapa en enkel API-server som svarar på GET-an
 
 Skapa projektets solution som vanligt, men välj .NET Core Web API som projekttyp istället för Console application.
 
-### Att skapa projektet i Visual Studio 2019
-
-* Starta Visual Studio Installer.
-* Gå till Modify och Individual components.
-* Leta rätt på "Web Development Tools plus .NET Core 2.1". Kryssa i, installera.
-* Starta ett nytt projekt, välj ASP.NET Core Web Application som mall att utgå från.
-* Skriv in namn och välj var projektet ska ligga.
-* Välj API och tryck Create.
-* När projektet skapats, tryck på den lilla nedåtpilen till höger om IIS Express och välj namnet på ditt projekt istället.
-
 ### Rensa bort Weather Forecast-delarna
 
 * Ta bort WeatherForecast.cs
