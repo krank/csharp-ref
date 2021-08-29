@@ -29,7 +29,7 @@ Om du inte ser den rutan:
 
 ## Kompilera och köra
 
-Börja med att gå till Debug and run-panelen, den som ser ut som en insekt med ett kryss på.  
+Börja med att gå till Debug and run-panelen, den som ser ut som en insekt på en play-knapp.  
   
 ![](../../.gitbook/assets/image%20%283%29.png) 
 
