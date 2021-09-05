@@ -8,6 +8,7 @@ Se till att åtminstone C\# och C\# Toolbox-tilläggen är installerade i VSCode
 * Project template: Console application.
 * Project name: skriv något som beskriver projektet. **INGA MELLANSLAG**.
 * Välj en mapp att lägga projektet i.
+  * Om du vill använda samma mapp varje gång – [se det här knepet.](./#ha-en-standardmapp-foer-nya-projekt)
 * Framework: 5.0.
 
 Tryck på Create Project. Nu bör ditt nya projekt skapas och öppnas.

@@ -30,6 +30,24 @@ Under Settings \(Kugghjulet och sen Settings, eller kortkommandot Ctrl+, \) finn
 
 * Sök efter "lens", och kryssa ur "Csharp › References Code Lens: Enabled".
 
+### Ha en standardmapp för nya projekt
+
+* Klicka i adressfältet för att kunna markera och kopiera adressen till mappen
+  * Exempel: `C:\Users\krank\Documents\Programmering 1`
+* Gå till Visual Studio Code.
+* Ha C\# Toolbox of Productivity installerad och uppdaterad.
+* Gå till inställningarna.
+* Sök efter "Default Folder For Project Creation". Klicka på "Edit in settings.json".
+* Gå till Utforskaren och bläddra till mappen där du vill lägga dina projekt.
+
+![](../../.gitbook/assets/image%20%2835%29.png)
+
+* Klistra in adressen inom citattecknen efter `"csharp-snippet-productivity.defaultFolderForProjectCreation"`.
+  * OBS: Dubblera alla \
+  * Exempel: `"C:\\Users\\krank\\Documents\\Programmering 1"`
+
+![](../../.gitbook/assets/image%20%2834%29.png)
+
 ### Visa mappar ordentligt
 
 VSCode gillar att visa mappar "kompakt". Det betyder att den "sammanfattar" mappstrukturer i vissa fall, så att trädet under Explore blir konstigt.
