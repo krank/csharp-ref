@@ -3,17 +3,17 @@
 
 
 * Starta Visual Studio Code
-* File → Open folder.
-  * Gå till din mapp för Programmering 2. Skapa en ny mapp. Döp den till projektets namn. Välj att öppna den.
-* **SKAPA SOLUTION**
-  * Solution Explorer. Högerklicka, "Create new empty solution". Döp den till projektets namn.
-* **SKAPA PROJEKT**
-  * När den är klar, högerklicka på din solution.
-  * "Add New Project".
-  * Välj rätt typ, oftast Console Application.
-  * C\#.
-  * Döp projektet.
-  * Helt OK att ha samma namn på mappen.
+* **SKAPA PROJEKTET**
+  * F1 → C\# Toolbox: Create Project.
+  * Template – oftast Console Application.
+  * Projektnamnet – inga mellanslag, börja inte med siffror.
+  * Location: Välj mapp för projektet.
+  * Solution name: Genereras automatiskt från projektnamnet.
+  * Framework: 5.0
+  * Tryck "Create Project"
+  * När det nya fönstret öppnas, välj sln-filen.
+  * När dialogrutan dyker upp och frågar, svara "Yes" på att du vill skapa filerna som krävs.
+  * Dubbelkolla så OmniSharp går igång \(den lilla eldsflamman nere till vänster\).
 * **GÖR SÅ PROJEKTET KAN KÖRAS**
   * Run \(ikonen med play-knapp och insekt\)
     * Ser du inget här: F1 → ".NET: Generate Assets for Build and Debug"
@@ -27,7 +27,7 @@
   * F1 → Add gitignore
     * Välj Visual Studio Code
     * Välj Append
-  * Source Control
+  * Gå till Source Control
   * Initialize Repository
   * Skriv in ditt första commit-meddelande och stage:a alla filer du vill ha med \(manuellt eller automatiskt\)
   * Nere i vänstra kanten av programmet, klicka på det lilla molnet \("Publish to GitHub"\)
