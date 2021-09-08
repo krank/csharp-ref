@@ -56,7 +56,7 @@
 * [Public, private och protected](klasser-och-objektorientering/public-private-och-protected.md)
 * [Klassdiagram](klasser-och-objektorientering/klassdiagram.md)
 * [Klassmetoder](klasser-och-objektorientering/klassmetoder.md)
-* [Kontruktorer](klasser-och-objektorientering/kontruktorer.md)
+* [Konstruktorer](klasser-och-objektorientering/kontruktorer.md)
 * [Arv](klasser-och-objektorientering/arv.md)
 * [Inkapsling och properties](klasser-och-objektorientering/inkapsling-och-properties.md)
 * [Static](klasser-och-objektorientering/static.md)

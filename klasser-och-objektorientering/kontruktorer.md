@@ -1,4 +1,4 @@
-# Kontruktorer
+# Konstruktorer
 
 En konstruktor är en metod som anropas automatiskt när en instans skapas. Den skrivs in i klassen som en publik metod utan returtyp och med samma namn som klassen.
 
