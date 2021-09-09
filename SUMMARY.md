@@ -35,6 +35,7 @@
 * [Slump \(Random\)](grundlaeggande/slump.md)
 * [Matematik \(Math\)](grundlaeggande/matematik-math.md)
 * [Vektorer \(Numerics\)](grundlaeggande/vektorer-numerics.md)
+* [Datum och tid](grundlaeggande/datum-och-tid.md)
 * [Try-catch](grundlaeggande/try-catch.md)
 
 ## Filhantering
