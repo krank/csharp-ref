@@ -6,35 +6,54 @@ description: (Under uppbyggnad)
 
 ## DateTime
 
-Datatyp som lagrar tidpunkter.
+Datatyp – mer exakt en [klass ](../klasser-och-objektorientering/klasser-och-instanser.md)– som lagrar tidpunkter.
 
 ```csharp
 // Datumet 10:e december 1815
 DateTime lovelaceBirthday = new DateTime(1815, 12, 10);
+
+// Tidpunkten 14:32:00 på datumet 1969-07-16
+DateTime apolloEleven = new DateTime(1969, 8, 16, 14, 32, 0);
 ```
 
 ### Egenskaper
 
+Man kan få ut information ur DateTime-objekt genom att läsa av dess egenskaper. \(Alla dessa är i själva verket [properties](../klasser-och-objektorientering/inkapsling-och-properties.md#properties).\)
+
 ```csharp
-Console.WriteLine(lovelaceBirthday.DayOfWeek); // vilken dag i veckan det är
-Console.WriteLine(lovelaceBirthday.Year);
-Console.WriteLine(lovelaceBirthday.Month);
-Console.WriteLine(lovelaceBirthday.Day); // Dag i månaden
-Console.WriteLine(lovelaceBirthday.Hour);
-Console.WriteLine(lovelaceBirthday.Minute);
-Console.WriteLine(lovelaceBirthday.Second);
-Console.WriteLine(lovelaceBirthday.Millisecond);
+lovelaceBirthday.DayOfWeek; // vilken dag i veckan det är
+lovelaceBirthday.Year;
+lovelaceBirthday.Month;
+lovelaceBirthday.Day; // Dag i månaden
+apolloEleven.Hour; // 14
+apolloEleven.Minute; // 32
+apolloEleven.Second; // 0
+apolloEleven.Millisecond; // 0
 ```
 
 ### Metoder
 
-## DateTime.Now
-
-Tidpunkten _just nu_.
-
-\(Är egentligen en [static ](../klasser-och-objektorientering/static.md#statiska-variabler)[property](../klasser-och-objektorientering/inkapsling-och-properties.md#properties)\)
+Man kan justera ett DateTime-objekts innehåll genom att anropa dess metoder.
 
 ```csharp
+// Flytta fram klockan
+apolloEleven.AddYears(1);
+apolloEleven.AddMonths(2);
+apolloEleven.AddDays(14);
+apolloEleven.AddHours(2);
+apolloEleven.AddMinutes(30);
+apolloEleven.AddSeconds(10);
+apolloEleven.AddMilliseconds(300);
+```
+
+Alla dessa kan också användas för att flytta klockan bakåt – då stoppar man helt enkelt in negativa tal.
+
+## DateTime.Now
+
+Tidpunkten _just nu_. \(Är egentligen en [static ](../klasser-och-objektorientering/static.md#statiska-variabler)[property](../klasser-och-objektorientering/inkapsling-och-properties.md#properties)\)
+
+```csharp
+// Spara en kopia av tidpunkten "just nu" i variabeln startTime
 DateTime startTime = DateTime.Now;
 ```
 
