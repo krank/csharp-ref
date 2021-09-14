@@ -7,6 +7,13 @@ Saker som behövs:
 * [Git-scm](https://git-scm.com/)
 * Ett konto på [GitHub](https://github.com/).
 
+## Första gången efter ny Git-installation
+
+* Gå till Terminal i menyn och välj New terminal.
+* I terminalen som dyker upp längst ner, skriv:
+  * `git config --global user.name "Förnamn Efternamn"` , fast med dina namn, och tryck enter.
+  * `git config --global user.email "fornamn.efternamn@elev.ga.ntig.se"` , fast med den E-mailadress du registrerade dig med på GitHub, och tryck enter.
+
 ## Arbeta med Git \(+GitHub\) och Visual Studio Code
 
 ### Skapa ett projekt och göra det till ett repository + koppla till GitHub \(en gång per projekt\)

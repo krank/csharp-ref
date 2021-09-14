@@ -14,7 +14,6 @@
   * [Felsökning](mjukvara/visual-studio-code/felsoekning.md)
 * [Git & GitHub \[…\]](mjukvara/git-and-github/README.md)
   * [Git-begrepp](mjukvara/git-and-github/git-begrepp.md)
-  * [Felsökning](mjukvara/git-and-github/felsoekning.md)
 
 ## Grundläggande
 
