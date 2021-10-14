@@ -27,7 +27,7 @@ int x = (int) xPos;
 
 ## Konvertera till int
 
-### int.Parse\(\)
+### int.Parse()
 
 Många datatyper kan inte konverteras direkt till t.ex. en int. Metodern int.Parse tar emot nästan vad som helst – t.ex. en string – och försöker konvertera den till en int.
 
@@ -36,7 +36,7 @@ string tal = "42";
 int i = int.Parse(tal);
 ```
 
-### int.TryParse\(\)
+### int.TryParse()
 
 För en enkel, säker konvertering kan man använda TryParse.
 
@@ -46,9 +46,9 @@ int resultat;
 bool lyckad = int.TryParse(tal, out resultat);
 ```
 
-TryParse returnerar true om konverteringen lyckades, false om den inte lyckades. Resultatet lagras i variabeln som anges som "out"-variabel i den andra parametern \(i exemplet, variabeln "resultat"\). Om konverteringen misslyckas så blir resultatet 0.
+TryParse returnerar true om konverteringen lyckades, false om den inte lyckades. Resultatet lagras i variabeln som anges som "out"-variabel i den andra parametern (i exemplet, variabeln "resultat"). Om konverteringen misslyckas så blir resultatet 0.
 
-### .All\(char.IsDigit\)
+### .All(char.IsDigit)
 
 Om man försöker använda Parse på en string som innehåller bokstäver så kan man få felmeddelande. Därför kan man använda följande kod för att undersöka ifall en string enbart innehåller siffror.
 
@@ -62,7 +62,7 @@ bool onlyContainsNumbers = testLetters.All(char.IsDigit); // Blir false
 
 ## Konvertera till float
 
-### float.Parse\(\)
+### float.Parse()
 
 Tar emot ett värde, och konverterar det till en float – om det går. Resultatet av konverteringen returneras.
 
@@ -73,7 +73,7 @@ float f = float.Parse(tal);
 
 Om det inte går att konvertera värdet till en float, kommer Parse att ge ifrån sig ett runtime-felmeddelande.
 
-### float.TryParse\(\)
+### float.TryParse()
 
 Tar emot två parametrar – ett värde som ska försöka konverteras till en float, och en "out"-variabel.
 
@@ -88,4 +88,3 @@ string tal = "42.5";
 float f;
 bool lyckad = int.TryParse(tal, out f);
 ```
-

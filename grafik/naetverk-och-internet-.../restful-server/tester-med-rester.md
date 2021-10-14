@@ -2,7 +2,7 @@
 
 Chrome-pluginet [RESTer](https://chrome.google.com/webstore/detail/rester/eejfoncpjfgmeleakejdcanedmefagga) låter oss göra REST-anrop till servrar utan att programmera en klient.
 
-![](../../../.gitbook/assets/image%20%2828%29.png)
+![](<../../../.gitbook/assets/image (28).png>)
 
 Det är ganska enkelt att använda
 
@@ -29,4 +29,3 @@ Ofta kan man undersöka den output man får från GET för att se hur JSON-datan
 {% hint style="warning" %}
 **OBSERVERA:** Om du skickar in JSON-data, kom ihåg att lägga till en header som säger att Content-Type är "application/json".
 {% endhint %}
-

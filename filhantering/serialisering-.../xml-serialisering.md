@@ -153,7 +153,7 @@ file.Close();
 {% endtab %}
 {% endtabs %}
 
-Eftersom serializern inte är skriven som en generisk klass så måste vi aktivt casta det Deserialize returnerar till den klass vi vill att det ska vara \(och vet att det borde vara\), i det här fallet Spaceship.
+Eftersom serializern inte är skriven som en generisk klass så måste vi aktivt casta det Deserialize returnerar till den klass vi vill att det ska vara (och vet att det borde vara), i det här fallet Spaceship.
 
 Samma kod kan skrivas så här, med hjälp av ett [using-statement](../open-close-using.md#using):
 
@@ -181,7 +181,7 @@ using (FileStream file = File.Open(@"ship.xml", FileMode.OpenOrCreate))
 {% endtab %}
 {% endtabs %}
 
-## XML-serialisering av samlingar \(arrayer, listor\)
+## XML-serialisering av samlingar (arrayer, listor)
 
 Det går utmärkt att serialisera även listor.
 
@@ -233,6 +233,4 @@ public class Fleet
 ```
 {% endtab %}
 {% endtabs %}
-
-
 

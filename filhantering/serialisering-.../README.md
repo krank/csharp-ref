@@ -1,8 +1,8 @@
-# Serialisering \[…\]
+# Serialisering \[…]
 
-Serialisering handlar om att ta ett objekt – en [instans ](../../klasser-och-objektorientering/klasser-och-instanser.md)– och göra om objektet till ren text \(s.k. "plain text"\) som kan lagras i en fil eller till exempel skickas via internet.
+Serialisering handlar om att ta ett objekt – en [instans ](../../klasser-och-objektorientering/klasser-och-instanser.md)– och göra om objektet till ren text (s.k. "plain text") som kan lagras i en fil eller till exempel skickas via internet.
 
-För att den rena texten sen ska kunna avläsas \(deserialiseras\) tillbaka till ett objekt i andra änden så behöver man vara överens om ett format. JSON är idag ett av de absolut vanligaste, och XML är också förekommande.
+För att den rena texten sen ska kunna avläsas (deserialiseras) tillbaka till ett objekt i andra änden så behöver man vara överens om ett format. JSON är idag ett av de absolut vanligaste, och XML är också förekommande.
 
 Se nedan för ett exempel på en klass och hur en instans av klassen skulle se ut om man serialiserade den till JSON respektive XML.
 
@@ -40,6 +40,4 @@ public class Spaceship
 ```
 {% endtab %}
 {% endtabs %}
-
-
 

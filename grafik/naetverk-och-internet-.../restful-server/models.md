@@ -21,9 +21,9 @@ public class Pokemon
 
 ### JSON-serialiserade instanser
 
-För att en \[HttpGet\]-metod ska returnera en JSON-serialiserad version av en instans av en modellklass, behövs två saker: 
+För att en \[HttpGet]-metod ska returnera en JSON-serialiserad version av en instans av en modellklass, behövs två saker: 
 
-* När man deklarerar metoden säger man att den ska returnera ActionResult&lt;Something&gt;, där Something är namnet på klassen vars instanser ska serialiseras.
+* När man deklarerar metoden säger man att den ska returnera ActionResult\<Something>, där Something är namnet på klassen vars instanser ska serialiseras.
 * När man kör Ok, så lägger man in en instans av den klassen inom parenteserna.
 
 {% tabs %}
@@ -128,6 +128,4 @@ namespace WebApplication1.Controllers
   }
 }
 ```
-
-
 

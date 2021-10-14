@@ -80,5 +80,4 @@ class Warrior : Character
 {% endtab %}
 {% endtabs %}
 
-I exemplet ovan är det alltså tänkt att metoden LevelUp ska anropas för att ge karaktärer ny level, ifall de fått tillräckligt med xp. I och med att olika karaktärer ska ha olika progression baserat på vilken klass de tillhör \(t.ex. Warrior\) så kan man låta LevelUp-metoden vara abstrakt och ha en egen implementation för varje subklass.
-
+I exemplet ovan är det alltså tänkt att metoden LevelUp ska anropas för att ge karaktärer ny level, ifall de fått tillräckligt med xp. I och med att olika karaktärer ska ha olika progression baserat på vilken klass de tillhör (t.ex. Warrior) så kan man låta LevelUp-metoden vara abstrakt och ha en egen implementation för varje subklass.

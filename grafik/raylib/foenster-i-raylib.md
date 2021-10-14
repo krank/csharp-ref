@@ -10,7 +10,7 @@ Raylib.InitWindow(800, 600, "Hello World");
 
 800 är fönstrets bredd, 600 dess höjd, och "Hello World" är vad som kommer att stå i titeln.
 
-## WindowShouldClose\(\)
+## WindowShouldClose()
 
 Returnerar False så länge användaren inte skickat signalen att fönstret borde stängas – till exempel genom att trycka på krysset.
 
@@ -48,4 +48,3 @@ class Program
     }
 }
 ```
-

@@ -134,7 +134,7 @@ class Node<T>
 {% endtab %}
 {% endtabs %}
 
-Nu kan jag bestämma vilken datatyp variabeln value ska ha genom att ange det mellan &lt;&gt; när jag skapar instansen:
+Nu kan jag bestämma vilken datatyp variabeln value ska ha genom att ange det mellan <> när jag skapar instansen:
 
 ```csharp
 Node<string> firstTextNode = new Node<string>();
@@ -143,4 +143,3 @@ firstTextNode.value = "Bananas";
 Node<int> firstNumberNode = new Node<int>();
 firstNumberNode.value = 23;
 ```
-

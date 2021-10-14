@@ -55,4 +55,3 @@ myHero.AddExperience(12);
 Hero bygger på Character, så alla instanser av Hero-klassen har egna name, hp, x och y-variabler. Dessutom har de egna kopior av Hurt-metoden, som då påverkar Hero-instansens egen hp.
 
 Dessutom tillför Hero-klassen ett par egna variabler och en egen metod.
-

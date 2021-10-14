@@ -54,4 +54,3 @@ foreach (string choice in choices)
   Console.WriteLine(choice);
 }
 ```
-

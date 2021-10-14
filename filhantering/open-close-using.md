@@ -19,7 +19,7 @@ FileModes:
 
 Används för att "stänga" en koppling till en fil och informera operativsystemet om att den nu kan öppnas och användas av andra program igen.
 
-```text
+```
 file.Close();
 ```
 
@@ -27,12 +27,11 @@ Det är en mycket bra idé att alltid komma ihåg att stänga sina filer när ma
 
 ## Using
 
-Using gör att man slipper använda Close\(\) – när kodblocket är slut så stängs filen automatiskt.
+Using gör att man slipper använda Close() – när kodblocket är slut så stängs filen automatiskt.
 
-```text
+```
 using (FileStream file = File.Open(@"test.txt", FileMode.OpenOrCreate))
 {
   /* Gör saker */
 }
 ```
-

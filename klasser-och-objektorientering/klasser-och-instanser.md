@@ -48,7 +48,7 @@ Goomba g3 = new Goomba() {x = 10, y = 6};
 ### Med VS Sharper for C\#
 
 * Högerklicka på mappen du vill skapa klassen i.
-* Välj "Add a new C\# Class file".
+* Välj "Add a new C# Class file".
 * Skriv in namnet på klassen – glöm inte stor bokstav!
 
 ### Med Solution Explorer
@@ -57,13 +57,11 @@ Goomba g3 = new Goomba() {x = 10, y = 6};
 * Högerklicks på ditt projekt
 * Välj "Create file"
 
-![](../.gitbook/assets/image%20%2817%29.png) 
+![](<../.gitbook/assets/image (18).png>) 
 
 * Skriv in ett filnamn – lämpligen klassens namn punkt cs.
 
-![](../.gitbook/assets/image%20%2818%29.png) 
+![](<../.gitbook/assets/image (19).png>) 
 
 * Om du får upp en lista, välj "Class".
-
-
 

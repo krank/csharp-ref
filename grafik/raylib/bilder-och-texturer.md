@@ -11,7 +11,7 @@ Skillnaden är att Images kan _manipuleras mer_. Textures kan _ritas ut till sk�
 * png
 * bmp
 * tga
-* gif \(dock ej animationer\)
+* gif (dock ej animationer)
 * dds, hdr, ktx, astc
 
 Observera att det saknas stöd för jpg – detta eftersom jpg är väldigt ovanligt i spel.
@@ -46,7 +46,7 @@ Raylib.ImageDrawPixel(ref targetImage, 20, 15, Color.BLUE);
 
 ### ImageFlipHorizontal
 
-Flippar en Image horisontellt \(spegelvänder\).
+Flippar en Image horisontellt (spegelvänder).
 
 ```csharp
 Raylib.ImageFlipHorizontal(ref targetImage);
@@ -120,12 +120,12 @@ Det här kan man bland annat använda sig av när man har en bild som är ett s.
 
 Bilden nedan visar principen:
 
-![](../../.gitbook/assets/drawtexturepro.png)
+![](../../.gitbook/assets/DrawTexturePro.png)
 
 DrawTexturePro kan också användas för vanliga texturer, som man vill rita ut roterade. Nedan är kod som ritar ut en textur som från början är 200×200 pixlar stor till Raylibfönstret.
 
 {% tabs %}
-{% tab title="C\#" %}
+{% tab title="C#" %}
 ```csharp
 Raylib.DrawTexturePro(
   texture, 
@@ -137,6 +137,4 @@ Raylib.DrawTexturePro(
 ```
 {% endtab %}
 {% endtabs %}
-
-
 

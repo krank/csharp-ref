@@ -49,5 +49,3 @@ for (int y = 0; y < board.GetLength(1); y++)
 }
 ```
 
-
-

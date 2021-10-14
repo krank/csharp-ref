@@ -1,4 +1,4 @@
-# Datatyper \[…\]
+# Datatyper \[…]
 
 ## string
 
@@ -43,11 +43,10 @@ char c = 'ä';
 
 ## long
 
-Heltal, kan ha mycket större \(och mindre\) värden än int.
+Heltal, kan ha mycket större (och mindre) värden än int.
 
 ```csharp
 long i = 9223372036854775804; 
 ```
 
-## 
-
+##

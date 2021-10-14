@@ -1,4 +1,4 @@
-# Vektorer \(Numerics\)
+# Vektorer (Numerics)
 
 Numerics är ett bibliotek som innehåller mer avancerade numeriska typer, som komplement till de vanliga, t.ex. int.
 
@@ -50,7 +50,7 @@ Console.WriteLine(position.X); // 20
 Console.WriteLine(position.Y); // 30
 ```
 
-### Length\(\)
+### Length()
 
 Inbyggd i varje vektor. Ger vektorns storlek.
 
@@ -59,7 +59,7 @@ Vector2 position = new Vector2(20, 20);
 float l = position.Length(); // 28.284271
 ```
 
-### Vector2.Distance\(\)
+### Vector2.Distance()
 
 Ger avståndet mellan två vektorer.
 
@@ -70,7 +70,7 @@ Vector2 enemyPosition = new Vector2(30, 30);
 float d = Vector2.Distance(position, enemyPosition); // 14.142136
 ```
 
-### Vector2.Normalize\(\)
+### Vector2.Normalize()
 
 Ger en normaliserad version av en vektor.
 
@@ -80,4 +80,3 @@ Vector2 position = new Vector2(20, 10);
 // Ger en vektor med storlek 1, X 0.8944272 och Y 0.4472136
 Vector2 n = Vector2.Normalize(position);
 ```
-

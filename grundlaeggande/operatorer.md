@@ -22,7 +22,7 @@ int x = 6 - 4;
 int x = 6 / 3;
 ```
 
-OBS: Om man delar ett heltal \(int eller long\) med ett annat heltal blir resultatet alltid ett heltal – decimaler trunkeras bort.
+OBS: Om man delar ett heltal (int eller long) med ett annat heltal blir resultatet alltid ett heltal – decimaler trunkeras bort.
 
 ### \* Multiplikation.
 
@@ -68,7 +68,7 @@ i--;
 
 ## Boolska
 
-### &gt; &lt; Större än, mindre än.
+### > < Större än, mindre än.
 
 ```csharp
 bool x = 4 > 3;
@@ -102,7 +102,7 @@ bool x = true && true; // resultatet är true
 bool y = true && false; // resultatet är false
 ```
 
-### \|\| Or / Eller
+### || Or / Eller
 
 True om **minst en** av operanderna är true.
 
@@ -113,4 +113,3 @@ bool y = false || false; // false
 
 bool z = (3 == 2) || x; // true; x är true även om 3 inte är samma som 2.
 ```
-

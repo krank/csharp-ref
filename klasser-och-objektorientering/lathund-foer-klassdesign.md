@@ -17,7 +17,7 @@
 
 * Vilka EGENSKAPER hos de olika sakerna är relevanta för spelet?
   * Position, Styrka, intelligens, Hit points
-* En egenskap som bara är ett enkelt värde \(int, strint, float etc\) bör vara en **variabel**.
+* En egenskap som bara är ett enkelt värde (int, strint, float etc) bör vara en **variabel**.
   * Exempel: namn, hit points
 * En egenskap som är mer komplex, och i sig har en massa egenskaper/funktionalitet bör vara en referens till en **instans av en klass**.
   * Exempel: ett svärd, som har skadevärde, vikt etc
@@ -38,4 +38,3 @@
   * Variabler – helst inte public alls. Använd [properties](inkapsling-och-properties.md) istället.
 * Saker som bara ska kunna påverkas från metoder som tillhör den här klassen – **private**.
 * Saker som ska kunna påverkas av metoder som tillhör den här klassen och klasser som ärver från den – **protected**.
-

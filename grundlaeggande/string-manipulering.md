@@ -1,8 +1,8 @@
 # String-manipulering
 
-En string är i C\# alltid oföränderlig; man kan inte ändra direkt i en string. Men man kan använda olika metoder för att skapa nya versioner av existerande strings.
+En string är i C# alltid oföränderlig; man kan inte ändra direkt i en string. Men man kan använda olika metoder för att skapa nya versioner av existerande strings.
 
-## Replace\(\)
+## Replace()
 
 Byter ut ett tecken eller en del-string.
 
@@ -12,7 +12,7 @@ string oldString = "Mikael är min programmeringslärare";
 string newString = oldString.Replace("Mikael", "Micke");
 ```
 
-## Substring\(\)
+## Substring()
 
 Returnerar en del av stringen. Tar emot startposition och längd som parametrar. Anges bara en parameter så antas längden vara resten av stringen.
 
@@ -24,7 +24,7 @@ string sub1 = oldString.Substring(2,5); // sub1 blir "tta ä"
 string sub2 = oldString.Substring(2); // sub2 blir "tta är en string"
 ```
 
-## Trim\(\)
+## Trim()
 
 Returnerar en kopia av stringen där mellanslag och andra "tomma" tecken tagits bort från början och slutet.
 
@@ -34,7 +34,7 @@ string clean = oldString.Trim();
 
 Det finns också `TrimEnd` och `TrimStart` ifall man bara vill trimma slutet eller början av stringen.
 
-## Insert\(\)
+## Insert()
 
 Returnerar en kopia av stringen där en annan string stoppats in på en angiven plats. Tar emot en position och en string som parametrar.
 
@@ -45,7 +45,7 @@ string nyFolk = folk.insert(5, " och herbert");
 // nyFolk blir "micke och herbert och kim och mimmi"
 ```
 
-## IndexOf\(\)
+## IndexOf()
 
 Returnerar positionen för den första plats i stringen där en annan string finns. Tar emot något att söka efter som parameter.
 
@@ -59,17 +59,17 @@ Resultatet av ovanstående blir att variabeln kimPlats får värdet 10 och att m
 
 ## Stora och små bokstäver
 
-### ToUpper\(\)
+### ToUpper()
 
-Returnerar en kopia av stringen där alla gemener \(små bokstäver\) bytts ut mot versaler \(stora bokstäver\).
+Returnerar en kopia av stringen där alla gemener (små bokstäver) bytts ut mot versaler (stora bokstäver).
 
 ```csharp
 string caps = oldString.ToUpper();
 ```
 
-### ToLower\(\)
+### ToLower()
 
-Returnerar en kopia av stringen där alla versaler \(stora bokstäver\) bytts ut mot gemener \(små bokstäver\).
+Returnerar en kopia av stringen där alla versaler (stora bokstäver) bytts ut mot gemener (små bokstäver).
 
 ```csharp
 string small = oldString.ToLower();
@@ -79,7 +79,7 @@ Denna används ofta för att till exempel förvandla strings man fått in från 
 
 ## Sätta ihop och ta isär
 
-### String.Join\(\)
+### String.Join()
 
 Sätter ihop alla element i en array till en string. Tar emot två parametrar; en separator som placeras mellan elementen och en array med de element som ska sättas ihop.
 
@@ -94,7 +94,7 @@ Resultatet av ovanstående blir en string som heter folk och som innehåller fö
 "micke och kim och mimmi"
 ```
 
-### Split\(\)
+### Split()
 
 Returnerar en array som består av en uppdelad string. Tar emot en separator som parameter. Separatorn kan bara vara ett ensamt tecken, en **char**.
 
@@ -108,4 +108,3 @@ Resultatet av ovanstående blir en string-array med följande innehåll:
 ```csharp
 {"micke", "och", "kim", "och", "mimmi"}
 ```
-

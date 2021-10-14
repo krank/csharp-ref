@@ -12,13 +12,13 @@ En klass är en ritning, eller en mall, för en kategori av objekt. En klass är
 
 _Exempel på klasser: Svärd, fiende, bok, bana, päron, kund._
 
-En klass fungerar också som en datatyp, så varje gång kod förväntar sig en datatyp \(t.ex. string eller int\) kan man istället skriva dit en klass.
+En klass fungerar också som en datatyp, så varje gång kod förväntar sig en datatyp (t.ex. string eller int) kan man istället skriva dit en klass.
 
 [Mer om klasser.](klasser-och-instanser.md#skapa-klasser-i-visual-studio-code)
 
 ## Instans
 
-En instans är ett _objekt_ man skapat utifrån en _klass_.
+En instans är ett _objekt _man skapat utifrån en _klass_.
 
 [Mer om instanser.](klasser-och-instanser.md#skapa-klasser-i-visual-studio-code)
 
@@ -44,6 +44,12 @@ class Pear
 
 ## Arv
 
+En klass kan ärva från en annan klass. Det betyder att subklassen får basklassens alla metoder och variabler, men den kan också lägga till egna.
+
+Man brukar också beskriva det som att subklassen är en mer specialiserad version av basklassen – ett exempel på basklass kan vara `Weapon` och en subklass till Weapon kan då vara `Sword`. Sedan kan Sword agera basklass till LongSword och ShortSword.
+
+Alla svärd är då vapen, och har alla metoder etc som ingår i vapen – fast de kan ha egna tillägg, och de kan också delvis fungera annorlunda (se Polymorfism).
+
 ## Inkapsling
 
 ## Interaktion mellan objekt
@@ -51,4 +57,3 @@ class Pear
 ## Polymorfism
 
 ## Generiska klasser
-

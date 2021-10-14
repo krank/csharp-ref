@@ -2,7 +2,7 @@
 
 ## Rektanglar
 
-### DrawRectangle\(\)
+### DrawRectangle()
 
 ```csharp
 Raylib.DrawRectangle(10, 10, 30, 40, Color.ORANGE);
@@ -10,7 +10,7 @@ Raylib.DrawRectangle(10, 10, 30, 40, Color.ORANGE);
 
 Parametrarna är, i tur och ordning: X- och Y-position för rektangelns övre vänstra hörn, rektangelns bredd och höjd, och dess färg.
 
-### DrawRectangleLines\(\), DrawCircleLines\(\)
+### DrawRectangleLines(), DrawCircleLines()
 
 Fungerar precis som DrawCircle respektive DrawRectangle, men använder färgen för att rita ut respektive forms kanter istället för att fylla dem.
 
@@ -18,7 +18,7 @@ Fungerar precis som DrawCircle respektive DrawRectangle, men använder färgen f
 Raylib.DrawCircleLines(150, 200, 40, Color.MAGENTA);
 ```
 
-### DrawRectangleRec\(\)
+### DrawRectangleRec()
 
 Fungerar precis som DrawRectangle, men tar emot ett [Rectangle](rectangle.md)-objekt istället för koordinater och bredd/höjd.
 
@@ -29,7 +29,7 @@ Raylib.DrawRectangleRec(r1, Color.PINK);
 
 ## Cirklar och elipser
 
-### DrawCircle\(\)
+### DrawCircle()
 
 ```csharp
 Raylib.DrawCircle(150, 200, 40, Color.MAGENTA);
@@ -37,27 +37,25 @@ Raylib.DrawCircle(150, 200, 40, Color.MAGENTA);
 
 Parametrarna är, i tur och ordning: X- och Y-position för cirkelns mitt, cirkelns radie, och cirkelns färg.
 
-### DrawCircleSector\(\)
+### DrawCircleSector()
 
-\(kommer\)
+(kommer)
 
 ## Andra former
 
-### DrawTriangle\(\)
+### DrawTriangle()
 
-\(kommer\)
+(kommer)
 
-### DrawPoly\(\)
+### DrawPoly()
 
-\(kommer\)
+(kommer)
 
-### DrawLine\(\)
+### DrawLine()
 
-\(kommer\)
+(kommer)
 
-### DrawLineBezier\(\)
+### DrawLineBezier()
 
-\(kommer\)
-
-
+(kommer)
 

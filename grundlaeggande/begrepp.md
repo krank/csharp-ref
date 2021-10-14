@@ -98,7 +98,7 @@ Att omvandla ett objekt – ofta en instans av en klass – eller flera till ett
 
 ### Deserialisering
 
-Att omvandla strukturerad text \(t.ex. XML eller JSON\) som beskriver ett eller flera objekt till en instans av en klass.
+Att omvandla strukturerad text (t.ex. XML eller JSON) som beskriver ett eller flera objekt till en instans av en klass.
 
 ## Nätverk
 
@@ -110,7 +110,7 @@ Ett program som kontaktar en server för att få tillgång till någon form av t
 
 ### Server
 
-Ett program som tillhandahåller någon form av tjänst åt klienter. Används ibland också om datorer som har sådana program installerade och som mest finns till för att just tillhandahålla tjänster \(och inte t.ex. spelas på\).
+Ett program som tillhandahåller någon form av tjänst åt klienter. Används ibland också om datorer som har sådana program installerade och som mest finns till för att just tillhandahålla tjänster (och inte t.ex. spelas på).
 
 > **Exempel:** Apache web server
 
@@ -131,4 +131,3 @@ REpresentational State Transfer. Beskriver en standard för kommunikation mellan
 ### CRUD
 
 Create, Read, Update och Delete. De fyra saker man vanligtvis behöver kunna göra med innehållet i en databas eller annan lagring.
-

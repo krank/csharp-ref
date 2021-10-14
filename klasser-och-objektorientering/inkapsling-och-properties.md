@@ -129,4 +129,3 @@ class Character
 ```
 
 Det innebär att propertyns setter bara kan anropas från andra av klassens metoder.
-

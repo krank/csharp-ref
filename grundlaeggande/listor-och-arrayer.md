@@ -1,6 +1,6 @@
 # Listor och arrayer
 
-Både listor och arrayer är samlingar, som \(förenklat\) låter oss lagra flera värden av samma datatyp på samma ställe. Man kan till exempel ha en samling av en massa int-värden som är samlade på samma ställe, eller en samling strings.
+Både listor och arrayer är samlingar, som (förenklat) låter oss lagra flera värden av samma datatyp på samma ställe. Man kan till exempel ha en samling av en massa int-värden som är samlade på samma ställe, eller en samling strings.
 
 * **Arrayer** kom först, är snabba och effektiva, men kan inte växa/krympa – de har ett fast antal platser.
 * **Listor** är en senare uppfinning, är nästan lika snabba, och kan växa/krympa.
@@ -38,7 +38,7 @@ Variabel som är inbyggd i arrayer. Har alltid ett värde som är lika med array
 int length = arrayHp.Length;
 ```
 
-### Contains\(\)
+### Contains()
 
 Ett snabbt sätt att se ifall en sak finns i arrayen.
 
@@ -110,7 +110,7 @@ using System.Collections.Generic;
 ```
 {% endhint %}
 
-### Add\(\)
+### Add()
 
 Metod som är inbyggd i listor. Används för att lägga till nya föremål i listan.
 
@@ -127,7 +127,7 @@ Variabel som är inbyggd i listor. Har alltid ett värde som är lika med listan
 int length = listNamn.Count;
 ```
 
-### Remove\(\)
+### Remove()
 
 Metod som är inbyggd i listor. Används för att ta bort föremål från listan.
 
@@ -135,7 +135,7 @@ Metod som är inbyggd i listor. Används för att ta bort föremål från listan
 listNamn.Remove("Kim");
 ```
 
-### RemoveAt\(\)
+### RemoveAt()
 
 Metod som är inbyggd i listor. Används för att ta bort föremål på en specifik plats i listan.
 
@@ -143,7 +143,7 @@ Metod som är inbyggd i listor. Används för att ta bort föremål på en speci
 listNamn.RemoveAt(4);
 ```
 
-### RemoveAll\(\)
+### RemoveAll()
 
 Metod för att ta bort alla föremål som matchar ett visst kriterium. Kriteriet skrivs som en metod. Metoden tar emot ett värde av samma datatyp som listan innehåller, och returnerar true om kriteriet är uppfyllt och false om det inte är det. Här används med andra ord [delegates](delegates.md).
 
@@ -176,4 +176,3 @@ rects.removeAll(rect => rect.y < 0);
 ```csharp
 string[] aNamn = listNamn.ToArray();
 ```
-

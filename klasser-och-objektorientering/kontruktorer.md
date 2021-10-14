@@ -114,7 +114,7 @@ class Character
 {% endtab %}
 {% endtabs %}
 
-För att ange vilket värde som ska skickas till basklassens konstruktor så använder man base\(\).
+För att ange vilket värde som ska skickas till basklassens konstruktor så använder man base().
 
 {% tabs %}
 {% tab title="Hero.cs" %}
@@ -131,4 +131,3 @@ class Hero : Character
 {% endtabs %}
 
 Här tar subklassens konstruktor emot två parametrar - na och h - och skickar vidare värdet som lagras i parametern na till basklassens konstruktor.
-

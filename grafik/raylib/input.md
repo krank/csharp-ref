@@ -2,7 +2,7 @@
 
 ## Tangentbordet
 
-### IsKeyDown\(\)
+### IsKeyDown()
 
 Tar emot en tangent som parameter; returnerar true om den angivna tangenten är nedtryckt – false om den inte är det.
 
@@ -15,7 +15,7 @@ if (Raylib.IsKeyDown(KeyboardKey.KEY_LEFT))
 }
 ```
 
-### IsKeyUp\(\)
+### IsKeyUp()
 
 Fungerar som IsKeyDown fast… tvärtom
 
@@ -26,7 +26,7 @@ if (Raylib.IsKeyUp(KeyboardKey.KEY_LEFT))
 }
 ```
 
-### SetExitKey\(\)
+### SetExitKey()
 
 I vanliga fall innebär ett tryck på ESC-knappen att hela spelet avslutas. SetExitKey kan användas för att byta vilken knapp som har den funktionen – eller ta bort den helt.
 
@@ -47,7 +47,7 @@ int mouseX = Raylib.GetMouseX();
 int mouseY = Raylib.GetMouseY();
 ```
 
-### GetMousePosition\(\)
+### GetMousePosition()
 
 Hämtar musens nuvarande position i form av en tvådimensionell [vektor](../../grundlaeggande/vektorer-numerics.md).
 
@@ -55,7 +55,7 @@ Hämtar musens nuvarande position i form av en tvådimensionell [vektor](../../g
 Vector2 mousePos = Raylib.GetMousePosition();
 ```
 
-### IsMouseButtonDown\(\)
+### IsMouseButtonDown()
 
 Anropas med en musknapp som parameter; returnerar true om den musknappen just nu är nedtryckt.
 
@@ -64,11 +64,10 @@ bool leftDown = Raylib.IsMouseButtonDown(MouseButton.MOUSE_LEFT_BUTTON);
 bool rightDown = Raylib.IsMouseButtonDown(MouseButton.MOUSE_RIGHT_BUTTON);
 ```
 
-### IsMouseButtonPressed\(\)
+### IsMouseButtonPressed()
 
 Anropas med en musknapp som parameter; returnerar true om den musknappen tryckts ned någon gång sedan förra gången metoden anropades.
 
 ```csharp
 bool leftWasPressed = Raylib.IsMouseButtonPressed(MouseButton.MOUSE_LEFT_BUTTON);
 ```
-

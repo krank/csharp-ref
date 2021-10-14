@@ -2,7 +2,7 @@
 
 En URL på internet har kan till exempel se ut såhär:
 
-```text
+```
 http://test.stapi.co/api/v1/rest/animal?uid=ANMA0000032338
 ```
 
@@ -21,7 +21,7 @@ Den består av följande delar:
 
 En "REST-endpoint" är den delen av REST-URL:en som är gemensam för alla anrop till API:et. För Star Trek-API:t är endpointen denna:
 
-```text
+```
 http://test.stapi.co/api/v1/rest/
 ```
 
@@ -31,13 +31,13 @@ Den består alltså av protokoll, domännamn och ofta en eller flera mappar.
 
 En REST-resurs är den del av databasen eller systemet som API:et ger tillgång till som man vill hämta information från. Ett exempel från Star Trek API:t är t.ex. "animal". Om man då lägger ihop endpoint plus resurs så får man då:
 
-```text
+```
 http://test.stapi.co/api/v1/rest/animal
 ```
 
 I vissa API:er används bara endpoints och resurser. I PokeApi till exempel anger man namnet på den pokemon man vill ha information om som en resurs:
 
-```text
+```
 https://pokeapi.co/api/v2/pokemon/ditto
 ```
 
@@ -47,7 +47,6 @@ Parametrar kan ge ytterligare information om t.ex. Det är generellt här man an
 
 Parametrar skrivs genom att man först har ett frågetecken som separerar parametrarna från resten, och sedan par av parameter+värde. Paren separeras från varandra med & och parametern separeras från värdet med ett likamed-tecken.
 
-```text
+```
 http://stapi.co/api/v1/rest/animal?uid=ANMA0000032338
 ```
-

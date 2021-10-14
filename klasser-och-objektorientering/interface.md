@@ -2,7 +2,7 @@
 
 Ett interface är ett slags kravspecifikation som beskriver ett antal metoder som en klass behöver implementera. De fungerar som ett slags tvingande abstrakta klasser. När en klass "ärver" från ett interface så kallas det att klassen implementerar interfacet.
 
-Interfaces namnges med PascalCase och med ett I \(stora i\) i början.
+Interfaces namnges med PascalCase och med ett I (stora i) i början.
 
 {% tabs %}
 {% tab title="IDamagable.cs" %}
@@ -111,4 +111,3 @@ class Character : IDamagable, IAttacking
 {% endtabs %}
 
 Eftersom interfaces mer fungerar som kravspecifikationer än traditionella arv så innebär detta med andra ord helt enkelt att klassen uppfyller de krav som ställs upp av både IDamagable och IAttacking.
-

@@ -33,5 +33,3 @@ while (gameContinues == true)
 
 Varje gång loopen körs, så kollar spelet vilket rum spelaren är i just den här "vändan", och kör den koden. I koden för varje rum lägger man in kod som kan ändra vilket rum som är "current". Så om man skriver "1" i det första rummet så kommer man, nästa gång loopen körs, att hamna i rum 1.
 
-
-

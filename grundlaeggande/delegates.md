@@ -33,15 +33,15 @@ delegate int DelegateTwo();
 delegate float DelegateThree(string x, int y);
 ```
 
-När man skapat sin delegat används den alltså som om den vore en datatyp. När man lagrar metoderna i den så ser man till att inte använda \(\) efter metodnamnet, för då körs ju metoden istället, innan tilldelningen.
+När man skapat sin delegat används den alltså som om den vore en datatyp. När man lagrar metoderna i den så ser man till att inte använda () efter metodnamnet, för då körs ju metoden istället, innan tilldelningen.
 
 ```csharp
 DelegateOne test = MethodOne;
 ```
 
-### Dictionary med actions <a id="h.p_qt3ARehin8YT"></a>
+### Dictionary med actions <a href="h.p_qt3arehin8yt" id="h.p_qt3arehin8yt"></a>
 
-Ett exempel på hur man kan använda delegater – Action är en delegat som ingår i C\# och som helt enkelt stämmer in på metoder som varken tar emot parametrar eller returnerar något.
+Ett exempel på hur man kan använda delegater – Action är en delegat som ingår i C# och som helt enkelt stämmer in på metoder som varken tar emot parametrar eller returnerar något.
 
 ```csharp
 static void Main(string[] args)
@@ -100,7 +100,7 @@ actions["greet"]();
 
 ### Lambdas
 
-Lambda-uttryck är, enkelt uttryckt, ett sätt att skriva väldigt enkla anonyma metoder \(anonyma delegater\) vars returvärden är direkta resultat av deras parametrar.
+Lambda-uttryck är, enkelt uttryckt, ett sätt att skriva väldigt enkla anonyma metoder (anonyma delegater) vars returvärden är direkta resultat av deras parametrar.
 
 ```csharp
 // Delegat som passar alla metoder som tar emot två int-parametrar och
@@ -132,4 +132,3 @@ List<int> numbers = new List<int>() {2,3,4,5,6};
 // numbers, som är < 4.
 List<int> lowNumbers = numbers.FindAll(n => n < 4);
 ```
-

@@ -24,7 +24,7 @@
 
 **Ctrl + C** – Kopiera
 
-**Ctrl + X** – Klipp ur
+**Ctrl + X **– Klipp ur
 
 **Ctrl + V** – Klistra in
 
@@ -32,5 +32,4 @@
 
 **End** – Flytta markören till slutet av raden
 
-**Shift** – Håll nere för att utöka markering. Så trycker man Home, sedan håller nere Shift och trycker på End, så markerar man hela raden.
-
+**Shift **– Håll nere för att utöka markering. Så trycker man Home, sedan håller nere Shift och trycker på End, så markerar man hela raden.

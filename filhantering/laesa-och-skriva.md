@@ -30,7 +30,7 @@ Exempelkoden läser in all data från filen localfile.txt och lagrar datan i str
 
 Om localfile.txt t.ex. innehåller:
 
-```text
+```
 Banana
 Apple
 Monkey
@@ -68,9 +68,8 @@ File.WriteAllLines(@"localfile.txt", contents);
 
 Exempelkoden skriver innehållet från string-arrayen contents till filen localfile.txt. Resultatet blir att localfile.txt innehåller följande:
 
-```text
+```
 Apple
 Banana
 Monkey
 ```
-

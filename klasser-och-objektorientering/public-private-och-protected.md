@@ -80,4 +80,3 @@ class StrongFighter : Fighter
 ```
 {% endtab %}
 {% endtabs %}
-

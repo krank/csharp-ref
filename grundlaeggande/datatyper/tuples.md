@@ -1,6 +1,6 @@
 # Tuples
 
-_OBS: Detta fungerar bara i lite nyare C\#. Om du arbetar i Visual Studio 2017 finns risk att Tuples inte fungerar om du inte krånglar lite \(det går eventuellt att lägga till stöd för tuples genom att lägga till det NuGet-paket som heter ValueTuples\)_
+_OBS: Detta fungerar bara i lite nyare C#. Om du arbetar i Visual Studio 2017 finns risk att Tuples inte fungerar om du inte krånglar lite (det går eventuellt att lägga till stöd för tuples genom att lägga till det NuGet-paket som heter ValueTuples)_
 
 Tuples är ett sätt att lagra flera bitar information i samma variabel.
 
@@ -12,7 +12,7 @@ Datatypen för variabeln anges då som en parentes, och i den parentesen skriver
 (string, int) property = ("strength", 10);
 ```
 
-När man gör som i exemplen ovan så får varje egenskap ett automatiskt namn, utifrån modellen item\#, där \# är numret i ordningen för den datan.
+När man gör som i exemplen ovan så får varje egenskap ett automatiskt namn, utifrån modellen item#, där # är numret i ordningen för den datan.
 
 Så för att få ut trean ur koordinaten skulle man skriva:
 
@@ -61,4 +61,3 @@ static void ReceiveCoordinate((int x, int y) coord)
   Console.WriteLine(coord.x);
 }
 ```
-

@@ -40,7 +40,7 @@ PrettyPrint("Horsies!");
 
 Resultatet blir att följande skrivs ut till konsollen:
 
-```text
+```
 --~~== Horsies! ==~~--
 ```
 
@@ -78,7 +78,7 @@ Och ovanstående metod anropas såhär:
 int area = Multiply(3, 4);
 ```
 
-Resultatet blir att 3 multipliceras med 4 inuti metoden, och resultatet \(12\) returneras och lagras i variabeln `area`.
+Resultatet blir att 3 multipliceras med 4 inuti metoden, och resultatet (12) returneras och lagras i variabeln `area`.
 
 ## Överlagring
 
@@ -115,4 +115,3 @@ Shout("abracadabra!");
 ```
 
 Så kommer den nedre versionen att köras. Ett string-värde angavs som parametervärde, och det finns en version av Shout som behöver ett string-värde, alltså körs den.
-

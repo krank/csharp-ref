@@ -1,6 +1,6 @@
 # Kollisioner
 
-## CheckCollisionRecs\(\)
+## CheckCollisionRecs()
 
 Tar emot två [Rectangles ](rectangle.md)som parametrar och returnerar true om de överlappar, false om de inte gör det.
 
@@ -11,7 +11,7 @@ Rectangle enemyRect = new Rectangle(10,10,10,10);
 bool areOverlapping = Raylib.CheckCollisionRecs(playerRect, enemyRect); // true
 ```
 
-## GetCollisionRec\(\)
+## GetCollisionRec()
 
 Tar emot två [Rectangles](rectangle.md) som parametrar och returnerar en Rectangle som motsvarar överlappet mellan dem.
 
@@ -25,9 +25,9 @@ Raylib.DrawRectangleRec(enemyRect, Color.BLUE);
 Raylib.DrawRectangleRec(overlap, Color.ORANGE);
 ```
 
-![](../../.gitbook/assets/image%20%2833%29.png) 
+![](<../../.gitbook/assets/image (33).png>) 
 
-## CheckCollisionCircles\(\)
+## CheckCollisionCircles()
 
 Tar emot två [vektorer ](../../grundlaeggande/vektorer-numerics.md)som beskriver två cirklars mittpunkter, och två floats som beskriver cirklarnas radie, och returnerar true om de överlappar, false om de inte gör det.
 
@@ -39,7 +39,7 @@ Vector2 enemyPos = new Vector2(20,20);
 bool areOverlapping = Raylib.CheckCollisionCircles(playerPos, 10, enemyPos, 15);
 ```
 
-## CheckCollisionCircleRec\(\)
+## CheckCollisionCircleRec()
 
 Tar emot en positions[vektor](../../grundlaeggande/vektorer-numerics.md) och en radie för en cirkel, och en [Rectangle](rectangle.md). Returnerar true om rektangeln och cirkeln överlappar varandra, false om de inte gör det.
 
@@ -51,7 +51,7 @@ Vector2 enemyPos = new Vector2(20,20);
 bool areOverlapping = Raylib.CheckCollisionCircleRec(enemyPos, 15, playerRect);
 ```
 
-## CheckCollisionPointRec\(\)
+## CheckCollisionPointRec()
 
 Tar emot en punkt i form av en positions[vektor](../../grundlaeggande/vektorer-numerics.md) samt en [Rectangle](rectangle.md). Returnerar true om punkten befinner sig inuti rektangeln, false om den inte gör det.
 
@@ -62,4 +62,3 @@ mousePos = Raylib.GetMousePosition();
 
 bool areOverlapping = Raylib.CheckCollisionPointRec(mousePos, enemyRect))
 ```
-

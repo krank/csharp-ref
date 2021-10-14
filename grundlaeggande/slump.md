@@ -1,4 +1,4 @@
-# Slump \(Random\)
+# Slump (Random)
 
 ## Slumpgenerator
 
@@ -10,9 +10,9 @@ Börja med att skapa en slumpgenerator.
 Random generator = new Random();
 ```
 
-## Next – heltal \(int\)
+## Next – heltal (int)
 
-Används för att slumpa heltal \(int\).
+Används för att slumpa heltal (int).
 
 ```csharp
 // Slumpar ett heltal mellan 0 och det största heltal int kan innehålla
@@ -40,4 +40,3 @@ Används för att slumpa decimaltal mellan 0 och 1. Man får värdet i form av e
 ```csharp
 float percent = (float) generator.NextDouble() * 100f;
 ```
-

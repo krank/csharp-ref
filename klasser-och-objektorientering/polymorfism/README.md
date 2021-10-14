@@ -1,8 +1,8 @@
-# Polymorfism \[…\]
+# Polymorfism \[…]
 
 Polymorfism inom programmering är när flera olika saker liknar varandra så pass mycket att de kan ersätta varandra, eller när man kan använda ett och samma namn för att referera till flera olika saker.
 
-Ett exempel på detta är [metodöverlagring](../../grundlaeggande/egna-metoder.md#oeverlagring), där man använder samma namn på flera olika metoder, och C\# använder parametervärden för att avgöra vilken metod som ska köras.
+Ett exempel på detta är [metodöverlagring](../../grundlaeggande/egna-metoder.md#oeverlagring), där man använder samma namn på flera olika metoder, och C# använder parametervärden för att avgöra vilken metod som ska köras.
 
 ## Polymorfism, klasser och arv
 
@@ -61,13 +61,13 @@ characters.Add(new Hero);
 {% endtab %}
 {% endtabs %}
 
-Ett problem med detta är att man då bara har tillgång till de publika variabler och metoder som ingår i basklassen. I exemplet ovan kan man med andra ord anropa myHero.Hurt eller characters\[0\].Hurt men man kan inte anropa AddExperience eftersom den bara finns i subklassen.
+Ett problem med detta är att man då bara har tillgång till de publika variabler och metoder som ingår i basklassen. I exemplet ovan kan man med andra ord anropa myHero.Hurt eller characters\[0].Hurt men man kan inte anropa AddExperience eftersom den bara finns i subklassen.
 
 Därför är det en bra idé att tillföra så få nya metoder som behöver anropas utifrån som möjligt, när man designar subklasser som ska kunna fungera polyformt. I idealfallet ingår alltså alla metoder och variabler som ska vara åtkomliga utifrån redan i basklassen.
 
 ## Tvingad tolkning
 
-I nödfall kan man tvinga C\# att tillfälligt tolka variabeln som en instans av subklassen:
+I nödfall kan man tvinga C# att tillfälligt tolka variabeln som en instans av subklassen:
 
 ```csharp
 Hero tmpHero = (Hero)myHero;
@@ -90,5 +90,4 @@ if (h.GetType() == typeof(Hero))
 }
 ```
 
-GetType\(\) returnerar en instans av datatypen Type, som beskriver klasser. Typeof är en metod som tar emot en klass som parameter, och returnerar också en instans av datatypen Type, som beskriver den klass som angavs som parameter. Det gör att de går att jämföra med varandra.
-
+GetType() returnerar en instans av datatypen Type, som beskriver klasser. Typeof är en metod som tar emot en klass som parameter, och returnerar också en instans av datatypen Type, som beskriver den klass som angavs som parameter. Det gör att de går att jämföra med varandra.

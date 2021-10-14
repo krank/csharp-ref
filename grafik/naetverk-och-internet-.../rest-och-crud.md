@@ -45,7 +45,7 @@ Headern innehåller allmän data och information om meddelandet. Här finns till
 
 Request-meddelanden innehåller alltid en "metod" – motsvarar ungefär verb. Metoden avgör vilken sorts operation det är man försöker göra – POST, PUT, GET etc.
 
-Response-meddelanden innehåller alltid en respons-kod som talar om ifall requesten lyckades eller om något gick fel. Det kan t.ex. vara kod 200 \("ok"\) eller 404 \("not found"\).
+Response-meddelanden innehåller alltid en respons-kod som talar om ifall requesten lyckades eller om något gick fel. Det kan t.ex. vara kod 200 ("ok") eller 404 ("not found").
 
 ### POST
 
@@ -67,11 +67,11 @@ Används för att ta bort en resurs från en server.
 
 Förenklat kan man säga att REST innebär att man utför CRUD-operationer med hjälp av HTTP-kommandon på ett standardiserat sätt.
 
-| CRUD | HTTP |
-| :--- | :--- |
-| Create | POST |
-| Read | GET |
-| Update | PUT |
+| CRUD   | HTTP   |
+| ------ | ------ |
+| Create | POST   |
+| Read   | GET    |
+| Update | PUT    |
 | Delete | DELETE |
 
 Så för att till exempel läsa/hämta information om en specifik artikel så kan man i ett REST-API skicka en HTTP-request med GET som metod till https://www.somenews.net/api/articles/45 och då får man ett HTTP-response som innehåller artikel nummer 45s data.
@@ -79,4 +79,3 @@ Så för att till exempel läsa/hämta information om en specifik artikel så ka
 Och för att lägga in en ny artikel skulle man då kunna skicka en HTTP-request med POST som metod till http://www.somenews.net/api/articles. Då skulle man också inkludera den nya artikelns data i requesten. Som svar skulle man då kunna få ett HTTP-response med statuskoden Ok, och då vet man att artikeln lagts till.
 
 Exakt hur requests ska se ut beror på vad den som bygger servern bestämmer. Det finns inget automatiskt i att det är just /api/articles som gäller, det skulle lika gärna kunnat vara /cyberzone/fluff/gauntlet eller vad som helst.
-

@@ -2,7 +2,7 @@
 
 Raylib har stöd för en hel del ljudformat, bland annat mp3, ogg och wave.
 
-### InitAudioDevice\(\)
+### InitAudioDevice()
 
 Gör att Raylibs ljudsystem initieras.
 
@@ -10,7 +10,7 @@ Gör att Raylibs ljudsystem initieras.
 Raylib.InitAudioDevice();
 ```
 
-### SetMasterVolume\(\)
+### SetMasterVolume()
 
 Bestämmer volymen överlag på en skala mellan 0.0 och 1.0.
 
@@ -36,7 +36,7 @@ Sound exampleSound = Raylib.LoadSound("woop_woop.ogg");
 
 Spelar upp ett ljud
 
-```text
+```
 Raylib.PlaySound(exampleSound);
 ```
 
@@ -86,7 +86,7 @@ Raylib.SetSoundVolume(exampleSound, 0.35f);
 
 En datatyp för musikströmmar.
 
-### LoadMusicStream\(\)
+### LoadMusicStream()
 
 Skapar en musikström baserad på en ljudfil. Hela ljudfilen läses inte in i minnet samtidigt, utan bara en liten bit i taget.
 
@@ -94,7 +94,7 @@ Skapar en musikström baserad på en ljudfil. Hela ljudfilen läses inte in i mi
 Music exampleMusic = Raylib.LoadMusicStream("file_example_OOG_1MG.ogg");
 ```
 
-### PlayMusicStream\(\)
+### PlayMusicStream()
 
 Aktiverar uppspelningen av en musikström.
 
@@ -102,7 +102,7 @@ Aktiverar uppspelningen av en musikström.
 Raylib.PlayMusicStream(exampleMusic);
 ```
 
-### PauseMusicStream\(\)
+### PauseMusicStream()
 
 Pausar uppspelningen av en musikström.
 
@@ -110,7 +110,7 @@ Pausar uppspelningen av en musikström.
 Raylib.PauseMusicStream(exampleMusic);
 ```
 
-### ResumeMusicStream\(\)
+### ResumeMusicStream()
 
 Fortsätter uppspelningen av en pausad musikström.
 
@@ -118,7 +118,7 @@ Fortsätter uppspelningen av en pausad musikström.
 Raylib.ResumeMusicStream(exampleMusic);
 ```
 
-### StopMusicStream\(\)
+### StopMusicStream()
 
 Avbryter uppspelningen av musikströmmen helt.
 
@@ -126,7 +126,7 @@ Avbryter uppspelningen av musikströmmen helt.
 Raylib.StopMusicStream(exampleMusic);
 ```
 
-### UpdateMusicStream\(\)
+### UpdateMusicStream()
 
 Behöver köras varje frame. Kollar ifall mer data behöver laddas in från ljudfilen som musikströmmen är kopplad till, och gör det i så fall.
 
@@ -134,7 +134,7 @@ Behöver köras varje frame. Kollar ifall mer data behöver laddas in från ljud
 Raylib.UpdateMusicStream(exampleMusic);
 ```
 
-### IsMusicPlaying\(\)
+### IsMusicPlaying()
 
 Returnerar en bool – true om musikströmmen just nu spelas, annars false.
 
@@ -142,7 +142,7 @@ Returnerar en bool – true om musikströmmen just nu spelas, annars false.
 bool isPlaying = Raylib.IsMusicPlaying(exampleMusic);
 ```
 
-### SetMusicLoopCount\(\)
+### SetMusicLoopCount()
 
 Bestämmer hur många gånger musikströmmen ska loopas. Standard är 0, vilket betyder att musiken loopas oändligt.
 
@@ -150,11 +150,10 @@ Bestämmer hur många gånger musikströmmen ska loopas. Standard är 0, vilket 
 Raylib.SetMusicLoopCount(exampleMusic, 2);
 ```
 
-### SetMusicVolume\(\)
+### SetMusicVolume()
 
 Bestämmer volym för en musikström. Volymen anges som en float mellan 0.0 och 1.0.
 
 ```csharp
 Raylib.SetMusicVolume(exampleMusic, 0.75f)
 ```
-

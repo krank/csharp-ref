@@ -2,11 +2,11 @@
 
 ### PascalCase
 
-Inga mellanslag mellan orden, stor bokstav \(versal\) i början av varje ord.
+Inga mellanslag mellan orden, stor bokstav (versal) i början av varje ord.
 
 ### camelCase
 
-Inga mellanslag mellan orden, liten bokstav i början men i övrigt stor bokstav \(versal\) i början av varje ord.
+Inga mellanslag mellan orden, liten bokstav i början men i övrigt stor bokstav (versal) i början av varje ord.
 
 ## Användning
 
@@ -26,9 +26,9 @@ Använd camelCase.
 
 Använd PascalCase.
 
-> **Exempel:** TakeDamage\(\), RestoreOriginalPosition\(\) eller Rest\(\).
+> **Exempel:** TakeDamage(), RestoreOriginalPosition() eller Rest().
 
-Använd helst verb \(Rest, Eat, Hurt, Build\).
+Använd helst verb (Rest, Eat, Hurt, Build).
 
 ### Klasser
 
@@ -36,5 +36,4 @@ Använd PascalCase.
 
 > **Exempel:** Enemy, ProjectileTarget eller PowerupBox.
 
-Döp i singular av vad klassen beskriver \(Character, Apple, Monster, Clock, Rainbow\).
-
+Döp i singular av vad klassen beskriver (Character, Apple, Monster, Clock, Rainbow).

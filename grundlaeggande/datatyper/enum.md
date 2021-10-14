@@ -20,7 +20,7 @@ Senare, i metoderna, kan de användas som datatyper.
 
 Man skapar alltså variabler där man anger datatypen som enum-namnet:
 
-```text
+```
 Room currentRoom = Room.entrance;
 ```
 
@@ -34,4 +34,3 @@ if (currentRoom == Room.corridor)
 ```
 
 Vill man skapa mer komplexa egna datatyper så är det [klasser](https://sites.google.com/view/csharp-referens/klasser-och-objektorientering?authuser=0) som gäller.
-

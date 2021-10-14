@@ -1,6 +1,6 @@
 # Attribut
 
-Attribut används för att säga saker _om_ klassvariabler, properties och metoder. Med andra ord är de ett slags _metadata_ – information om information.
+Attribut används för att säga saker _om_ klassvariabler, properties och metoder. Med andra ord är de ett slags _metadata _– information om information.
 
 De används en hel del när man konstruerar controllers till REST-servrar, och när man jobbar med JSON-serialisering.
 
@@ -18,8 +18,6 @@ public class Pokemon
   public int CurrentHp {get; set;}
 }
 ```
-
-
 
 
 

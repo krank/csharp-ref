@@ -2,7 +2,7 @@
 
 Controllers är klasser som kopplar ihop klientens HTTP-requests med serverns data, via lite egen logik.
 
-Nedan – ett exempel på en controller som kopplar ihop GET-requests till url:en som slutar på /api/Something med metoden Get\(\).
+Nedan – ett exempel på en controller som kopplar ihop GET-requests till url:en som slutar på /api/Something med metoden Get().
 
 ```csharp
 using Microsoft.AspNetCore.Mvc;
@@ -23,7 +23,7 @@ public class SomethingController : ControllerBase
 
 Mer om attribut [här](../../../klasser-och-objektorientering/attribut.md).
 
-### \[ApiController\]
+### \[ApiController]
 
 Dekorerar en klass. Meddelar API-serversystemet att denna klass är en API Controller och ska kunna ta emot requests.
 
@@ -39,13 +39,13 @@ public class PokemonController : ControllerBase
 {% endtab %}
 {% endtabs %}
 
-### \[Route\("thing"\)\]
+### \[Route("thing")]
 
 Dekorerar en klass eller en metod. Meddelar API-serversystemet att klassen eller metoden ska ta emot requests till en specifik "route". Exempel:
 
 * https://localhost:5001/api/pokemon → routen är "api/pokemon"
 * https://www.test.com/hello/world → routen är "hello/world"
-* [https://192.168.1.100/number](https://www.google.com/url?q=https%3A%2F%2F192.168.1.100%2Fnumber&sa=D&sntz=1&usg=AFQjCNHmakUtrDd1CIEFI8sA-zNgZhw2XA) → routen är "number"
+* [https://192.168.1.100/number](https://www.google.com/url?q=https%3A%2F%2F192.168.1.100%2Fnumber\&sa=D\&sntz=1\&usg=AFQjCNHmakUtrDd1CIEFI8sA-zNgZhw2XA) → routen är "number"
 
 {% tabs %}
 {% tab title="PokemonController.cs" %}
@@ -80,9 +80,9 @@ public class PokemonController : ControllerBase
 {% endtab %}
 {% endtabs %}
 
-### \[Route\("\[controller\]"\)\]
+### \[Route("\[controller]")]
 
-När man dekorerar en klass, kan man skriva \[controller\] inom hakparenteser inuti sin route. Det betyder att \[controller\] i praktiken byts ut mot det som står innan Controller i klassens namn. Övrig text står kvar oförändrad.
+När man dekorerar en klass, kan man skriva \[controller] inom hakparenteser inuti sin route. Det betyder att \[controller] i praktiken byts ut mot det som står innan Controller i klassens namn. Övrig text står kvar oförändrad.
 
 {% tabs %}
 {% tab title="AngelController.cs" %}
@@ -97,7 +97,7 @@ public class AngelController : ControllerBase
 {% endtab %}
 {% endtabs %}
 
-### \[HttpGet\]
+### \[HttpGet]
 
 Registrerar en metod som mottagare av GET-requests.
 
@@ -109,7 +109,7 @@ public ActionResult Get()
 }
 ```
 
-Man kan också ange olika unika routes för olika Get-metoder. Det gör man genom att skriva in routen inom parenteser direkt i \[HttpGet\].
+Man kan också ange olika unika routes för olika Get-metoder. Det gör man genom att skriva in routen inom parenteser direkt i \[HttpGet].
 
 ```csharp
 [ApiController]
@@ -145,11 +145,11 @@ public class AngelController : ControllerBase
   }
 ```
 
-En \[HttpGet\]-metod brukar normalt returnera via Ok\(\), NotFound\(\), NoContent\(\) eller BadRequest\(\).
+En \[HttpGet]-metod brukar normalt returnera via Ok(), NotFound(), NoContent() eller BadRequest().
 
-### \[HttpPost\]
+### \[HttpPost]
 
-Registrerar en metod som mottagare av POST-requests. API-servern gör också ett försök att deserialisera inkommande JSON-data \(angiven i requestens body\) till rätt sorts instans.
+Registrerar en metod som mottagare av POST-requests. API-servern gör också ett försök att deserialisera inkommande JSON-data (angiven i requestens body) till rätt sorts instans.
 
 ```csharp
 [HttpPost]
@@ -172,15 +172,15 @@ public ActionResult AddPokemon(Pokemon newPokemon)
 }
 ```
 
-En \[HttpPost\]-metod brukar normalt returnera via Ok\(\) eller BadRequest\(\).
+En \[HttpPost]-metod brukar normalt returnera via Ok() eller BadRequest().
 
 {% hint style="warning" %}
 **OBSERVERA:** För att servern ska kunna deserialisera inskickad JSON korrekt, måste Content-Type i requesten vara "application/json".
 {% endhint %}
 
-### \[HttpPut\]
+### \[HttpPut]
 
-Registrerar en metod som mottagare av PUT-requests. API-servern gör också ett försök att deserialisera inkommande JSON-data \(angiven i requestens body\) till rätt sorts instans.
+Registrerar en metod som mottagare av PUT-requests. API-servern gör också ett försök att deserialisera inkommande JSON-data (angiven i requestens body) till rätt sorts instans.
 
 Skillnaden mellan POST och PUT är att när någon skickar en POST så förväntar de sig att det alltid ska skapas en ny sak i databasen, men vid PUT förväntar man sig att det bara skapas en ny sak ifall det inte finns en gammal, liknande, som kan uppdateras. Vad som bestämmer ifall det finns en gammal, liknande är du som programmerare. I en Pokemon-databas skulle man t.ex. kunna kolla om det redan finns en pokemon med samma unika ID-nummer.
 
@@ -208,13 +208,13 @@ public ActionResult UpdatePokemon(int id, Pokemon newPokemon)
 }
 ```
 
-En \[HttpPut\]-metod brukar normalt returnera via Ok\(\), NotFound\(\), NoContent\(\) eller BadRequest\(\).
+En \[HttpPut]-metod brukar normalt returnera via Ok(), NotFound(), NoContent() eller BadRequest().
 
 {% hint style="warning" %}
 **OBSERVERA:** För att servern ska kunna deserialisera inskickad JSON korrekt, måste Content-Type i requesten vara "application/json".
 {% endhint %}
 
-### \[HttpDelete\]
+### \[HttpDelete]
 
 Registrerar en metod som mottagare av DELETE-requests.
 
@@ -229,7 +229,7 @@ public ActionResult DeletePokemon()
 }
 ```
 
-En \[HttpDelete\]-metod brukar normalt returnera via Ok\(\), NotFound\(\) eller BadRequest\(\).
+En \[HttpDelete]-metod brukar normalt returnera via Ok(), NotFound() eller BadRequest().
 
 ## ActionResponse-metoder
 
@@ -237,9 +237,9 @@ ActionResponse är en klass som beskriver vanliga HTTP-responses. Genom att anv�
 
 Det finns sådana metoder för många HTTP-statuskoder – de nedan är bara exempel.
 
-### Ok\(\)
+### Ok()
 
-Ger ett ActionResult med HTTP-koden "ok" \(200\). Parametervärdet skickas som body.
+Ger ett ActionResult med HTTP-koden "ok" (200). Parametervärdet skickas som body.
 
 ```csharp
 [HttpGet]
@@ -249,9 +249,9 @@ public ActionResult Get()
 }
 ```
 
-### Created\(\)
+### Created()
 
-Ger ett ActionResult med HTTP-koden "created" \(201\). Parametervärdet skickas som body.
+Ger ett ActionResult med HTTP-koden "created" (201). Parametervärdet skickas som body.
 
 Created betyder att servern skapat en ny sak, baserat på den request som skickades.
 
@@ -263,9 +263,9 @@ public ActionResult AddPokemon()
 }
 ```
 
-### NotFound\(\)
+### NotFound()
 
-Ger ett ActionResult med HTTP-koden "not found" \(404\). Parametervärdet skickas som body.
+Ger ett ActionResult med HTTP-koden "not found" (404). Parametervärdet skickas som body.
 
 Not found betyder att den sak som efterfrågades inte finns.
 
@@ -277,9 +277,9 @@ public ActionResult Get()
 }
 ```
 
-### NoContent\(\)
+### NoContent()
 
-Ger ett ActionResult med HTTP-koden "no content" \(202\). Parametervärdet skickas som body.
+Ger ett ActionResult med HTTP-koden "no content" (202). Parametervärdet skickas som body.
 
 No content betyder att servern tog emot requesten men att det inte finns någon content att visa.
 
@@ -291,9 +291,9 @@ public ActionResult Get()
 }
 ```
 
-### BadRequest\(\)
+### BadRequest()
 
-Ger ett ActionResult med HTTP-koden "bad request" \(400\). Parametervärdet skickas som body.
+Ger ett ActionResult med HTTP-koden "bad request" (400). Parametervärdet skickas som body.
 
 Bad request betyder att det var något fel på den request klienten skickade till servern, och att servern inte kunde göra något vettigt med den.
 
@@ -304,4 +304,3 @@ public ActionResult Get()
   return BadRequest("Response");
 }
 ```
-

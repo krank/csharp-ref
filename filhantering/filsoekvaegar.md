@@ -4,7 +4,7 @@
 
 En filsökväg kan t.ex. se ut så här:
 
-```text
+```
 c:\temp\exempel.txt
 ```
 
@@ -17,21 +17,20 @@ Det betyder:
 
 Med andra ord används \ för att separera enheter, mappar och filnamn. I filnamn används punkt för att separera namn från filändelse.
 
-Eftersom \ redan används som "escape"-tecken i C\#, för att t.ex. göra radbrytning \n, så måste man ange filsökvägar så här:
+Eftersom \ redan används som "escape"-tecken i C#, för att t.ex. göra radbrytning \n, så måste man ange filsökvägar så här:
 
-```text
+```
 string path = @"c:\temp\exempel.txt";
 ```
 
-@-tecknet gör att \-tecknen inte tolkas, utan tas bokstavligt.
+@-tecknet gör att \\-tecknen inte tolkas, utan tas bokstavligt.
 
-#### Filer i samma mapp som programmet <a id="h.p_GkVdjQel-LgI"></a>
+#### Filer i samma mapp som programmet <a href="h.p_gkvdjqel-lgi" id="h.p_gkvdjqel-lgi"></a>
 
 När det gäller filer som ligger i samma mapp som programmet så behöver man inte ange mapp eller enhet.
 
-```text
+```
 string path = @"localfile.txt";
 ```
 
 För er som läst webbutveckling bör detta vara bekant.
-

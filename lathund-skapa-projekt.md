@@ -4,7 +4,7 @@
 
 * Starta Visual Studio Code
 * **SKAPA PROJEKTET**
-  * F1 → C\# Toolbox: Create Project.
+  * F1 → C# Toolbox: Create Project.
   * Template – oftast Console Application.
   * Projektnamnet – inga mellanslag, börja inte med siffror.
   * Location: Välj mapp för projektet.
@@ -13,9 +13,9 @@
   * Tryck "Create Project"
   * När det nya fönstret öppnas, välj sln-filen.
   * När dialogrutan dyker upp och frågar, svara "Yes" på att du vill skapa filerna som krävs.
-  * Dubbelkolla så OmniSharp går igång \(den lilla eldsflamman nere till vänster\).
+  * Dubbelkolla så OmniSharp går igång (den lilla eldsflamman nere till vänster).
 * **GÖR SÅ PROJEKTET KAN KÖRAS**
-  * Run \(ikonen med play-knapp och insekt\)
+  * Run (ikonen med play-knapp och insekt)
     * Ser du inget här: F1 → ".NET: Generate Assets for Build and Debug"
   * Kugghjulet för att öppna launch.json
   * Leta rätt på "console": "internalConsole". Bör vara på rad 17.
@@ -29,8 +29,7 @@
     * Välj Append
   * Gå till Source Control
   * Initialize Repository
-  * Skriv in ditt första commit-meddelande och stage:a alla filer du vill ha med \(manuellt eller automatiskt\)
-  * Nere i vänstra kanten av programmet, klicka på det lilla molnet \("Publish to GitHub"\)
+  * Skriv in ditt första commit-meddelande och stage:a alla filer du vill ha med (manuellt eller automatiskt)
+  * Nere i vänstra kanten av programmet, klicka på det lilla molnet ("Publish to GitHub")
   * Välj "Publish to GitHub public repository"
   * Om du behöver logga in eller göra något annat kommer VSCode att säga till. Följ instruktionerna.
-

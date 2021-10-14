@@ -9,7 +9,7 @@ Om vi däremot skickar vår färdiga exe-fil till någon, så kommer den mappen 
 För att automatiskt se till att alla filer kopieras till samma mapp som exe-filen, vilket underlättar distribution, används det här knepet:
 
 1. Skapa en mapp vid namn "assets" i din projektmapp.
-2. Redigera din csproj-fil och stoppa in detta innan &lt;/project&gt;:
+2. Redigera din csproj-fil och stoppa in detta innan \</project>:
 
 ```markup
 <ItemGroup>
@@ -19,5 +19,4 @@ För att automatiskt se till att alla filer kopieras till samma mapp som exe-fil
 </ItemGroup>
 ```
 
-Det gör att det automatiskt skapas en "assets"-mapp där exe-filen läggs \(t.ex. i bin\debug\net5.0 eller liknande\), och alla filer etc från din assets-mapp kopieras dit.
-
+Det gör att det automatiskt skapas en "assets"-mapp där exe-filen läggs (t.ex. i bin\debug\net5.0 eller liknande), och alla filer etc från din assets-mapp kopieras dit.

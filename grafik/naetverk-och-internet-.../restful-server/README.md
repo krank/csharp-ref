@@ -1,4 +1,4 @@
-# RESTful server \[…\]
+# RESTful server \[…]
 
 Nedan är instruktioner för att skapa en enkel API-server som svarar på GET-anrop.
 
@@ -30,9 +30,9 @@ public class SomethingController : ControllerBase
 }
 ```
 
-Route och ApiController är decorators. De talar om att den här klassen är en API-controller och att den ska kopplas till url:en api/Something. \[controller\] i Routen byts alltså ut automatiskt mot det som står innan Controller i klassens namn.
+Route och ApiController är decorators. De talar om att den här klassen är en API-controller och att den ska kopplas till url:en api/Something. \[controller] i Routen byts alltså ut automatiskt mot det som står innan Controller i klassens namn.
 
-HttpGet är också en decorator, som talar om att metoden Get ska anropas när någon försöker hämta data från controllern \(via url:en\).
+HttpGet är också en decorator, som talar om att metoden Get ska anropas när någon försöker hämta data från controllern (via url:en).
 
 ActionResult är en klass som tillhandahålls av .Net och innehåller allt sådant som ett server-svar brukar behova innehålla.
 
@@ -40,14 +40,14 @@ Ok är en metod som returnerar ett färdigt ActionResult med HTTP-koden "ok". Re
 
 ## Köra och testa servern
 
-### Gör så servern kan nås från andra datorer \(behöver göras 1 gång\)
+### Gör så servern kan nås från andra datorer (behöver göras 1 gång)
 
 * I Properties-mappen, öppna LaunchSettings.json
-* Let rätt på "applicationUrl" en bit ner. Inte den som ligger i \[iissettings\], utan den som ligger kring rad 25.
+* Let rätt på "applicationUrl" en bit ner. Inte den som ligger i \[iissettings], utan den som ligger kring rad 25.
 * Ändra localhost till \*
 * Ändra också "launchBrowser" till false.
 
-![](../../../.gitbook/assets/image%20%2825%29.png)
+![](<../../../.gitbook/assets/image (25).png>)
 
 ### Starta servern
 
@@ -57,4 +57,3 @@ Ok är en metod som returnerar ett färdigt ActionResult med HTTP-koden "ok". Re
 
 * Starta t.ex. Chrome medan servern körs.
 * Gå till `https://localhost:5001/api/Something`
-

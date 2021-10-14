@@ -21,7 +21,7 @@ Varje gång loopen ovan körs, så minskar timerns värde med 1.
 
 Om timerns värde blivit lika med eller under 0, så skriver programmet ut "Tenth!" och återställer timern till dess maxvärde.
 
-Det här kan såklart byggas vidare på – i Unity eller Raylib kan man låta räknarvärdet vara en float, och dra av mängden tid sedan föregående frame \(i Unity drar man då av `Time.DeltaTime`, i Raylib drar man av `Raylib.GetFrameTime()`.
+Det här kan såklart byggas vidare på – i Unity eller Raylib kan man låta räknarvärdet vara en float, och dra av mängden tid sedan föregående frame (i Unity drar man då av `Time.DeltaTime`, i Raylib drar man av `Raylib.GetFrameTime()`.
 
 ```csharp
 float timerMaxValue = 1;
@@ -42,4 +42,3 @@ while (!Raylib.WindowShouldClose())
 
 }
 ```
-

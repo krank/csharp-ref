@@ -17,7 +17,7 @@ Hur inzoomad kameran ska vara.
 ```
 
 {% hint style="warning" %}
-OBSERVERA: Om du inte bestämmer värdet för zoomen, så kommer kameran att bete sig underligt. Ge alltid kameran zoomvärde 1 \(eller något annat\) manuellt!
+OBSERVERA: Om du inte bestämmer värdet för zoomen, så kommer kameran att bete sig underligt. Ge alltid kameran zoomvärde 1 (eller något annat) manuellt!
 {% endhint %}
 
 ### target
@@ -50,9 +50,9 @@ camera.rotation = 45; // Roterar kameran 45 grader
 
 
 
-### BeginMode2D\(\) / EndMode2D\(\)
+### BeginMode2D() / EndMode2D()
 
-Används för att, mellan Raylib.BeginDrawing\(\) och Raylib.EndDrawing\(\), avgränsa vilka delar som ska ritas relativt kameran. I de flesta spel betyder det "hela själva spelet". Utanför BeginMode / EndMode ritar man ut UI-element och sådant som inte ska påverkas av kamerans rotationer och förflyttningar.
+Används för att, mellan Raylib.BeginDrawing() och Raylib.EndDrawing(), avgränsa vilka delar som ska ritas relativt kameran. I de flesta spel betyder det "hela själva spelet". Utanför BeginMode / EndMode ritar man ut UI-element och sådant som inte ska påverkas av kamerans rotationer och förflyttningar.
 
 BeginMode2D vill ha en kamera som första parameter.
 
@@ -64,4 +64,3 @@ Raylib.DrawRectangle(390,290,10,10,Color.RED);
 
 Raylib.EndMode2D();
 ```
-

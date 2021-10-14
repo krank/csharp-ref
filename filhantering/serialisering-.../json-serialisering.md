@@ -27,7 +27,7 @@ public class Pokemon
 
 Det är också enbart publika variabler samt properties med publika getters och setters som serialiseras.
 
-Om du ska deserialisera JSON-kod som du får från något annat ställe och inte designat själv, så behöver du vara noga med att matcha namnet på dina publika variabler/[properties ](../../klasser-och-objektorientering/inkapsling-och-properties.md#properties)mot JSON-kodens. Serialiseringsprocessen är normalt känslig vad gäller stora och små bokstäver, men du kan ändra på detta \(rekommenderas!\).
+Om du ska deserialisera JSON-kod som du får från något annat ställe och inte designat själv, så behöver du vara noga med att matcha namnet på dina publika variabler/[properties ](../../klasser-och-objektorientering/inkapsling-och-properties.md#properties)mot JSON-kodens. Serialiseringsprocessen är normalt känslig vad gäller stora och små bokstäver, men du kan ändra på detta (rekommenderas!).
 
 {% tabs %}
 {% tab title="Spaceship.cs" %}
@@ -82,7 +82,7 @@ Används för att serialisera ett objekt till en JSON-string.
 Denna string kan sedan lagras i en textfil eller t.ex. skickas som svar på ett [REST](../../grafik/naetverk-och-internet-.../restful-server/)-anrop.
 
 {% hint style="info" %}
-OBS: Det finns inget sätt att automatiskt förvandla namnen på properties till snake\_case, vilket ju ofta används i JSON. Vill du serialisera med snake\_case så får du med andra ord använda JsonPropertyName-attributet.
+OBS: Det finns inget sätt att automatiskt förvandla namnen på properties till snake_case, vilket ju ofta används i JSON. Vill du serialisera med snake_case så får du med andra ord använda JsonPropertyName-attributet.
 {% endhint %}
 
 ## JsonSerializer.Deserialize
@@ -97,7 +97,7 @@ Pokemon ditto = JsonSerializer.Deserialize<Pokemon>(jsonString);
 
 ### Små och stora bokstäver
 
-Properties ska döpas med stor bokstav i C\#, men i json döps egenskaper nästan alltid med liten bokstav. Deserialize är känsligt för skillnader mellan stora och små bokstäver. Det går att stänga av den känsligheten:
+Properties ska döpas med stor bokstav i C#, men i json döps egenskaper nästan alltid med liten bokstav. Deserialize är känsligt för skillnader mellan stora och små bokstäver. Det går att stänga av den känsligheten:
 
 ```csharp
 var options = new JsonSerializerOptions
@@ -114,12 +114,12 @@ Pokemon ditto = JsonSerializer.Deserialize<Pokemon>(jsonString, options);
 Mer om attribut [här](../../klasser-och-objektorientering/attribut.md).
 
 {% hint style="info" %}
-**OBS:** dessa kräver att du inkluderar `System.Text.Json.Serialization`.
+**OBS: **dessa kräver att du inkluderar `System.Text.Json.Serialization`.
 {% endhint %}
 
-### \[JsonIgnore\]
+### \[JsonIgnore]
 
-Används för att se till så att en variabel eller property på C\#-sidan inte serialiseras till JSON.
+Används för att se till så att en variabel eller property på C#-sidan inte serialiseras till JSON.
 
 ```javascript
 using System.Text.Json.Serialization;
@@ -134,9 +134,9 @@ public class Pokemon
 }
 ```
 
-### \[JsonPropertyName\(\)\]
+### \[JsonPropertyName()]
 
-Med attributet `[JsonPropertyName()]` kan man bestämma att en C\#-klass' property ska matchas mot ett JSON-värde med annat namn.
+Med attributet `[JsonPropertyName()]` kan man bestämma att en C#-klass' property ska matchas mot ett JSON-värde med annat namn.
 
 {% tabs %}
 {% tab title="Pokemon.cs" %}
@@ -224,4 +224,3 @@ class Pokemon
 ```
 {% endtab %}
 {% endtabs %}
-

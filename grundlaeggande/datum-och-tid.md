@@ -18,7 +18,7 @@ DateTime apolloEleven = new DateTime(1969, 8, 16, 14, 32, 0);
 
 ### Egenskaper
 
-Man kan få ut information ur DateTime-objekt genom att läsa av dess egenskaper. \(Alla dessa är i själva verket [properties](../klasser-och-objektorientering/inkapsling-och-properties.md#properties).\)
+Man kan få ut information ur DateTime-objekt genom att läsa av dess egenskaper. (Alla dessa är i själva verket [properties](../klasser-och-objektorientering/inkapsling-och-properties.md#properties).)
 
 ```csharp
 lovelaceBirthday.DayOfWeek; // vilken dag i veckan det är
@@ -50,7 +50,7 @@ Alla dessa kan också användas för att flytta klockan bakåt – då stoppar m
 
 ## DateTime.Now
 
-Tidpunkten _just nu_. \(Är egentligen en [static ](../klasser-och-objektorientering/static.md#statiska-variabler)[property](../klasser-och-objektorientering/inkapsling-och-properties.md#properties)\)
+Tidpunkten _just nu_. (Är egentligen en [static ](../klasser-och-objektorientering/static.md#statiska-variabler)[property](../klasser-och-objektorientering/inkapsling-och-properties.md#properties))
 
 ```csharp
 // Spara en kopia av tidpunkten "just nu" i variabeln startTime
@@ -113,6 +113,4 @@ Console.WriteLine($"{span.Minutes} minuter");
 Console.WriteLine($"{span.Seconds} sekunder");
 Console.WriteLine($"{span.Milliseconds} millisekunder");
 ```
-
-
 

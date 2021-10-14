@@ -6,7 +6,7 @@ Observera att koordinatsystemet i Raylib har **origo i övre vänstra hörnet**,
 
 Måtten är i **pixlar**.
 
-## SetTargetFps\(\)
+## SetTargetFps()
 
 Används normalt utanför spel-loopen, för att begränsa antalet bildrutor per sekund. Är ett av de sätt som finns att få t.ex. förflyttningar att ske lika snabbt på alla datorer.
 
@@ -14,7 +14,7 @@ Används normalt utanför spel-loopen, för att begränsa antalet bildrutor per 
 Raylib.SetTargetFps(60); // Begränsar till 60fps
 ```
 
-## BeginDrawing\(\), EndDrawing\(\)
+## BeginDrawing(), EndDrawing()
 
 Används för att påbörja, respektive avsluta, den delen av spelloopen som ritar ut saker till fönstret.
 
@@ -31,7 +31,7 @@ while (!Raylib.WindowShouldClose())
 }
 ```
 
-## ClearBackground\(\)
+## ClearBackground()
 
 Rensar fönstret. Görs normalt kort efter BeginDrawing.
 
@@ -56,5 +56,4 @@ Om man vill skapa en egen ny färg så kan man göra det:
 Color hotPink = new Color(255, 105, 180, 255);
 ```
 
-Parametrarna är helt enkelt siffror från 0–255 för rött, grönt, blått och alpha \(genomskinlighet\). 0 alpha är helt genomskinlig, 255 är helt ogenomskinlig.
-
+Parametrarna är helt enkelt siffror från 0–255 för rött, grönt, blått och alpha (genomskinlighet). 0 alpha är helt genomskinlig, 255 är helt ogenomskinlig.

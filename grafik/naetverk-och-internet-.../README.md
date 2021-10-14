@@ -1,2 +1,2 @@
-# Nätverk och internet \[…\]
+# Nätverk och internet \[…]
 

@@ -66,13 +66,12 @@ I de flesta fall där API:er kräver API-nycklar anges de som parametrar i reque
 
 ## Öppna databas-API:er
 
-* [Pokemon API](https://pokeapi.co/)
-* [Digimon API](https://digimon-api.herokuapp.com/)
-* [Star Wars API](https://swapi.dev/)
-* [Star Trek API](http://stapi.co/)
+* [Pokemon API](https://pokeapi.co)
+* [Digimon API](https://digimon-api.herokuapp.com)
+* [Star Wars API](https://swapi.dev)
+* [Star Trek API](http://stapi.co)
 * Steam-API
   * [Skaffa en API-nyckel](https://steamcommunity.com/dev/apikey)
   * [Dokumentation](https://partner.steamgames.com/doc/webapi)
-* [Marvel API](https://developer.marvel.com/)
-* [Superhero API](https://superheroapi.com/)
-
+* [Marvel API](https://developer.marvel.com)
+* [Superhero API](https://superheroapi.com)

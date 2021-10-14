@@ -15,11 +15,11 @@ Nackdelar:
 
 ### Hur det funkar
 
-En länkad lista består av **noder**. Varje nod innehåller \(minst\) ett **värde** samt en **pekare** till nästa nod. Det finns ingen samling av alla noder någonstans; allt som finns är pekaren från en nod till en annan.
+En länkad lista består av **noder**. Varje nod innehåller (minst) ett **värde** samt en **pekare** till nästa nod. Det finns ingen samling av alla noder någonstans; allt som finns är pekaren från en nod till en annan.
 
  
 
-![](../.gitbook/assets/image%20%2821%29.png)
+![](<../.gitbook/assets/image (20).png>)
 
 {% tabs %}
 {% tab title="Node.cs" %}
@@ -68,7 +68,7 @@ Flera pekare kan peka på samma objekt. Det gör att man kan skapa mer komplexa 
 
 ### Tvåvägs
 
-![En tv&#xE5;v&#xE4;gs l&#xE4;nkad lista](../.gitbook/assets/image%20%2820%29.png)
+![En tvåvägs länkad lista](<../.gitbook/assets/image (21).png>)
 
 {% tabs %}
 {% tab title="Node.cs" %}
@@ -85,7 +85,7 @@ class Node
 
 ### Träd
 
-![](../.gitbook/assets/image%20%2823%29.png)
+![](<../.gitbook/assets/image (22).png>)
 
 {% tabs %}
 {% tab title="Node.cs" %}
@@ -101,7 +101,7 @@ class Node
 
 ### Nätverk
 
-![](../.gitbook/assets/image%20%2822%29.png)
+![](<../.gitbook/assets/image (23).png>)
 
 {% tabs %}
 {% tab title="Node.cs" %}
@@ -114,4 +114,3 @@ class Node
 ```
 {% endtab %}
 {% endtabs %}
-

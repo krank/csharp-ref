@@ -47,4 +47,3 @@ class Fighter
 ```
 {% endtab %}
 {% endtabs %}
-

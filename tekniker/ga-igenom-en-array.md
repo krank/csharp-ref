@@ -1,4 +1,4 @@
-# Gå igenom en array \(eller lista\)
+# Gå igenom en array (eller lista)
 
 I en array används index från 0 till X, där X är 1 mindre än antalet saker i arrayen. Om det finns 3 saker så finns index 0, 1 och 2.
 
@@ -28,7 +28,7 @@ while (i < choices.Length)
 
 Detta gör att även om man skulle lägga till tio nya namn till arrayen så kommer alla de nya namnen att skrivas ut tillsammans med de gamla.
 
-Detta kan även göras med listor och givetvis fungerar en [for-loop](../grundlaeggande/loopar.md#for-loop) lika bra \(om inte bättre\).
+Detta kan även göras med listor och givetvis fungerar en [for-loop](../grundlaeggande/loopar.md#for-loop) lika bra (om inte bättre).
 
 ```csharp
 string[] choices = {"Start", "Options", "Quit"};
@@ -54,5 +54,4 @@ Denna teknik används MYCKET, till exempel för att:
 
 * Skriva ut alla saker i en array
 * Undersöka varje grej i en array och se om den stämmer överens med något man letar efter
-* Ändra på varje grej i en array \(t.ex. fylla den med slumptal\).
-
+* Ändra på varje grej i en array (t.ex. fylla den med slumptal).
