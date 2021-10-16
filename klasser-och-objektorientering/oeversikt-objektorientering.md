@@ -46,7 +46,7 @@ class Pear
 
 En klass kan ärva från en annan klass. Det betyder att subklassen får basklassens alla metoder och variabler, men den kan också lägga till egna.
 
-Man brukar också beskriva det som att subklassen är en mer specialiserad version av basklassen – ett exempel på basklass kan vara `Weapon` och en subklass till Weapon kan då vara `Sword`. Sedan kan Sword agera basklass till LongSword och ShortSword.
+Man brukar också beskriva det som att subklassen är en mer specialiserad version av basklassen – ett exempel på basklass kan vara `Weapon` och en subklass till Weapon kan då vara `Sword`. Sedan kan Sword agera basklass till `LongSword `och `ShortSword`.
 
 Alla svärd är då vapen, och har alla metoder etc som ingår i vapen – fast de kan ha egna tillägg, och de kan också delvis fungera annorlunda (se Polymorfism).
 

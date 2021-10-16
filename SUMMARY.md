@@ -1,6 +1,6 @@
 # Table of contents
 
-* [C\# Snabbreferens](README.md)
+* [C# Snabbreferens](README.md)
 * [Lathund: Skapa projekt](lathund-skapa-projekt.md)
 * [Kompilering och publicering](kompilering-och-publicering.md)
 
@@ -24,16 +24,16 @@
   * [Enum](grundlaeggande/datatyper/enum.md)
 * [Typkonvertering](grundlaeggande/typkonvertering.md)
 * [Operatorer](grundlaeggande/operatorer.md)
-* [Konsollen \(Console\)](grundlaeggande/konsollen-console.md)
+* [Konsollen (Console)](grundlaeggande/konsollen-console.md)
 * [String-manipulering](grundlaeggande/string-manipulering.md)
 * [If-satser](grundlaeggande/if-satser.md)
 * [Loopar](grundlaeggande/loopar.md)
 * [Listor och arrayer](grundlaeggande/listor-och-arrayer.md)
 * [Egna metoder](grundlaeggande/egna-metoder.md)
 * [Delegates och lambdas](grundlaeggande/delegates.md)
-* [Slump \(Random\)](grundlaeggande/slump.md)
-* [Matematik \(Math\)](grundlaeggande/matematik-math.md)
-* [Vektorer \(Numerics\)](grundlaeggande/vektorer-numerics.md)
+* [Slump (Random)](grundlaeggande/slump.md)
+* [Matematik (Math)](grundlaeggande/matematik-math.md)
+* [Vektorer (Numerics)](grundlaeggande/vektorer-numerics.md)
 * [Datum och tid](grundlaeggande/datum-och-tid.md)
 * [Try-catch](grundlaeggande/try-catch.md)
 
@@ -67,7 +67,7 @@
 * [Interface](klasser-och-objektorientering/interface.md)
 * [Attribut](klasser-och-objektorientering/attribut.md)
 
-## Annat <a id="grafik"></a>
+## Annat <a href="grafik" id="grafik"></a>
 
 * [RayLib \[…\]](grafik/raylib/README.md)
   * [Raylib setup](grafik/raylib/raylib-setup.md)
@@ -89,14 +89,14 @@
     * [Controllers](grafik/naetverk-och-internet-.../restful-server/controllers.md)
     * [Models/dataklasser](grafik/naetverk-och-internet-.../restful-server/models.md)
     * [Tester med RESTer](grafik/naetverk-och-internet-.../restful-server/tester-med-rester.md)
+    * [Thunder](grafik/naetverk-och-internet-.../restful-server/thunder.md)
 
 ## Tekniker
 
 * [Begränsa input](tekniker/begraensa-input.md)
 * [Game states](tekniker/game-states.md)
-* [Gå igenom en array \(eller lista\)](tekniker/ga-igenom-en-array.md)
+* [Gå igenom en array (eller lista)](tekniker/ga-igenom-en-array.md)
 * [Länkade listor och andra strukturer](tekniker/laenkade-listor-och-andra-strukturer.md)
 * [Ta bort saker ur listan man går igenom](tekniker/ta-bort-saker-ur-listan-man-gar-igenom.md)
 * [2D-spelbräden](tekniker/2d-spelbraeden.md)
 * [Timers](tekniker/timers.md)
-

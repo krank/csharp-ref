@@ -19,8 +19,9 @@ VS Code är väldigt modulärt. Det betyder att det finns en ganska liten "grund
 
 **Bonus:**
 
-* [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare) – Realtids-samarbete; flera personer kan skriva kod tillsammans samtidigt.
+* [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client) – gör att man kan testa API-anrop direkt i VScode, både mot lokala servrar som man bygger själv och servrar på det lokala nätverket eller internet.
 * [Auto-Using for C#](https://marketplace.visualstudio.com/items?itemName=Fudge.auto-using) – hjälper till att lägga in using-statements när det behövs, t.ex. för listor så lägger den till `using System.Collections.Generic`.
+* [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare) – Realtids-samarbete; flera personer kan skriva kod tillsammans samtidigt.
 
 ## Praktiska inställningar
 
@@ -32,16 +33,21 @@ Under Settings (Kugghjulet och sen Settings, eller kortkommandot Ctrl+, ) finns 
 
 ### Ha en standardmapp för nya projekt
 
-* Klicka i adressfältet för att kunna markera och kopiera adressen till mappen
-  * Exempel: `C:\Users\krank\Documents\Programmering 1`
-* Gå till Visual Studio Code.
-* Ha C# Toolbox of Productivity installerad och uppdaterad.
-* Gå till inställningarna.
-* Sök efter "Default Folder For Project Creation". Klicka på "Edit in settings.json".
+**Steg 1: Hämta adressen till mappen**
+
 * Gå till Utforskaren och bläddra till mappen där du vill lägga dina projekt.
 
 ![](<../../.gitbook/assets/image (34).png>)
 
+* Klicka i adressfältet för att kunna markera och kopiera adressen till mappen
+  * Exempel: `C:\Users\krank\Documents\Programmering 1`
+
+**Steg 2: Skriv in adressen på rätt ställe.**
+
+* Gå till Visual Studio Code.
+* Ha C# Toolbox of Productivity installerad och uppdaterad.
+* Gå till inställningarna.
+* Sök efter "Default Folder For Project Creation". Klicka på "Edit in settings.json".
 * Klistra in adressen inom citattecknen efter `"csharp-snippet-productivity.defaultFolderForProjectCreation"`.
   * OBS: Dubblera alla \\
   * Exempel: `"C:\\Users\\krank\\Documents\\Programmering 1"`
