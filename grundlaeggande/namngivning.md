@@ -10,30 +10,14 @@ Inga mellanslag mellan orden, liten bokstav i början men i övrigt stor bokstav
 
 ## Användning
 
-### Projekt
+| Typ                         | Modell     | Exempel                                                          |
+| --------------------------- | ---------- | ---------------------------------------------------------------- |
+| **Projekt**                 | PascalCase | <p>SpaceShooter</p><p>PacMan</p><p>BreakoutClone</p>             |
+| **Metoder**                 | PascalCase | <p>TakeDamage()</p><p>RestoreOriginalPosition()</p><p>Rest()</p> |
+| **Variabler**               | camelCase  | <p>hitPoints</p><p>mana</p><p>isFloating</p>                     |
+| **Parametrar**              | camelCase  | <p>name</p><p>movementVector</p>                                 |
+| **Klasser**                 | PascalCase | <p>Enemy</p><p>ProjectileTarget</p><p>PowerupBox</p>             |
+| **Klassvariabler: publika** | PascalCase | IsAlive                                                          |
+| **Klassvariabler: privata** | camelCase  | hitPoints                                                        |
+| **Properties**              | camelCase  | HitPoints                                                        |
 
-Använd PascalCase.
-
-> **Exempel:** SpaceShooter eller PacMan eller BreakoutClone.
-
-### Variabler
-
-Använd camelCase.
-
-> **Exempel:** hitPoints, mana eller isFloating.
-
-### Metoder
-
-Använd PascalCase.
-
-> **Exempel:** TakeDamage(), RestoreOriginalPosition() eller Rest().
-
-Använd helst verb (Rest, Eat, Hurt, Build).
-
-### Klasser
-
-Använd PascalCase.
-
-> **Exempel:** Enemy, ProjectileTarget eller PowerupBox.
-
-Döp i singular av vad klassen beskriver (Character, Apple, Monster, Clock, Rainbow).
