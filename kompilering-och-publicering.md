@@ -24,7 +24,17 @@ Resultatet bör se ut ungefär såhär:
 
 I ditt projekt bör du nu ha en mapp som heter "bin" och i den finns en mapp som heter "Release". Där finns ytterligare en undermapp som heter "net5.0" (om du använder .NET Core 5), och under den finns en som heter "publish". Filerna i publish-mappen är de du kan distribuera till andra.
 
-![](<.gitbook/assets/image (32).png>) 
+![](<.gitbook/assets/image (32).png>)&#x20;
+
+### En ensam exe-fil
+
+För att packa ihop ovanstående till en ensam exe-fil du kan distribuera behöver du bli mer specifik:
+
+```powershell
+dotnet publish -r win-x64 -c Release -p:PublishSingleFile=true --self-contained false
+```
+
+Här behöver mottagaren fortfarande ha dotnet installerat – inte SDK nödvändigtvis, men runtime. Det borde dock inte vara något större problem då dotnet 5 brukar vara installerat i de flesta moderna windowsversioner.
 
 ### Överkurs: standalone
 
