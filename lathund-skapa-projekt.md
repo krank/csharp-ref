@@ -9,7 +9,7 @@
   * Projektnamnet – inga mellanslag, börja inte med siffror.
   * Location: Välj mapp för projektet.
   * Solution name: Genereras automatiskt från projektnamnet.
-  * Framework: 5.0
+  * Framework: 5.0 eller 6.0
   * Tryck "Create Project"
   * När det nya fönstret öppnas, välj sln-filen.
   * När dialogrutan dyker upp och frågar, svara "Yes" på att du vill skapa filerna som krävs.

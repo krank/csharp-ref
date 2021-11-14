@@ -9,7 +9,7 @@ Se till att åtminstone C# och C# Toolbox-tilläggen är installerade i VSCode.
 * Project name: skriv något som beskriver projektet. **INGA MELLANSLAG**.
 * Välj en mapp att lägga projektet i.
   * Om du vill använda samma mapp varje gång – [se det här knepet.](./#ha-en-standardmapp-foer-nya-projekt)
-* Framework: 5.0.
+* Framework: 5.0 eller 6.0.
 
 Tryck på Create Project. Nu bör ditt nya projekt skapas och öppnas.
 
@@ -32,7 +32,7 @@ Om du inte ser den rutan:
 
 Börja med att gå till Debug and run-panelen, den som ser ut som en insekt på en play-knapp.\
 \
-![](<../../.gitbook/assets/image (1).png>) 
+![](<../../.gitbook/assets/image (1).png>)&#x20;
 
 Tryck på kugghjulet. Då öppnas config-filen för projektet.
 
