@@ -82,7 +82,7 @@ Används för att serialisera ett objekt till en JSON-string.
 Denna string kan sedan lagras i en textfil eller t.ex. skickas som svar på ett [REST](../../grafik/naetverk-och-internet-.../restful-server/)-anrop.
 
 {% hint style="info" %}
-OBS: Det finns inget sätt att automatiskt förvandla namnen på properties till snake_case, vilket ju ofta används i JSON. Vill du serialisera med snake_case så får du med andra ord använda JsonPropertyName-attributet.
+OBS: Det finns inget sätt att automatiskt förvandla namnen på properties till snake\_case, vilket ju ofta används i JSON. Vill du serialisera med snake\_case så får du med andra ord använda JsonPropertyName-attributet.
 {% endhint %}
 
 ## JsonSerializer.Deserialize
@@ -177,7 +177,10 @@ För att deserialisera dessa, skapa helt enkelt publika [listor ](../../grundlae
 ```csharp
 class Pokemon
 {
+  [JsonPropertyName("name")]
   public string Name {get; set;}
+  
+  [JsonPropertyName("forms")]
   public List<string> Forms {get; set;}
 }
 ```
@@ -206,7 +209,10 @@ För att deserialisera dessa, skapa klasser som beskriver de inre objekten.
 ```csharp
 class PokemonSpecies
 {
+  [JsonPropertyName("name")]
   public string Name {get; set;}
+  
+  [JsonPropertyName("url")]
   public string Url {get; set;}
 }
 ```
@@ -218,7 +224,10 @@ class PokemonSpecies
 ```csharp
 class Pokemon
 {
+  [JsonPropertyName("name")]
   public string Name {get; set;}
+  
+  [JsonPropertyName("species")]
   public PokemonSpecies Species {get; set;}
 }
 ```
