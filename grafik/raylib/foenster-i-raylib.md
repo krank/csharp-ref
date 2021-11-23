@@ -30,21 +30,17 @@ I exemplet nedan initieras Raylib-fönstret. Sedan körs en loop så länge fön
 ```csharp
 using Raylib_cs;
 
-class Program
+Raylib.InitWindow(800, 600, "The title of my window");
+RayLib.SetTargetFPS(60);
+
+while (!Raylib.WindowShouldClose())
 {
-  static void Main(string[] args)
-  {
-    Raylib.InitWindow(800, 600, "The title of my window");
-    
-    while (!Raylib.WindowShouldClose())
-    {
-      Raylib.BeginDrawing();
-      
-      Raylib.ClearBackground(Color.WHITE);
-      
-      Raylib.DrawCircle(100,100,100,Color.MAGENTA);
-      
-      Raylib.EndDrawing();
-    }
+  Raylib.BeginDrawing();
+  
+  Raylib.ClearBackground(Color.WHITE);
+  
+  Raylib.DrawCircle(100,100,100,Color.MAGENTA);
+  
+  Raylib.EndDrawing();
 }
 ```
