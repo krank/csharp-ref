@@ -43,25 +43,11 @@ Man kan också tilldela värden till variablerna direkt när instansen skapas:
 Goomba g3 = new Goomba() {x = 10, y = 6};
 ```
 
-## Skapa klasser i Visual Studio Code
-
-### Med VS Sharper for C\#
+## Skapa klasser
 
 * Högerklicka på mappen du vill skapa klassen i.
 * Välj "Add a new C# Class file".
 * Skriv in namnet på klassen – glöm inte stor bokstav!
 
-### Med Solution Explorer
 
-* Gå till Solution Explorer
-* Högerklicks på ditt projekt
-* Välj "Create file"
-
-![](<../.gitbook/assets/image (18).png>) 
-
-* Skriv in ett filnamn – lämpligen klassens namn punkt cs.
-
-![](<../.gitbook/assets/image (19).png>) 
-
-* Om du får upp en lista, välj "Class".
 
