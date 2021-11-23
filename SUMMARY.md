@@ -4,38 +4,27 @@
 * [Lathund: Skapa projekt](lathund-skapa-projekt.md)
 * [Kompilering och publicering](kompilering-och-publicering.md)
 
-## Mjukvara
-
-* [Visual Studio Code \[…\]](mjukvara/visual-studio-code/README.md)
-  * [Nya projekt](mjukvara/visual-studio-code/nya-projekt.md)
-  * [Debugging](mjukvara/visual-studio-code/debugging.md)
-  * [Snabbkommandon](mjukvara/visual-studio-code/snabbkommandon.md)
-  * [Snippets](mjukvara/visual-studio-code/snippets.md)
-  * [Felsökning](mjukvara/visual-studio-code/felsoekning.md)
-* [Git & GitHub \[…\]](mjukvara/git-and-github/README.md)
-  * [Git-begrepp](mjukvara/git-and-github/git-begrepp.md)
-
 ## Grundläggande
 
-* [Begrepp](grundlaeggande/begrepp.md)
-* [Namngivning](grundlaeggande/namngivning.md)
 * [Datatyper \[…\]](grundlaeggande/datatyper/README.md)
   * [Tuples](grundlaeggande/datatyper/tuples.md)
   * [Enum](grundlaeggande/datatyper/enum.md)
 * [Typkonvertering](grundlaeggande/typkonvertering.md)
 * [Operatorer](grundlaeggande/operatorer.md)
 * [Konsollen (Console)](grundlaeggande/konsollen-console.md)
-* [String-manipulering](grundlaeggande/string-manipulering.md)
 * [If-satser](grundlaeggande/if-satser.md)
 * [Loopar](grundlaeggande/loopar.md)
 * [Listor och arrayer](grundlaeggande/listor-och-arrayer.md)
+* [Slump (Random)](grundlaeggande/slump.md)
+* [String-manipulering](grundlaeggande/string-manipulering.md)
 * [Egna metoder](grundlaeggande/egna-metoder.md)
 * [Delegates och lambdas](grundlaeggande/delegates.md)
-* [Slump (Random)](grundlaeggande/slump.md)
 * [Matematik (Math)](grundlaeggande/matematik-math.md)
 * [Vektorer (Numerics)](grundlaeggande/vektorer-numerics.md)
 * [Datum och tid](grundlaeggande/datum-och-tid.md)
 * [Try-catch](grundlaeggande/try-catch.md)
+* [Namngivning](grundlaeggande/namngivning.md)
+* [Begrepp](grundlaeggande/begrepp.md)
 
 ## Filhantering
 
@@ -72,7 +61,7 @@
 * [RayLib \[…\]](grafik/raylib/README.md)
   * [Raylib setup](grafik/raylib/raylib-setup.md)
   * [Fönster i Raylib](grafik/raylib/foenster-i-raylib.md)
-  * [Grafik](grafik/raylib/grafik.md)
+  * [Grundläggande grafik](grafik/raylib/grafik.md)
   * [Geometriska former](grafik/raylib/geometriska-former.md)
   * [Bilder och texturer](grafik/raylib/bilder-och-texturer.md)
   * [Input](grafik/raylib/input.md)
@@ -90,6 +79,17 @@
     * [Models/dataklasser](grafik/naetverk-och-internet-.../restful-server/models.md)
     * [Tester med RESTer](grafik/naetverk-och-internet-.../restful-server/tester-med-rester.md)
     * [Thunder](grafik/naetverk-och-internet-.../restful-server/thunder.md)
+
+## Mjukvara
+
+* [Visual Studio Code \[…\]](mjukvara/visual-studio-code/README.md)
+  * [Nya projekt](mjukvara/visual-studio-code/nya-projekt.md)
+  * [Debugging](mjukvara/visual-studio-code/debugging.md)
+  * [Snabbkommandon](mjukvara/visual-studio-code/snabbkommandon.md)
+  * [Snippets](mjukvara/visual-studio-code/snippets.md)
+  * [Felsökning](mjukvara/visual-studio-code/felsoekning.md)
+* [Git & GitHub \[…\]](mjukvara/git-and-github/README.md)
+  * [Git-begrepp](mjukvara/git-and-github/git-begrepp.md)
 
 ## Tekniker
 

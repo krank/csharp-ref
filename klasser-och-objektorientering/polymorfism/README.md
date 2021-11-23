@@ -1,5 +1,7 @@
 # Polymorfism \[…]
 
+Se också [Virtual och Override](virtual-override.md).
+
 Polymorfism inom programmering är när flera olika saker liknar varandra så pass mycket att de kan ersätta varandra, eller när man kan använda ett och samma namn för att referera till flera olika saker.
 
 Ett exempel på detta är [metodöverlagring](../../grundlaeggande/egna-metoder.md#oeverlagring), där man använder samma namn på flera olika metoder, och C# använder parametervärden för att avgöra vilken metod som ska köras.
@@ -84,10 +86,8 @@ Eller ännu kortare:
 Det innebär dock att man riskerar felmeddelanden ifall det nu visar sig att just den instansen faktiskt inte var någon Hero-instans utan kanske en Character-instans. Därför gäller det att vara försiktig, och kontrollera att instansen som lagrats i variabeln faktiskt _är_ en instans av just den efterfrågade subklassen.
 
 ```csharp
-if (h.GetType() == typeof(Hero))
+if (h is Hero)
 {
   ((Hero)myHero).AddExperience(10);
 }
 ```
-
-GetType() returnerar en instans av datatypen Type, som beskriver klasser. Typeof är en metod som tar emot en klass som parameter, och returnerar också en instans av datatypen Type, som beskriver den klass som angavs som parameter. Det gör att de går att jämföra med varandra.

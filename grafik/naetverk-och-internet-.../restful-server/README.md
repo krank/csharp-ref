@@ -1,5 +1,7 @@
 # RESTful server \[…]
 
+[Controllers ](controllers.md)| [Models/dataklasser](models.md) | [Tester med RESTer](tester-med-rester.md) | [Thunder](thunder.md)
+
 Nedan är instruktioner för att skapa en enkel API-server som svarar på GET-anrop.
 
 ## Skapa projektet

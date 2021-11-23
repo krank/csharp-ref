@@ -1,5 +1,7 @@
 # Visual Studio Code \[…]
 
+[Nya projekt](nya-projekt.md) | [Debugging](debugging.md) | [Snabbkommandon](snabbkommandon.md) | [Snippets](snippets.md) | [Felsökning](felsoekning.md)
+
 Visual Studio Code (VS Code) är en ny kod-editor från Microsoft som är betydligt snabbare och enklare än vanliga Visual Studio. Den funkar också bättre till många saker, även om den saknar en del av de mer avancerade verktygen som finns i det större programmet.
 
 Ladda ner Visual Studio Code: [https://code.visualstudio.com/](https://www.google.com/url?q=https%3A%2F%2Fcode.visualstudio.com%2F\&sa=D\&sntz=1\&usg=AFQjCNFfrd2nqbS9PitDdShdvXIIGWl04g)
@@ -15,7 +17,7 @@ VS Code är väldigt modulärt. Det betyder att det finns en ganska liten "grund
 * [C#](https://www.google.com/url?q=https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3Dms-vscode.csharp\&sa=D\&sntz=1\&usg=AFQjCNGOzgSFj14Pbd9ut66JAvh0loJsEw) – Ger Visual Studio Code stöd för C#
 * [C# Toolbox of Productivity](https://marketplace.visualstudio.com/items?itemName=RichardZampieriprog.csharp-snippet-productivity) – Lägger till en del extra användbara genvägar och funktioner, t.ex. för att skapa nya projekt och klasser.
 * [gitignore](https://www.google.com/url?q=https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3Dcodezombiech.gitignore\&sa=D\&sntz=1\&usg=AFQjCNHu8aUEHuuoWIdAZQcCdvDqnSWhSQ) – Underlättar arbetet med git och Visual Studio Code. Om du söker efter den, se till att ta den av CodeZombie!
-* [NuGet Gallery](https://www.google.com/url?q=https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3Dpatcx.vscode-nuget-gallery\&sa=D\&sntz=1\&usg=AFQjCNGESnjNCe20EX_KwyQS6\_sTUBYv5A) – Underlättar installationen av externa bibliotek och paket, t.ex. Raylib.
+* [NuGet Gallery](https://www.google.com/url?q=https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3Dpatcx.vscode-nuget-gallery\&sa=D\&sntz=1\&usg=AFQjCNGESnjNCe20EX\_KwyQS6\_sTUBYv5A) – Underlättar installationen av externa bibliotek och paket, t.ex. Raylib.
 
 **Bonus:**
 
