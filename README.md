@@ -9,7 +9,7 @@ Detta är en hemsida med förenklade förklaringar och exempel för C# och Visua
 
 ## Vad behöver jag först?
 
-* Installera DotNet 5 SDK eller senare.
+* Installera [DotNet SDK](https://dotnet.microsoft.com/download) – version 5 eller senare.
 * Installera [Visual Studio Code](mjukvara/visual-studio-code/) och lämpliga extensions.
 * Installera [Git-scm](mjukvara/git-and-github/) och ställ in namn och email.
 * Kolla [lathunden ](lathund-skapa-projekt.md)för hur man skapar nya projekt.
