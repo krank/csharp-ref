@@ -76,12 +76,20 @@ RayLib.ImageResizeNN(ref pixelartImage, pixelartImage * 2, pixelartImage * 2);
 
 En Texture är en bild som är sparad i grafikkortets minne, och är redo att ritas ut på skärmen. Man kan skapa en Texture utifrån en Image eller läsa in en bildfil från hårddisken direkt. Om man ska använda samma Image i flera olika Textures så kan det vara bra att skapa en Image först, så slipper man läsa in den från hårddisken flera gånger.
 
-```csharp
-// Skapar en ny texture baserat på en Image som redan lästs in.
-Texture2D heroTexture = Raylib.LoadTextureFromImage(originalImage);
+### LoadTexture
 
-// Läser in en bildfil och skapar en texture direkt från den.
+Läser in en bildfil och skapar en texture direkt från den.
+
+```csharp
 Texture2D goombaTexture = Raylib.LoadTexture(@"goomba.png");
+```
+
+### LoadTextureFromImage
+
+Skapar en ny texture baserat på en Image.
+
+```
+Texture2D heroTexture = Raylib.LoadTextureFromImage(originalImage);
 ```
 
 ### DrawTexture
