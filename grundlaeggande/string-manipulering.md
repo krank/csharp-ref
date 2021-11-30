@@ -45,6 +45,20 @@ string nyFolk = folk.insert(5, " och herbert");
 // nyFolk blir "micke och herbert och kim och mimmi"
 ```
 
+## Contains()
+
+Kollar om en string innehåller en annan string, t.ex. ifall "haj" finns i texten "en haj hoppar över en björn". Returnerar true om den finns, false om den inte gör det.
+
+```csharp
+string answer = Console.ReadLine();
+bool hasAShark = answer.Contains("haj");
+
+if (hasAShark == true)
+{
+  Console.WriteLine("Du skrev något med ordet haj!");
+}
+```
+
 ## IndexOf()
 
 Returnerar positionen för den första plats i stringen där en annan string finns. Tar emot något att söka efter som parameter.
