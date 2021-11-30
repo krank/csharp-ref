@@ -31,7 +31,7 @@ I exemplet nedan initieras Raylib-fönstret. Sedan körs en loop så länge fön
 using Raylib_cs;
 
 Raylib.InitWindow(800, 600, "The title of my window");
-RayLib.SetTargetFPS(60);
+Raylib.SetTargetFPS(60);
 
 while (!Raylib.WindowShouldClose())
 {
