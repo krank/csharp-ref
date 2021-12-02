@@ -7,6 +7,10 @@ Saker som behövs:
 * [Git-scm](https://git-scm.com)
 * Ett konto på [GitHub](https://github.com).
 
+Kan vara väldigt bra:
+
+* [GitLens-extension](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) (lägger till bl.a visuell historik direkt i vscode)
+
 ## Första gången efter ny Git-installation
 
 * Gå till Terminal i menyn och välj New terminal.
@@ -24,7 +28,7 @@ Saker som behövs:
 * Tryck F1 och sök "add gitignore". Välj Visual Studio.
   * Gör samma sak igen, välj "Append" och "Visual Studio Code".
 * Tryck "Publish to GitHub"
-  * Längst ner till vänster, ser ut som en liten pil som pekar upp i ett moln: ![](<../../.gitbook/assets/image (29).png>) 
+  * Längst ner till vänster, ser ut som en liten pil som pekar upp i ett moln: ![](<../../.gitbook/assets/image (29).png>)&#x20;
   * Första gången: Följ instruktionerna för att knyta Visual Studio Code till github-kontot
 * Välj namn för projektet, kryssa ur att projektet ska vara private om det ska lämnas in
 
@@ -40,7 +44,7 @@ Saker som behövs:
 
 När du gjort alla commits för denna gång och t.ex. ska stänga av datorn eller lämna lektionen.
 
-* Tryck Synchronize Changes (längst ner till vänster): ![](<../../.gitbook/assets/image (30).png>) 
+* Tryck Synchronize Changes (längst ner till vänster): ![](<../../.gitbook/assets/image (30).png>)&#x20;
 
 ### Lämna in en Git-länk (en gång per projekt)
 
@@ -56,3 +60,36 @@ Om man råkat göra ett projekt privat på GitHub.com…
 * Gå till "Settings".
 * Bland knapparna längst ner finns "Make Public".
 * Skriv in repots namn för att bekräfta.
+
+### Återgå till den senaste committen
+
+* Gå till Source Control i Visual Studio Code.
+* Högerklicka på filen eller filerna du vill återställa.
+  * (Du kan markera flera filer genom att klicka på den första filen, hålla nere shift och klicka på den sista filen)
+* Välj "Discard changes".
+
+### Ångra den senaste committen
+
+(Med GitLens-extension!)
+
+* Gå till Source Control i Visual Studio Code.
+* Öppna "Commits" i listan under "Changes" för att se en lista med alla commits.
+* Högerklicka på den senaste committen.
+* Välj "Revert commit".
+  * Välj alternativet med "--no-edit".
+
+### Avancerat: gå tillbaka flera commits på en gång
+
+(Med GitLens-extension!)
+
+* Gå till Source Control i Visual Studio Code.
+* Öppna "Commits" i listan under "Changes" för att se en lista med alla commits.
+* Högerklicka på den commit du vill gå tillbaka till.
+  * Välj "Reset current branch to commit". Välj **Hard**.
+* Expandera "changes to pull from Origin on GitHub".
+* Högerklicka på den senaste/nyaste committen.
+  * Välj "Reset current branch to commit". Välj **Soft**.
+* Gör en ny commit. Denna commit kommer nu att innebära en radering av alla ändringar som fanns i alla commits mellan den senaste committen och den du återställde till.
+
+
+
