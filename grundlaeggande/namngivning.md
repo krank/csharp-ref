@@ -1,14 +1,19 @@
 # Namngivning
 
-### PascalCase
+## Språk och "bra namn"
 
-Inga mellanslag mellan orden, stor bokstav (versal) i början av varje ord.
+Ett bra namn är tydligt och beskriver informationen variabeln innehåller, eller den handling metoden gör. "hitPoints" är ett bättre namn än "x".
 
-### camelCase
+\[Fler exempel kommer]
 
-Inga mellanslag mellan orden, liten bokstav i början men i övrigt stor bokstav (versal) i början av varje ord.
+Namnen i ett projekt bör alla vara **på samma språk** och följa samma mönster.
 
-## Användning
+## PascalCase och camelCase
+
+* **PascalCase:** Inga mellanslag mellan orden, stor bokstav (versal) i början av varje ord.
+* **camelCase:** Inga mellanslag mellan orden, liten bokstav i början men i övrigt stor bokstav (versal) i början av varje ord.
+
+### Exempel
 
 | Typ                         | Modell     | Exempel                                                          |
 | --------------------------- | ---------- | ---------------------------------------------------------------- |
