@@ -2,11 +2,15 @@
 
 ## Språk och "bra namn"
 
+Namnen i ett projekt bör alla vara **på samma språk** och följa samma mönster.
+
 Ett bra namn är tydligt och beskriver informationen variabeln innehåller, eller den handling metoden gör. "hitPoints" är ett bättre namn än "x".
 
-\[Fler exempel kommer]
-
-Namnen i ett projekt bör alla vara **på samma språk** och följa samma mönster.
+| Kategori  | Grundtanke              | Bra exempelnamn                                                                |
+| --------- | ----------------------- | ------------------------------------------------------------------------------ |
+| Variabler | Den data som lagras     | <p>hitPoints<br>movementX<br>hasBeenHit<br>weaponDamage<br>moneyOwed</p>       |
+| Metoder   | Den handling som utförs | <p>CheckCollision<br>Draw<br>Update<br>LoadSavegame<br>ApplyMovementVector</p> |
+| Klasser   | Kategorinamn i singular | <p>Enemy<br>Level<br>Powerup<br>Button<br>Book</p>                             |
 
 ## PascalCase och camelCase
 
@@ -15,14 +19,14 @@ Namnen i ett projekt bör alla vara **på samma språk** och följa samma mönst
 
 ### Exempel
 
-| Typ                         | Modell     | Exempel                                                          |
-| --------------------------- | ---------- | ---------------------------------------------------------------- |
-| **Projekt**                 | PascalCase | <p>SpaceShooter</p><p>PacMan</p><p>BreakoutClone</p>             |
-| **Metoder**                 | PascalCase | <p>TakeDamage()</p><p>RestoreOriginalPosition()</p><p>Rest()</p> |
-| **Variabler**               | camelCase  | <p>hitPoints</p><p>mana</p><p>isFloating</p>                     |
-| **Parametrar**              | camelCase  | <p>name</p><p>movementVector</p>                                 |
-| **Klasser**                 | PascalCase | <p>Enemy</p><p>ProjectileTarget</p><p>PowerupBox</p>             |
-| **Klassvariabler: publika** | PascalCase | IsAlive                                                          |
-| **Klassvariabler: privata** | camelCase  | hitPoints                                                        |
-| **Properties**              | camelCase  | HitPoints                                                        |
+| Typ                                                                            | Modell     | Exempel                                                          |
+| ------------------------------------------------------------------------------ | ---------- | ---------------------------------------------------------------- |
+| **Projekt**                                                                    | PascalCase | <p>SpaceShooter</p><p>PacMan</p><p>BreakoutClone</p>             |
+| **Metoder**                                                                    | PascalCase | <p>TakeDamage()</p><p>RestoreOriginalPosition()</p><p>Rest()</p> |
+| **Klasser**                                                                    | PascalCase | <p>Enemy</p><p>ProjectileTarget</p><p>PowerupBox</p>             |
+| **Properties**                                                                 | PascalCase | HitPoints                                                        |
+| <p><strong>Klassvariabler:</strong> <br><strong>public, protected</strong></p> | PascalCase | IsAlive                                                          |
+| **Klassvariabler: private**                                                    | camelCase  | hitPoints                                                        |
+| **Lokala variabler**                                                           | camelCase  | <p>hitPoints</p><p>mana</p><p>isFloating</p>                     |
+| **Parametrar**                                                                 | camelCase  | <p>name</p><p>movementVector</p>                                 |
 
