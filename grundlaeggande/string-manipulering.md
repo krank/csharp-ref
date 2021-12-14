@@ -1,6 +1,6 @@
 # String-manipulering
 
-En string är i C# alltid oföränderlig; man kan inte ändra direkt i en string. Men man kan använda olika metoder för att skapa nya versioner av existerande strings.
+En string är i C# alltid oföränderlig; man kan inte ändra direkt i en string. Men man kan använda olika metoder för att skapa **nya versioner** av existerande strings.
 
 ## Replace()
 

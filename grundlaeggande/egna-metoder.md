@@ -28,7 +28,7 @@ Genom parametrar kan man föra in information i metoden när den anropas.
 ```csharp
 static void PrettyPrint(string text)
 {
-  Console.WriteLine("--~~== " + text + "==~~--");
+  Console.WriteLine($"--~~== {text} ==~~--");
 }
 ```
 
