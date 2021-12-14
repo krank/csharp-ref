@@ -100,7 +100,7 @@ Man kan få fram en samling av alla keys i ett dictionary genom att läsa av ege
 ```csharp
 foreach (string key in myStats.Keys)
 {
-  Console.WriteLine(key + ": " + myStats[key]);
+  Console.WriteLine($"{key}: {myStats[key]});
 }
 ```
 

@@ -18,6 +18,17 @@ Laddar in en typsnittsfil (ttf eller otf-format)
 Font f1 = Raylib.LoadFont(@"Metrophobic.ttf");
 ```
 
+## LoadFontEx()
+
+Laddar in en typsnittsfil (ttf eller otf-format) med extra parametrar
+
+```csharp
+// Ladda in typsnittsfilen Lato-Regular.ttf, i storleken 36.
+//  Vi anger null eftersom vi inte vill ange exakt vilka tecken som ska laddas in.
+//  VI anger -1 eftersom vi inte vill ange ett maxantal tecken att ladda in.
+Font f2 = Raylib.LoadFontEx(@"Lato-Regular.ttf", 36, null, -1);
+```
+
 ## DrawTextEx()
 
 Mer avancerad variant av DrawText, som använder Vector2 för positionering och tillåter att man anger typsnitt. Kräver att man lagt in `using System.Numerics;` högst upp.

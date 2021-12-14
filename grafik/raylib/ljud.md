@@ -24,7 +24,7 @@ Raylib.SetMasterVolume(0.3f);
 
 En datatyp för ljudeffekter.
 
-### LoadSound
+### LoadSound()
 
 Läser in en ljudfil och placerar dess innehåll i minnet, redo att läsas av och spelas upp.
 
@@ -32,7 +32,7 @@ Läser in en ljudfil och placerar dess innehåll i minnet, redo att läsas av oc
 Sound exampleSound = Raylib.LoadSound("woop_woop.ogg");
 ```
 
-### PlaySound
+### PlaySound()
 
 Spelar upp ett ljud
 
@@ -40,7 +40,7 @@ Spelar upp ett ljud
 Raylib.PlaySound(exampleSound);
 ```
 
-### PauseSound
+### PauseSound()
 
 Pausar uppspelningen av ett ljud.
 
@@ -48,7 +48,7 @@ Pausar uppspelningen av ett ljud.
 Raylib.PauseSound(exampleSound);
 ```
 
-### ResumeSound
+### ResumeSound()
 
 Fortsätter uppspelningen av ett pausat ljud.
 
@@ -56,7 +56,7 @@ Fortsätter uppspelningen av ett pausat ljud.
 Raylib.ResumeSound(exampleSound);
 ```
 
-### StopSound
+### StopSound()
 
 Avbryter uppspelningen av ett ljud.
 
@@ -64,7 +64,7 @@ Avbryter uppspelningen av ett ljud.
 Raylib.StopSound(exampleSound);
 ```
 
-### IsSoundPlaying
+### IsSoundPlaying()
 
 Returnerar en bool – true om ljudet just nu spelas, annars false.
 
@@ -72,7 +72,7 @@ Returnerar en bool – true om ljudet just nu spelas, annars false.
 bool isPlaying = Raylib.IsSoundPlaying(exampleSound);
 ```
 
-### SetSoundVolume
+### SetSoundVolume()
 
 Bestämmer volym för ett ljud. Volymen anges som en float mellan 0.0 och 1.0.
 
@@ -140,14 +140,6 @@ Returnerar en bool – true om musikströmmen just nu spelas, annars false.
 
 ```csharp
 bool isPlaying = Raylib.IsMusicPlaying(exampleMusic);
-```
-
-### SetMusicLoopCount()
-
-Bestämmer hur många gånger musikströmmen ska loopas. Standard är 0, vilket betyder att musiken loopas oändligt.
-
-```csharp
-Raylib.SetMusicLoopCount(exampleMusic, 2);
 ```
 
 ### SetMusicVolume()
