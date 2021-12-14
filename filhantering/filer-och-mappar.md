@@ -8,7 +8,7 @@ using System.IO;
 
 ## Filer
 
-### File.Delete
+### File.Delete()
 
 Tar bort den fil som anges som parameter.
 
@@ -16,7 +16,7 @@ Tar bort den fil som anges som parameter.
 File.Delete(@"localfile.txt");
 ```
 
-### File.Exists
+### File.Exists()
 
 File.Exists är en metod som returnerar true om filen som anges som parameter existerar, false om den inte gör det.
 
@@ -29,7 +29,7 @@ if (File.Exists(@"localfile.txt"))
 
 ## Mappar
 
-### Directory.CreateDirectory
+### Directory.CreateDirectory()
 
 Skapa en mapp.
 
@@ -37,7 +37,7 @@ Skapa en mapp.
 Directory.Create(@"Savegames");
 ```
 
-### Directory.Delete
+### Directory.Delete()
 
 Ta bort en mapp.
 
@@ -45,7 +45,7 @@ Ta bort en mapp.
 Directory.Delete(@"Savegames");
 ```
 
-### Directory.Exists
+### Directory.Exists()
 
 Kolla om en mapp existerar.
 

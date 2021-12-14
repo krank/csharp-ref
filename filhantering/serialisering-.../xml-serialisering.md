@@ -59,7 +59,7 @@ XmlSerializer shipSerializer = new XmlSerializer(typeof(Spaceship));
 
 Tyvärr är XmlSerializern inte skriven som en generisk klass, så istället måste man använda typeof för att meddela vilken klass det är serialiseraren ska specialisera sig på.
 
-## Serialize
+## Serialize()
 
 När vi har en serialiserare så kan vi använda den för att serialisera en instans av en klass.
 
@@ -119,7 +119,7 @@ using (FileStream file = File.Open(@"ship.xml", FileMode.OpenOrCreate))
 {% endtab %}
 {% endtabs %}
 
-## Deserialize
+## Deserialize()
 
 Serialiseraren kan också användas för att omvandla XML-text till en instans av klassen.
 

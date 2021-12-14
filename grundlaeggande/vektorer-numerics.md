@@ -41,7 +41,7 @@ position += movement;
 
 ### X och Y
 
-X och Y är egenskaper hos varje vektor.
+X och Y är float-egenskaper hos varje vektor.
 
 ```csharp
 Vector2 position = new Vector2(20, 30);
@@ -52,7 +52,7 @@ Console.WriteLine(position.Y); // 30
 
 ### Length()
 
-Inbyggd i varje vektor. Ger vektorns storlek.
+En metod inbyggd i varje vektor. Ger vektorns storlek (magnitud) som en [float](datatyper/#float).
 
 ```csharp
 Vector2 position = new Vector2(20, 20);
@@ -61,7 +61,7 @@ float l = position.Length(); // 28.284271
 
 ### Vector2.Distance()
 
-Ger avståndet mellan två vektorer.
+Ger avståndet mellan två vektorer som en float.
 
 ```csharp
 Vector2 position = new Vector2(20, 20);

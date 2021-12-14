@@ -8,7 +8,7 @@ Börja med att lägga till System.IO högst upp bland de bibliotek som inkludera
 using System.IO;
 ```
 
-### ReadAllText
+### ReadAllText()
 
 Läser in all information från angiven fil till en string
 
@@ -18,7 +18,7 @@ string contents = File.ReadAllText(@"localfile.txt");
 
 Exempelkoden läser in all data från filen localfile.txt och lagrar datan i string-variabeln contents.
 
-### ReadAllLines
+### ReadAllLines()
 
 Läser in all information från angiven fil till en string-array — en rad från filen per position i arrayen.
 
@@ -30,11 +30,13 @@ Exempelkoden läser in all data från filen localfile.txt och lagrar datan i str
 
 Om localfile.txt t.ex. innehåller:
 
+{% code title="localfile.txt" %}
 ```
 Banana
 Apple
 Monkey
 ```
+{% endcode %}
 
 så kommer contents-arrayen att ha tre strings i sig: Banana, Apple och Monkey.
 
@@ -46,7 +48,7 @@ Börja med att lägga till System.IO högst upp bland de bibliotek som inkludera
 using System.IO;
 ```
 
-### WriteAllText
+### WriteAllText()
 
 Skriver en string till en textfil.
 
@@ -56,7 +58,7 @@ File.WriteAllText(@"localfile.txt", "Banana");
 
 Exempelkoden skriver texten "Banana" till textfilen localtext.txt.
 
-### WriteAllLines
+### WriteAllLines()
 
 Skriver en string-array till en textfil - med en av arrayens strings per rad.
 
@@ -68,8 +70,10 @@ File.WriteAllLines(@"localfile.txt", contents);
 
 Exempelkoden skriver innehållet från string-arrayen contents till filen localfile.txt. Resultatet blir att localfile.txt innehåller följande:
 
+{% code title="localfile.txt" %}
 ```
 Apple
 Banana
 Monkey
 ```
+{% endcode %}

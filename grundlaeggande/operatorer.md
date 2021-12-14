@@ -92,7 +92,7 @@ bool x = 4 != 5; // true eftersom det stämmer att 4 och 5 är olika
 
 ## Logiska
 
-### && And / Och
+### && And (Och)
 
 True om **båda** operanderna är true, dvs det är true på båda sidorna om &&.
 
@@ -102,7 +102,7 @@ bool x = true && true; // resultatet är true
 bool y = true && false; // resultatet är false
 ```
 
-### || Or / Eller
+### || Or (Eller)
 
 True om **minst en** av operanderna är true.
 

@@ -1,6 +1,6 @@
 # Open, close, using
 
-## File.Open
+## File.Open()
 
 Används för att skapa en koppling till en fil .
 
@@ -15,7 +15,7 @@ FileModes:
 * FileMode.Open – öppna en fil som garanterat finns. Kasta felmeddelande FileNotFoundException om den inte finns.
 * FileMode.OpenOrCreate – öppna en fil; skapa den om den inte finns.
 
-## Close
+## Close()
 
 Används för att "stänga" en koppling till en fil och informera operativsystemet om att den nu kan öppnas och användas av andra program igen.
 
@@ -25,7 +25,7 @@ file.Close();
 
 Det är en mycket bra idé att alltid komma ihåg att stänga sina filer när man är klar med dem.
 
-## Using
+## Using()
 
 Using gör att man slipper använda Close() – när kodblocket är slut så stängs filen automatiskt.
 

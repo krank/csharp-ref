@@ -2,7 +2,7 @@
 
 ## Filsökvägar
 
-En filsökväg kan t.ex. se ut så här:
+En filsökväg i windows kan t.ex. se ut så här:
 
 ```
 c:\temp\exempel.txt
@@ -23,9 +23,9 @@ Eftersom \ redan används som "escape"-tecken i C#, för att t.ex. göra radbryt
 string path = @"c:\temp\exempel.txt";
 ```
 
-@-tecknet gör att \\-tecknen inte tolkas, utan tas bokstavligt.
+@-tecknet gör att \\-tecknen inte tolkas, utan [tas bokstavligt](../grundlaeggande/datatyper/#literal-strings).
 
-#### Filer i samma mapp som programmet <a href="h.p_gkvdjqel-lgi" id="h.p_gkvdjqel-lgi"></a>
+### Filer i samma mapp som programmet <a href="#h.p_gkvdjqel-lgi" id="h.p_gkvdjqel-lgi"></a>
 
 När det gäller filer som ligger i samma mapp som programmet så behöver man inte ange mapp eller enhet.
 

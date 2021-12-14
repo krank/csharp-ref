@@ -60,7 +60,7 @@ public class Pokemon
 {% endtab %}
 {% endtabs %}
 
-## JsonSerializer.Serialize
+## JsonSerializer.Serialize<>()
 
 Används för att serialisera ett objekt till en JSON-string.
 
@@ -85,7 +85,7 @@ Denna string kan sedan lagras i en textfil eller t.ex. skickas som svar på ett 
 OBS: Det finns inget sätt att automatiskt förvandla namnen på properties till snake\_case, vilket ju ofta används i JSON. Vill du serialisera med snake\_case så får du med andra ord använda JsonPropertyName-attributet.
 {% endhint %}
 
-## JsonSerializer.Deserialize
+## JsonSerializer.Deserialize<>()
 
 Används för att deserialisera ett objekt från en JSON-string.
 
@@ -114,7 +114,7 @@ Pokemon ditto = JsonSerializer.Deserialize<Pokemon>(jsonString, options);
 Mer om attribut [här](../../klasser-och-objektorientering/attribut.md).
 
 {% hint style="info" %}
-**OBS: **dessa kräver att du inkluderar `System.Text.Json.Serialization`.
+**OBS:** dessa kräver att du inkluderar `System.Text.Json.Serialization`.
 {% endhint %}
 
 ### \[JsonIgnore]
