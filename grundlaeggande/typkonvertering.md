@@ -52,6 +52,11 @@ TryParse returnerar true om konverteringen lyckades, false om den inte lyckades.
 
 Om man försöker använda Parse på en string som innehåller bokstäver så kan man få felmeddelande. Därför kan man använda följande kod för att undersöka ifall en string enbart innehåller siffror.
 
+{% hint style="info" %}
+OBS: Du måste skriva in denna kod högst upp i filen för att All ska funka:\
+`using System.Linq`
+{% endhint %}
+
 ```csharp
 string testNum = "456";
 bool onlyContainsNumbers = testNum.All(char.IsDigit); // Blir true
