@@ -37,9 +37,25 @@ Raylib.DrawCircle(150, 200, 40, Color.MAGENTA);
 
 Parametrarna är, i tur och ordning: X- och Y-position för cirkelns mitt, cirkelns radie, och cirkelns färg.
 
+### DrawCircleV()
+
+Ritar en cirkel men använder en Vector2 som mittpunkt.
+
+```csharp
+Vector2 midPoint = new Vector2(100, 100);
+Raylib.DrawCircleV(midPoint, 40, Color.PINK);
+```
+
 ### DrawCircleSector()
 
-(kommer)
+Ritar en del av en cirkel.
+
+```csharp
+Vector2 midPoint = new Vector2(100, 100);
+Raylib.DrawCircleSector(midPoint, 50, 0, -45, 100, Color.PINK);
+```
+
+Parametrarna är alltså mittpunkten, radien, startgraden, slutgraden, antalet segment som ska ritas ut samt färgen. Graderna utgår från att noll är rakt nedåt, och räknar motsols(!). Med andra ord är 0 nedåt, 90 är rakt åt höger och −90 är rakt åt vänster.
 
 ## Andra former
 
