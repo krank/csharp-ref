@@ -39,7 +39,7 @@ Parametrarna är, i tur och ordning: X- och Y-position för cirkelns mitt, cirke
 
 ### DrawCircleV()
 
-Ritar en cirkel men använder en Vector2 som mittpunkt.
+Ritar en cirkel men använder en [Vector2 ](../../grundlaeggande/vektorer-numerics.md#vector2)som mittpunkt.
 
 ```csharp
 Vector2 midPoint = new Vector2(100, 100);
@@ -61,11 +61,27 @@ Parametrarna är alltså mittpunkten, radien, startgraden, slutgraden, antalet s
 
 ### DrawTriangle()
 
-(kommer)
+Ritar ut en triangel. Parametrarna är triangelns tre hörn som [Vector2](../../grundlaeggande/vektorer-numerics.md#vector2) samt den färg triangeln ska ha.
+
+```csharp
+Vector2 top = new Vector2(150, 100);
+Vector2 bottomLeft = new Vector2(100, 150);
+Vector2 bottomRight = new Vector2(200, 150);
+
+Raylib.DrawTriangle(top, bottomLeft, bottomRight, Color.GRAY);
+```
+
+{% hint style="info" %}
+**OBSERVERA:** Ange vektorerna i _motsols ordning_.
+{% endhint %}
 
 ### DrawPoly()
 
-(kommer)
+Ritar en polygon. Parametrarna är mittpunkten, antalet sidor, radien, rotationen och färgen.
+
+```csharp
+Raylib.DrawPoly(centerPoint, 7, 64, 0, Color.GREEN);
+```
 
 ### DrawLine()
 
