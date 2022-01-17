@@ -57,6 +57,14 @@ Raylib.DrawCircleSector(midPoint, 50, 0, -45, 100, Color.PINK);
 
 Parametrarna är alltså mittpunkten, radien, startgraden, slutgraden, antalet segment som ska ritas ut samt färgen. Graderna utgår från att noll är rakt nedåt, och räknar motsols(!). Med andra ord är 0 nedåt, 90 är rakt åt höger och −90 är rakt åt vänster.
 
+### DrawEllipse()
+
+Ritar ut en ellips. Parametrarna är mittpunktens x- och y-värde, den horisontella radien och den vertikala radien.
+
+```csharp
+Raylib.DrawEllipse(100, 250, 50, 200, Color.PINK);
+```
+
 ## Andra former
 
 ### DrawTriangle()
@@ -83,11 +91,44 @@ Ritar en polygon. Parametrarna är mittpunkten, antalet sidor, radien, rotatione
 Raylib.DrawPoly(centerPoint, 7, 64, 0, Color.GREEN);
 ```
 
+## Linjer
+
 ### DrawLine()
 
-(kommer)
+Ritar en linje mellan två punkter. Parametrarna är startpunktens x- och y-värden och slutpunktens x- och y-värde, samt färgen.
 
-### DrawLineBezier()
+```csharp
+Raylib.DrawLine(10, 10, 10, 20, Color.PINK);
+```
 
-(kommer)
+### DrawLineV()
+
+Ritar en linje mellan två punkter. Parametrarna är en vektor2 för startpunkten, en vektor2 för slutpunkten, samt färgen.
+
+```csharp
+  Vector2 start = new Vector2(10,10);
+  Vector2 end = new Vector2(10,20);
+
+  Raylib.DrawLineV(start, end, Color.RED);
+```
+
+### DrawLineEx()
+
+Precis som DrawLineV fast med en extra parameter: tjockleken.
+
+```csharp
+Raylib.DrawLineEx(start, end, 10, Color.GREEN);
+```
+
+### DrawLineBezierQuad()
+
+Rita en böjd linje. Funkar som DrawLineEx, men med en extra parameter: en punkt som linjen böjer sig mot.
+
+```csharp
+  Vector2 start = new Vector2(10,10);
+  Vector2 end = new Vector2(100,100);
+  Vector2 control = new Vector2(200, 10);
+
+  Raylib.DrawLineBezierQuad(start, end, control, 5, Color.GREEN);
+```
 
