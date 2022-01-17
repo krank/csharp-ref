@@ -103,7 +103,7 @@ Raylib.DrawLine(10, 10, 10, 20, Color.PINK);
 
 ### DrawLineV()
 
-Ritar en linje mellan två punkter. Parametrarna är en vektor2 för startpunkten, en vektor2 för slutpunkten, samt färgen.
+Ritar en linje mellan två punkter. Parametrarna är en [vektor2 ](../../grundlaeggande/vektorer-numerics.md#vector2)för startpunkten, en vektor2 för slutpunkten, samt färgen.
 
 ```csharp
   Vector2 start = new Vector2(10,10);

@@ -26,6 +26,29 @@ if (Raylib.IsKeyUp(KeyboardKey.KEY_LEFT))
 }
 ```
 
+### IsKeyPressed()
+
+Returnerar true om knappen tryckts ned denna frame.
+
+```csharp
+if (Raylib.IsKeyPressed(KeyboardKey.KEY_SPACE))
+{
+  Jump();
+}
+```
+
+### IsKeyReleased()
+
+Returnerar true om knappen släppts upp denna frame.
+
+```csharp
+  if (Raylib.IsKeyReleased(KeyboardKey.KEY_LEFT_CTRL))
+  {
+    FireShot(shotPower);
+    shotPower = 0;
+  }
+```
+
 ### SetExitKey()
 
 I vanliga fall innebär ett tryck på ESC-knappen att hela spelet avslutas. SetExitKey kan användas för att byta vilken knapp som har den funktionen – eller ta bort den helt.
