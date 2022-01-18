@@ -31,7 +31,7 @@ Console.WriteLine($"Height: {goombaTexture.height});
 Rectangle hitBox = new Rectangle(0, 0, goombaTexture.width, goombaTexture.height);
 ```
 
-### LoadTexture
+### LoadTexture()
 
 Läser in en bildfil och skapar en texture direkt från den.
 
@@ -39,7 +39,7 @@ Läser in en bildfil och skapar en texture direkt från den.
 Texture2D goombaTexture = Raylib.LoadTexture(@"goomba.png");
 ```
 
-### LoadTextureFromImage
+### LoadTextureFromImage()
 
 Skapar en ny texture baserat på en [Image](bilder-och-texturer.md#image).
 
@@ -47,7 +47,7 @@ Skapar en ny texture baserat på en [Image](bilder-och-texturer.md#image).
 Texture2D heroTexture = Raylib.LoadTextureFromImage(originalImage);
 ```
 
-### DrawTexture
+### DrawTexture()
 
 Ritar ut en texture till fönstret.
 
@@ -57,7 +57,7 @@ Ritar ut en texture till fönstret.
 Raylib.DrawTexture(heroTexture, 40, 300, Color.WHITE)
 ```
 
-### DrawTextureEx
+### DrawTextureEx()
 
 En lite mer avancerad version av DrawTexture, som dels använder en vektor för att ange x och y-värden, dels låter oss ange rotation och skalning av texturen.
 
@@ -77,7 +77,7 @@ using System.Numerics;
 ```
 {% endhint %}
 
-### DrawTexturePro
+### DrawTexturePro()
 
 En ännu mer avancerad version av DrawTexture. Här används två rektanglar, en vektor och en float för att ange vilken del av texturen som ska klippas ut, var den ska placeras och med vilka proportioner, kring vilken punkt den ska roteras och hur mycket den ska roteras.
 
@@ -120,7 +120,7 @@ Console.WriteLine($"Height: {filebasedImage.height});
 Rectangle hitBox = new Rectangle(0, 0, filebasedImage.width, filebasedimage.height);
 ```
 
-### LoadImage
+### LoadImage()
 
 Läser in en bildfil från hårddisken och lagrar den i minnet som en Image.
 
@@ -130,7 +130,7 @@ Läser in en bildfil från hårddisken och lagrar den i minnet som en Image.
 Image filebasedImage = Raylib.LoadImage(@"hero.png");
 ```
 
-### GenImageColor
+### GenImageColor()
 
 Skapar en ny blank image i minnet, fylld av den angivna färgen.
 
@@ -142,7 +142,7 @@ Image emptyImage = Raylib.GenImageColor(200, 200, Color.BLACK);
 Image emptyImage = Raylib.GenImageColor(200, 200, Color.RED);
 ```
 
-### ImageDrawPixel
+### ImageDrawPixel()
 
 Ändrar färg på en pixel i en Image.
 
@@ -152,7 +152,7 @@ Image emptyImage = Raylib.GenImageColor(200, 200, Color.RED);
 Raylib.ImageDrawPixel(ref targetImage, 20, 15, Color.BLUE);
 ```
 
-### ImageFlipHorizontal
+### ImageFlipHorizontal()
 
 Flippar en Image horisontellt (spegelvänder).
 
@@ -160,7 +160,7 @@ Flippar en Image horisontellt (spegelvänder).
 Raylib.ImageFlipHorizontal(ref targetImage);
 ```
 
-### ImageFlipVertical
+### ImageFlipVertical()
 
 Flippar en Image vertikalt.
 
@@ -168,7 +168,7 @@ Flippar en Image vertikalt.
 Raylib.ImageFlipVertical(ref targetImage);
 ```
 
-### ImageResize/ImageResizeNN
+### ImageResize/ImageResizeNN()
 
 Ändrar storlek på en bild. NN-versionen ger ett skarpt resultat vilket fungerar bra för pixelart som skalas med jämna multiplikationer.
 
