@@ -46,6 +46,8 @@ for (int i = 0; i < 10; i++)
 
 Foreach-loopar är i princip likadana som for-loopar men är specialdesignade för att gå igenom listor och arrayer. En foreach-loop körs lika många gånger som det finns saker i en lista/array, och varje gång loopen körs så lagras en av sakerna i variabeln som anges.
 
+Nackdelen jämfört med en for-loop är att man inte får ut vilket index (plats i listan/arrayen) respektive sak har. Behöver man skriva ut index eller använda det på något vis är därför for-loop ett bättre val.
+
 ```csharp
 string[] choices = {"Start", "Options", "Quit"};
 
