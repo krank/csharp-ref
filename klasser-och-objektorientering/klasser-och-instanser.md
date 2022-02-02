@@ -48,6 +48,7 @@ Goomba g3 = new Goomba() {x = 10, y = 6};
 * Högerklicka på mappen du vill skapa klassen i.
 * Välj "Add a new C# Class file".
 * Skriv in namnet på klassen – glöm inte stor bokstav!
+* Ta gärna bort namespace-kodblocket kring klassen; det behöver vi sällan.
 
 
 

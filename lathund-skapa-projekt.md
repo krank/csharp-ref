@@ -14,7 +14,6 @@
   * När det nya fönstret öppnas, välj sln-filen.
   * När dialogrutan dyker upp och frågar, svara "Yes" på att du vill skapa filerna som krävs.
   * Dubbelkolla så OmniSharp går igång (den lilla eldsflamman nere till vänster).
-  * Om du vill: plocka bort Namespace, class och Main-kodblocken som automatiskt läggs till i dotnet 5-projekt och tidigare.
 * **GÖR SÅ PROJEKTET KAN KÖRAS**
   * Run (ikonen med play-knapp och insekt)
     * Ser du inget här: F1 → ".NET: Generate Assets for Build and Debug"
