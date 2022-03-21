@@ -55,7 +55,9 @@ using System.Threading.Tasks;
 
 ## NuGet Gallery
 
-NuGet Gallery är ett Visual Studio Code-tillägg som gör att man kan söka efter och lägga till nya bibliotek till sitt projekt. Man kommer åt tillägget genom att trycka F1 och söka efter det.
+NuGet Gallery är ett Visual Studio Code-tillägg som gör att man kan söka efter och lägga till nya bibliotek till sitt projekt. De är packeterade som NuGet-paket, och Gallery hjälper till att hitta, laddaner och installera dem.
+
+Man kommer åt tillägget genom att trycka F1 och söka efter det.
 
 ![](<../.gitbook/assets/image (38).png>)
 
@@ -65,4 +67,10 @@ Därefter söker man efter det bibliotek man vill ha, till exempel Raylib eller 
 
 ## NuGet via terminalen
 
-(Kommer…)
+Om man känner till NuGet-paketets namn så kan man använda terminalkommandon istället. Man placerar sig då först i mappen där projektets csproj-fil ligger och sedan skriver man till exempel:
+
+```powershell
+dotnet add package Raylib-cs
+```
+
+Då kommer dotnet att upptäcka csproj-filen, lägga in en referens till biblioteket i den, och sedan se till att NuGet-paketet laddas ner och packas upp.
