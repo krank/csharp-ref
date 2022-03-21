@@ -37,7 +37,8 @@ Ofta när ett API kräver att man har en API-nyckel så behöver den anges som p
 ### Gör en Get-operation med klienten
 
 ```csharp
-IRestResponse response = client.Get(request);
+// OBS: Detta är nytt för version RestSharp 107 och senare.
+RestResponse result = await client.GetAsync(request);
 ```
 
 ### Använda svarets innehåll som en string
@@ -60,9 +61,23 @@ I response-objektet finns också en StatusCode. Dess datatyp är en [Enum](../..
   }
 ```
 
+För att slippa skriva System.Net hela tiden kan du använda ett using-statement högst upp i filen:
+
+```csharp
+using System.Net;
+```
+
 ## API-nycklar
 
 I de flesta fall där API:er kräver API-nycklar anges de som parametrar i requesten.
+
+## Kommunicera med en lokal server
+
+Om du vill anropa en lokal server (localhost) men får ett felmeddelande om ett SSL-fel, så kan du kör denna kod i terminalen för att det ska fungera:
+
+```powershell
+dotnet dev-certs https --trust
+```
 
 ## Öppna databas-API:er
 
