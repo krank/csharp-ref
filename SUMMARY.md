@@ -18,6 +18,7 @@
 * [Slump (Random)](grundlaeggande/slump.md)
 * [String-manipulering](grundlaeggande/string-manipulering.md)
 * [Egna metoder](grundlaeggande/egna-metoder.md)
+* [Använda bibliotek (using)](grundlaeggande/anvaenda-bibliotek-using.md)
 * [Delegates och lambdas](grundlaeggande/delegates.md)
 * [Matematik (Math)](grundlaeggande/matematik-math.md)
 * [Vektorer (Numerics)](grundlaeggande/vektorer-numerics.md)
@@ -56,7 +57,7 @@
 * [Interface](klasser-och-objektorientering/interface.md)
 * [Attribut](klasser-och-objektorientering/attribut.md)
 
-## Annat <a href="grafik" id="grafik"></a>
+## Annat <a href="#grafik" id="grafik"></a>
 
 * [RayLib \[…\]](grafik/raylib/README.md)
   * [Raylib setup](grafik/raylib/raylib-setup.md)
