@@ -39,9 +39,9 @@ När man skapat sin delegat används den alltså som om den vore en datatyp. Nä
 DelegateOne test = MethodOne;
 ```
 
-### Dictionary med actions <a href="h.p_qt3arehin8yt" id="h.p_qt3arehin8yt"></a>
+### Dictionary med Actions <a href="#h.p_qt3arehin8yt" id="h.p_qt3arehin8yt"></a>
 
-Ett exempel på hur man kan använda delegater – Action är en delegat som ingår i C# och som helt enkelt stämmer in på metoder som varken tar emot parametrar eller returnerar något.
+Ett exempel på hur man kan använda delegater – **Action** är en delegat som ingår i C# och som helt enkelt stämmer in på metoder som varken tar emot parametrar eller returnerar något.
 
 ```csharp
 static void Main(string[] args)
@@ -65,9 +65,9 @@ static void DoSecond()
 }
 ```
 
-### Anonyma delegater
+### Anonyma metoder i delegatvariabler
 
-Anonyma delegater är i praktiken anonyma metoder – metoder som saknar eget namn.
+Anonyma metoder saknar eget namn.
 
 ```csharp
 delegate void Task(); 
@@ -96,6 +96,32 @@ actions.Add("greet",
 );
 
 actions["greet"]();
+```
+
+### Multicasting: delegat-variabler med flera metoder
+
+Om man vill att flera metoder ska köras när en delegat-variabel anropas så kan man kombinera delegater för att skapa s.k. [multicast-delegater](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates).
+
+```csharp
+Action multiCaster = delegate() { Console.WriteLine("Hello"); };
+
+multiCaster += delegate() { Console.WriteLine("World"); };
+
+multiCaster(); // Skriver först ut Hello, sedan World
+```
+
+```csharp
+Action good = delegate() { Console.WriteLine("Good"); };
+
+Action bye = delegate() { Console.WriteLine("Bye"); };
+
+Action morning = delegate() { Console.WriteLine("Morning"); };
+
+Action goodMorning = good + morning;
+Action goodBye = good + bye;
+
+goodMorning();
+goodBye();
 ```
 
 ### Lambdas
