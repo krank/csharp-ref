@@ -39,9 +39,31 @@ När man skapat sin delegat används den alltså som om den vore en datatyp. Nä
 DelegateOne test = MethodOne;
 ```
 
+### Action <a href="#h.p_qt3arehin8yt" id="h.p_qt3arehin8yt"></a>
+
+En Action är en "generisk" delegat som passar in på metoder som inte returnerar ett värde. Om man vill matcha metoder som tar emot parametrar kan dessa anges mellan <>.
+
+```
+static void Hello()
+{
+  Console.WriteLine("Hello");
+}
+
+static void HelloTo(string target)
+{
+  Console.WriteLine($"Hello {target}");
+}
+
+Action example1 = Hello;
+Action<string> example2 = HelloTo
+
+example1();
+example2("Micke");
+```
+
 ### Dictionary med Actions <a href="#h.p_qt3arehin8yt" id="h.p_qt3arehin8yt"></a>
 
-Ett exempel på hur man kan använda delegater – **Action** är en delegat som ingår i C# och som helt enkelt stämmer in på metoder som varken tar emot parametrar eller returnerar något.
+Ett exempel på hur man kan använda delegater.
 
 ```csharp
 static void Main(string[] args)
@@ -70,11 +92,9 @@ static void DoSecond()
 Anonyma metoder saknar eget namn.
 
 ```csharp
-delegate void Task(); 
-
 static void Main(string[] args)
 {
-  Task t = delegate()
+  Action t = delegate()
     {
       System.WriteLine("Hello!");
     }
@@ -126,7 +146,9 @@ goodBye();
 
 ### Lambdas
 
-Lambda-uttryck är, enkelt uttryckt, ett sätt att skriva väldigt enkla anonyma metoder (anonyma delegater) vars returvärden är direkta resultat av deras parametrar.
+Lambda-uttryck är, enkelt uttryckt, ett sätt att skriva väldigt enkla anonyma metoder (anonyma delegater) vars returvärden är direkta resultat av deras parametrar. Ett lambda-uttryck består av en parentes där den anonyma metodens parametervärden anges, en => och slutligen en enkel uträkning som motsvarar det som ska returneras från metoden.
+
+Uträkningen kan bytas ut mot ett kodblock som returnerar ett värde, om mer omfattande&#x20;
 
 ```csharp
 // Delegat som passar alla metoder som tar emot två int-parametrar och
@@ -141,6 +163,10 @@ static void Main(string[] args)
   Calculation c = (xInput, xOutput) => xInput * xOutput;
 
   int result = c(10, 5);
+  
+  // Detta gör samma sak som ovan, men med ett kodblock istället 
+  // för en ren beräkning
+  Calculation c2 = (xInput, xOutput) => {return xInput * xOutput};
 }
 ```
 
