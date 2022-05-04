@@ -45,17 +45,17 @@ while (!validAnswer)
 }
 ```
 
-Vill man vara lite mer avancerad kan man använda en [array ](../grundlaeggande/listor-och-arrayer.md#array)med giltiga svar:
+Vill man vara lite mer avancerad kan man använda en [lista ](../grundlaeggande/listor-och-arrayer.md#list)med giltiga svar:
 
 ```csharp
 string answer = "";
 
-string[] validAnswers = {"a", "b", "c"}
+List<string> validAnswers = new List<string>{"a", "b", "c"}
 bool validAnswer = false;
 
 while (!validAnswer)
 {
-  Console.Write("Välj [" + String.Join(",", validAnswers) + "]: ");
+  Console.Write($"Välj [{ String.Join(",", validAnswers) }]: ");
   
   answer = Console.ReadLine();
   
@@ -64,7 +64,7 @@ while (!validAnswer)
   
   if (!validAnswer)
   {
-    Console.WriteLine("Du måste välja en av " + String.Join(",", validAnswers) + "!");
+    Console.WriteLine($"Du måste välja en av { String.Join(",", validAnswers) }!");
   }
 }
 ```
