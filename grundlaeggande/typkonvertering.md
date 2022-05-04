@@ -16,13 +16,52 @@ long l = i;
 * int → float
 * float → double
 
-## Explicit konvertering / Casting
+## Casting
 
-När konverteringen innebär att man blir av med precision, t.ex. går från en float till en int och blir av med decimaler, så behöver man använda **casting**. Det betyder att man helt enkelt skriver vilken datatyp man vill konvertera till inom parenteser innan värdet som ska konverteras.
+När konverteringen innebär att man blir av med precision, t.ex. går från en float till en int och blir av med decimaler, så använder man ibland **casting**. Det betyder att man helt enkelt skriver vilken datatyp man vill konvertera till inom parenteser innan värdet som ska konverteras.
 
 ```csharp
 float xPos = 3.4f;
 int x = (int) xPos;
+```
+
+## As
+
+As fyller en liknande funktion som casting, men fungerar bara på datatyper som är av referenstyp (t.ex. klasser) och datatyper som kan bli null (t.ex. string). Detta är mest användbart när man använt [polymorfi](../klasser-och-objektorientering/polymorfism/).
+
+As går också lite snabbare än casting.
+
+```csharp
+// Säger att instansen som enemy-variabeln pekar mot är en instans av Goomba,
+//  och att Goomba-variabeln "g" också ska peka mot samma instans.
+Goomba g = enemy as Goomba;
+```
+
+## Is
+
+Is kan användas för att se vilken datatyp ett värde är. Detta är mest användbart när man använt [polymorfi](../klasser-och-objektorientering/polymorfism/).
+
+```csharp
+// Om instansen som enemy-variabeln pekar mot är en instans av Goomba-klassen,
+//  så kör koden inuti if-blocket.
+
+if (enemy is Goomba)
+{
+  // ---
+}
+```
+
+Is kan också göra en samtidig As-operation.
+
+```csharp
+// Om instansen som enemy-variabeln pekar mot är en instans av Goomba-klassen
+//  så skapa en ny variabel "g" som är an datatypen Goomba och pekar mot
+//  samma instans.
+
+if (enemy is Goomba g)
+{
+  g.SetColor("Brown");
+}
 ```
 
 ## Konvertera till int
