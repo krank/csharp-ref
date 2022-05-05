@@ -3,7 +3,7 @@
 Både listor och arrayer är samlingar, som (förenklat) låter oss lagra flera värden av samma datatyp på samma ställe. Man kan till exempel ha en samling av en massa int-värden som är samlade på samma ställe, eller en samling strings.
 
 * **Arrayer** kom först, är snabba och effektiva, men kan inte växa/krympa – de har ett fast antal platser.
-* **Listor** är en senare uppfinning, är nästan lika snabba, och kan växa/krympa.
+* **Listor** är en senare uppfinning. De är mer flexibla och nästan lika snabba. De är en [generisk klass](../klasser-och-objektorientering/generiska-klasser.md#list) och de kan växa/krympa.
 
 ## Indexering
 
@@ -47,8 +47,8 @@ string choice = Console.ReadLine();
 bool validAnswer = choices.Contains(choice);
 ```
 
-{% hint style="info" %}
-OBSERVERA: Contains är en del av biblioteket Linq, så du behöver skriva detta längst upp bland dina andra using-statements:
+{% hint style="warning" %}
+**OBSERVERA:** Contains är en del av biblioteket Linq, så du behöver skriva detta längst upp bland dina andra using-statements:
 
 **`using System.Linq;`**
 {% endhint %}
@@ -62,9 +62,9 @@ List<string> lNamn = new List<string>(arrayHp);
 
 ## Flerdimensionella arrayer
 
-En vanlig array är endimensionell – en lista. Varje sak i arrayen identifieras av ett index.
+En vanlig array är **endimensionell** – en lista, eller en serie. Varje sak i arrayen identifieras av **ett** index.
 
-En tvådimensionell array är som ett rutnät. Varje sak i arrayen identifieras av två index.
+En tvådimensionell array är som ett rutnät eller en tabell. Varje sak i arrayen identifieras av **två** index.
 
 ```csharp
 // Skapa en tvådimensionell array med 150 platser; 10 rader med 15 kolumner
@@ -102,8 +102,8 @@ List<string> choices = new List<string>() {"Start", "Options", "Quit"};
 
 Mer information om List finns under [Generiska klasser](../klasser-och-objektorientering/generiska-klasser.md).
 
-{% hint style="info" %}
-OBSERVERA: Om du använder .NET Core så behöver du manuellt skriva till detta högst upp i dokumentet för att listor ska fungera:
+{% hint style="warning" %}
+**OBSERVERA:** Om du använder .NET 5 eller .NET Core så behöver du manuellt skriva till detta högst upp i dokumentet för att listor ska fungera:
 
 ```csharp
 using System.Collections.Generic;

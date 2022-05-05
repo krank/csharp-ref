@@ -100,12 +100,8 @@ Sätter ihop alla element i en array till en string. Tar emot två parametrar; e
 ```csharp
 string[] names = {"micke", "kim", "mimmi"};
 string folk = String.Join(" och ", names);
-```
 
-Resultatet av ovanstående blir en string som heter folk och som innehåller följande:
-
-```csharp
-"micke och kim och mimmi"
+// Variabeln "folk" får namnet "micke och kim och mimmi"
 ```
 
 ### Split()
@@ -115,10 +111,6 @@ Returnerar en array som består av en uppdelad string. Tar emot en separator som
 ```csharp
 string folk = "micke och kim och mimmi";
 string[] names = folk.Split(' ');
-```
 
-Resultatet av ovanstående blir en string-array med följande innehåll:
-
-```csharp
-{"micke", "och", "kim", "och", "mimmi"}
+// Variabeln "names" får innehållet {"micke", "och", "kim", "och", "mimmi"}
 ```
