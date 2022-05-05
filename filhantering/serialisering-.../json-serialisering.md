@@ -113,7 +113,7 @@ Pokemon ditto = JsonSerializer.Deserialize<Pokemon>(jsonString, options);
 
 Mer om attribut [här](../../klasser-och-objektorientering/attribut.md).
 
-{% hint style="info" %}
+{% hint style="warning" %}
 **OBS:** dessa kräver att du inkluderar `System.Text.Json.Serialization`.
 {% endhint %}
 
