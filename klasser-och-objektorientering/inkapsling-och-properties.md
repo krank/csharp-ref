@@ -59,7 +59,7 @@ class Character
 
 ## Properties
 
-Properties fungerar som ett slags variabler med inbyggda getters och setters.
+Properties, även kallade **egenskaper**, fungerar som ett slags variabler med inbyggda getters och setters.
 
 {% tabs %}
 {% tab title="Character.cs" %}

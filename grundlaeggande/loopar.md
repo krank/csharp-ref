@@ -2,7 +2,7 @@
 
 ## while-loop
 
-Fungerar och ser ut som en [if-sats](if-satser.md) utom att körningen inte fortsätter när kodblocket körts, utan "hoppar upp" till kriteriet och testar det igen.
+Fungerar och ser ut som en if-sats utom att körningen inte fortsätter när kodblocket körts, utan "hoppar upp" till kriteriet och testar det igen.
 
 ```csharp
 int i = 10;
@@ -13,7 +13,7 @@ while (i > 0)
 }
 ```
 
-While-loopar används när man **inte vet** hur många gånger loopen ska köras. Till exempel:
+Används när man inte vet hur många gånger loopen ska köras. Till exempel:
 
 ```csharp
 string name = "";
@@ -41,8 +41,6 @@ for (int i = 0; i < 10; i++)
   Console.WriteLine(i);
 }
 ```
-
-For-loopar används när man **vet** hur många gånger loopen ska köras – åtminstone när man når den. Så länge en räknare ska användas fungerar en for-loop bra.
 
 ## foreach-loop
 
