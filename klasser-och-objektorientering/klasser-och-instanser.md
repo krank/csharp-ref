@@ -13,9 +13,9 @@ Så här skulle en enkel version av den klassen se ut:
 ```csharp
 class Goomba
 {
- public int x = 0;
- public int y = 0;
- public bool isDead = false;
+  public int X = 0;
+  public int Y = 0;
+  public bool IsDead = false;
 }
 ```
 {% endtab %}

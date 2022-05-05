@@ -9,7 +9,7 @@ Variabler och metoder som är publika kan läsas av och ändras på från andra 
 ```csharp
 class Fighter
 {
-  public string name = "";
+  public string Name = "";
 }
 ```
 {% endtab %}
@@ -19,7 +19,7 @@ class Fighter
 {% tab title="Program.cs" %}
 ```csharp
 Fighter hero = new Fighter();
-hero.name = "Laban";
+hero.Name = "Laban";
 ```
 {% endtab %}
 {% endtabs %}

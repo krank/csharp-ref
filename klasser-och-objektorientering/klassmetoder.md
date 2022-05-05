@@ -2,6 +2,8 @@
 
 Det går utmärkt att lägga in metoder i klasser. De anropas då genom att man skriver instansens namn följt av metodens namn, och lägger in parametrar och hanterar returneringar som vanligt.
 
+Klassmetoders kod kan komma åt instansens variabler, properties och metoder.
+
 {% tabs %}
 {% tab title="Fighter.cs" %}
 ```csharp
@@ -30,7 +32,7 @@ Console.WriteLine(n);
 
 När en metod som ingår i en klass vill använda en variabel som ingår i samma klass så kan den göra detta genom att använda dess namn rakt av. Man behöver alltså inte skriva instansens namn.
 
-Om man vill vara tydlig med att man använder en intern klassvariabel så kan man skriva this. framför.
+Om man vill vara tydlig med att man använder en intern klassvariabel så kan man skriva **this.** framför.
 
 {% tabs %}
 {% tab title="Fighter.cs" %}

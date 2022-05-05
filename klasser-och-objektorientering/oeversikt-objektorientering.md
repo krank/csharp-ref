@@ -33,8 +33,9 @@ _Exempel:_
 ```csharp
 class Pear
 {
-  public int cost = 100; // <-- klassvariabel
-  public bool eaten = false; // <-- klassvariabel
+  public int Cost = 100; // <-- klassvariabel
+  public bool Eaten = false; // <-- klassvariabel
+  
   public void Eat() // <- klassmetod
   {
     eaten = true;
