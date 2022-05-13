@@ -18,7 +18,7 @@ I ett klassdiagram beskrivs klassen i tre sektioner:
 * \- betyder "private"
 * \# betyder "protected"
 
-![](<../.gitbook/assets/image (16).png>) 
+<img src="../.gitbook/assets/image (16).png" alt="" data-size="original">&#x20;
 
 ## Arv i klassdiagram
 
@@ -28,8 +28,12 @@ Pilarna pekar alltid FRÅN subklassen TILL basklassen.
 
 Subklassernas diagram ritas på samma sätt som basklassens. Man skriver in klassens variabler och metoder, inklusive metoder som använder [override](polymorfism/virtual-override.md). Däremot skriver man inte in variabler eller metoder som bara ärvs från basklassen.
 
-![](<../.gitbook/assets/image (17).png>) 
+<img src="../.gitbook/assets/image (17).png" alt="" data-size="original">&#x20;
 
 ## NClass
 
-Nclass är ett enkelt program för att skapa klassdiagram. Det är gratis och [kan laddas ner här](http://www.google.com/url?q=http%3A%2F%2Fnclass.sourceforge.net%2F\&sa=D\&sntz=1\&usg=AFQjCNH-E6IhpQ3vcfOLuWdAaRHZ\_8\__-Q).
+NClass är ett enkelt program för att skapa klassdiagram. Det är gratis och [kan laddas ner här](https://github.com/gbaychev/NClass/releases).&#x20;
+
+{% hint style="info" %}
+**Observera:** Länken leder till en ny fork av den gamla versionen av NClass. Den nya verkar utvecklas aktivt och har t.ex. stöd för Ctrl+Z och nyare projekt i sin code generation (Visual Studio 2019… Fortfarande inte Dotnet 5/6 tyvärr)
+{% endhint %}
