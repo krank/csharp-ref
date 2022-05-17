@@ -5,7 +5,6 @@ Detta är en hemsida med förenklade förklaringar och exempel för C# och Visua
 **Se även:**
 
 * [Unity-ref](https://krank23.gitbook.io/unity-ref/) – en sida med förenklade förklaringar och exempel för Unity och C#
-* [Unity AR/VR-referens](https://sites.google.com/view/unityarvr) – en något föråldrad sida med förklaringar och exempel kring hur man kan jobba med VR och AR i Unity.
 
 ## Vad behöver jag först?
 
