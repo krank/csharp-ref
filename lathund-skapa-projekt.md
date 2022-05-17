@@ -4,7 +4,7 @@
 
 * Starta Visual Studio Code
 * **SKAPA PROJEKTET**
-  * F1 → C# Toolbox: Create Project.
+  * F1 ▶ C# Toolbox: Create Project.
   * Template – oftast Console Application.
   * Projektnamnet – inga mellanslag, börja inte med siffror.
   * Location: Välj mapp för projektet.
