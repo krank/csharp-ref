@@ -30,6 +30,13 @@ Subklassernas diagram ritas på samma sätt som basklassens. Man skriver in klas
 
 <img src="../.gitbook/assets/image (17).png" alt="" data-size="original">&#x20;
 
+## Vanliga frågor
+
+* **Har man med variablers värde?** Nej, bara datatyp, namn och access modifier (public, private, protected)
+* **Har man med metoders innehåll?** Nej, bara datatyp (returtyp), namn, parametrar (med namn och datatyp) och access modifier.
+* **Hur gör man med listor?** Precis som vanligt, en int-listas datatyp skrivs som "List\<int>".
+* **Hur gör man med properties?** Man kan lista dem som vanliga klassvariabler. NClass visar dem i metod-sektionen, kompletta med get och set. Det är också helt OK.
+
 ## NClass
 
 NClass är ett enkelt program för att skapa klassdiagram. Det är gratis och [kan laddas ner här](https://github.com/gbaychev/NClass/releases).&#x20;

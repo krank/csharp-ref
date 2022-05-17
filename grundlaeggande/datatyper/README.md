@@ -18,10 +18,24 @@ string s = "Hello";
 
 ### Length
 
-Alla strings har en inbyggd egenskap som heter Length. Det är en int som innehåller det antal tecken stringen har.
+Length är en egenskap alla strings har. Det är en int som innehåller det antal tecken stringen har.
 
 ```csharp
 Console.WriteLine($"Texten {s} har {s.Length} tecken");
+```
+
+### All()
+
+All() är en del av **Linq-biblioteket** så man måste först ha med `using System.Linq`. All har en [delegate ](../delegates.md)som parameter, och förväntar sig då en metod (eller ett lambda-uttryck) som tar emot en `char` och returnerar `true` eller `false`. All stoppar sedan i var och ett av stringens tecken in i den angivna metoden. Om resultatet för alla blir `true` så returnerar All också `true`.
+
+```csharp
+using System.Linq;
+
+string s1 = "12345";
+string s2 = "123a45;
+
+bool b1 = s1.All(char.IsDigit); // b1 = true
+bool b2 = s2.All(char.IsDigit); // b2 = false
 ```
 
 ### \ – specialtecken
@@ -76,12 +90,44 @@ Ett tecken.
 char c = 'ä';
 ```
 
-## long
+### Char.Is…
 
-Heltal, kan ha mycket större (och mindre) värden än int.
+I klassen Char finns flera metoder för att undersöka char-tecken. Till exempel:
 
 ```csharp
-long i = 9223372036854775804; 
+Char.IsDigit(c) // true om c är en siffra
+Char.IsLetter(c) // true om c är en bokstav
+Char.IsLetterOrDigit(c) // true om c är en siffra eller en bokstav
+Char.IsUpper(c) // true om c är en STOR BOKSTAV
+Char.IsWhiteSpace(c) // true om c är ett mellanslag, en tabb eller en radbrytning
 ```
 
-##
+Observera att definitionen av "siffra" här inte bara inkluderar tecknen 0–9 utan också till exempel thailändska siffertecken.
+
+## Andra heltal
+
+Överkurs: det finns ett antal olika sätt att spara heltal, och de har olika min- och maxvärden.
+
+* int, eller int32, är en 32-bitars integer. Den använder 32 ettor och nollor (bits/bitar) för att lagra ett heltal som kan vara positivt eller negativt. En av bitarna används för att avgöra ifall talet är positivt eller negativt.
+* long, eller int64, är en 64-bitars integer.
+* short, eller int16, är en 16-bitars integer.
+* uint, ulong och ushort är versioner av int, long och short som inte kan bli negativa – men i gengäld kan mäta större positiva tal. Eftersom ingen bit används för att avgöra om talet är positivt/negativt.
+
+Vilken som är lämplig vid vilket tillfälle beror på hur höga tal man behöver lagra samt hur viktigt det är att spara på minnesutrymmet.
+
+```csharp
+Console.WriteLine(int.MaxValue); //   2147483647
+Console.WriteLine(int.MinValue); //  -2147483648
+Console.WriteLine(uint.MaxValue); // 4294967295
+Console.WriteLine(uint.MinValue); // 0
+
+Console.WriteLine(long.MaxValue); //   9223372036854775807
+Console.WriteLine(long.MinValue); //  -9223372036854775808
+Console.WriteLine(ulong.MaxValue); // 18446744073709551615
+Console.WriteLine(ulong.MinValue); // 0
+
+Console.WriteLine(short.MaxValue); // 32767
+Console.WriteLine(short.MinValue); // -32768
+Console.WriteLine(ushort.MaxValue); // 65535
+Console.WriteLine(ushort.MinValue); // 0
+```

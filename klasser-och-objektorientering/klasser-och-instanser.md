@@ -6,13 +6,21 @@ Man kan betrakta en **klass** som en ritning för något - "såhär ska fiender 
 
 Sedan skapar man **instanser** av klassen - de konkreta, faktiska fienderna. Alla goombas i Super Mario Bros och alla paladiner i World of Warcraft bygger på samma ritning. De har samma egenskaper och utseende i grunden, även om de skiljer sig åt i vilka värden en del av egenskaperna har. De befinner sig till exempel på olika positioner, även om de alla _har_ en position.
 
-Så här skulle en enkel version av den klassen se ut:
+## Skapa klasser
+
+Generellt bör varje klass läggas i sin egen fil. Med C# Toolbox of Productivity finns ett snabbt och enkelt sätt:
+
+* **Högerklicka på mappen** klassen/filen ska skapas i.
+* Välj **"Add a new C# Class file"**.
+* Skriv in namnet på klassen – **glöm inte stor bokstav**!
+* **Ta bort namespace**-kodblocket kring klassen; det behöver vi sällan.
 
 {% tabs %}
 {% tab title="Goomba.cs" %}
 ```csharp
 class Goomba
 {
+  // Klassvariabler
   public int X = 0;
   public int Y = 0;
   public bool IsDead = false;
@@ -21,14 +29,18 @@ class Goomba
 {% endtab %}
 {% endtabs %}
 
-Och så här skulle man sedan göra för att skapa instanser av klassen:
+## Skapa instanser
+
+Kodordet `new` skapar **nya instanser** i minnet (heapen).
+
+Därefter behöver en [referens ](../grundlaeggande/reference-vs-value-types.md)till instansen lagras någonstans, till exempel i en variabel.
 
 ```csharp
 Goomba g1 = new Goomba();
 Goomba g2 = new Goomba();
 ```
 
-Därefter kan man ändra på de inviduella instansernas variabler separat:
+Därefter kan man ändra på de individuella instansernas variabler separat:
 
 ```csharp
 g1.x = 60;
@@ -43,12 +55,14 @@ Man kan också tilldela värden till variablerna direkt när instansen skapas:
 Goomba g3 = new Goomba() {x = 10, y = 6};
 ```
 
-## Skapa klasser
+### New()
 
-* Högerklicka på mappen du vill skapa klassen i.
-* Välj "Add a new C# Class file".
-* Skriv in namnet på klassen – glöm inte stor bokstav!
-* Ta gärna bort namespace-kodblocket kring klassen; det behöver vi sällan.
+Om man (som ovan) skapar en instans av exakt samma klass som variabeln så kan koden förenklas. Det gäller med andra ord nästan jämt – undantaget är vid [polymorfism](polymorfism/#polymorfism-klasser-och-arv).
+
+```csharp
+Goomba g4 = new();
+Goomba g5 = new() {x = 100};
+```
 
 
 

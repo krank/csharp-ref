@@ -75,6 +75,10 @@ string tal = "42";
 int i = int.Parse(tal);
 ```
 
+{% hint style="warning" %}
+**OBS:** Parse kommer att orsaka ett runtime error ifall den string som anges inte kan konverteras till en int. Använd [try-catch](try-catch.md) för att fånga upp felet eller använd TryParse istället för Parse.
+{% endhint %}
+
 ### int.TryParse()
 
 För en enkel, säker konvertering kan man använda TryParse.
@@ -86,23 +90,6 @@ bool lyckad = int.TryParse(tal, out resultat);
 ```
 
 TryParse returnerar true om konverteringen lyckades, false om den inte lyckades. Resultatet lagras i variabeln som anges som "out"-variabel i den andra parametern (i exemplet, variabeln "resultat"). Om konverteringen misslyckas så blir resultatet 0.
-
-### .All(char.IsDigit)
-
-Om man försöker använda Parse på en string som innehåller bokstäver så kan man få felmeddelande. Därför kan man använda följande kod för att undersöka ifall en string enbart innehåller siffror.
-
-{% hint style="info" %}
-OBS: Du måste skriva in denna kod högst upp i filen för att All ska funka:\
-`using System.Linq`
-{% endhint %}
-
-```csharp
-string testNum = "456";
-bool onlyContainsNumbers = testNum.All(char.IsDigit); // Blir true
-
-string testLetters = "abrakadabra9";
-bool onlyContainsNumbers = testLetters.All(char.IsDigit); // Blir false
-```
 
 ## Konvertera till float
 

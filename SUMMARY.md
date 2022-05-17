@@ -26,6 +26,7 @@
 * [Try-catch](grundlaeggande/try-catch.md)
 * [Namngivning](grundlaeggande/namngivning.md)
 * [Begrepp](grundlaeggande/begrepp.md)
+* [Reference vs value types\*](grundlaeggande/reference-vs-value-types.md)
 
 ## Filhantering
 
