@@ -50,8 +50,11 @@ Console.WriteLine($"Finished with a result of {result}!");
 ## Async
 
 * Asynkron metod
-* Returnerar en Task
+* Har en Task som returtyp, men returnerar Taskens typ-parameter
 * Invänta att den avslutas genom await eller .Result
 
 ## Await
+
+* Kan skrivas framför en asynkron metod
+* Wait:ar på den asynkrona metoden och ger, som resultat, det den returnerar
 
