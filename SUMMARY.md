@@ -17,7 +17,7 @@
 * [Listor och arrayer](grundlaeggande/listor-och-arrayer.md)
 * [Slump (Random)](grundlaeggande/slump.md)
 * [String-manipulering](grundlaeggande/string-manipulering.md)
-* [Egna metoder](grundlaeggande/egna-metoder.md)
+* [Egna metoder\*](grundlaeggande/egna-metoder.md)
 * [Använda bibliotek (using)](grundlaeggande/anvaenda-bibliotek-using.md)
 * [Delegates och lambdas](grundlaeggande/delegates.md)
 * [Matematik (Math)](grundlaeggande/matematik-math.md)
@@ -81,6 +81,7 @@
     * [Models/dataklasser](grafik/naetverk-och-internet-.../restful-server/models.md)
     * [Tester med RESTer](grafik/naetverk-och-internet-.../restful-server/tester-med-rester.md)
     * [Thunder](grafik/naetverk-och-internet-.../restful-server/thunder.md)
+* [Threading och async\*](grafik/threading-och-async.md)
 
 ## Mjukvara
 

@@ -38,8 +38,10 @@ Ofta när ett API kräver att man har en API-nyckel så behöver den anges som p
 
 ```csharp
 // OBS: Detta är nytt för version RestSharp 107 och senare.
-RestResponse result = await client.GetAsync(request);
+RestResponse response = await client.GetAsync(request).Result;
 ```
+
+GetAsync är, som namnet antyder, en [asynkron metod](../threading-och-async.md). Med andra ord går det att använda await istället för .Result om situationen tillåter.
 
 ### Använda svarets innehåll som en string
 
@@ -81,12 +83,12 @@ dotnet dev-certs https --trust
 
 ## Öppna databas-API:er
 
-* [Pokemon API](https://pokeapi.co)
-* [Digimon API](https://digimon-api.herokuapp.com)
-* [Star Wars API](https://swapi.dev)
-* [Star Trek API](http://stapi.co)
+* [Pokemon API](https://pokeapi.co/)
+* [Digimon API](https://digimon-api.herokuapp.com/)
+* [Star Wars API](https://swapi.dev/)
+* [Star Trek API](http://stapi.co/)
 * Steam-API
   * [Skaffa en API-nyckel](https://steamcommunity.com/dev/apikey)
   * [Dokumentation](https://partner.steamgames.com/doc/webapi)
-* [Marvel API](https://developer.marvel.com)
-* [Superhero API](https://superheroapi.com)
+* [Marvel API](https://developer.marvel.com/)
+* [Superhero API](https://superheroapi.com/)

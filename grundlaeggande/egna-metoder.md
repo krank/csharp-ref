@@ -1,4 +1,4 @@
-# Egna metoder
+# Egna metoder\*
 
 ## Enkel metod
 
@@ -115,3 +115,7 @@ Shout("abracadabra!");
 ```
 
 Så kommer den nedre versionen att köras. Ett string-värde angavs som parametervärde, och det finns en version av Shout som behöver ett string-värde, alltså körs den.
+
+## Generiska metoder
+
+(Kommer…)
