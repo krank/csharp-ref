@@ -1,6 +1,6 @@
 # Generiska klasser
 
-En generisk klass är en klass där någon datatyp inte är fördefinierad, utan deklareras i koden. En lista där värdena som lagras är inte har till exempel datatypen List\<int> och en lista med strings är en List\<string>.
+En generisk klass är en klass där någon datatyp inte är fördefinierad, utan deklareras i koden. En lista där värdena som lagras är `int` har till exempel datatypen List\<int> och en lista med strings är en List\<string>.
 
 Det som skrivs mellan <> i en generisk klass kallas för en **typ-parameter**.
 
