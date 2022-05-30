@@ -1,4 +1,4 @@
-# Egna metoder\*
+# Egna metoder
 
 ## Enkel metod
 
@@ -118,4 +118,25 @@ Så kommer den nedre versionen att köras. Ett string-värde angavs som paramete
 
 ## Generiska metoder
 
-(Kommer…)
+Generiska metoder är metoder där datatypen för någon eller några av variablerna eller parametrarna inte bestäms när metoden deklareras, utan när den anropas.
+
+I exemplet nedan används 1 typ-parameter, "T". Efter att den skrivits mellan <> efter metodens namn så kan T användas i koden som om den vore en datatyp.
+
+```csharp
+static void PrintInRed<T>(T content)
+{
+  ConsoleColor defaultColor = Console.ForegroundColor;
+  Console.ForegroundColor = ConsoleColor.Red;
+  Console.WriteLine(content);
+  Console.ForegroundColor = defaultColor;
+}
+```
+
+När metoden sedan anropas så anges vilken datatyp T ska vara vid just det anropet genom att datatypen skrivs mellan <> efter metodens namn.
+
+```csharp
+PrintInRed<int>(8);
+PrintInRed<string>("Hello, World!");
+```
+
+Detta liknar hur [generiska klasser](../klasser-och-objektorientering/generiska-klasser.md) fungerar.
