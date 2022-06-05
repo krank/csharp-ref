@@ -1,4 +1,4 @@
-# C# Snabbreferens
+# C# snabbreferens
 
 Detta är en hemsida med förenklade förklaringar och exempel för C# och Visual Studio Code. Tanken är att den ska kunna användas som referensverk för gymnasieelever som läser kurserna Programmering 1 och Programmering 2.
 
@@ -8,9 +8,9 @@ Detta är en hemsida med förenklade förklaringar och exempel för C# och Visua
 
 ## Vad behöver jag först?
 
-* Installera [DotNet SDK](https://dotnet.microsoft.com/download) – version 5 eller senare.
+* Installera [DotNet SDK](https://dotnet.microsoft.com/download) – version 6 eller senare.
 * Installera [Visual Studio Code](mjukvara/visual-studio-code/) och lämpliga extensions.
-* Installera [Git-scm](mjukvara/git-and-github/) och ställ in namn och email.
+* Installera [Git-scm](mjukvara/git-and-github/) och [ställ in namn och email](mjukvara/git-and-github/#foersta-gangen-efter-ny-git-installation).
 * Kolla [lathunden ](lathund-skapa-projekt.md)för hur man skapar nya projekt.
 
 ## Hittat ett fel?
