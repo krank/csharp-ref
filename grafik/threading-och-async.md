@@ -49,31 +49,4 @@ Console.WriteLine($"Finished with a result of {result}!");
 
 ## Async
 
-En metod kan deklareras vara asynkron genom att man skriver async framför den. En asynkron metod deklareras med en Task som returtyp, men det man faktiskt skriver efter return i koden är Taskens typparameter.
-
-```csharp
-static async Task<int> Hello()
-{
-  Console.WriteLine("Hello World!");
-  Thread.Sleep(1000);
-  Console.WriteLine("Goodbye World!");
-  return 23;
-}
-
-Task<int> helloTask = Hello();
-
-helloTask.Wait();
-int result = helloTask.Result;
-```
-
-En asynkron metod kan await:as.
-
 ## Await
-
-Await kan skrivas framför en asynkron metod, och fungerar då i princip som att skriva .Result efter dess Task – körningen pausas tills dess att Task:en som returneras från metoden blivit färdig.
-
-```csharp
-int result = await Hello();
-```
-
-Await kan enbart användas i metoder som är asynkrona, eller i top level statements (alltså kod som ligger direkt i Program.cs).
