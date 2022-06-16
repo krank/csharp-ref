@@ -13,8 +13,6 @@ Se till att åtminstone C# och C# Toolbox-tilläggen är installerade i VSCode.
 
 Tryck på Create Project. Nu bör ditt nya projekt skapas och öppnas.
 
-Du bör nu uppe i kommandopaletten få välja mellan en sln-fil och en csproj-fil. Välj sln-filen (egentligen verkar det inte spela så stor roll).
-
 ### De första stegen
 
 Gå till din Program.cs.
@@ -28,11 +26,25 @@ Om du inte ser den rutan:
 * Klicka på den lilla klockan (🔔) nere i högra hörnet. Då får du upp alla notifications och kan se om du bara missade den.
 * Man kan göra det manuellt också – Gå till kommandopaletten (F1 eller Fn+F1) och sök efter "assets" så bör du hitta en som heter ".NET: Generate Assets for Build and Debug". Välj den.
 
+Gå till din csproj-fil. Kommentera bort eller ta bort raden med `<Nullable>`. Den kommer annars att ge upphov till en del onödiga felmeddelanden. Exempel:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <!-- <Nullable>enable</Nullable> -->
+  </PropertyGroup>
+</Project>
+
+```
+
 ## Kompilera och köra
 
 Börja med att gå till Debug and run-panelen, den som ser ut som en insekt på en play-knapp.\
 \
-![](<../../.gitbook/assets/image (1).png>)&#x20;
+<img src="../../.gitbook/assets/image (1).png" alt="" data-size="original">&#x20;
 
 Tryck på kugghjulet. Då öppnas config-filen för projektet.
 
