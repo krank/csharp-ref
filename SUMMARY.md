@@ -83,7 +83,7 @@
     * [Models/dataklasser](grafik/naetverk-och-internet-.../restful-server/models.md)
     * [Tester med RESTer](grafik/naetverk-och-internet-.../restful-server/tester-med-rester.md)
     * [Thunder](grafik/naetverk-och-internet-.../restful-server/thunder.md)
-* [Threading\*](grafik/threading.md)
+* [Threading](grafik/threading.md)
 * [Task, async, await\*](grafik/task-async-await.md)
 
 ## Mjukvara

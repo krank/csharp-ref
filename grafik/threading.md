@@ -1,4 +1,4 @@
-# Threading\*
+# Threading
 
 {% hint style="info" %}
 **OBSERVERA:** Threading är definitivt överkurs och ingår varken i Programmering 1 eller 2.
@@ -26,11 +26,13 @@ Om det arbete en tråd utför är väldigt tungt så begränsas tråden av sin p
 Thread-klassen används när man manuellt vill skapa nya trådar. Som parameter anges en metod vars kod ska köras i den separata tråden. Observera att det är metodens namn – dess identifier – som anges, och att man inte skriver () efter namnet.
 
 ```csharp
+using System.Threading; // Behövs för tillgång till Thread-klassen
+
 Thread workerThread = new Thread(DoSomeHeavyLifting);
 
 static void DoSomeHeavyLifting()
 {
-  // Kod som ska köras i en separat tråd
+  // Kod som ska köras i den separata tråden
 }
 ```
 
@@ -43,7 +45,7 @@ static void DoSomeHeavyLifting(object n)
 {
   string name = (string) n;
   
-  // Kod som ska köras i en separat tråd
+  // Kod som ska köras i den separata tråden
 }
 ```
 
@@ -66,7 +68,7 @@ static void DoSomeHeavyLifting(object n)
 {
   string name = (string) n;
   
-  // Kod som ska köras i en separat tråd
+  // Kod som ska köras i den separata tråden
 }
 ```
 
@@ -78,14 +80,14 @@ Pausar körningen av den nuvarande tråden, tills den tråd som "joinas" är kla
 Thread workerThread = new Thread(DoSomeHeavyLifting);
 workerThread.Start();
 
-// Gör nånting
+// Kod som ska köras samtidigt som tråden körs
 
 workerThread.Join();
 ```
 
 ### Name
 
-Trådens namn. Användbart bl.a när man debuggar.
+En property som är trådens namn. Användbart bl.a när man debuggar.
 
 ```csharp
 Thread workerThread = new Thread(DoSomeHeavyLifting);
@@ -95,10 +97,66 @@ workerThread.Name = "Arbetaren";
 
 ### IsAlive
 
-### CurrentThread
+En property som berättar huruvida tråden är "levande"; alltså huruvida den just nu utför sitt arbete. Tråden börjar "leva" när den startas, och slutar leva när dess arbete är utfört – alltså när dess kod är färdigkörd.
+
+```csharp
+Thread workerThread = new Thread(DoSomeHeavyLifting);
+
+while (workerThread.IsAlive)
+{
+  Console.WriteLine("Arbete pågår!");
+  Thread.Sleep(500);
+}
+```
 
 ### IsBackground
 
+En property för huruvida tråden är en bakgrunds-tråd eller ej. Skillnaden mellan bakgrundstrådar och förgrundstrådar är att om huvudprogrammet når sitt slut innan en förgrundstråd är klar, så väntar huvudprogrammet på att tråden ska bli färdig innan körningen avslutas. Bakgrundstrådar avslutas automatiskt när huvudprogrammet når sitt slut.
+
+Trådar är normalt sett _förgrundstrådar_.
+
+```csharp
+Thread workerThread = new Thread(DoSomeHeavyLifting);
+workerThread.Start();
+
+Console.WriteLine("Väntar på att tråden ska bli klar...");
+```
+
+```csharp
+Thread workerThread = new Thread(DoSomeHeavyLifting);
+workerThread.IsBackground = true;
+workerThread.Start();
+
+Console.WriteLine("Väntar inte på att tråden ska bli klar...");
+```
+
+### CurrentThread
+
+En statisk property som pekar på den nuvarande tråden.
+
+```csharp
+Thread workerThread = new Thread(DoSomeHeavyLifting);
+workerThread.Name = "Arbetaren";
+
+static void DoSomeHeavyLifting()
+{
+  Console.WriteLine(Thread.CurrentThread.Name); // Skriver ut "Arbetaren"
+  Thread.CurrentThread.IsBackground = true;
+  
+  // Kod som ska köras i den separata tråden
+}
+```
+
 ### Sleep
 
-##
+En status metod som gör att den nuvarande tråden "somnar", pausas, i så många millisekunder som anges som parametervärde.
+
+```csharp
+static void DoSomeHeavyLifting()
+{
+  Console.WriteLine("Väntar 1 sekund innan resten av trådens kod körs");
+  Thread.Sleep(1000);  
+  
+  // Kod som ska köras i den separata tråden
+}
+```
