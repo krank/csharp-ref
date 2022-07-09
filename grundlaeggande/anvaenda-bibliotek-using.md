@@ -63,7 +63,7 @@ Man kommer åt tillägget genom att trycka F1 och söka efter det.
 
 Därefter söker man efter det bibliotek man vill ha, till exempel Raylib eller Restsharp. Man markerar biblioteket man vill ha, sedan kan man trycka på "Install"-länken som står bredvid ens projekts csproj-fil i högerspalten.
 
-![](<../.gitbook/assets/image (37).png>)
+![](<../.gitbook/assets/image (37) (1).png>)
 
 ## NuGet via terminalen
 
