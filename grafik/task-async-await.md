@@ -1,9 +1,4 @@
-# Threading och async\*
-
-Threading innebär att kod kan köras asynkront – det vill säga att två bitar kod exekveras samtidigt, i olika "trådar" i CPUn. Vanliga användningsområden inkluderar:
-
-* Se till så att ett grafiskt gränssnitt inte låser sig medan det väntar på svar från något på internet, eller på att något laddas in från hårddisken.
-* Dela upp något som kräver mycket datorkraft på flera processorer, och därmed utnyttja datorns kraft mer effektivt.
+# Task, async, await\*
 
 ## Task<>
 

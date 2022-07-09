@@ -2,11 +2,11 @@
 
 ## Slumpgenerator
 
-Börja med att skapa en slumpgenerator.
+En slumpgenerator är ett objekt som används för att generera slumptal.
 
 ```csharp
 // Skapar en slumpgenerator och gör så att vi kan komma åt den 
-// med hjälp av variabeln generator.
+// med hjälp av variabeln "generator".
 Random generator = new Random();
 ```
 
@@ -19,7 +19,7 @@ Används för att slumpa heltal (int).
 int r = generator.Next();
 ```
 
-Next kan anropas med en parameter som anger "taket" för slumpen. Taket är exklusivt, dvs det tal som anges kommer aldrig att slumpas - bara lägre tal.
+Next kan anropas med en [parameter ](egna-metoder.md#parametrar)som anger "taket" för slumpen. Taket är exklusivt, dvs det tal som anges kommer aldrig att slumpas - bara lägre tal.
 
 ```csharp
 // Slumpar ett heltal som är 0, 1, 2 eller 3

@@ -1,21 +1,21 @@
 # Debugging
 
- Debugging är ett sätt att undersöka vad som händer i ens kod medan den körs. Genom att lägga in **breakpoints** på specifika rader i sin kod så "pausas" körningen där och man kan se vilka värden programmets olika variabler har just då.
+&#x20;Debugging är ett sätt att undersöka vad som händer i ens kod medan den körs. Genom att lägga in **breakpoints** på specifika rader i sin kod så "pausas" körningen där och man kan se vilka värden programmets olika variabler har just då.
 
 Du skapar en breakpoint genom att klicka till vänster om radnumret. Då placeras en liten röd prick där. Du kan plocka bort din breakpoint genom att klicka på den röda pricken.
 
-![](<../../.gitbook/assets/image (2).png>) \
- ![](<../../.gitbook/assets/image (3).png>) 
+<img src="../../.gitbook/assets/image (2).png" alt="" data-size="original"> \
+&#x20;<img src="../../.gitbook/assets/image (3).png" alt="" data-size="original">&#x20;
 
 När du sedan kör/debuggar ditt program (F5) så pausas körningen vid din breakpoint.
 
 Du kan då se vilket värde olika variabler har under Variables i Run-vyn.
 
-![](<../../.gitbook/assets/image (4).png>) 
+<img src="../../.gitbook/assets/image (4).png" alt="" data-size="original">&#x20;
 
 Du kan fortsätta körningen genom att klicka på "Continue".
 
-![](<../../.gitbook/assets/image (5).png>) 
+<img src="../../.gitbook/assets/image (5).png" alt="" data-size="original">&#x20;
 
 Du kan också fortsätta körningen rad för rad genom att klicka "Step Over" (F10) eller "Step Into" (F11).
 

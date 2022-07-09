@@ -62,10 +62,10 @@ Under Settings (Kugghjulet och sen Settings, eller kortkommandot Ctrl+, ) finns 
 
 VSCode gillar att visa mappar "kompakt". Det betyder att den "sammanfattar" mappstrukturer i vissa fall, så att trädet under Explore blir konstigt.
 
-> ![](<../../.gitbook/assets/image (26).png>) \
+> <img src="../../.gitbook/assets/image (26).png" alt="" data-size="original"> \
 > _Med compact folders_
 
-> ![](<../../.gitbook/assets/image (27).png>) \
+> <img src="../../.gitbook/assets/image (27).png" alt="" data-size="original"> \
 > _Utan compact folders_
 
 * För att stänga av det – sök efter "compact" och kryssa ur "Explorer: Compact Folders".

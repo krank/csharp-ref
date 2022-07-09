@@ -2,10 +2,10 @@
 
 Saker som behövs:
 
-* [Visual Studio Code](https://code.visualstudio.com)
+* [Visual Studio Code](https://code.visualstudio.com/)
   * [Gitignore-extension](https://marketplace.visualstudio.com/items?itemName=codezombiech.gitignore)
-* [Git-scm](https://git-scm.com)
-* Ett konto på [GitHub](https://github.com).
+* [Git-scm](https://git-scm.com/)
+* Ett konto på [GitHub](https://github.com/).
 
 Kan vara väldigt bra:
 
@@ -22,13 +22,13 @@ Kan vara väldigt bra:
 
 ### Skapa ett projekt och göra det till ett repository + koppla till GitHub (en gång per projekt)
 
-* Se till att ha [git](https://git-scm.com) installerat, och VSCode-tillägget "gitignore".
+* Se till att ha [git](https://git-scm.com/) installerat, och VSCode-tillägget "gitignore".
 * Skapa projektet [som vanligt](../visual-studio-code/nya-projekt.md#skapa-nytt-konsollprojekt).
 * Source Control → Initialize Repository.
 * Tryck F1 och sök "add gitignore". Välj Visual Studio.
   * Gör samma sak igen, välj "Append" och "Visual Studio Code".
 * Tryck "Publish to GitHub"
-  * Längst ner till vänster, ser ut som en liten pil som pekar upp i ett moln: ![](<../../.gitbook/assets/image (29).png>)&#x20;
+  * Längst ner till vänster, ser ut som en liten pil som pekar upp i ett moln: <img src="../../.gitbook/assets/image (29).png" alt="" data-size="line">&#x20;
   * Första gången: Följ instruktionerna för att knyta Visual Studio Code till github-kontot
 * Välj namn för projektet, kryssa ur att projektet ska vara private om det ska lämnas in
 
@@ -44,7 +44,7 @@ Kan vara väldigt bra:
 
 När du gjort alla commits för denna gång och t.ex. ska stänga av datorn eller lämna lektionen.
 
-* Tryck Synchronize Changes (längst ner till vänster): ![](<../../.gitbook/assets/image (30).png>)&#x20;
+* Tryck Synchronize Changes (längst ner till vänster): <img src="../../.gitbook/assets/image (30).png" alt="" data-size="line">&#x20;
 
 ### Lämna in en Git-länk (en gång per projekt)
 

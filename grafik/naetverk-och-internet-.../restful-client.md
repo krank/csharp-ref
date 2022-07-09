@@ -41,7 +41,7 @@ Ofta när ett API kräver att man har en API-nyckel så behöver den anges som p
 RestResponse response = await client.GetAsync(request).Result;
 ```
 
-GetAsync är, som namnet antyder, en [asynkron metod](../threading-och-async.md). Med andra ord går det att använda await istället för .Result om situationen tillåter.
+GetAsync är, som namnet antyder, en [asynkron metod](../threading.md). Med andra ord går det att använda await istället för .Result om situationen tillåter.
 
 ### Använda svarets innehåll som en string
 

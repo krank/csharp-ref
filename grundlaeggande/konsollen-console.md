@@ -40,8 +40,8 @@ Variabel vars värde avgör färgen på texten i konsollfönstret.
 Console.ForegroundColor = ConsoleColor.Cyan;
 ```
 
-{% hint style="info" %}
-OBSERVERA: detta gäller enbart text som skrivs efter det att färgen ändrats. Text som redan skrivits ut förändras inte.
+{% hint style="warning" %}
+**OBSERVERA:** detta gäller enbart text som skrivs efter det att färgen ändrats. Text som redan skrivits ut förändras inte.
 {% endhint %}
 
 ### Console.BackgroundColor
@@ -52,8 +52,8 @@ Variabel vars värde avgör färgen på texten i konsollfönstret.
 Console.BackgroundColor = ConsoleColor.Magenta;
 ```
 
-{% hint style="info" %}
-OBSERVERA: detta gäller enbart text som skrivs efter det att färgen ändrats. Text som redan skrivits ut förändras inte.
+{% hint style="warning" %}
+**OBSERVERA:** detta gäller enbart text som skrivs efter det att färgen ändrats. Text som redan skrivits ut förändras inte.
 {% endhint %}
 
 ### Console.Beep()
@@ -88,6 +88,6 @@ Console.CursorTop = 10; // Placera pekaren på rad 10
 Console.CursorTop-- // Flytta pekaren 1 rad uppåt
 ```
 
-{% hint style="info" %}
-OBSERVERA: y-axeln är **omvänd**! Med andra ord, den första raden är 0, den andra är 1, den tredje är 2…
+{% hint style="warning" %}
+**OBSERVERA:** y-axeln är **omvänd**! Med andra ord, den första raden är 0, den andra är 1, den tredje är 2…
 {% endhint %}
