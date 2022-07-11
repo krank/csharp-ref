@@ -1,33 +1,8 @@
-# Threading
+# Thread\*
 
 {% hint style="info" %}
-**OBSERVERA:** Threading är definitivt överkurs och ingår varken i Programmering 1 eller 2.
+**OBSERVERA:** Oftast gör man inte threading manuellt på det här viset i C#, men det är bra att förstå grundkonceptet. Istället används oftast [Tasks ](task.md)för asynkron programmering
 {% endhint %}
-
-{% hint style="info" %}
-**OBSERVERA:** Oftast gör man inte threading manuellt på det här viset i C#, men det är bra att förstå grundkonceptet. Istället används oftast [Tasks ](task-async-await.md)för asynkron programmering.
-{% endhint %}
-
-Threading innebär att kod kan köras asynkront – det vill säga att två bitar kod exekveras samtidigt, i olika "trådar" i CPUn. Vanliga användningsområden inkluderar:
-
-* Se till så att ett grafiskt gränssnitt inte låser sig medan det väntar på svar från något på internet, eller på att något laddas in från hårddisken.
-* Dela upp något som kräver mycket datorkraft på flera processorkärnor, och därmed utnyttja datorns kraft mer effektivt.
-
-Normalt körs ett C#-program bara i en enda tråd. Det betyder att den bara körs på en enda processorkärna – en kärna kan köra flera trådar, men en tråd kan inte delas upp på flera kärnor.
-
-Om det arbete en tråd utför är väldigt tungt så begränsas tråden av sin processor – det syns till exempel i att en processorkärna arbetar till 100% medan övriga knappt gör något alls. Vill man då öka hastigheten på körningen behöver man dela upp arbetet på flera processorer.
-
-**Den stora nackdelen** med threading är att det blir svårt att dela data på ett säkert sätt mellan olika delar av programmet. Om två trådar till exempel försöker komma åt samma resurs finns risk att något går fel.
-
-## Debugging
-
-När man debuggar ett program som använder threading, så kan man under Call Stack se alla trådar som körs. Standard är att huvudtråden för programmet heter "Main Thread". Andra trådar visas som "\<No Name>" om man inte gett dem ett namn via [Name](threading.md#name)-propertyn.
-
-![](<../.gitbook/assets/image (37).png>)
-
-Om trådarna inte syns under Call Stack, testa att klicka på några av variablerna under Variables så bör de dyka upp.
-
-## Thread
 
 Thread-klassen används när man manuellt vill skapa nya trådar. Som parameter anges en metod vars kod ska köras i den separata tråden. Observera att det är metodens namn – dess identifier – som anges, och att man inte skriver () efter namnet.
 
@@ -55,7 +30,7 @@ static void DoSomeHeavyLifting(object n)
 }
 ```
 
-### Start
+## Start
 
 Startar körningen av tråden.
 
@@ -78,7 +53,7 @@ static void DoSomeHeavyLifting(object n)
 }
 ```
 
-### Join
+## Join
 
 Pausar körningen av den nuvarande tråden, tills den tråd som "joinas" är klar med sin körning.
 
@@ -91,9 +66,9 @@ workerThread.Start();
 workerThread.Join();
 ```
 
-### Name
+## Name
 
-En [property ](../klasser-och-objektorientering/inkapsling-och-properties.md#properties)som är trådens namn. Användbart bl.a när man debuggar.
+En [property ](../../klasser-och-objektorientering/inkapsling-och-properties.md#properties)som är trådens namn. Användbart bl.a när man debuggar.
 
 ```csharp
 Thread workerThread = new Thread(DoSomeHeavyLifting);
@@ -101,9 +76,9 @@ Thread workerThread = new Thread(DoSomeHeavyLifting);
 workerThread.Name = "Arbetaren";
 ```
 
-### IsAlive
+## IsAlive
 
-En [property ](../klasser-och-objektorientering/inkapsling-och-properties.md#properties)som berättar huruvida tråden är "levande"; alltså huruvida den just nu utför sitt arbete. Tråden börjar "leva" när den startas, och slutar leva när dess arbete är utfört – alltså när dess kod är färdigkörd.
+En [property ](../../klasser-och-objektorientering/inkapsling-och-properties.md#properties)som berättar huruvida tråden är "levande"; alltså huruvida den just nu utför sitt arbete. Tråden börjar "leva" när den startas, och slutar leva när dess arbete är utfört – alltså när dess kod är färdigkörd.
 
 ```csharp
 Thread workerThread = new Thread(DoSomeHeavyLifting);
@@ -115,9 +90,9 @@ while (workerThread.IsAlive)
 }
 ```
 
-### IsBackground
+## IsBackground
 
-En [property ](../klasser-och-objektorientering/inkapsling-och-properties.md#properties)för huruvida tråden är en bakgrunds-tråd eller ej.
+En [property ](../../klasser-och-objektorientering/inkapsling-och-properties.md#properties)för huruvida tråden är en bakgrunds-tråd eller ej.
 
 Skillnaden mellan bakgrundstrådar och förgrundstrådar är att om huvudprogrammet når sitt slut innan en förgrundstråd är klar, så väntar huvudprogrammet på att tråden ska bli färdig innan körningen avslutas. Bakgrundstrådar avslutas automatiskt när huvudprogrammet når sitt slut.
 
@@ -138,9 +113,9 @@ workerThread.Start();
 Console.WriteLine("Väntar inte på att tråden ska bli klar...");
 ```
 
-### CurrentThread
+## CurrentThread
 
-En statisk [property ](../klasser-och-objektorientering/inkapsling-och-properties.md#properties)som pekar på den nuvarande tråden.
+En statisk [property ](../../klasser-och-objektorientering/inkapsling-och-properties.md#properties)som pekar på den nuvarande tråden.
 
 ```csharp
 Thread workerThread = new Thread(DoSomeHeavyLifting);
@@ -155,7 +130,7 @@ static void DoSomeHeavyLifting()
 }
 ```
 
-### Sleep
+## Sleep
 
 En statisk metod som gör att den nuvarande tråden "somnar" (pausas) i så många millisekunder som anges som parametervärde.
 
