@@ -38,7 +38,7 @@ Ofta när ett API kräver att man har en API-nyckel så behöver den anges som p
 
 ```csharp
 // OBS: Detta är nytt för version RestSharp 107 och senare.
-RestResponse response = await client.GetAsync(request).Result;
+RestResponse response = client.GetAsync(request).Result;
 ```
 
 GetAsync är, som namnet antyder, en [asynkron metod](../threading/). Med andra ord går det att använda await istället för .Result om situationen tillåter.
