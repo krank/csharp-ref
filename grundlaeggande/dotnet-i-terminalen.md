@@ -63,6 +63,6 @@ dotnet restore
 Lägg till ett projekt (ProjectName.csproj) i den solution som finns i den nuvarande mappen:
 
 ```
-dotnet sln add ProjectName.csproj
+dotnet sln add .\ProjectName\ProjectName.csproj
 ```
 
