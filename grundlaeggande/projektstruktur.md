@@ -1,10 +1,12 @@
-# Projektstruktur\*
+# Projektstruktur
 
 Ett C#-projekt består av ett antal textfiler. Några av dem innehåller själva C#-koden; andra innehåller information om hur den koden ska köras, vilken version av C# som ska användas och så vidare.
 
 Oftast brukar C#-projektet också ingå i en _solution_ – ett slags samling av ett eller flera projekt. När ett nytt projekt skapas genom C# Toolbox-tillägget så skapas både en solution, ett projekt i denna solution, och en första C#-fil i projektet.
 
 ## Mappstruktur
+
+![](<../.gitbook/assets/image (39).png>)
 
 Mappen som skapas av C# Toolbox har följande struktur:
 
