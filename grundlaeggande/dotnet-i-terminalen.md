@@ -42,7 +42,7 @@ Kompilerar och kör projektet i den nuvarande mappen (eller solutionens primära
 dotnet run
 ```
 
-### Dotnet add
+### Dotnet add package
 
 Lägger till ett nuget-paket till projektet.
 
@@ -58,7 +58,7 @@ Laddar ner saknade nuget-bibliotek (t.ex. [Raylib](../grafik/raylib/)) som proje
 dotnet restore
 ```
 
-### Dotnet sln
+### Dotnet sln add
 
 Lägg till ett projekt (ProjectName.csproj) i den solution som finns i den nuvarande mappen:
 
