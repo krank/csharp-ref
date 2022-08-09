@@ -27,7 +27,7 @@
 * [Namngivning](grundlaeggande/namngivning.md)
 * [Begrepp](grundlaeggande/begrepp.md)
 * [Reference vs value types\*](grundlaeggande/reference-vs-value-types.md)
-* [Projektstruktur\*](grundlaeggande/projektstruktur.md)
+* [Projektstruktur](grundlaeggande/projektstruktur.md)
 * [Dotnet i terminalen\*](grundlaeggande/dotnet-i-terminalen.md)
 
 ## Filhantering
