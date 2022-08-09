@@ -47,7 +47,7 @@ dotnet run
 Lägger till ett nuget-paket till projektet.
 
 ```
-dotnet add Raylib-cs
+dotnet add package Raylib-cs
 ```
 
 ### Dotnet restore
