@@ -11,8 +11,7 @@
   * Solution name: Genereras automatiskt från projektnamnet.
   * Framework: 5.0 eller 6.0
   * Tryck "Create Project"
-  * När det nya fönstret öppnas, välj sln-filen.
-  * När dialogrutan dyker upp och frågar, svara "Yes" på att du vill skapa filerna som krävs.
+  * När dialogrutan dyker upp och frågar, svara "Yes" på att du vill skapa filerna som krävs. Om den inte dyker upp, tryck på "Run & Debug" och klicka på den nedre knappen ("Generate assets…").
   * Dubbelkolla så OmniSharp går igång (den lilla eldsflamman nere till vänster).
   * Öppna csproj-filen och ta bort (eller kommentera bort) raden med `<Nullable>`.
   * (I Dotnet 5 och tidigare: plocka bort Namespace, class och Main-kodblocken som automatiskt läggs till i program.cs)
