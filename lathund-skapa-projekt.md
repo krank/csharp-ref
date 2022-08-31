@@ -17,7 +17,7 @@
   * (I Dotnet 5 och tidigare: plocka bort Namespace, class och Main-kodblocken som automatiskt läggs till i program.cs)
 * **GÖR SÅ PROJEKTET KAN KÖRAS**
   * Run (ikonen med play-knapp och insekt)
-    * Ser du inget här: F1 → ".NET: Generate Assets for Build and Debug"
+    * Ser du inget här: Klicka på "Generate assets for build and debug".
   * Kugghjulet för att öppna launch.json
   * Leta rätt på "console": "internalConsole". Bör vara på rad 17.
   * Byt ut "internalConsole" mot "externalTerminal"
@@ -25,12 +25,9 @@
 * **SKAPA GIT-REPOSITORY**
   * F1 → Add gitignore
     * Välj Visual Studio
-  * F1 → Add gitignore
-    * Välj Visual Studio Code
-    * Välj Append
   * Gå till Source Control
   * Initialize Repository
   * Skriv in ditt första commit-meddelande och stage:a alla filer du vill ha med (manuellt eller automatiskt)
-  * Nere i vänstra kanten av programmet, klicka på det lilla molnet ("Publish to GitHub")
-  * Välj "Publish to GitHub public repository"
+  * Klicka på "Publish Branch".
+  * Välj "Publish to GitHub **public** repository"
   * Om du behöver logga in eller göra något annat kommer VSCode att säga till. Följ instruktionerna.

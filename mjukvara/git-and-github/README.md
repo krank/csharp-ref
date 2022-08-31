@@ -13,7 +13,7 @@ Kan vara väldigt bra:
 
 ## Första gången efter ny Git-installation
 
-* Gå till Terminal i menyn och välj New terminal.
+* Gå till **Terminal** i menyn och välj **New terminal**.
 * I terminalen som dyker upp längst ner, skriv:
   * `git config --global user.name "Förnamn Efternamn"` , fast med dina namn, och tryck enter.
   * `git config --global user.email "fornamn.efternamn@elev.ga.ntig.se"` , fast med den E-mailadress du registrerade dig med på GitHub, och tryck enter.
@@ -25,12 +25,19 @@ Kan vara väldigt bra:
 * Se till att ha [git](https://git-scm.com/) installerat, och VSCode-tillägget "gitignore".
 * Skapa projektet [som vanligt](../visual-studio-code/nya-projekt.md#skapa-nytt-konsollprojekt).
 * Source Control → Initialize Repository.
-* Tryck F1 och sök "add gitignore". Välj Visual Studio.
-  * Gör samma sak igen, välj "Append" och "Visual Studio Code".
-* Tryck "Publish to GitHub"
-  * Längst ner till vänster, ser ut som en liten pil som pekar upp i ett moln: <img src="../../.gitbook/assets/image (29).png" alt="" data-size="line">&#x20;
-  * Första gången: Följ instruktionerna för att knyta Visual Studio Code till github-kontot
-* Välj namn för projektet, kryssa ur att projektet ska vara private om det ska lämnas in
+* Tryck F1 och sök "add gitignore". Välj **Visual Studio**.
+* Tryck "Publish Branch"
+  * Första gången: Följ instruktionerna för att knyta Visual Studio Code till github-kontot.
+    * "The extension 'GitHub' wants to sign in using GitHub" --> Allow
+    * Låt VSCode öppna länken i webbläsaren.
+    * "Authorize Visual Studio Code to access GitHub".
+    * "This site is trying to open Visual Studio Code" --> Open
+    * "Allow an extension to open this URI?" --> Open
+* Välj "Publish to GitHub **public** repository".
+  * Första gången: Följ instruktionerna för att låta Visual Studio Code ladda upp filer.&#x20;
+    * GitHub Sign in --> "Sign in with your browser"
+    * Godkänn
+    * Gå tillbaka till Visual Studio Code.
 
 ### Commits (då och då)
 
@@ -44,12 +51,13 @@ Kan vara väldigt bra:
 
 När du gjort alla commits för denna gång och t.ex. ska stänga av datorn eller lämna lektionen.
 
-* Tryck Synchronize Changes (längst ner till vänster): <img src="../../.gitbook/assets/image (30).png" alt="" data-size="line">&#x20;
+* Gå till Source Control
+* Tryck Sync Changes.
 
 ### Lämna in en Git-länk (en gång per projekt)
 
 * Gå till projektsidan på github.com.
-* Tryck på "Clone or download".
+* Kopiera URL:en i adressfältet
 * Kopiera länken och lämna in. Numera kan man lägga till länkar direkt i sitt svar i Classroom!
 
 ### Göra ett projekt publikt
