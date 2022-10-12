@@ -11,15 +11,30 @@ Alla föremål som lagrats i en samling ges normalt ett index, som beskriver fö
 
 I arrayer och listor är index alltid en siffra – en integer. Det första föremålet i listan har index 0, det andra har index 1, etc.
 
+{% code lineNumbers="true" %}
 ```csharp
 string[] names = {"Benny", "Jenny", "Kenny", "Anna"};
 // I denna array har Benny index 0, Jenny 1, Kenny 2 och Anna 3.
+
+Console.WriteLine(names[2]); // Skriver ut "Kenny"
 ```
+{% endcode %}
+
+För att hänvisa till ett index räknat från slutet av arrayen så skriver man ^ framför siffran.
+
+{% code lineNumbers="true" %}
+```csharp
+string[] names = {"Benny", "Jenny", "Kenny", "Anna"};
+
+Console.WriteLine(names[^2]); // Skriver ut "Jenny"
+```
+{% endcode %}
 
 ## Array
 
 Arrayer har en **fast längd** som bestäms när arrayen skapas.
 
+{% code lineNumbers="true" %}
 ```csharp
 // Skapa en int-array med tre tomma platser
 int[] arrayHp = new int[3];
@@ -27,16 +42,19 @@ int[] arrayHp = new int[3];
 // Skapa en string-array med tre platser som redan från början ges värden
 string[] choices = {"Start", "Options", "Quit"};
 ```
+{% endcode %}
 
 ### Length
 
 Variabel som är inbyggd i arrayer. Har alltid ett värde som är lika med arrayens storlek.
 
+{% code lineNumbers="true" %}
 ```csharp
 // Skapa en integer-variabel och tilldela den värdet som motsvarar 
 // arrayens storlek
 int length = arrayHp.Length;
 ```
+{% endcode %}
 
 ### Contains()
 
@@ -53,12 +71,36 @@ bool validAnswer = choices.Contains(choice);
 **`using System.Linq;`**
 {% endhint %}
 
+### Range
+
+För att få ut en del av en array som en ny array kan man använda _ranges_.
+
+Ranges anger man genom att skriva `..` (två punkter). Innan punkten skriver man start-index, alltså den sak i arrayen man vill att den nya arrayen ska börja på. Efter punkterna skriver man slut-index. Den nya arrayen inkluderar inte den sak som finns på slut-index.
+
+{% code lineNumbers="true" %}
+```csharp
+string[] names = {"Benny", "Jenny", "Kenny", "Anna", "Mahmud", "Ki"};
+
+string[] subNames = names[1..3]; // subNames blir en array med Jenny och Kenny
+
+string[] firstHalf = names[..3]; // blir Benny, Jenny och Kenny
+
+string[] secondHalf = names[3..]; // blir Anna, Mahmud och Ki
+
+string[] lastTwo = names[^2..]; // blir Jenny och Kenny
+```
+{% endcode %}
+
+Detta kallas ibland också "slicing", eftersom man delar upp arrayen i mindre bitar.
+
 ### Att göra om en array till en lista
 
+{% code lineNumbers="true" %}
 ```csharp
 // Skapa en string-lista baserat på arrayHp, med samma innehåll och storlek
 List<string> lNamn = new List<string>(arrayHp);
 ```
+{% endcode %}
 
 ## Flerdimensionella arrayer
 
@@ -66,6 +108,7 @@ En vanlig array är **endimensionell** – en lista, eller en serie. Varje sak i
 
 En tvådimensionell array är som ett rutnät eller en tabell. Varje sak i arrayen identifieras av **två** index.
 
+{% code lineNumbers="true" %}
 ```csharp
 // Skapa en tvådimensionell array med 150 platser; 10 rader med 15 kolumner
 int[,] grid = new int[10,15];
@@ -73,11 +116,13 @@ int[,] grid = new int[10,15];
 // Bestäm värdet på position 2,2 till 1
 grid[2,2] = 1;
 ```
+{% endcode %}
 
 ### GetLength
 
 För att läsa av en flerdimensionell arrays längd i någon dimension, använd GetLength.
 
+{% code lineNumbers="true" %}
 ```csharp
 for (int y = 0; y < grid.GetLength(1); y++)
 {
@@ -87,11 +132,13 @@ for (int y = 0; y < grid.GetLength(1); y++)
   }
 }
 ```
+{% endcode %}
 
 ## List
 
 När listor skapas har de normalt sett en längd på 0, och de **växer dynamiskt** när man lägger till saker i dem.
 
+{% code lineNumbers="true" %}
 ```csharp
 // Skapa en tom string-lista
 List<string> listNamn = new List<string>();
@@ -99,6 +146,7 @@ List<string> listNamn = new List<string>();
 // Skapa en string-lista som redan från början innehåller tre värden
 List<string> choices = new List<string>() {"Start", "Options", "Quit"};
 ```
+{% endcode %}
 
 Mer information om List finns under [Generiska klasser](../klasser-och-objektorientering/generiska-klasser.md).
 
@@ -114,39 +162,48 @@ using System.Collections.Generic;
 
 Metod som är inbyggd i listor. Används för att lägga till nya föremål i listan.
 
+{% code lineNumbers="true" %}
 ```csharp
 listNamn.Add("Kim");
 ```
+{% endcode %}
 
 ### Count
 
 Variabel som är inbyggd i listor. Har alltid ett värde som är lika med listans storlek.
 
+{% code lineNumbers="true" %}
 ```csharp
 // Skapa en integer-variabel och tilldela den värdet som motsvarar listans storlek
 int length = listNamn.Count;
 ```
+{% endcode %}
 
 ### Remove()
 
 Metod som är inbyggd i listor. Används för att ta bort föremål från listan.
 
+{% code lineNumbers="true" %}
 ```csharp
 listNamn.Remove("Kim");
 ```
+{% endcode %}
 
 ### RemoveAt()
 
 Metod som är inbyggd i listor. Används för att ta bort föremål på en specifik plats i listan.
 
+{% code lineNumbers="true" %}
 ```csharp
 listNamn.RemoveAt(4);
 ```
+{% endcode %}
 
 ### RemoveAll()
 
 Metod för att ta bort alla föremål som matchar ett visst kriterium. Kriteriet skrivs som en metod. Metoden tar emot ett värde av samma datatyp som listan innehåller, och returnerar true om kriteriet är uppfyllt och false om det inte är det. Här används med andra ord [delegates](delegates.md).
 
+{% code lineNumbers="true" %}
 ```csharp
 // IsAboveScreen är kriteriet
 static bool IsAboveScreen(Rectangle r)
@@ -164,15 +221,20 @@ static void Main(string[] args)
   // i metoden, får den att returnera true
   rects.RemoveAll(IsAboveScreen);
 ```
+{% endcode %}
 
 Ett annat sätt är att använda ett [lambda-uttryck](delegates.md#lambdas):
 
+{% code lineNumbers="true" %}
 ```csharp
 rects.removeAll(rect => rect.y < 0);
 ```
+{% endcode %}
 
 ### Att göra om en lista till en array
 
+{% code lineNumbers="true" %}
 ```csharp
 string[] aNamn = listNamn.ToArray();
 ```
+{% endcode %}
