@@ -6,15 +6,18 @@ C# har ett antal inbyggda kodbibliotek. Man kan lägga till ytterligare bibliote
 
 Skrivs högst upp i en cs-fil för att deklarera att innehållet i ett visst bibliotek ska användas.
 
+{% code lineNumbers="true" %}
 ```csharp
 using System;
 using System.Net;
 using System.Collections.Generic;
 using System.Text.Json;
 ```
+{% endcode %}
 
 Man kan alltid använda sig av bibliotekens innehåll utan att skriva using, men då måste man skriva hela bibliotekets namn varje gång.
 
+{% code lineNumbers="true" %}
 ```csharp
 // Utan "using System":
 System.Console.WriteLine("Hello");
@@ -28,6 +31,7 @@ System.Collections.Generic.List<string> list = new System.Collections.Generic.Li
 // Med "using System.Collections.Generic":
 List<string> list = new List<string>();
 ```
+{% endcode %}
 
 ### Global using (.NET 6)
 
@@ -43,6 +47,7 @@ De gör att man bara behöver skriva varje using-statement en gång per projekt.
 
 I .NET 6 ingår som standard vissa globala using-statements utan att man behöver skriva dem. I konsollprogram ingår:
 
+{% code lineNumbers="true" %}
 ```csharp
 using System;
 using System.IO;
@@ -52,6 +57,7 @@ using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 ```
+{% endcode %}
 
 ## NuGet Gallery
 

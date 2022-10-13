@@ -8,8 +8,7 @@ Det här innebär att man undviker att ha variabler som är direkt tillgängliga
 
 Istället används metoder för att läsa av och ändra på variablerna.
 
-{% tabs %}
-{% tab title="Character.cs" %}
+{% code title="Character.cs" lineNumbers="true" %}
 ```csharp
 class Character
 {
@@ -24,11 +23,9 @@ class Character
   {
     return hp;
   }  
-
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 I exemplet ovan kan man fortfarande få tag i karaktärers hp utifrån, och även bestämma nya värden, men man måste gå via GetHp och SetHp. Den här sortens metoder, som används för att direkt läsa av eller bestämma en variabels värde, kallas _getters_ och _setters_.
 
@@ -36,8 +33,7 @@ En fördel med det här är att man kan välja att en variabel t.ex. enbart ska 
 
 En annan finess är att man får mer kontroll över vilka värden som ges till en variabel. I exemplet nedan hindras till exempel hp-värdet från att bli lägre än 0.
 
-{% tabs %}
-{% tab title="Character.cs" %}
+{% code title="Character.cs" lineNumbers="true" %}
 ```csharp
 class Character
 {
@@ -54,15 +50,13 @@ class Character
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ## Properties
 
 Properties, även kallade **egenskaper**, fungerar som ett slags variabler med inbyggda getters och setters.
 
-{% tabs %}
-{% tab title="Character.cs" %}
+{% code title="Character.cs" lineNumbers="true" %}
 ```csharp
 class Character
 {
@@ -80,15 +74,13 @@ class Character
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Fördelen med att använda properties är att de kan anropas och användas som om de vore variabler:
 
-{% tabs %}
-{% tab title="Program.cs" %}
+{% code title="Program.cs" lineNumbers="true" %}
 ```csharp
-haracter cha = new Character();
+Character cha = new Character();
 
 // Propertyns setter anropas automatiskt, och value sätts till 80.
 cha.Hitpoints = 80; 
@@ -97,23 +89,20 @@ cha.Hitpoints = 80;
 // och returnerar värdet av den privata variabeln hp.
 Console.WriteLine(cha.Hitpoints);
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ## Auto-implementerade properties
 
 Om man inte vill lägga in någon extra logik i en property så kan man deklarera den på följande vis:
 
-{% tabs %}
-{% tab title="Character.cs" %}
+{% code title="Character.cs" lineNumbers="true" %}
 ```csharp
 class Character
 {
   public int Hitpoints{ get; set; }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Det här innebär att man blir av med den fördel properties ger jämfört med publika variabler, men å andra sidan blir det lätt att senare bygga ut propertyn till en fullvärdig sådan. På det här viset behöver man med andra ord inte i efterhand byta ut en publik variabel mot en property när man senare kommer på att man trots allt ville ha lite logik.
 
@@ -121,11 +110,13 @@ Det här innebär att man blir av med den fördel properties ger jämfört med p
 
 Ett användningsområde för automatiskt implementerade properties är s.k. read only-värden. Säg t.ex. att vi vill att karaktärens hitpoints ska kunna läsas, men inte ändras, utifrån. Då skriver man så här:
 
+{% code title="Character.cs" lineNumbers="true" %}
 ```csharp
 class Character
 {
   public int Hitpoints{ get; private set; }
 }
 ```
+{% endcode %}
 
 Det innebär att propertyns setter bara kan anropas från andra av klassens metoder.

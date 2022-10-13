@@ -6,6 +6,7 @@ De används en hel del när man konstruerar controllers till REST-servrar, och n
 
 Man skriver attribut mellan hakparenteser `[]` innan det attributet ska gälla.
 
+{% code title="Pokemon.cs" lineNumbers="true" %}
 ```csharp
 using System.Text.Json.Serialization;
 
@@ -18,6 +19,7 @@ public class Pokemon
   public int CurrentHp {get; set;}
 }
 ```
+{% endcode %}
 
 
 

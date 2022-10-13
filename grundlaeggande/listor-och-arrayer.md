@@ -162,11 +162,9 @@ using System.Collections.Generic;
 
 Metod som är inbyggd i listor. Används för att lägga till nya föremål i listan.
 
-{% code lineNumbers="true" %}
 ```csharp
 listNamn.Add("Kim");
 ```
-{% endcode %}
 
 ### Count
 
@@ -183,21 +181,17 @@ int length = listNamn.Count;
 
 Metod som är inbyggd i listor. Används för att ta bort föremål från listan.
 
-{% code lineNumbers="true" %}
 ```csharp
 listNamn.Remove("Kim");
 ```
-{% endcode %}
 
 ### RemoveAt()
 
 Metod som är inbyggd i listor. Används för att ta bort föremål på en specifik plats i listan.
 
-{% code lineNumbers="true" %}
 ```csharp
 listNamn.RemoveAt(4);
 ```
-{% endcode %}
 
 ### RemoveAll()
 
@@ -225,16 +219,18 @@ static void Main(string[] args)
 
 Ett annat sätt är att använda ett [lambda-uttryck](delegates.md#lambdas):
 
-{% code lineNumbers="true" %}
 ```csharp
 rects.removeAll(rect => rect.y < 0);
 ```
-{% endcode %}
 
 ### Att göra om en lista till en array
 
-{% code lineNumbers="true" %}
 ```csharp
 string[] aNamn = listNamn.ToArray();
 ```
-{% endcode %}
+
+### Att göra om en array till en lista
+
+```csharp
+List<string> listNamn = new List<string>(aNamn);
+```

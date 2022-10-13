@@ -8,11 +8,13 @@
 
 Variabelnamn är egentligen bara namn på specifika minnesplatser i datorns RAM-minne.
 
+{% code lineNumbers="true" %}
 ```csharp
 int t; // Reservera 32 bitar i datorns minne för att lagra heltal, 
        //  och namge den minnesadressen "t"
 t = 8; // Lagra heltalet 8 i den minnesaddress som har namnet "t".
 ```
+{% endcode %}
 
 Namnet något får kallas för en **identifier**.
 
@@ -54,14 +56,17 @@ Så identifiern pekar på en plats i stacken, på den platsen finns en vidarepek
 
 Value types och reference types beter sig olika när tilldelnings-operatorn = används. Mer exakt beter de sig exakt lika – men eftersom de lagrar olika saker i stacken så blir effekten olika.
 
+{% code lineNumbers="true" %}
 ```csharp
 int a = 9;
 int b = a; // Kopierar stack-positionen som identifiern a pekar på
            //  till stack-positionen som identifiern b pekar på.
 ```
+{% endcode %}
 
 (Bild: enkel stack-operation, före och efter)
 
+{% code lineNumbers="true" %}
 ```csharp
 Fighter f = new Fighter(); // Instans skapas av klassen Fighter.
                            // Instansen lagras i heapen.
@@ -75,6 +80,7 @@ Fighter f2 = f; // Identifiern f2 skapas.
                 // Inget nytt objekt skapas i heapen – både f1 och f2 pekar mot
                 //  samma objekt.
 ```
+{% endcode %}
 
 (Bild: Stack-heap-operation)
 
@@ -82,6 +88,7 @@ Fighter f2 = f; // Identifiern f2 skapas.
 
 Ovanstående gäller också parametrar i metoder.
 
+{% code lineNumbers="true" %}
 ```csharp
 int k = 9;
 
@@ -92,7 +99,9 @@ static void TakeInt(int i)
   // variabeln i pekar mot sin helt egna kopia av talet 9.
 }
 ```
+{% endcode %}
 
+{% code lineNumbers="true" %}
 ```csharp
 Fighter f = new Fighter();
 
@@ -106,6 +115,7 @@ static void TakeFight(Fighter localFighter)
   localFighter.hp -= 9; // Ändrar på instansens hp-värde
 }
 ```
+{% endcode %}
 
 ## Out och ref
 

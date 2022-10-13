@@ -10,8 +10,7 @@ Ett exempel på detta är [metodöverlagring](../../grundlaeggande/egna-metoder.
 
 Inom objektorientering används polymorfism genom att en variabel vars datatyp är satt till en basklass kan innehålla instanser av subklasser till den basklassen.
 
-{% tabs %}
-{% tab title="Character.cs" %}
+{% code title="Character.cs" lineNumbers="true" %}
 ```csharp
 class Character
 {
@@ -24,11 +23,9 @@ class Character
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
-{% tabs %}
-{% tab title="Hero.cs" %}
+{% code title="Hero.cs" lineNumbers="true" %}
 ```csharp
 class Hero: Character
 {
@@ -42,30 +39,25 @@ class Hero: Character
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
-{% tabs %}
-{% tab title="Program.cs" %}
+{% code title="Program.cs" lineNumbers="true" %}
 ```csharp
 Character myHero = new Hero();
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Det här är praktiskt när man till exempel vill ha en lista med alla karaktärer i spelet:
 
-{% tabs %}
-{% tab title="Program.cs" %}
+{% code title="Program.cs" lineNumbers="true" %}
 ```csharp
 List<Character> characters = new List<Character>();
 
 characters.Add(new Hero());
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
-Ett problem med detta är att man då bara har tillgång till de publika variabler och metoder som ingår i basklassen. I exemplet ovan kan man med andra ord anropa myHero.Hurt eller characters\[0].Hurt men man kan inte anropa AddExperience eftersom den bara finns i subklassen.
+Ett problem med detta är att man då bara har tillgång till de publika variabler och metoder som ingår i basklassen. I exemplet ovan kan man med andra ord anropa `myHero.Hurt` eller `characters[0].Hurt` men man kan inte anropa `AddExperience` eftersom den bara finns i subklassen.
 
 Därför är det en bra idé att tillföra så få nya metoder som behöver anropas utifrån som möjligt, när man designar subklasser som ska kunna fungera polymorfiskt. I idealfallet ingår alltså alla metoder och variabler som ska vara åtkomliga utifrån redan i basklassen.
 
@@ -73,6 +65,7 @@ Därför är det en bra idé att tillföra så få nya metoder som behöver anro
 
 [As](../../grundlaeggande/typkonvertering.md#as) och framför allt [Is](../../grundlaeggande/typkonvertering.md#is) ger praktiska verktyg att arbeta med polymorfa klasser. Det är användbart framför allt när subklasser till exempel lägger till nya metoder eller properties.
 
+{% code lineNumbers="true" %}
 ```csharp
 foreach(Character c in characters)
 {
@@ -82,3 +75,4 @@ foreach(Character c in characters)
   }
 }
 ```
+{% endcode %}

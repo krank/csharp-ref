@@ -4,21 +4,25 @@
 
 Lägg till dessa using-statements:
 
+{% code lineNumbers="true" %}
 ```csharp
 using System.Xml.Serialization;
 using System.IO;
 ```
+{% endcode %}
 
 ## Klassdesign
 
 Klassen vars instanser ska kunna serialiseras måste vara public.
 
+{% code title="Spaceship.cs" lineNumbers="true" %}
 ```csharp
 public class Spaceship
 {
   // Lägg som vanligt in variabler, properties, metoder etc här
 }
 ```
+{% endcode %}
 
 Det är också enbart publika variabler samt properties med publika getters och setters som serialiseras.
 
@@ -26,6 +30,7 @@ Om du ska deserialisera XML-kod som du får från något annat ställe och inte 
 
 {% tabs %}
 {% tab title="Spaceship.cs" %}
+{% code lineNumbers="true" %}
 ```csharp
 public class Spaceship
 {
@@ -34,9 +39,11 @@ public class Spaceship
  public int Speed {get; set;} = 2;
 }
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Spaceship.xml" %}
+{% code lineNumbers="true" %}
 ```markup
 <?xml version="1.0"?>
 <Spaceship xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
@@ -46,6 +53,7 @@ public class Spaceship
  <speed>2</speed>
 </Spaceship>
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -67,6 +75,7 @@ Beroende på om man vill ha ut XML-koden till en string eller till en fil behöv
 
 {% tabs %}
 {% tab title="StringWriter" %}
+{% code lineNumbers="true" %}
 ```csharp
 Spaceship myShip = new Spaceship();
 
@@ -76,9 +85,11 @@ shipSerializer.Serialize(textWriter, myShip);
 
 textWriter.Close();
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="FileStream" %}
+{% code lineNumbers="true" %}
 ```csharp
 Spaceship myShip = new Spaceship();
 
@@ -88,6 +99,7 @@ shipSerializer.Serialize(file, myShip);
 
 file.Close();
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -97,6 +109,7 @@ Samma kod kan skrivas så här, med hjälp av ett [using-statement](../open-clos
 
 {% tabs %}
 {% tab title="StringWriter" %}
+{% code lineNumbers="true" %}
 ```csharp
 Spaceship myShip = new Spaceship();
 
@@ -105,9 +118,11 @@ using (StringWriter textWriter = new StringWriter())
   shipSerializer.Serialize(textWriter, myShip);
 }
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="FileStream" %}
+{% code lineNumbers="true" %}
 ```csharp
 Spaceship myShip = new Spaceship();
 
@@ -116,6 +131,7 @@ using (FileStream file = File.Open(@"ship.xml", FileMode.OpenOrCreate))
   shipSerializer.Serialize(file, myShip);
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -127,6 +143,7 @@ Beroende på om XML-koden finns i en string eller till en fil behövs en StringR
 
 {% tabs %}
 {% tab title="StringReader" %}
+{% code lineNumbers="true" %}
 ```csharp
 Spaceship myShip; // Variabeln resultatet lagras i
 
@@ -137,9 +154,11 @@ myShip = (Spaceship) shipSerializer.Deserialize(textReader);
 
 textReader.Close();
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="FileStream" %}
+{% code lineNumbers="true" %}
 ```csharp
 Spaceship myShip; // Variabeln resultatet lagras i
 
@@ -150,6 +169,7 @@ myShip = (Spaceship) shipSerializer.Deserialize(textReader);
 
 file.Close();
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -159,6 +179,7 @@ Samma kod kan skrivas så här, med hjälp av ett [using-statement](../open-clos
 
 {% tabs %}
 {% tab title="StringReader" %}
+{% code lineNumbers="true" %}
 ```csharp
 Spaceship myShip;
 
@@ -167,9 +188,11 @@ using (StringReader textReader = new StringReader(xmlText))
   myShip = (Spaceship) shipSerializer.Deserialize(textReader);
 }
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="FileStream" %}
+{% code lineNumbers="true" %}
 ```csharp
 Spaceship myShip;
 
@@ -178,6 +201,7 @@ using (FileStream file = File.Open(@"ship.xml", FileMode.OpenOrCreate))
   myShip = (Spaceship) shipSerializer.Deserialize(textReader);
 }
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -185,6 +209,7 @@ using (FileStream file = File.Open(@"ship.xml", FileMode.OpenOrCreate))
 
 Det går utmärkt att serialisera även listor.
 
+{% code lineNumbers="true" %}
 ```csharp
 List<Spaceship> fleet = new List<Spaceship>();
 
@@ -199,20 +224,24 @@ using (FileStream file = File.Open(@"fleet.xml", FileMode.OpenOrCreate))
   shipSerializer.Serialize(file, fleet);
 }
 ```
+{% endcode %}
 
 Precis som med andra variabler och properties så kommer publika samlingar av instanser som lagrats i en instans också serialiseras.
 
 {% tabs %}
 {% tab title="Fleet.cs" %}
+{% code lineNumbers="true" %}
 ```csharp
 public class Fleet
 {
   public List<Spaceship> ships = new List<Spaceship>();
 }
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Fleet.xml" %}
+{% code lineNumbers="true" %}
 ```markup
 <?xml version="1.0"?>
 <Fleet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -231,6 +260,7 @@ public class Fleet
  </ships>
 </Fleet>
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 

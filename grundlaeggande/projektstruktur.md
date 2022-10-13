@@ -34,6 +34,7 @@ Mappen som skapas av C# Toolbox har följande struktur:
 
 ## C#-projekt (csproj)
 
+{% code lineNumbers="true" %}
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
@@ -44,6 +45,7 @@ Mappen som skapas av C# Toolbox har följande struktur:
   </PropertyGroup>
 </Project>
 ```
+{% endcode %}
 
 En csproj-fil är en XML-fil med information om C#-projektet. Några viktiga delar är:
 
@@ -53,6 +55,7 @@ En csproj-fil är en XML-fil med information om C#-projektet. Några viktiga del
 
 ## Dotnet-solutions (sln)
 
+{% code lineNumbers="true" %}
 ```
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
@@ -76,5 +79,6 @@ Global
 	EndGlobalSection
 EndGlobal
 ```
+{% endcode %}
 
 SLN-filen innehåller en hel del information, där det viktigaste för oss är vilka projekt som ingår. I exemplet ingår ett enda projekt – "DemoProject".

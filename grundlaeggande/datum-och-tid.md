@@ -8,6 +8,7 @@ description: (Under uppbyggnad)
 
 Datatyp – mer exakt en [klass ](../klasser-och-objektorientering/klasser-och-instanser.md)– som lagrar tidpunkter.
 
+{% code lineNumbers="true" %}
 ```csharp
 // Datumet 10:e december 1815
 DateTime lovelaceBirthday = new DateTime(1815, 12, 10);
@@ -15,11 +16,13 @@ DateTime lovelaceBirthday = new DateTime(1815, 12, 10);
 // Tidpunkten 14:32:00 på datumet 1969-07-16
 DateTime apolloEleven = new DateTime(1969, 8, 16, 14, 32, 0);
 ```
+{% endcode %}
 
 ### Egenskaper
 
 Man kan få ut information ur DateTime-objekt genom att läsa av dess egenskaper. (Alla dessa är i själva verket [properties](../klasser-och-objektorientering/inkapsling-och-properties.md#properties).)
 
+{% code lineNumbers="true" %}
 ```csharp
 lovelaceBirthday.DayOfWeek; // vilken dag i veckan det är
 lovelaceBirthday.Year;
@@ -30,11 +33,13 @@ apolloEleven.Minute; // 32
 apolloEleven.Second; // 0
 apolloEleven.Millisecond; // 0
 ```
+{% endcode %}
 
 ### Metoder
 
 Man kan justera ett DateTime-objekts innehåll genom att anropa dess metoder.
 
+{% code lineNumbers="true" %}
 ```csharp
 // Flytta fram klockan
 apolloEleven.AddYears(1);
@@ -45,6 +50,7 @@ apolloEleven.AddMinutes(30);
 apolloEleven.AddSeconds(10);
 apolloEleven.AddMilliseconds(300);
 ```
+{% endcode %}
 
 Alla dessa kan också användas för att flytta klockan bakåt – då stoppar man helt enkelt in negativa tal.
 
@@ -52,10 +58,12 @@ Alla dessa kan också användas för att flytta klockan bakåt – då stoppar m
 
 Tidpunkten _just nu_. (Är egentligen en [static ](../klasser-och-objektorientering/static.md#statiska-variabler)[property](../klasser-och-objektorientering/inkapsling-och-properties.md#properties))
 
+{% code lineNumbers="true" %}
 ```csharp
 // Spara en kopia av tidpunkten "just nu" i variabeln startTime
 DateTime startTime = DateTime.Now;
 ```
+{% endcode %}
 
 ## TimeSpan
 
@@ -63,15 +71,18 @@ Datatyp som beskriver ett tidsspann, till exempel "tiden mellan 26:e mars 1926 o
 
 Om man subtraherar en DateTime från en annan DateTime så blir resultatet en TimeSpan.
 
+{% code lineNumbers="true" %}
 ```csharp
 DateTime leonardBirth = new DateTime(1926, 3, 26);
 DateTime leonardDeath = new DateTime(2015, 2, 27);
 
 TimeSpan life = leonardDeath - leonardBirth;
 ```
+{% endcode %}
 
 ### Tidsenheter i en TimeSpan
 
+{% code lineNumbers="true" %}
 ```csharp
 // Dagar
 Console.WriteLine(life.Days); // en int: 32480 hela dagar i spannet
@@ -93,11 +104,13 @@ Console.WriteLine(life.TotalSeconds); // En double: 2806272000 sekunder i spanne
 Console.WriteLine(life.Milliseconds); // Timme-komponenten för spannet. Går mellan -59 och 59.
 Console.WriteLine(life.TotalMilliseconds); // En double: 2806272000000 millisekunder i spannet
 ```
+{% endcode %}
 
 ## Att mäta tid
 
 Ett vanligt användningsområde för DateTime och TimeSpan är att mäta hur lång tid något tar.
 
+{% code lineNumbers="true" %}
 ```csharp
 DateTime start = DateTime.Now
 
@@ -113,4 +126,5 @@ Console.WriteLine($"{span.Minutes} minuter");
 Console.WriteLine($"{span.Seconds} sekunder");
 Console.WriteLine($"{span.Milliseconds} millisekunder");
 ```
+{% endcode %}
 

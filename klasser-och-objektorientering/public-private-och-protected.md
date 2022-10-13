@@ -4,25 +4,21 @@
 
 Variabler och metoder som är **publika** kan läsas av och ändras på **utifrån**.
 
-{% tabs %}
-{% tab title="Fighter.cs" %}
+{% code title="Fighter.cs" lineNumbers="true" %}
 ```csharp
 class Fighter
 {
   public string Name = "";
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
-{% tabs %}
-{% tab title="Program.cs" %}
+{% code title="Program.cs" lineNumbers="true" %}
 ```csharp
 Fighter hero = new Fighter();
 hero.Name = "Laban";
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ## Private
 
@@ -32,8 +28,7 @@ Om det **inte står något** framför en klassvariabel eller klassmetod är den 
 
 För att man ska kunna få ut värdet hos en privat variabel behöver man gå via en publik metod som returnerar dess värde. Metoden tillhör ju klassen, så _den_ får komma åt den privata variabeln. Detta är en form av [inkapsling](inkapsling-och-properties.md).
 
-{% tabs %}
-{% tab title="Fighter.cs" %}
+{% code title="Fighter.cs" lineNumbers="true" %}
 ```csharp
 class Fighter
 {
@@ -45,15 +40,13 @@ class Fighter
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ## Protected
 
 Fungerar som private, men metoden/variabeln kan kommas åt i klasser som _ärver_ från klassen där de deklareras.
 
-{% tabs %}
-{% tab title="Fighter.cs" %}
+{% code title="Fighter.cs" lineNumbers="true" %}
 ```csharp
 class Fighter
 {
@@ -65,11 +58,9 @@ class Fighter
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
-{% tabs %}
-{% tab title="StrongFighter.cs" %}
+{% code title="StrongFighter.cs" lineNumbers="true" %}
 ```csharp
 class StrongFighter : Fighter
 {
@@ -80,5 +71,4 @@ class StrongFighter : Fighter
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}

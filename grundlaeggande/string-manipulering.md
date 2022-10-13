@@ -32,11 +32,9 @@ string sub2 = oldString.Substring(2); // sub2 blir "tta är en string"
 
 Returnerar en kopia av stringen där mellanslag och andra "tomma" tecken tagits bort från början och slutet.
 
-{% code lineNumbers="true" %}
 ```csharp
 string clean = oldString.Trim();
 ```
-{% endcode %}
 
 Det finns också `TrimEnd` och `TrimStart` ifall man bara vill trimma slutet eller början av stringen.
 
@@ -89,21 +87,17 @@ Resultatet av ovanstående blir att variabeln kimPlats får värdet 10 och att m
 
 Returnerar en kopia av stringen där alla gemener (små bokstäver) bytts ut mot versaler (stora bokstäver).
 
-{% code lineNumbers="true" %}
 ```csharp
 string caps = oldString.ToUpper();
 ```
-{% endcode %}
 
 ### ToLower()
 
 Returnerar en kopia av stringen där alla versaler (stora bokstäver) bytts ut mot gemener (små bokstäver).
 
-{% code lineNumbers="true" %}
 ```csharp
 string small = oldString.ToLower();
 ```
-{% endcode %}
 
 Denna används ofta för att till exempel förvandla strings man fått in från en användare så att det inte spelar någon roll ifall hen svarat t.ex. JA, Ja, jA eller ja.
 

@@ -6,8 +6,7 @@ Statiska variabler och metoder tillhör klassen istället för instanserna. Alla
 
 När man läser eller ändrar på en statisk variabel utifrån skriver man klassens namn, sedan en punkt och därefter variabelns namn. Inuti klassmetoder kan man alltid bara använda variabeln som vilken som helst.
 
-{% tabs %}
-{% tab title="Fighter.cs" %}
+{% code title="Fighter.cs" lineNumbers="true" %}
 ```csharp
 class Fighter
 {
@@ -21,22 +20,19 @@ class Fighter
   {
     strength = generator.Next(10,20);
   }
-  
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ## Statiska metoder
 
 När man anropar en statisk metod skriver man klassens namn, sedan en punkt och därefter metodens namn. Inuti icke-statiska klassmetoder kan man anropa statiska metoder som om de vore vanliga metoder.
 
-{% hint style="warning" %}
+{% hint style="info" %}
 En viktig detalj är att **inuti en statisk metod** kan man **bara** anropa de metoder i samma klass som **också är statiska**. Detta eftersom metoden tillhör just klassen och inte instanserna. Detta gäller också variabler - i en statisk metod kan man bara använda statiska klassvariabler.
 {% endhint %}
 
-{% tabs %}
-{% tab title="Fighter.cs" %}
+{% code title="Fighter.cs" lineNumbers="true" %}
 ```csharp
 class Fighter
 {
@@ -46,5 +42,4 @@ class Fighter
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}

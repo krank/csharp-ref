@@ -62,11 +62,13 @@ Exempelkoden skriver texten "Banana" till textfilen localtext.txt.
 
 Skriver en string-array till en textfil - med en av arrayens strings per rad.
 
+{% code lineNumbers="true" %}
 ```csharp
 string[] contents = {"Apple", "Banana", "Monkey"};
 
 File.WriteAllLines(@"localfile.txt", contents);
 ```
+{% endcode %}
 
 Exempelkoden skriver innehållet från string-arrayen contents till filen localfile.txt. Resultatet blir att localfile.txt innehåller följande:
 

@@ -2,8 +2,7 @@
 
 När man bygger en klass som bygger på en annan klass så kallas det **arv**. Arvet innebär att subklassen får samma variabler och metoder som basklassen.
 
-{% tabs %}
-{% tab title="Character.cs" %}
+{% code title="Character.cs" lineNumbers="true" %}
 ```csharp
 class Character
 {
@@ -18,11 +17,9 @@ class Character
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
-{% tabs %}
-{% tab title="Hero.cs" %}
+{% code title="Hero.cs" lineNumbers="true" %}
 ```csharp
 class Hero: Character
 {
@@ -36,11 +33,9 @@ class Hero: Character
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
-{% tabs %}
-{% tab title="Program.cs" %}
+{% code title="Program.cs" lineNumbers="true" %}
 ```csharp
 Hero myHero = new Hero();
 
@@ -49,8 +44,7 @@ myHero.name = "Britt-Marie";
 myHero.Hurt(3);
 myHero.AddExperience(12);
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Hero bygger på Character, så alla instanser av Hero-klassen har egna name, hp, x och y-variabler. Dessutom har de egna kopior av Hurt-metoden, som då påverkar Hero-instansens egen hp.
 

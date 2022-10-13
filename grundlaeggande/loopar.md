@@ -4,6 +4,7 @@
 
 Fungerar och ser ut som en [if-sats](if-satser.md) utom att körningen inte fortsätter när kodblocket körts, utan "hoppar upp" till kriteriet och testar det igen.
 
+{% code lineNumbers="true" %}
 ```csharp
 int i = 10;
 while (i > 0)
@@ -12,9 +13,11 @@ while (i > 0)
   i--;
 }
 ```
+{% endcode %}
 
 While-loopar används när man **inte vet** hur många gånger loopen ska köras. Till exempel:
 
+{% code lineNumbers="true" %}
 ```csharp
 string name = "";
 
@@ -26,11 +29,13 @@ while (name != "Micke")
   name = Console.ReadLine();
 }
 ```
+{% endcode %}
 
 ## for-loop
 
 Fungerar som en while-loop men har alltid en räknare – bra när man vill göra något ett visst antal gånger. Samlar deklaration av räknare, kriterie för att fortsätta loopa och förändring av räknarens värde på samma ställe.
 
+{% code lineNumbers="true" %}
 ```csharp
 // i är räknarvariabeln, vars värder börjar på 0
 // i < 10 är villkoret; så länge det utvärderas som sant fortsätter loopen köras
@@ -41,6 +46,7 @@ for (int i = 0; i < 10; i++)
   Console.WriteLine(i);
 }
 ```
+{% endcode %}
 
 For-loopar används när man **vet** hur många gånger loopen ska köras – åtminstone när man når den. Så länge en räknare ska användas fungerar en for-loop bra.
 
@@ -50,6 +56,7 @@ Foreach-loopar är i princip likadana som for-loopar men är specialdesignade f�
 
 Nackdelen jämfört med en for-loop är att man inte får ut vilket index (plats i listan/arrayen) respektive sak har. Behöver man skriva ut index eller använda det på något vis är därför for-loop ett bättre val.
 
+{% code lineNumbers="true" %}
 ```csharp
 string[] choices = {"Start", "Options", "Quit"};
 
@@ -58,3 +65,4 @@ foreach (string choice in choices)
   Console.WriteLine(choice);
 }
 ```
+{% endcode %}

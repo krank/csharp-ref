@@ -41,7 +41,7 @@ Console.ForegroundColor = ConsoleColor.Cyan;
 ```
 
 {% hint style="warning" %}
-**OBSERVERA:** detta gäller enbart text som skrivs efter det att färgen ändrats. Text som redan skrivits ut förändras inte.
+**OBSERVERA:** detta gäller enbart text som skrivs _efter_ det att färgen ändrats. Text som redan skrivits ut förändras inte.
 {% endhint %}
 
 ### Console.BackgroundColor

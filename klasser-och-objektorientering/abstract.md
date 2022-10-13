@@ -4,8 +4,7 @@
 
 En abstrakt klass kan aldrig instansieras, utan kan bara användas som basklass för arv.
 
-{% tabs %}
-{% tab title="Character.cs" %}
+{% code title="Character.cs" lineNumbers="true" %}
 ```csharp
 abstract class Character
 {
@@ -18,11 +17,9 @@ abstract class Character
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
-{% tabs %}
-{% tab title="Hero.cs" %}
+{% code title="Hero.cs" lineNumbers="true" %}
 ```csharp
 class Hero: Character
 {
@@ -35,8 +32,7 @@ class Hero: Character
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ## Abstrakta metoder
 
@@ -44,8 +40,7 @@ Den huvudsakliga anledningen till att göra en basklass abstrakt är för att ma
 
 Abstrakta metoder fungerar bäst i de fall där det inte finns någon lämplig "standardversion" av metoden som kan ingå i basklassen
 
-{% tabs %}
-{% tab title="Character.cs" %}
+{% code title="Character.cs" lineNumbers="true" %}
 ```csharp
 abstract class Character
 {
@@ -59,11 +54,9 @@ abstract class Character
   public abstract void LevelUp();
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
-{% tabs %}
-{% tab title="Warrior.cs" %}
+{% code title="Warrior.cs" lineNumbers="true" %}
 ```csharp
 class Warrior : Character
 {
@@ -77,7 +70,6 @@ class Warrior : Character
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 I exemplet ovan är det alltså tänkt att metoden LevelUp ska anropas för att ge karaktärer ny level, ifall de fått tillräckligt med xp. I och med att olika karaktärer ska ha olika progression baserat på vilken klass de tillhör (t.ex. Warrior) så kan man låta LevelUp-metoden vara abstrakt och ha en egen implementation för varje subklass.

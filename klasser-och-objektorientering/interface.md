@@ -4,19 +4,16 @@ Ett interface är ett slags kravspecifikation som beskriver ett antal metoder so
 
 Interfaces namnges med PascalCase och med ett I (stora i) i början.
 
-{% tabs %}
-{% tab title="IDamagable.cs" %}
+{% code title="IDamagable.cs" lineNumbers="true" %}
 ```csharp
 interface IDamagable
 {
   void Hurt(int amount);
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
-{% tabs %}
-{% tab title="Character.cs" %}
+{% code title="Character.cs" lineNumbers="true" %}
 ```csharp
 class Character : IDamagable
 {
@@ -29,15 +26,13 @@ class Character : IDamagable
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Interfacet Damagable specificerar att klasser som implementerar det måste ha en Hurt-metod.
 
 Sedan kan man designa t.ex. metoder som kan ta emot vilken klass sim helst som implemeterar interfacet som parameter:
 
-{% tabs %}
-{% tab title="Character.cs" %}
+{% code title="Character.cs" lineNumbers="true" %}
 ```csharp
 class Character : IDamagable
 {
@@ -49,14 +44,13 @@ class Character : IDamagable
      hp -= amount;
   }
 
-  public void Attack(Damagable target)
+  public void Attack(IDamagable target)
   {
     target.Hurt(5);
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 I exemplet ovan kan man alltså stoppa in Characters - eller vad som helst som implementerar Damagable - i metoden Attack. Eftersom man vet att alla klasser som implementerar Damagable har en Hurt-metod.
 
@@ -66,30 +60,25 @@ Sedan behöver den som designar andra saker i spelet som kan skadas - väggar, v
 
 En och samma klass kan implementera flera interfaces.
 
-{% tabs %}
-{% tab title="IDamagable.cs" %}
+{% code title="IDamagable.cs" lineNumbers="true" %}
 ```csharp
 interface IDamagable
 {
   void Hurt(int amount);
-}  
+}
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
-{% tabs %}
-{% tab title="IAttacking.cs" %}
+{% code title="IAttacking.cs" lineNumbers="true" %}
 ```csharp
 interface IAttacking
 {
   void Attack(Damagable target);
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
-{% tabs %}
-{% tab title="Character.cs" %}
+{% code title="Character.cs" lineNumbers="true" %}
 ```csharp
 class Character : IDamagable, IAttacking
 {
@@ -107,7 +96,6 @@ class Character : IDamagable, IAttacking
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Eftersom interfaces mer fungerar som kravspecifikationer än traditionella arv så innebär detta med andra ord helt enkelt att klassen uppfyller de krav som ställs upp av både IDamagable och IAttacking.

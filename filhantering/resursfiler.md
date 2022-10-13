@@ -11,12 +11,14 @@ För att automatiskt se till att alla filer kopieras till samma mapp som exe-fil
 1. Skapa en mapp vid namn "assets" i din projektmapp.
 2. Redigera din csproj-fil och stoppa in detta innan \</project>:
 
-```markup
+{% code lineNumbers="true" %}
+```xml
 <ItemGroup>
   <Content Include="assets\**\*.*">
     <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
   </Content>
 </ItemGroup>
 ```
+{% endcode %}
 
 Det gör att det automatiskt skapas en "assets"-mapp där exe-filen läggs (t.ex. i bin\debug\net5.0 eller liknande), och alla filer etc från din assets-mapp kopieras dit.

@@ -30,6 +30,7 @@ Alla instanser av en klass får tillgång till alla klassens metoder och egen ko
 
 _Exempel:_
 
+{% code title="" lineNumbers="true" %}
 ```csharp
 class Pear
 {
@@ -42,6 +43,7 @@ class Pear
   }
 }
 ```
+{% endcode %}
 
 ## Arv
 
@@ -65,6 +67,7 @@ Anledningen till att man gör detta är dels för att skapa en tydlig struktur, 
 
 När två objekt interagerar direkt med varandra, till exempel när data från ett objekt förs över till ett annat, eller när ett objekt stoppas in som parametervärde in i ett annat objekts metod.
 
+{% code lineNumbers="true" %}
 ```csharp
 Fighter hero = new Fighter();
 Fighter opponent = new Fighter();
@@ -72,6 +75,7 @@ Fighter opponent = new Fighter();
 hero.Attack(opponent);
 opponent.Attack(hero);
 ```
+{% endcode %}
 
 ## Polymorfism
 

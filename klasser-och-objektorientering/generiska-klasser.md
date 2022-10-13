@@ -16,6 +16,7 @@ using System.Collections.Generic;
 
 Fungerar som arrayer, utom att man inte bestämmer storlek från början utan kan använda bl.a Add och Insert och RemoveAt-metoder för att lägga till, stoppa in och ta bort grejer ur listan när som helst.
 
+{% code lineNumbers="true" %}
 ```csharp
 List<string> myList = new List<string>();
 
@@ -25,11 +26,13 @@ Console.WriteLine(myList[0])
 
 List.RemoveAt(0);
 ```
+{% endcode %}
 
 ### Queue
 
 Fungerar som en lista, utom att man bara kan lägga till saker längst bak i kön, och ta bort dem längst fram.
 
+{% code lineNumbers="true" %}
 ```csharp
 Queue<int> myQueue = new Queue<int>();
 
@@ -45,11 +48,13 @@ Console.WriteLine(myQueue.Peek());
 // och returnerar det. Så nu är kön = 42, 665.
 int n = myQueue.Dequeue();
 ```
+{% endcode %}
 
 ### Stack
 
 Fungerar som en "hög" – man kan bara lägga till saker högst upp i högen och även bara plocka bort saker från högst upp i högen.
 
+{% code lineNumbers="true" %}
 ```csharp
 Stack<int> myStack = new Stack<int>();
 
@@ -64,11 +69,13 @@ Console.WriteLine(myQueue.Peek());
 // Så nu är bara 5 och 42 kvar i högen.
 int n = myStack.Pop();
 ```
+{% endcode %}
 
 ### HashSet
 
 Saknar indexering, men kan bara innehålla unika objekt – man riskerar inte att råka lägga till samma sak flera gånger.
 
+{% code lineNumbers="true" %}
 ```csharp
 HashSet<int> mySet = new HashSet<int>();
 
@@ -83,11 +90,13 @@ Console.WriteLine(mySet.Contains(5));
 //  – den andra femman lades aldrig till.
 Console.WriteLine(mySet.Count());
 ```
+{% endcode %}
 
 ### Dictionary
 
 Fungerar som en lista, utom att man kan använda andra datatyper än ints som index. I Dictionaries använder man ofta ordet "key" istället för "index".
 
+{% code lineNumbers="true" %}
 ```csharp
 Dictionary<string, int> myStats = new Dictionary<string, int>();
 
@@ -96,38 +105,26 @@ myStats.Add("Intelligence", 12);
 
 Console.WriteLine(myStats["Strength"]);
 ```
+{% endcode %}
 
 #### Keys
 
 Man kan få fram en samling av alla keys i ett dictionary genom att läsa av egenskapen Keys som är inbyggd i alla Dictionaries.
 
+{% code lineNumbers="true" %}
 ```csharp
 foreach (string key in myStats.Keys)
 {
   Console.WriteLine($"{key}: {myStats[key]});
 }
 ```
+{% endcode %}
 
 ## Skapa egna generiska klasser
 
 Generiska klasser är oftast "container-klasser", alltså klasser vars uppgift det är att lagra ett annat värde.
 
-{% tabs %}
-{% tab title="Node.cs" %}
-```csharp
-class Node
-{
-  public int value;
-  public Node nextNode;
-}
-```
-{% endtab %}
-{% endtabs %}
-
-Ovanstående kod är en enkel nod i en s.k. länkad lista. I en länkad lista känner varje nod bara till "nästa nod". Observera att den bara kan lagra ints i det här fallet. Om jag vill skapa en nod som kan lagra strings måste jag skapa en ny klass för det. Eller så gör jag den generisk:
-
-{% tabs %}
-{% tab title="Node.cs" %}
+{% code title="Node.cs" lineNumbers="true" %}
 ```csharp
 class Node<T>
 {
@@ -135,15 +132,18 @@ class Node<T>
   public Node nextNode;
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
-Nu kan jag bestämma vilken datatyp variabeln value ska ha genom att ange det mellan <> när jag skapar instansen:
+Ovanstående kod är en enkel nod i en s.k. länkad lista. I en länkad lista känner varje nod bara till "nästa nod".&#x20;
 
+Nu bestäms vilken datatyp variabeln value ska ha genom att den anges mellan <> när instansen skapas:
+
+{% code lineNumbers="true" %}
 ```csharp
-Node<string> firstTextNode = new Node<string>();
+Node<string> firstTextNode = new Node<string>(); // value blir en string
 firstTextNode.value = "Bananas";
 
-Node<int> firstNumberNode = new Node<int>();
+Node<int> firstNumberNode = new Node<int>(); // value blir en int
 firstNumberNode.value = 23;
 ```
+{% endcode %}

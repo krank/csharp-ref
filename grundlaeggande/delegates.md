@@ -2,6 +2,7 @@
 
 Delegates är ett sätt att kunna göra så att variabler pekar mot metoder istället för mot värden eller objekt i minnet. De är lite överkurs, men ganska användbara.
 
+{% code lineNumbers="true" %}
 ```csharp
 // Skapar en delegate som passar in på metoder som 
 // inte tar emot några parametrar eller returnerar något.
@@ -18,9 +19,11 @@ static void Main(string[] args)
   t(); // Att köra t som en metod är nu samma sak som att köra SayHello.
 }
 ```
+{% endcode %}
 
 När man skapar en delegat så beskriver den en metodprofil. Man kan säga att varje delegat beskriver en **kategori** av metoder.
 
+{% code lineNumbers="true" %}
 ```csharp
 // Stämmer in på metoder som tar emot en int-parameter och inte returnerar något.
 delegate void DelegateOne(int y);
@@ -32,6 +35,7 @@ delegate int DelegateTwo();
 // en string och en int.
 delegate float DelegateThree(string x, int y);
 ```
+{% endcode %}
 
 När man skapat sin delegat används den alltså som om den vore en datatyp. När man lagrar metoderna i den så ser man till att inte använda () efter metodnamnet, för då körs ju metoden istället, innan tilldelningen.
 
@@ -43,6 +47,7 @@ DelegateOne test = MethodOne;
 
 En Action är en "generisk" delegat som passar in på metoder som inte returnerar ett värde. Om man vill matcha metoder som tar emot parametrar kan dessa anges mellan <>.
 
+{% code lineNumbers="true" %}
 ```
 static void Hello()
 {
@@ -60,11 +65,13 @@ Action<string> example2 = HelloTo
 example1();
 example2("Micke");
 ```
+{% endcode %}
 
 ### Dictionary med Actions <a href="#h.p_qt3arehin8yt" id="h.p_qt3arehin8yt"></a>
 
 Ett exempel på hur man kan använda delegater.
 
+{% code lineNumbers="true" %}
 ```csharp
 static void Main(string[] args)
 {
@@ -86,11 +93,13 @@ static void DoSecond()
   /* .. */
 }
 ```
+{% endcode %}
 
 ### Anonyma metoder i delegatvariabler
 
 Anonyma metoder saknar eget namn.
 
+{% code lineNumbers="true" %}
 ```csharp
 static void Main(string[] args)
 {
@@ -102,9 +111,11 @@ static void Main(string[] args)
   t();
 }
 ```
+{% endcode %}
 
 De är praktiska när man aldrig faktiskt kommer att anropa metoden med dess eget namn, utan bara vill kunna lägga in den i en variabel eller en lista.
 
+{% code lineNumbers="true" %}
 ```csharp
 Dictionary<string, Action> actions = new Dictionary<string, Action>();
 
@@ -117,11 +128,13 @@ actions.Add("greet",
 
 actions["greet"]();
 ```
+{% endcode %}
 
 ### Multicasting: delegat-variabler med flera metoder
 
 Om man vill att flera metoder ska köras när en delegat-variabel anropas så kan man kombinera delegater för att skapa s.k. [multicast-delegater](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates).
 
+{% code lineNumbers="true" %}
 ```csharp
 Action multiCaster = delegate() { Console.WriteLine("Hello"); };
 
@@ -129,7 +142,9 @@ multiCaster += delegate() { Console.WriteLine("World"); };
 
 multiCaster(); // Skriver först ut Hello, sedan World
 ```
+{% endcode %}
 
+{% code lineNumbers="true" %}
 ```csharp
 Action good = delegate() { Console.WriteLine("Good"); };
 
@@ -143,6 +158,7 @@ Action goodBye = good + bye;
 goodMorning();
 goodBye();
 ```
+{% endcode %}
 
 ### Lambdas
 
@@ -150,6 +166,7 @@ Lambda-uttryck är, enkelt uttryckt, ett sätt att skriva väldigt enkla anonyma
 
 Uträkningen kan bytas ut mot ett kodblock som returnerar ett värde, om mer omfattande&#x20;
 
+{% code lineNumbers="true" %}
 ```csharp
 // Delegat som passar alla metoder som tar emot två int-parametrar och
 // som returnerar en int som resultat
@@ -169,9 +186,11 @@ static void Main(string[] args)
   Calculation c2 = (xInput, xOutput) => {return xInput * xOutput};
 }
 ```
+{% endcode %}
 
 Lambdas används väldigt ofta när man till exempel vill filtrera en lista på något sätt.
 
+{% code lineNumbers="true" %}
 ```csharp
 List<int> numbers = new List<int>() {2,3,4,5,6};
 
@@ -184,3 +203,4 @@ List<int> numbers = new List<int>() {2,3,4,5,6};
 // numbers, som är < 4.
 List<int> lowNumbers = numbers.FindAll(n => n < 4);
 ```
+{% endcode %}

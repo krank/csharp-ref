@@ -16,6 +16,7 @@ using System.Text.Json;
 
 Klassen vars instanser ska kunna serialiseras/deserialiseras måste vara public.
 
+{% code title="Pokemon.cs" lineNumbers="true" %}
 ```csharp
 public class Pokemon
 {
@@ -24,6 +25,7 @@ public class Pokemon
   public bool is_default {get; set;}
 }
 ```
+{% endcode %}
 
 Det är också enbart publika variabler samt properties med publika getters och setters som serialiseras.
 
@@ -64,20 +66,22 @@ public class Pokemon
 
 Används för att serialisera ett objekt till en JSON-string.
 
+{% code lineNumbers="true" %}
 ```csharp
-  Pokemon poke = new Pokemon()
-  {
-    Name = "Ditto",
-    Id = 132,
-    IsDefault = true,
-    Species = new PokemonSpecies() {
-      Name = "ditto",
-      Url = "https://pokeapi.co/api/v2/pokemon-species/132/"
-    }
-  };
+Pokemon poke = new Pokemon()
+{
+  Name = "Ditto",
+  Id = 132,
+  IsDefault = true,
+  Species = new PokemonSpecies() {
+    Name = "ditto",
+    Url = "https://pokeapi.co/api/v2/pokemon-species/132/"
+  }
+};
 
-  string json = JsonSerializer.Serialize<Pokemon>(poke);
+string json = JsonSerializer.Serialize<Pokemon>(poke);
 ```
+{% endcode %}
 
 Denna string kan sedan lagras i en textfil eller t.ex. skickas som svar på ett [REST](../../grafik/naetverk-och-internet-.../restful-server/)-anrop.
 
@@ -89,16 +93,19 @@ Denna string kan sedan lagras i en textfil eller t.ex. skickas som svar på ett 
 
 Används för att deserialisera ett objekt från en JSON-string.
 
+{% code lineNumbers="true" %}
 ```csharp
 // jsonString innehåller json-data. Den kan t.ex. läsas in från en json-fil
 // eller hämtas från en REST-server.
 Pokemon ditto = JsonSerializer.Deserialize<Pokemon>(jsonString);
 ```
+{% endcode %}
 
 ### Små och stora bokstäver
 
 Properties ska döpas med stor bokstav i C#, men i json döps egenskaper nästan alltid med liten bokstav. Deserialize är känsligt för skillnader mellan stora och små bokstäver. Det går att stänga av den känsligheten:
 
+{% code lineNumbers="true" %}
 ```csharp
 var options = new JsonSerializerOptions
 {
@@ -108,6 +115,7 @@ var options = new JsonSerializerOptions
 // Nu kan property-namnen i Pokemon.cs döpas med stor bokstav
 Pokemon ditto = JsonSerializer.Deserialize<Pokemon>(jsonString, options);
 ```
+{% endcode %}
 
 ## Attribut
 
@@ -121,6 +129,7 @@ Mer om attribut [här](../../klasser-och-objektorientering/attribut.md).
 
 Används för att se till så att en variabel eller property på C#-sidan inte serialiseras till JSON.
 
+{% code title="Pokemon.cs" lineNumbers="true" %}
 ```javascript
 using System.Text.Json.Serialization;
 
@@ -133,13 +142,13 @@ public class Pokemon
   public int CurrentHp {get; set;}
 }
 ```
+{% endcode %}
 
 ### \[JsonPropertyName()]
 
 Med attributet `[JsonPropertyName()]` kan man bestämma att en C#-klass' property ska matchas mot ett JSON-värde med annat namn.
 
-{% tabs %}
-{% tab title="Pokemon.cs" %}
+{% code title="Pokemon.cs" lineNumbers="true" %}
 ```csharp
 using System.Text.Json.Serialization;
 
@@ -152,28 +161,28 @@ class Pokemon
   public bool IsDefault {get; set;}
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ## Deserialisering av listor
 
 Ibland beskriver JSON-kod listor av objekt eller värden. De kännetecknas av att ge omges av hakparenteser `[]`.
 
+{% code lineNumbers="true" %}
 ```javascript
 {
   "name": "ditto",
   "forms":
   [
-    0: "Ditto"
-    1: "Exempel"
+    "Ditto",
+    "Exempel"
   ]
 }
 ```
+{% endcode %}
 
 För att deserialisera dessa, skapa helt enkelt publika [listor ](../../grundlaeggande/listor-och-arrayer.md#list)i klassen.
 
-{% tabs %}
-{% tab title="Pokemon.cs" %}
+{% code title="Pokemon.cs" lineNumbers="true" %}
 ```csharp
 class Pokemon
 {
@@ -184,13 +193,13 @@ class Pokemon
   public List<string> Forms {get; set;}
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ## Deserialisering av objekt i flera led
 
 Ibland beskriver JSON-kod objekt som innehåller andra objekt.
 
+{% code lineNumbers="true" %}
 ```javascript
 {
   "name": "ditto",
@@ -201,12 +210,12 @@ Ibland beskriver JSON-kod objekt som innehåller andra objekt.
   }
 }
 ```
+{% endcode %}
 
 För att deserialisera dessa, skapa klasser som beskriver de inre objekten.
 
-{% tabs %}
-{% tab title="PokemonSpecies.cs" %}
-```csharp
+{% code title="PokemonSpecies.cs" lineNumbers="true" %}
+```
 class PokemonSpecies
 {
   [JsonPropertyName("name")]
@@ -216,11 +225,9 @@ class PokemonSpecies
   public string Url {get; set;}
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
-{% tabs %}
-{% tab title="Pokemon.cs" %}
+{% code title="Pokemon.cs" lineNumbers="true" %}
 ```csharp
 class Pokemon
 {
@@ -231,5 +238,4 @@ class Pokemon
   public PokemonSpecies Species {get; set;}
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}

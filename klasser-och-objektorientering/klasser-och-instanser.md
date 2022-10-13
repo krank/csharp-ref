@@ -15,8 +15,7 @@ Generellt bör varje klass läggas i sin egen fil. Med C# Toolbox of Productivit
 * Skriv in namnet på klassen – **glöm inte stor bokstav**!
 * **Ta bort namespace**-kodblocket kring klassen; det behöver vi sällan.
 
-{% tabs %}
-{% tab title="Goomba.cs" %}
+{% code title="Goomba.cs" lineNumbers="true" %}
 ```csharp
 class Goomba
 {
@@ -26,8 +25,7 @@ class Goomba
   public bool IsDead = false;
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ## Skapa instanser
 
@@ -35,19 +33,23 @@ Kodordet `new` skapar **nya instanser** i minnet (heapen).
 
 Därefter behöver en [referens ](../grundlaeggande/reference-vs-value-types.md)till instansen lagras någonstans, till exempel i en variabel.
 
+{% code lineNumbers="true" %}
 ```csharp
 Goomba g1 = new Goomba();
 Goomba g2 = new Goomba();
 ```
+{% endcode %}
 
 Därefter kan man ändra på de individuella instansernas variabler separat:
 
+{% code lineNumbers="true" %}
 ```csharp
 g1.x = 60;
 g1.y = 20;
 g2.x = 80;
 g2.y = 25;
 ```
+{% endcode %}
 
 Man kan också tilldela värden till variablerna direkt när instansen skapas:
 
@@ -59,10 +61,12 @@ Goomba g3 = new Goomba() {x = 10, y = 6};
 
 Om man (som ovan) skapar en instans av exakt samma klass som variabeln så kan koden förenklas. Det gäller med andra ord nästan jämt – undantaget är vid [polymorfism](polymorfism/#polymorfism-klasser-och-arv).
 
+{% code lineNumbers="true" %}
 ```csharp
 Goomba g4 = new();
 Goomba g5 = new() {x = 100};
 ```
+{% endcode %}
 
 
 

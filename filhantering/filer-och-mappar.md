@@ -49,9 +49,11 @@ Directory.Delete(@"Savegames");
 
 Kolla om en mapp existerar.
 
+{% code lineNumbers="true" %}
 ```csharp
 if (Directory.Exists(@"Savegames")
 {
   /* Stuff */
 }
 ```
+{% endcode %}

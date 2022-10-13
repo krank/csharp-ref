@@ -2,8 +2,7 @@
 
 En konstruktor är en metod som anropas automatiskt när en instans skapas. Den skrivs in i klassen som en publik metod utan returtyp och med samma namn som klassen.
 
-{% tabs %}
-{% tab title="Fighter.cs" %}
+{% code title="Fighter.cs" lineNumbers="true" %}
 ```csharp
 class Fighter
 {
@@ -17,8 +16,7 @@ class Fighter
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 När man skapar en instans av klassen Fighter så ges instansen nu enligt koden ovan ett slumpat strength-värde.
 
@@ -26,8 +24,7 @@ När man skapar en instans av klassen Fighter så ges instansen nu enligt koden 
 
 Precis som andra metoder kan konstruktorer ta emot en eller flera parametrar. Det brukar till exempel användas som ett snabbt och enkelt sätt att skjuta in information som ska lagras i instansens variabler.
 
-{% tabs %}
-{% tab title="Fighter.cs" %}
+{% code title="Fighter.cs" lineNumbers="true" %}
 ```csharp
 class Fighter
 {
@@ -42,24 +39,20 @@ class Fighter
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
-{% tabs %}
-{% tab title="Program.cs" %}
+{% code title="Program.cs" lineNumbers="true" %}
 ```csharp
 Fighter heroFighter = new Fighter("Britta-Lena");
 Fighter enemyFighter = new Fighter("Börje");
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ## Konstruktorer i arv
 
 När en basklass och en subklass har varsin konstruktor så kommer _båda_ konstruktorerna att köras när en instans av subklassen skapas. Först körs basklassens konstruktor, därefter körs subklassens konstruktor.
 
-{% tabs %}
-{% tab title="Character.cs" %}
+{% code title="" lineNumbers="true" %}
 ```csharp
 class Character
 {
@@ -71,11 +64,9 @@ class Character
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
-{% tabs %}
-{% tab title="Thief.cs" %}
+{% code title="Thief.cs" lineNumbers="true" %}
 ```csharp
 class Thief: Character
 {
@@ -86,8 +77,7 @@ class Thief: Character
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 I exemplet ovan kommer med andra ord en instans av Thief först 100 i hp när basklassens konstruktor körs, och sedan ändras hp till 20 och name till "Thief".
 
@@ -97,9 +87,8 @@ Etersom både basklassens och subklassens konstruktor körs, så betyder det att
 
 I exemplet nedan måste Character-klassens konstruktor få ett string-värde som parameter.
 
-{% tabs %}
-{% tab title="Character.cs" %}
-```csharp
+{% code title="Character.cs" lineNumbers="true" %}
+```
 class Character
 {
   public string name;
@@ -111,13 +100,11 @@ class Character
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 För att ange vilket värde som ska skickas till basklassens konstruktor så använder man base().
 
-{% tabs %}
-{% tab title="Hero.cs" %}
+{% code title="Hero.cs" lineNumbers="true" %}
 ```csharp
 class Hero : Character
 {
@@ -127,7 +114,6 @@ class Hero : Character
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Här tar subklassens konstruktor emot två parametrar - na och h - och skickar vidare värdet som lagras i parametern na till basklassens konstruktor.
