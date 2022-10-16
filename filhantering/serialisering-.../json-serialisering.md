@@ -32,7 +32,7 @@ Det är också enbart publika variabler samt properties med publika getters och 
 Om du ska deserialisera JSON-kod som du får från något annat ställe och inte designat själv, så behöver du vara noga med att matcha namnet på dina publika variabler/[properties ](../../klasser-och-objektorientering/inkapsling-och-properties.md#properties)mot JSON-kodens. Serialiseringsprocessen är normalt känslig vad gäller stora och små bokstäver, men du kan ändra på detta (rekommenderas!).
 
 {% tabs %}
-{% tab title="Spaceship.cs" %}
+{% tab title="Pokemon.cs" %}
 ```csharp
 public class Pokemon
 {
