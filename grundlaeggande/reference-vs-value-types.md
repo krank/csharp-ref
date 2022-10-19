@@ -26,9 +26,9 @@ Förenklat delas datorns minne upp i två delar: **Stacken** och **heapen**.
 
 **Heapen** är ostrukturerad, stor och det man lägger i den lever kvar tills det tas bort. I en del språk betyder det att man alltid måste komma ihåg att ta bort saker som ligger där manuellt – i C# och en del andra språk finns s.k. Garbage Collection som då och då rensar bort saker i heapen som det inte längre finns någon identifier som pekar mot.
 
-**Identifiers finns alltid i stacken.** I stacken skapas en koppling mellan identifiern och vad den är satt att identifiera.
+**Identifiers finns alltid i stacken.** I stacken skapas en koppling mellan identifiern och vad den är satt att identifiera. Så till exempel skapas här en koppling mellan identifiern "x" och värdet "10".
 
-(Bild: Stacken som en tabell med identifiers och något de identifierar)
+<figure><img src="../.gitbook/assets/Stack-Heap.png" alt=""><figcaption></figcaption></figure>
 
 ## Value types
 
