@@ -1,4 +1,4 @@
-# Delegates och lambdas
+# Delegates, events och lambdas
 
 Delegates är ett sätt att kunna göra så att variabler pekar mot metoder istället för mot värden eller objekt i minnet. De är lite överkurs, men ganska användbara.
 
@@ -43,7 +43,7 @@ När man skapat sin delegat används den alltså som om den vore en datatyp. Nä
 DelegateOne test = MethodOne;
 ```
 
-### Action <a href="#h.p_qt3arehin8yt" id="h.p_qt3arehin8yt"></a>
+## Action <a href="#h.p_qt3arehin8yt" id="h.p_qt3arehin8yt"></a>
 
 En Action är en "generisk" delegat som passar in på metoder som inte returnerar ett värde. Om man vill matcha metoder som tar emot parametrar kan dessa anges mellan <>.
 
@@ -95,7 +95,7 @@ static void DoSecond()
 ```
 {% endcode %}
 
-### Anonyma metoder i delegatvariabler
+## Anonyma metoder i delegatvariabler
 
 Anonyma metoder saknar eget namn.
 
@@ -130,7 +130,7 @@ actions["greet"]();
 ```
 {% endcode %}
 
-### Multicasting: delegat-variabler med flera metoder
+## Multicasting: delegat-variabler med flera metoder
 
 Om man vill att flera metoder ska köras när en delegat-variabel anropas så kan man kombinera delegater för att skapa s.k. [multicast-delegater](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates).
 
@@ -155,12 +155,58 @@ Action morning = delegate() { Console.WriteLine("Morning"); };
 Action goodMorning = good + morning;
 Action goodBye = good + bye;
 
-goodMorning();
-goodBye();
+goodMorning(); // Skriver ut "Good" och "Morning"
+goodBye(); // Skriver ut "Good" och "Bye"
 ```
 {% endcode %}
 
-### Lambdas
+Att lägga till en metod till en multicast-delegat kallas **subscribing**, och att ta bort en metod från en multicast-delegat kallas **unsubscribing**.
+
+## Events
+
+Nackdelen med multicast-delegater är att den som har tillgång till dem inte bara kan lägga till nya metoder i dem, utan också aktivera dem och göra större ändringar – som att till exempel ändra dem till null.
+
+Med en event kan den som har tillgång utifrån **bara** lägga till och ta bort metoder (subscribe/unsubscribe)
+
+{% hint style="info" %}
+**Events kan bara existera i klasser**, och de kan bara anropas (invoke) inifrån den klassen
+{% endhint %}
+
+{% code title="Avatar.cs" lineNumbers="true" %}
+```csharp
+public class Avatar
+{
+  public event Action OnDeath; // OBS: nyckelordet "event"
+
+  public Avatar()
+  {
+    OnDeath += DeathMessage; // Subscribe:a klassmetoden DeathMessage
+  }
+
+  public void Update()
+  {
+    OnDeath.Invoke(); // Aktivera (invoke) eventet
+  }
+
+  public void DeathMessage() { Console.WriteLine("YOU DIED"); }
+}
+```
+{% endcode %}
+
+{% code title="Program.cs" lineNumbers="true" %}
+```csharp
+Avatar p = new Avatar();
+
+Action PauseGame = delegate() { Console.WriteLine("Game is paused"); };
+
+// Subscribe:a den lokala metoden PauseGame till eventet OnDeath
+p.OnDeath += PauseGame;
+
+p.Update(); // Kör Update-metoden, som i sin tur invoke:ar eventet
+```
+{% endcode %}
+
+## Lambdas
 
 Lambda-uttryck är, enkelt uttryckt, ett sätt att skriva väldigt enkla anonyma metoder (anonyma delegater) vars returvärden är direkta resultat av deras parametrar. Ett lambda-uttryck består av en parentes där den anonyma metodens parametervärden anges, en => och slutligen en enkel uträkning som motsvarar det som ska returneras från metoden.
 
@@ -202,5 +248,15 @@ List<int> numbers = new List<int>() {2,3,4,5,6};
 // Därför kommer lowNumbers att innehålla en lista med alla integers från
 // numbers, som är < 4.
 List<int> lowNumbers = numbers.FindAll(n => n < 4);
+```
+{% endcode %}
+
+De kan också användas till events och till multicast-delegates. Ofta används detta när det bara är ganska lite kod som ska köras.
+
+{% code lineNumbers="true" %}
+```csharp
+Avatar p = new Avatar();
+
+p.OnDeath += () => Console.WriteLine("Game is paused");
 ```
 {% endcode %}

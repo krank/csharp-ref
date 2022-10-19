@@ -19,7 +19,7 @@
 * [String-manipulering](grundlaeggande/string-manipulering.md)
 * [Egna metoder](grundlaeggande/egna-metoder.md)
 * [Använda bibliotek (using)](grundlaeggande/anvaenda-bibliotek-using.md)
-* [Delegates och lambdas](grundlaeggande/delegates.md)
+* [Delegates, events och lambdas](grundlaeggande/delegates.md)
 * [Matematik (Math)](grundlaeggande/matematik-math.md)
 * [Vektorer (Numerics)](grundlaeggande/vektorer-numerics.md)
 * [Datum och tid](grundlaeggande/datum-och-tid.md)
