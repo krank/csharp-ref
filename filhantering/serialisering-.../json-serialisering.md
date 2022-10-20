@@ -89,6 +89,21 @@ Denna string kan sedan lagras i en textfil eller t.ex. skickas som svar på ett 
 **OBSERVERA:** Det finns inget sätt att automatiskt förvandla namnen på properties till snake\_case, vilket ju ofta används i JSON. Vill du serialisera med snake\_case så får du med andra ord använda JsonPropertyName-attributet.
 {% endhint %}
 
+### Snygg, indenterad JSON-text
+
+Om du vill ha lite "snyggare" JSON-kod, färdigformaterad med radbrytningar och indenteringar så kan man göra det:
+
+{% code lineNumbers="true" %}
+```csharp
+var options = new JsonSerializerOptions
+{
+    WriteIndented = true
+};
+
+string json = JsonSerializer.Serialize<Pokemon>(poke, options);
+```
+{% endcode %}
+
 ## JsonSerializer.Deserialize<>()
 
 Används för att deserialisera ett objekt från en JSON-string.
