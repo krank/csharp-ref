@@ -28,7 +28,7 @@ Förenklat delas datorns minne upp i två delar: **Stacken** och **heapen**.
 
 **Identifiers finns alltid i stacken.** I stacken skapas en koppling mellan identifiern och vad den är satt att identifiera. Så till exempel skapas här en koppling mellan identifiern "x" och värdet "10".
 
-<figure><img src="../.gitbook/assets/Stack-Heap.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Stack-Heap-x10.png" alt=""><figcaption></figcaption></figure>
 
 ## Value types
 
@@ -40,7 +40,7 @@ Exempel på value types:
 * bool
 * struct-typer
 
-(Bild: Stack-tabellen med ett par ints och deras värden)
+<figure><img src="../.gitbook/assets/Stack-values.png" alt=""><figcaption></figcaption></figure>
 
 ## Reference types
 
