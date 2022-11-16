@@ -1,8 +1,25 @@
 # RESTful client
 
-Använd NuGet Gallery för att installera **RestSharp**.
+## Snabbstart
 
-Lägg till detta using-statement:
+Nedanstående exempelkod skapar ett klientobjekt och ett requestobjekt, skickar requesten genom klienten för att få ett response, och deserialiserar response-objektets text till en instans av Pokemon-klassen.
+
+```csharp
+using RestSharp;
+using System.Text.Json;
+
+RestClient client = new RestClient("https://pokeapi.co/api/v2/");
+RestRequest request = new RestRequest("pokemon/ditto");
+RestResponse response = client.GetAsync(request).Result;
+Pokemon p = JsonSerializer.Deserialize<Pokemon>(response.Content);
+
+```
+
+## RestSharp
+
+RestSharp är ett bibliotek som förenklar skickandet av Rest-requests till en RESTful API-server.
+
+Använd [NuGet Gallery](../../grundlaeggande/anvaenda-bibliotek-using.md#nuget-gallery) för att installera RestSharp. Lägg till detta using-statement högst upp:
 
 ```csharp
 using RestSharp;
