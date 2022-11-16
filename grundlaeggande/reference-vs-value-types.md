@@ -44,11 +44,11 @@ Exempel på value types:
 
 ## Reference types
 
-För datatyper som är reference types lagras själva objektet, datan, i heapen. Det enda som lagras på minnesadressen i stacken är en referens vidare till platsen i stacken där datan finns.
+För datatyper som är reference types lagras själva objektet, datan, i heapen. Det enda som lagras på minnesadressen i stacken är en **referens** vidare till platsen i stacken där datan finns.
 
 Så identifiern pekar på en plats i stacken, på den platsen finns en vidarepekning till en plats i heapen.
 
-(Bild: Stack-tabellen och Heap-utrymmet med ett par pekare)
+<figure><img src="../.gitbook/assets/Stack-Heap-References.png" alt=""><figcaption><p>I stacken är axe-identifiern inte kopplad direkt till en instans av Weapon, utan till en minnesadress där det finns en sån instans.</p></figcaption></figure>
 
 ## Varför är det här viktigt?
 
@@ -64,7 +64,9 @@ int b = a; // Kopierar stack-positionen som identifiern a pekar på
 ```
 {% endcode %}
 
-(Bild: enkel stack-operation, före och efter)
+<figure><img src="../.gitbook/assets/Stack-values-before-copy (1).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/Stack-values-copy (1).png" alt=""><figcaption></figcaption></figure>
 
 {% code lineNumbers="true" %}
 ```csharp
@@ -82,7 +84,15 @@ Fighter f2 = f; // Identifiern f2 skapas.
 ```
 {% endcode %}
 
-(Bild: Stack-heap-operation)
+<div>
+
+<figure><img src="../.gitbook/assets/Stack-Heap-References-before-copy.png" alt=""><figcaption><p>Innan tilldelningen av f2 finns bara f, som pekar till en Fighter-instans i heapen.</p></figcaption></figure>
+
+ 
+
+<figure><img src="../.gitbook/assets/Stack-Heap-References-copy.png" alt=""><figcaption><p>Efter tilldelningen av f2 finns fortfarande bara en Fighter-instans; det som kopieras är innehållet i stacken – alltså pekaren.</p></figcaption></figure>
+
+</div>
 
 ### Parametervärden
 
@@ -119,6 +129,6 @@ static void TakeFight(Fighter localFighter)
 
 ## Out och ref
 
-
+(Kommer…)
 
 {% embed url="https://www.c-sharpcorner.com/article/stack-heap-value-type-and-reference-type-in-c-sharp/" %}

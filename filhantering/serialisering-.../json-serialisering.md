@@ -83,7 +83,7 @@ string json = JsonSerializer.Serialize<Pokemon>(poke);
 ```
 {% endcode %}
 
-Denna string kan sedan lagras i en textfil eller t.ex. skickas som svar på ett [REST](../../grafik/naetverk-och-internet-.../restful-server/)-anrop.
+Denna string kan sedan lagras i en textfil eller t.ex. skickas som svar på ett [REST](../../annat/naetverk-och-internet-.../restful-server/)-anrop.
 
 {% hint style="warning" %}
 **OBSERVERA:** Det finns inget sätt att automatiskt förvandla namnen på properties till snake\_case, vilket ju ofta används i JSON. Vill du serialisera med snake\_case så får du med andra ord använda JsonPropertyName-attributet.

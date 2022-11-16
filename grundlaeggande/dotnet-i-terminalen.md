@@ -52,7 +52,7 @@ dotnet add package Raylib-cs
 
 ### Dotnet restore
 
-Laddar ner saknade nuget-bibliotek (t.ex. [Raylib](../grafik/raylib/)) som projektet använder. Väldigt användbart eftersom det betyder att de biblioteken inte måste skickas med till andra som ska jobba med projektet.
+Laddar ner saknade nuget-bibliotek (t.ex. [Raylib](../annat/raylib/)) som projektet använder. Väldigt användbart eftersom det betyder att de biblioteken inte måste skickas med till andra som ska jobba med projektet.
 
 ```
 dotnet restore
