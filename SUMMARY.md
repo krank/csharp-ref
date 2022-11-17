@@ -40,6 +40,8 @@
   * [JSON-serialisering](filhantering/serialisering-.../json-serialisering.md)
   * [XML-serialisering](filhantering/serialisering-.../xml-serialisering.md)
 * [Resursfiler](filhantering/resursfiler.md)
+* [Filformat](filhantering/filformat/README.md)
+  * [JSON](filhantering/filformat/json.md)
 
 ## Klasser och objektorientering
 

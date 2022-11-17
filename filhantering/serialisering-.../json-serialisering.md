@@ -1,6 +1,6 @@
 # JSON-serialisering
 
-JSON är Javascript Object Notation, så för den som är van vid Javascript kanske det ser bekant ut.
+[JSON ](../filformat/json.md)är Javascript Object Notation, så för den som är van vid Javascript kanske det ser bekant ut.
 
 [Här hittar du Microsofts officiella dokumentation.](https://docs.microsoft.com/en-us/dotnet/standard/serialization/system-text-json-how-to)
 
