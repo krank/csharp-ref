@@ -12,7 +12,7 @@ Innehåll:
 * [Fönster i Raylib](foenster-i-raylib.md)
 * [Grundläggande grafik](grafik.md)
 * [Geometriska former](geometriska-former.md)
-* [Bilder och texturer](bilder-och-texturer.md)
+* [Bilder och texturer](bilder-och-texturer/)
 * [Input](input.md)
 * [Text](text.md)
 * [Rectangle](rectangle.md)
