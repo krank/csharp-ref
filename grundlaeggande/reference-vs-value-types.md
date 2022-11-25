@@ -1,4 +1,4 @@
-# Reference vs value types\*
+# Reference vs value types
 
 {% hint style="info" %}
 **OBS:** Lite överkurs =)
@@ -129,6 +129,58 @@ static void TakeFight(Fighter localFighter)
 
 ## Out och ref
 
-(Kommer…)
+{% hint style="info" %}
+**Varning:** Använd out och ref så lite som möjligt. Det är väldigt, väldigt lätt att göra fel med dem.
+{% endhint %}
 
-{% embed url="https://www.c-sharpcorner.com/article/stack-heap-value-type-and-reference-type-in-c-sharp/" %}
+När en metod tar emot en parameter, är det i vanliga fall så att det man får en kopia av _värdet i stacken_.
+
+Med out och ref kan man istället få en pekare till _platsen_ i stacken – vilket gör att man inuti metoden kan ändra variabelns värden direkt.
+
+Med andra ord – stoppar man in en variabel som ref eller out så får man vara beredd på att precis vad som helst kan ha hänt med den efteråt. Den kan ha fått ett helt nytt värde eller till och med, om det är en reference type-variabel, referera till ett helt annat objekt.
+
+```csharp
+static void WithoutRef(int x)
+{
+  x++;
+}
+
+static void WithRef(ref int x)
+{
+  x++;
+}
+
+static void WithOut (out int x)
+{
+  x = 0;
+  x++;
+}
+
+int y = 3;
+
+WithoutRef(y);
+Console.WriteLine(y); // 3
+
+WithRef(ref y);
+Console.WriteLine(y); // 4
+
+WithOut(out y);
+Console.WriteLine(y); // 1
+```
+
+Ref och out fungerar i princip likadant, men det finns skillnader:
+
+* Med out måste variabeln initieras inuti metoden. Man kan alltså inte ändra ett existerande värde – variabeln som stoppas in _kommer garanterat_ att ges ett helt annat värde i metoden.
+* Med ref måste variabeln redan vara initierad innan den stoppas in som ref. Man kan inte ref:a en variabel man skapar på plats. Med out kan man skapa variabeln i parenteserna vid anropet.
+
+```csharp
+// Fungerar:
+int t = 6;
+WithRef(ref t);
+
+// Fungerar inte:
+WithRef(ref int u);
+
+// Fungerar:
+WithOut(out int u);
+```
