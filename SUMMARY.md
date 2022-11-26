@@ -11,7 +11,7 @@
   * [Enum](grundlaeggande/datatyper/enum.md)
 * [Typkonvertering](grundlaeggande/typkonvertering.md)
 * [Operatorer](grundlaeggande/operatorer.md)
-* [Konsollen (Console)](grundlaeggande/konsollen-console.md)
+* [Konsolen (Console)](grundlaeggande/konsollen-console.md)
 * [If-satser](grundlaeggande/if-satser.md)
 * [Loopar](grundlaeggande/loopar.md)
 * [Listor och arrayer](grundlaeggande/listor-och-arrayer.md)
