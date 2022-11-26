@@ -54,7 +54,19 @@ Metoderna tar alla emot en [RestRequest](restful-client.md#restrequest)-instans 
 RestResponse response = client.GetAsync(request).Result;
 ```
 
-GetAsync är, som namnet antyder, en [asynkron metod](../threading/). Med andra ord går det att använda await istället för .Result om situationen tillåter.
+GetAsync är, som namnet antyder, en [asynkron metod](../threading/task.md). Med andra ord går det att använda await istället för .Result om man är i en asynkron metod.
+
+```csharp
+async string GetPokemon(string pokemonName)
+{
+  Task<RestResponse> task = client.GetAsync(request);
+  
+  // gör något annat medan klienten hämtar resultatet
+  
+  await task;
+  return task.Result;
+}
+```
 
 ## RestRequest
 

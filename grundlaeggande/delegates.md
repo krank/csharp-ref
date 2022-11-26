@@ -1,5 +1,9 @@
 # Delegates, events och lambdas
 
+{% hint style="info" %}
+**OBS:** Lite överkurs =)
+{% endhint %}
+
 Delegates är ett sätt att kunna göra så att variabler pekar mot metoder istället för mot värden eller objekt i minnet. De är lite överkurs, men ganska användbara.
 
 {% code lineNumbers="true" %}
@@ -94,6 +98,10 @@ static void DoSecond()
 }
 ```
 {% endcode %}
+
+## Func
+
+(Kommer…)
 
 ## Anonyma metoder i delegatvariabler
 

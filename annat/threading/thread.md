@@ -1,7 +1,11 @@
-# Thread\*
+# Thread
 
 {% hint style="info" %}
-**OBSERVERA:** Oftast gör man inte threading manuellt på det här viset i C#, men det är bra att förstå grundkonceptet. Istället används oftast [Tasks ](task.md)för asynkron programmering
+**OBS:** Ganska mycket överkurs. Det här möter man normalt först på högskola/universitet.
+{% endhint %}
+
+{% hint style="info" %}
+**OBS** Oftast gör man inte threading manuellt på det här viset i C#, men det är bra att förstå grundkonceptet. Istället används oftast [Tasks ](task.md)för asynkron programmering
 {% endhint %}
 
 Thread-klassen används när man manuellt vill skapa nya trådar. Som parameter anges en metod vars kod ska köras i den separata tråden. Observera att det är metodens namn – dess identifier – som anges, och att man inte skriver () efter namnet.

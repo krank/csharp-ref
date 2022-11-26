@@ -89,7 +89,7 @@
     * [Thunder](annat/naetverk-och-internet-.../restful-server/thunder.md)
 * [Threading](annat/threading/README.md)
   * [Thread](annat/threading/thread.md)
-  * [Task\*](annat/threading/task.md)
+  * [Task](annat/threading/task.md)
 
 ## Mjukvara
 
