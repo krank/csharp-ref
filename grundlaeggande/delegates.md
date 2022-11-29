@@ -49,7 +49,7 @@ DelegateOne test = MethodOne;
 
 ## Action <a href="#h.p_qt3arehin8yt" id="h.p_qt3arehin8yt"></a>
 
-En Action är en "generisk" delegat som passar in på metoder som inte returnerar ett värde. Om man vill matcha metoder som tar emot parametrar kan dessa anges mellan <>.
+En Action är en generisk delegat som passar in på metoder som inte returnerar ett värde. Om man vill matcha metoder som tar emot parametrar kan dessa anges mellan <>.
 
 {% code lineNumbers="true" %}
 ```
@@ -77,15 +77,13 @@ Ett exempel på hur man kan använda delegater.
 
 {% code lineNumbers="true" %}
 ```csharp
-static void Main(string[] args)
-{
-  Dictionary<string, Action> actions = new Dictionary<string, Action>();
+Dictionary<string, Action> actions = new Dictionary<string, Action>();
 
-  actions.Add("first", DoFirst);
-  actions.Add("second", DoSecond);
+actions.Add("first", DoFirst);
+actions.Add("second", DoSecond);
   
-  actions["first"](); // Kör DoFirst-metoden
-}
+actions["first"](); // Kör DoFirst-metoden
+
 
 static void DoFirst()
 {
@@ -101,7 +99,27 @@ static void DoSecond()
 
 ## Func
 
-(Kommer…)
+Func är en generisk delegat som matchar metoder som returnerar något. En eller flera datatyper anges inom <>. Anges flera så är den sista alltid returtypen, resten är parametrar.
+
+```csharp
+static int Addition(int a, int b)
+{
+  return a + b;
+}
+
+static string MakeStrengthString(int str)
+{
+  return $"Strength: {str}";
+}
+
+Func<int, int, int> math = Addition;
+
+Func<int, string> statDisplay = MakeStrengthString;
+
+int y = math(3,4);
+
+string strength = statDisplay(14);
+```
 
 ## Anonyma metoder i delegatvariabler
 
