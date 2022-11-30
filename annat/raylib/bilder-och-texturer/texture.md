@@ -47,7 +47,9 @@ Raylib.DrawTexture(heroTexture, 40, 300, Color.WHITE)
 
 ### DrawTextureEx()
 
-En lite mer avancerad version av DrawTexture, som dels använder en vektor för att ange x och y-värden, dels låter oss ange rotation och skalning av texturen.
+Ritar ut en texture till fönstret, med andra parametrar: En [Vector2 ](../../../grundlaeggande/vektorer-numerics.md#vector2)för att ange x och y-positionen den ska ritas ut på, och floats som anger rotation och skalning av texturen.
+
+Rotationen anges i grader och skalningen i decimalform.
 
 ```csharp
 // Ritar texturen heroTexture till fönstret, på x-position 40 och 
@@ -65,6 +67,68 @@ using System.Numerics;
 ```
 {% endhint %}
 
+### DrawTextureRec()
+
+Ritar ut en del av en texture till fönstret. Fungerar som DrawTextureEx men utan rotationen och skalan, och med en rektangel som säger vilken del av texturen man vill klippa ut.
+
+```csharp
+Rectangle source = new Rectangle(0, 0, 100, 100);
+Vector2 position = new Vector(40, 300);
+
+Raylib.DrawTextureRec(heroTexture, source, position, Color.WHITE);
+```
+
+Det här kan man bland annat använda sig av när man har en bild som är ett s.k. sprite sheet, där alla bildrutor i en karaktärs animation finns med. Man behöver då inte klippa upp animationen i en massa olika bildfiler utan kan istället använda DrawTexturePro för att kopiera en del av bilden till raylibfönstret i taget.
+
+Man kan också ange en source-rektangel med negativ bredd eller höjd för att få en urklippt bild som är flippad längs x- eller y-axeln.
+
+```csharp
+Rectangle source = new Rectangle(0, 0, -100, 100);
+Vector2 position = new Vector(40, 300);
+
+Raylib.DrawTextureRec(heroTexture, source, position, Color.WHITE);
+```
+
+### DrawTexturePro()
+
+En ännu mer avancerad version av DrawTexture. Här anges två rektanglar – en för källan, alltså vilken del av texturen som ska kopieras. Och så en för destinationen, alltså var någonstans på fönstret kopian ska placeras och hur stor den ska göras.
+
+Dessutom anges en Vector2 för "origin", som är den position som ritandet och roterandet utgår från. Vill man rotera och skala en textur kring dess mittpunkt anger man alltså en Vector2 vars x- och y-värden är halva destination-rektangelns bredd och höjd.
+
+```csharp
+Texture2D spriteSheet = Raylib.LoadTexture("herosheet.png");
+
+// Det som ska kopieras från texturen är en ruta i storlek 64x64 pixlar från 
+//  dess övre vänstra hörn (0,0)
+Rectangle heroSpriteSource = new Rectangle(0,0,64,64);
+
+// Hjältespriten ska ritas ut på position 200, 200 och förstoras upp till 256x256.
+Rectangle heroSpriteDest = new Rectangle(200, 200, 256, 256);
+
+// En Vector2 med halva destinationens bredd och höjd som x- och y-värde.
+// Den räknas från destinationens övre vänstra hörn, så hamnar alltså i mitten av den.
+Vector2 heroOrigin = new Vector2(
+  heroSpriteDest.width / 2,
+  heroSpriteDest.height / 2
+);
+
+float rotation = 0;
+
+// ---
+
+Raylib.DrawTexturePro(
+  texture, 
+  heroSpriteSource,
+  heroSpriteDest,
+  heroOrigin,
+  rotation,
+  Color.WHITE );
+```
+
+Bilden nedan visar principen:
+
+![](../../../.gitbook/assets/DrawTexturePro.png)
+
 ### SetTextureFilter()
 
 I vanliga fall när man ritar ut en texture i en annan storlek än den är från början så skalas den med interpolering – den hittar på mjuka övergångar mellan originalpixlarna. Det fungerar bra för foton och liknande, men sämre för pixelart.
@@ -74,29 +138,3 @@ I vanliga fall när man ritar ut en texture i en annan storlek än den är från
 // pixelart - ingen interpolering.
 Raylib.SetTextureFilter(heroTexture, TextureFilter.TEXTURE_FILTER_POINT);
 ```
-
-### DrawTexturePro()
-
-En ännu mer avancerad version av DrawTexture. Här används två rektanglar, en vektor och en float för att ange vilken del av texturen som ska klippas ut, var den ska placeras och med vilka proportioner, kring vilken punkt den ska roteras och hur mycket den ska roteras.
-
-Det här kan man bland annat använda sig av när man har en bild som är ett s.k. sprite sheet, där alla bildrutor i en karaktärs animation finns med. Man behöver då inte klippa upp animationen i en massa olika bildfiler utan kan istället använda DrawTexturePro för att kopiera en del av bilden till raylibfönstret i taget.
-
-Bilden nedan visar principen:
-
-![](../../../.gitbook/assets/DrawTexturePro.png)
-
-DrawTexturePro kan också användas för vanliga texturer, som man vill rita ut roterade. Nedan är kod som ritar ut en textur som från början är 200×200 pixlar stor till Raylibfönstret.
-
-{% tabs %}
-{% tab title="C#" %}
-```csharp
-Raylib.DrawTexturePro(
-  texture, 
-  new Rectangle(0,0,200, 200), // Source
-  new Rectangle(200,200,200,200), // Dest(ination)
-  new Vector2(100,100), // Origin
-  rotation,
-  Color.WHITE );
-```
-{% endtab %}
-{% endtabs %}
