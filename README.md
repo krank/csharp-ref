@@ -9,7 +9,7 @@ Detta är en hemsida med förenklade förklaringar och exempel för C# och Visua
 ## Vad behöver jag först?
 
 * Installera DotNet SDK – version 6 eller senare: [https://dotnet.microsoft.com/en-us/download](https://dotnet.microsoft.com/en-us/download)
-* Installera [Visual Studio Code](mjukvara/visual-studio-code/) och lämpliga extensions.
+* Installera [Visual Studio Code och lämpliga extensions](mjukvara/visual-studio-code/).
 * Installera [Git-scm](mjukvara/git-and-github/) och [ställ in namn och email](mjukvara/git-and-github/#foersta-gangen-efter-ny-git-installation).
 * Kolla [lathunden ](lathund-skapa-projekt.md)för hur man skapar nya projekt.
 
@@ -40,4 +40,4 @@ Vissa saker som t.ex. [Raylib ](annat/raylib/)ligger utanför tabellen – det �
 | [Använda bibliotek](grundlaeggande/anvaenda-bibliotek-using.md) | [Läsa och skriva](filhantering/laesa-och-skriva.md)                                            |                                                                        |
 | [Namngivning](grundlaeggande/namngivning.md)                    | [Serialisering](filhantering/serialisering-.../)                                               |                                                                        |
 | [Begrepp](grundlaeggande/begrepp.md)                            | [Nätverk och internet](annat/naetverk-och-internet-.../)                                       |                                                                        |
-
+| [Pseudokod och diagram](annat/pseudokod-och-diagram.md)         |                                                                                                |                                                                        |
