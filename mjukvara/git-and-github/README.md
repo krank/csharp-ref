@@ -78,7 +78,9 @@ Om man råkat göra ett projekt privat på GitHub.com…
 
 ### Ångra den senaste committen
 
-(Med GitLens-extension!)
+{% hint style="info" %}
+**OBSERVERA:** Kräver [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens).
+{% endhint %}
 
 * Gå till Source Control i Visual Studio Code.
 * Öppna "Commits" i listan under "Changes" för att se en lista med alla commits.
@@ -88,7 +90,9 @@ Om man råkat göra ett projekt privat på GitHub.com…
 
 ### Avancerat: gå tillbaka flera commits på en gång
 
-(Med GitLens-extension!)
+{% hint style="info" %}
+**OBSERVERA:** Kräver [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens).
+{% endhint %}
 
 * Gå till Source Control i Visual Studio Code.
 * Öppna "Commits" i listan under "Changes" för att se en lista med alla commits.

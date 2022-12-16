@@ -12,9 +12,9 @@ Några inbyggda snippets:
 * ctor = en konstruktor
 * prop = en property
 
-![](<../../.gitbook/assets/image (6).png>) 
+<img src="../../.gitbook/assets/image (6).png" alt="" data-size="original">&#x20;
 
-![](<../../.gitbook/assets/image (7).png>) 
+<img src="../../.gitbook/assets/image (7) (1).png" alt="" data-size="original">&#x20;
 
 ## Lägga till egna snippets
 

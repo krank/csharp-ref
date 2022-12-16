@@ -5,7 +5,7 @@
 Du skapar en breakpoint genom att klicka till vänster om radnumret. Då placeras en liten röd prick där. Du kan plocka bort din breakpoint genom att klicka på den röda pricken.
 
 <img src="../../.gitbook/assets/image (2).png" alt="" data-size="original"> \
-&#x20;<img src="../../.gitbook/assets/image (3).png" alt="" data-size="original">&#x20;
+&#x20;<img src="../../.gitbook/assets/image (3) (1).png" alt="" data-size="original">&#x20;
 
 När du sedan kör/debuggar ditt program (F5) så pausas körningen vid din breakpoint.
 
