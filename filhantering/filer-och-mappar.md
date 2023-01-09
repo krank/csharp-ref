@@ -57,3 +57,16 @@ if (Directory.Exists(@"Savegames")
 }
 ```
 {% endcode %}
+
+### Directory.GetFiles()
+
+Hämta en array som innehåller alla filer som finns i en mapp.
+
+{% code lineNumbers="true" %}
+```csharp
+foreach (string filename in Directory.GetFiles(@"Savegames")
+{
+  Console.WriteLine(filename);
+}
+```
+{% endcode %}
