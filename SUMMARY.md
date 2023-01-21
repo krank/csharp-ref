@@ -82,7 +82,7 @@
   * [CRUD, HTTP och REST](annat/naetverk-och-internet-.../rest-och-crud.md)
   * [URL:er och REST](annat/naetverk-och-internet-.../url-er-och-rest.md)
   * [RESTful client](annat/naetverk-och-internet-.../restful-client.md)
-  * [RESTful server (Minimal API)\*](annat/naetverk-och-internet-.../restful-server-minimal-api/README.md)
+  * [RESTful server (Minimal API)](annat/naetverk-och-internet-.../restful-server-minimal-api/README.md)
     * [Swagger\*](annat/naetverk-och-internet-.../restful-server-minimal-api/swagger.md)
   * [RESTful server (Web API) \[…\]](annat/naetverk-och-internet-.../restful-server/README.md)
     * [Controllers](annat/naetverk-och-internet-.../restful-server/controllers.md)

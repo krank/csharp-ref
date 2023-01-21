@@ -1,6 +1,8 @@
-# RESTful server (Minimal API)\*
+# RESTful server (Minimal API)
 
 Nedan är instruktioner för att skapa en enkel API-server som svarar på GET-anrop.
+
+[Här finns Microsofts officiella snabbreferens.](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis)
 
 ## Skapa projektet
 
@@ -66,9 +68,11 @@ static string Double(int num)
 
 När man i exemplet ovan besöker t.ex. **https://localhost:7174/double/7** så blir det 14 som skickas tillbaka som HTTP-response.
 
+Detta används ofta för att välja vilken data som ska skickas – en parameter kan till exempel vara ett unikt ID eller namnet på ett objekt (en användare eller ett dokument). Då skriver man en metod som letar igenom en lista eller en databas efter rätt ID, och returnerar den datan. Ofta skickas då datan som ett objekt.
+
 ### Returnera Objekt som JSON
 
-Om metoden som mappas returnerar ett objekt, så kommer det objektet serialiseras till JSON innan det skickas tillbaka som ett HTTP-response.
+Om metoden som mappas returnerar ett objekt, så kommer det objektet [serialiseras ](../../../filhantering/serialisering-.../json-serialisering.md#jsonserializer.serialize-less-than-greater-than)till [JSON ](../../../filhantering/filformat/json.md)innan det skickas tillbaka som ett [HTTP-response](../rest-och-crud.md#http).
 
 {% code title="Hero.cs" %}
 ```csharp
@@ -80,9 +84,8 @@ public class Hero
 ```
 {% endcode %}
 
-```csharp
-app.MapGet("/hero/superman/", GetSuperman);
-
+<pre class="language-csharp"><code class="lang-csharp"><strong>app.MapGet("/hero/superman/", GetSuperman);
+</strong>
 static Hero GetSuperman()
 {
   Hero h = new Hero();
@@ -90,11 +93,11 @@ static Hero GetSuperman()
   h.Hitpoints = 100;
   return h;
 }
-```
+</code></pre>
 
 Resultatet om man skickar en GET-request till **/hero/superman**:
 
-```
+```json
 {
   "name": "Superman",
   "hitpoints": 100
@@ -103,7 +106,19 @@ Resultatet om man skickar en GET-request till **/hero/superman**:
 
 ### Skicka in nya objekt via POST/PUT och JSON
 
-(Kommer)
+För att kunna hantera att nya objekt skickas till serverprogrammet, mappa POST eller PUT till en metod som har en parameter av den datatyp [JSON](../../../filhantering/filformat/json.md)-koden ska [deserialiseras ](../../../filhantering/serialisering-.../json-serialisering.md#jsonserializer.deserialize-less-than-greater-than)till.
+
+```csharp
+app.MapPost("/hero/new/", AddNewHero);
+
+static void AddNewHero(Hero h)
+{
+  heroList.Add(h);
+  Console.WriteLine($"Added hero {} to the list"
+}
+```
+
+När en användare då skickar in JSON-kod som [body ](../rest-och-crud.md#header-och-body)i sin HTTP-request till servern, så deserialiseras koden automatiskt till en instans av klassen och resultatet hamnar i parametern när metoden anropas.
 
 ## Results
 
