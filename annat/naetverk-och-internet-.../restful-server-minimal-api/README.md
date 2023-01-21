@@ -92,6 +92,15 @@ static Hero GetSuperman()
 }
 ```
 
+Resultatet om man skickar en GET-request till **/hero/superman**:
+
+```
+{
+  "name": "Superman",
+  "hitpoints": 100
+}
+```
+
 ### Skicka in nya objekt via POST/PUT och JSON
 
 (Kommer)
