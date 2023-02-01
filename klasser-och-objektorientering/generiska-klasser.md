@@ -30,7 +30,7 @@ List.RemoveAt(0);
 
 ### Queue
 
-Fungerar som en lista, utom att man bara kan lägga till saker längst bak i kön, och ta bort dem längst fram.
+Fungerar som en lista, utom att man bara kan lägga till saker längst bak i kön, och ta bort dem längst fram. Detta kallas FIFO, eller First In, First Out.
 
 {% code lineNumbers="true" %}
 ```csharp
@@ -50,9 +50,49 @@ int n = myQueue.Dequeue();
 ```
 {% endcode %}
 
+#### Queue
+
+Lägger till ett objekt i kön.
+
+```csharp
+myQueue.Enqueue(5);
+```
+
+#### Dequeue
+
+Tar bort och returnerar nästa objekt i kön.
+
+```csharp
+int n = myQueue.Dequeue();
+```
+
+#### Peek
+
+Returnerar, men tar inte bort, nästa objekt i kön.
+
+```csharp
+Console.WriteLine(myQueue.Peek();
+```
+
+### PriorityQueue
+
+Fungerar som en Queue, plus att varje sak som läggs in i kön ges en _prioritet_. När man sedan kör Dequeue eller Peek så är det objektet med högst prioritet (lägst prioritets-värde) som returneras. När man skapar en PriorityQueue så anger man två datatyper – en för de saker som ska sparas i kön, en som ska användas för att avgöra prioritet. Oftast är den senare bara en int eller annan numerisk datatyp.
+
+Om flera saker har samma prioritet så returneras de i ordning motsvarande en vanlig queue.
+
+```csharp
+PriorityQueue<string, int> queue = new PriorityQueue<string, int>();
+
+queue.Enqueue("Micke", 2);
+queue.Enqueue("Martin", 1);
+queue.Enqueue("Lena", 3);
+
+Console.WriteLine(queue.Peek()); // Skriver ut "Martin"
+```
+
 ### Stack
 
-Fungerar som en "hög" – man kan bara lägga till saker högst upp i högen och även bara plocka bort saker från högst upp i högen.
+Fungerar som en "hög" – man kan bara lägga till saker högst upp i högen och även bara plocka bort saker från högst upp i högen. Detta kallas FILO, eller First In, Last Out.
 
 {% code lineNumbers="true" %}
 ```csharp
