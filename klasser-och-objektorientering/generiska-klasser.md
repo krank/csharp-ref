@@ -6,7 +6,7 @@ Det som skrivs mellan <> i en generisk klass kallas för en **typ-parameter**.
 
 ## Färdiga generiska klasser
 
-OBS: För att dessa ska fungera om du kör .NET Core, så behöver du skriva in följande högst upp i din kod:
+OBS: För att dessa ska fungera om du kör äldre versioner av dotnet (t.ex. dotnet 5), så behöver du skriva in följande högst upp i din kod:
 
 ```csharp
 using System.Collections.Generic;
