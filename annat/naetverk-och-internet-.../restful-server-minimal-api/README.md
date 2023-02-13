@@ -17,7 +17,7 @@ Nedanstående är ett absolut minimalt, enkelt projekt som helt enkelt skickar "
 // Skapa en webbapplikation-instans
 var app = WebApplication.Create(args);
 
-// Använd HTTPS
+// Använd HTTPS när det går
 app.UseHttpsRedirection();
 
 // När en GET-request kommer för "/" så svarar servern med det som 
@@ -150,3 +150,21 @@ app.Urls.Add("http://*:3000");
 ```
 
 Ovanstående gör att man kan komma åt servern både genom url:en localhost:3000 (på den lokala datorn) och genom att skriva datorns ip-nummer följt av 3000 (på den lokala datorn eller på någonnannan dator på samma nätverk).
+
+## Använda HTTPS
+
+Börja med att generera och lägga till ett certifikat för lokal utveckling och debuggning. Kör i terminalen:
+
+```powershell
+dotnet dev-certs https
+dotnet dev-certs https --trust
+```
+
+Lägg sedan till URL:er för https:
+
+```
+app.Urls.Add("https://localhost:3000");
+app.Urls.Add("https://*:3000");
+```
+
+Nu bör HTTPS fungera – åtminstone på din egna dator.
