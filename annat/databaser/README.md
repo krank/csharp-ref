@@ -20,17 +20,13 @@ Varje rad i en tabell beskriver en "sak", till exempel en användare, en artikel
 
 ### Primärnycklar
 
-För att kunna identifiera en specifik entry i en tabell, behöver man vara säker på att det finns något unikt med varje rad. Den delen som är unik brukar kallas "primärnyckel". I teorin kan vilken kolumn eller kombination av kolumner som helst vara primärnyckel, men i de allrra flesta fall ges bara varje entry ett unikt nummer, ett ID, som deklareras som primärnyckel.
+För att kunna identifiera en specifik entry i en tabell, behöver man vara säker på att det finns något unikt med varje rad. Den delen som är unik brukar kallas "primärnyckel". I teorin kan vilken kolumn eller kombination av kolumner som helst vara primärnyckel, men i de allra flesta fall ges bara varje entry ett unikt nummer, ett ID, som deklareras som primärnyckel.
 
 ### Normalisering
 
 Normalisering kallas det när man följer ett antal regler designade att göra databasen så lätt att använda som möjligt. Till exempel försöker man att se till så att ingen data finns lagrad på flera ställen.
 
-## Databashandlingar
-
-### Setup
-
-### Data entry
+##
 
 
 
