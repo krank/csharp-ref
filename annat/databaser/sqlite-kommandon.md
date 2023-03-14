@@ -29,7 +29,7 @@ Ovanstående skapar tabellen **users** med kolumnerna **id**, **name**, **passwo
 
 Lägger till en rad i en tabell.
 
-```
+```sql
 INSERT INTO users (name,password,email)
 VALUES('Mikael Bergström','12345','fake@bullshit.com');
 ```
@@ -49,42 +49,73 @@ En av tabellens fyra kolumner, "id", anges inte och får inget värde. Eftersom 
 
 Hämtar data från en tabell
 
-```
-SELECT * FROM users
+```sql
+SELECT * FROM users;
 ```
 
 Ovanstående hämtar alla rader och alla kolumner från tabellen.
 
-```
-SELECT name,email FROM users
+| id🔑 | name             | password | email                      |
+| ---- | ---------------- | -------- | -------------------------- |
+| 0    | Mikael Bergström | 12345    | fake@bullshit.com          |
+| 1    | Jacob Marley     | money$   | moneyman@scroogemarley.com |
+
+```sql
+SELECT name,email FROM users;
 ```
 
 Ovanstående hämtar alla rader, men bara kolumnerna **name** och **email**.
+
+| name             | email                      |
+| ---------------- | -------------------------- |
+| Mikael Bergström | fake@bullshit.com          |
+| Jacob Marley     | moneyman@scroogemarley.com |
 
 ### WHERE
 
 Gör att man kan vara mer specifik med vilken eller vilka rader man vill läsa av.
 
-```
-SELECT name,email FROM users WHERE id=0
+```sql
+SELECT name,email FROM users WHERE id=0;
 ```
 
-Ovanstående hämtar bara kolumnerna name och email, och bara de rader där kolumnen id har värder 0.
+Ovanstående hämtar bara kolumnerna name och email, och bara de rader där kolumnen id har värdet 0.
+
+| name             | email             |
+| ---------------- | ----------------- |
+| Mikael Bergström | fake@bullshit.com |
 
 ## DELETE
 
+Tar bort en eller flera rader från en tabell, baserat på ett eller flera kriterier.
+
+```sql
+DELETE FROM users WHERE id=0;
+```
+
+Kriterierna anges via WHERE, precis som för SELECT.
+
 ## UPDATE
 
+Ändrar information i en eller flera celler, baserat på ett eller flera kriterier.
+
+```sql
+UPDATE users
+SET email = 'deep@fake.com'
+WHERE id=0;
+```
+
+Ovanstående kod ändrar email-kolumnens data till "deep@fake.com" för alla rader där id-kolumnen innehåller en nolla.
+
+| id🔑 | name             | password | email                      |
+| ---- | ---------------- | -------- | -------------------------- |
+| 0    | Mikael Bergström | 12345    | deep@fake.com              |
+| 1    | Jacob Marley     | money$   | moneyman@scroogemarley.com |
+
+## Avancerat: Relationer
+
 ```csharp
-
-  INSERT INTO
-  WHERE
-  FROM
-  SELECT
-  DELETE
-  UPDATE
-
-  Avancerat
+    Avancerat
     INNER JOIN
     ALTER TABLE
     DROP TABLE
