@@ -44,7 +44,7 @@ Gå till din csproj-fil. Kommentera bort eller ta bort raden med `<Nullable>`. D
 
 Börja med att gå till Debug and run-panelen, den som ser ut som en insekt på en play-knapp.\
 \
-<img src="../../.gitbook/assets/image (1).png" alt="" data-size="original">&#x20;
+<img src="../../.gitbook/assets/image (1) (1).png" alt="" data-size="original">&#x20;
 
 Tryck på kugghjulet. Då öppnas config-filen för projektet.
 

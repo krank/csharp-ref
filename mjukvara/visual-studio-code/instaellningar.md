@@ -2,7 +2,7 @@
 
 Under Settings (Kugghjulet och sen Settings, eller kortkommandot Ctrl+, ) finns en hel massa användbara inställningar.
 
-![](<../../.gitbook/assets/image (3).png>)
+![](<../../.gitbook/assets/image (3) (2).png>)
 
 Man kan antingen bläddra själv, eller söka efter namnet på den inställning man vill ändra.
 
