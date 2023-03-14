@@ -25,21 +25,3 @@ För att kunna identifiera en specifik entry i en tabell, behöver man vara säk
 ### Normalisering
 
 Normalisering kallas det när man följer ett antal regler designade att göra databasen så lätt att använda som möjligt. Till exempel försöker man att se till så att ingen data finns lagrad på flera ställen.
-
-##
-
-
-
-SQLite
-
-* CREATE TABLE
-* DELETE
-* INSERT INTO
-* UPDATE
-* SELECT
-* ALTER TABLE
-*
-
-(Grundläggande databaskunskap, C#-kopplingar till SQL, SQLite)
-
-(Kanske NoSQL-databaser?)
