@@ -103,7 +103,7 @@ myStack.Push(42);
 myStack.Push(665);
 
 // Precis som för queue, peekar "nästa värde". Det som ligger högst upp – 665.
-Console.WriteLine(myQueue.Peek());
+Console.WriteLine(myStack.Peek());
 
 // Tar bort det som ligger högst upp i högen och returnerar det.
 // Så nu är bara 5 och 42 kvar i högen.
