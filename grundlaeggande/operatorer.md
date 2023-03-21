@@ -123,3 +123,27 @@ bool y = false || false; // false
 ```
 bool z = (3 == 2) || x; // true; x är true även om 3 inte är samma som 2.
 ```
+
+## Specialoperatorer
+
+### ? : Ternary
+
+Ternary-operatorn fungerar som en förkortad if-sats och består av tre delar – ett villkor, ett värde som gäller ifall villkoret är sant och ett värde som gäller ifall villkoret är falskt.
+
+```csharp
+int i = 1;
+
+// Om i == 1 så blir name lika med "Micke", annars blir name lika med "Mira".
+string name = i == 1 ? "Micke" : "Mira";
+```
+
+### ?? Null-coalescing
+
+Null-coalescing-operatorn används när det finns en risk för att ett värde är null, och gör så att ett alternativt värde kan tilldelas.
+
+```csharp
+// actualName får samma värde som name, förutsatt att name inte är null.
+// om name är null så blir actualName "Micke" istället.
+string actualName = name ?? "Micke";
+```
+

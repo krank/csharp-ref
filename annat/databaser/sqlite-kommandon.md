@@ -85,6 +85,14 @@ Ovanstående hämtar bara kolumnerna name och email, och bara de rader där kolu
 | ---------------- | ----------------- |
 | Mikael Bergström | fake@bullshit.com |
 
+### COUNT
+
+Räknar antalet rader som innehåller ett värde.
+
+```sql
+SELECT COUNT(*) FROM users WHERE id=0;
+```
+
 ## DELETE
 
 Tar bort en eller flera rader från en tabell, baserat på ett eller flera kriterier.

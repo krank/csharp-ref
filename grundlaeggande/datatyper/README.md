@@ -131,3 +131,11 @@ Console.WriteLine(short.MinValue); // -32768
 Console.WriteLine(ushort.MaxValue); // 65535
 Console.WriteLine(ushort.MinValue); // 0
 ```
+
+## Void
+
+Void är egentligen inte en datatyp – det är mer ett ord som används när man specifikt inte förväntar sig någon data. Void används bara som returdatatyp för [metoder ](../egna-metoder.md)som inte ska returnera något.
+
+## Null
+
+Null är inte heller riktigt en datatyp, utan snarare "icke-data". En string-variabel som ges värdet null är inte ens en tom string – det är ett icke-värde.

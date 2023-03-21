@@ -49,17 +49,46 @@ command.CommandText =
   ";
 ```
 
-### ExecuteReader()
-
 ### ExecuteNonQuery()
 
+Kör kommandot. Perfekt för t.ex kommandon som lägger in ny information i en tabell. Returnerar en integer som beskriver hur många rader som ändrats, tagits bort eller lagts till.
+
+```csharp
+SqliteCommand newUserCommand = connection.CreateCommand();
+command.CommandText =
+  @"
+    INSERT INTO users (name,password,email)
+    VALUES('Mikael Bergström','12345','fake@bullshit.com');
+  ";
+
+int rowsAffected = command.ExecuteNonQuery();
+```
+
 ### ExecuteScalar()
+
+Kör kommandot, och returnerar resultatet – men bara första cellen (första kolumnen i första raden). Resultatet returneras som ett object, som dessutom kan vara null ifall operationen inte returnerade något. Med andra ord behövs både [casting ](../../grundlaeggande/typkonvertering.md#casting)och något sätt att hantera nullvärden t.ex. via [null-coalescing](../../grundlaeggande/operatorer.md#null-coalescing).
+
+```csharp
+SqliteCommand countCommand = connection.CreateCommand();
+
+countCommand.CommandText =
+@"
+  SELECT COUNT(*)
+  FROM users
+";
+
+long result = 0;
+object resultObj = countCommand.ExecuteScalar() ?? 0;
+result = (long)resultObj;
+```
+
+### ExecuteReader()
 
 ## SQLiteDataReader
 
 ### Read()
 
-### Get
+### Get()
 
 ```csharp
  * SqliteConnection
