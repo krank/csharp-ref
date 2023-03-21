@@ -15,7 +15,7 @@ SqliteConnection connection = new SqliteConnection("Data Source=users.sqlite")
 connection.Open();
 ```
 
-Det är ofta en bra idé att använda ett using-kodblock för att säkerställa att programmet inte håller kvar kopplingen längre än nödvändigt. Då stängs kopplingen ner säkert i samband med att using.kodblocket avslutas.
+Det är ofta en bra idé att använda ett [using-kodblock](../../filhantering/open-close-using.md#using) för att säkerställa att programmet inte håller kvar kopplingen längre än nödvändigt. Då stängs kopplingen ner säkert i samband med att using.kodblocket avslutas.
 
 ```csharp
 using (SqliteConnection connection = new SqliteConnection("Data Source=users.sqlite"))
@@ -105,7 +105,7 @@ using (SqliteDataReader reader = selectCommand.ExecuteReader())
 
 Ett SqliteDataReader-objekt används för att läsa av ett resultat från en SQL-operation (ofta ett SELECT-kommando), en rad i taget.
 
-Precis som med SqliteConnection-objekt använder man oftast ett using-block för att se till så att reader-objektet tas bort ordentligt när man är klar med det.
+Precis som med SqliteConnection-objekt använder man oftast ett [using-block](../../filhantering/open-close-using.md#using) för att se till så att reader-objektet tas bort ordentligt när man är klar med det.
 
 ### Read()
 
