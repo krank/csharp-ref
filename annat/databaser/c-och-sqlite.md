@@ -35,7 +35,7 @@ SqliteCommand command = connection.CreateCommand();
 
 ## SqliteCommand
 
-Ett SqliteCommand är ett objekt som motsvarar ett SQLite-kommando. Det har ett textinnehåll i form av själva kommandot, och kan köras på flera olika sätt. Ett SQLiteCommand är alltid kopplat till en SqliteConnection; kommandot skickas alltid till den SQLite-databasen.
+Ett SqliteCommand är ett objekt som motsvarar ett [SQLite-kommando](sqlite-kommandon.md). Det har ett textinnehåll i form av själva kommandot, och kan köras på flera olika sätt. Ett SQLiteCommand är alltid kopplat till en SqliteConnection; kommandot skickas alltid till den SQLite-databasen.
 
 ### commandText
 
@@ -84,20 +84,34 @@ result = (long)resultObj;
 
 ### ExecuteReader()
 
-## SQLiteDataReader
+Kör kommandot, och returnerar en SQLiteDataReader för att läsa av resultatet. Passar bäst för SELECT-kommandon som returnerar flera rader och/eller kolumner.
+
+```csharp
+SqliteCommand selectCommand = connection.CreateCommand();
+
+selectCommand.CommandText =
+@"
+  SELECT (name)
+  FROM users
+";
+
+using (SqliteDataReader reader = selectCommand.ExecuteReader())
+{
+  // kod för att läsa datan
+}
+```
+
+## SqliteDataReader
+
+Ett SqliteDataReader-objekt används för att läsa av ett resultat från en SQL-operation (ofta ett SELECT-kommando), en rad i taget.
+
+Precis som med SqliteConnection-objekt använder man oftast ett using-block för att se till så att reader-objektet tas bort ordentligt när man är klar med det.
 
 ### Read()
 
-### Get()
+### Get?
 
 ```csharp
- * SqliteConnection
- *   Open
- *   CreateCommand
- * SqliteCommand
- *   ExecuteReader
- *   ExecuteNonQuery
- *   ExecuteScalar
  * SQliteDataReader
  *   Read
  *   GetString / GetFloat / GetInt32 etc
