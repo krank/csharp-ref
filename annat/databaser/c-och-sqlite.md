@@ -1,4 +1,4 @@
-# C# och SQLite\*
+# C# och SQLite
 
 Börja med att lägga till NuGet-paketet **Microsoft.Data.Sqlite**. Antingen genom att använda NuGet Gallery eller genom att köra i konsollen:
 
@@ -109,11 +109,41 @@ Precis som med SqliteConnection-objekt använder man oftast ett [using-block](..
 
 ### Read()
 
-### Get?
+Flyttar readerns "läshuvud" till nästa rad, om den finns. Om den inte finns, returneras true.
 
 ```csharp
- * SQliteDataReader
- *   Read
- *   GetString / GetFloat / GetInt32 etc
+while (reader.Read())
+{
+  // Kod för att läsa radens data
+}
+```
+
+### Get?()
+
+Det finns många metoder som börjar med Get – till exempel GetString, GetInt32, GetFloat och GetBoolean. De tar alla emot en integer som parameter, och returnerar datan den nuvarande raden och den kolumn som anges av siffran. De försöker också konvertera (parse) datan till rätt datatyp.
+
+```csharp
+while (reader.Read())
+{
+  // Läser datan i den första kolumnen och tolkar den som en string
+  string name = reader.GetString(0);
+  
+  Console.WriteLine(name);
+}
+```
+
+### FieldCount
+
+En property som talar om hur många fält (kolumner) resultatet innehåller.
+
+### GetName()
+
+Returnerar namnet på en specifik kolumn i resultatet.
+
+```csharp
+for (var i = 0; i < reader.FieldCount; i++)
+{
+  Console.WriteLine(reader.GetName(i));
+}
 ```
 
