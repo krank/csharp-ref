@@ -2,6 +2,8 @@
 
 När man bygger en klass som bygger på en annan klass så kallas det **arv**. Arvet innebär att subklassen får samma variabler och metoder som basklassen.
 
+Man skapar ett arv genom att skriva ett kolon (:) efter klassnamnet, följt av namnet på basklassen. Så om man vill att klassen Hero ska ärva från klassen Character så skriver man `class Hero: Character` när man skapar klassen.
+
 {% code title="Character.cs" lineNumbers="true" %}
 ```csharp
 class Character

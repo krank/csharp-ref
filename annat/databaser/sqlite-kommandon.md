@@ -1,4 +1,4 @@
-# SQLite-kommandon\*
+# SQLite-kommandon
 
 ## CREATE TABLE
 
@@ -25,6 +25,54 @@ Ovanstående skapar tabellen **users** med kolumnerna **id**, **name**, **passwo
 | ---- | ---- | -------- | ----- |
 |      |      |          |       |
 
+## DROP TABLE
+
+Raderar en tabell.
+
+```
+DROP TABLE users;
+```
+
+## ALTER TABLE
+
+Gör ändringar i en existerande tabell
+
+### RENAME
+
+Byter namn på tabellen.
+
+```sql
+ALTER TABLE users
+RENAME TO students;
+```
+
+### ADD COLUMN
+
+Lägger till en ny kolumn
+
+```
+ALTER TABLE users
+ADD COLUMN twitter_handle TEXT;
+```
+
+### DROP COLUMN
+
+Tar bort en kolumn (och all data som finns i den). Fungerar inte för alla kolumner – till exempel kan man inte ta bort de som är primärnycklar.
+
+```
+ALTER TABLE users
+DROP COLUMN twitter_handle;
+```
+
+### RENAME COLUMN
+
+Byter namn på en kolumn
+
+```sql
+ALTER TABLE users
+RENAME COLUMN name TO username;
+```
+
 ## INSERT INTO
 
 Lägger till en rad i en tabell.
@@ -43,7 +91,9 @@ En av tabellens fyra kolumner, "id", anges inte och får inget värde. Eftersom 
 
 | id🔑 | name             | password | email             |
 | ---- | ---------------- | -------- | ----------------- |
-| 0    | Mikael Bergström | 12345    | fake@bullshit.com |
+| 1    | Mikael Bergström | 12345    | fake@bullshit.com |
+
+Observera att man använder ' för att avgränsa texter (strings).&#x20;
 
 ## SELECT
 
@@ -57,8 +107,8 @@ Ovanstående hämtar alla rader och alla kolumner från tabellen.
 
 | id🔑 | name             | password | email                      |
 | ---- | ---------------- | -------- | -------------------------- |
-| 0    | Mikael Bergström | 12345    | fake@bullshit.com          |
-| 1    | Jacob Marley     | money$   | moneyman@scroogemarley.com |
+| 1    | Mikael Bergström | 12345    | fake@bullshit.com          |
+| 2    | Jacob Marley     | money$   | moneyman@scroogemarley.com |
 
 ```sql
 SELECT name,email FROM users;
@@ -71,12 +121,25 @@ Ovanstående hämtar alla rader, men bara kolumnerna **name** och **email**.
 | Mikael Bergström | fake@bullshit.com          |
 | Jacob Marley     | moneyman@scroogemarley.com |
 
+### AS
+
+Gör att kolumner kan ges nya namn i resultatet.
+
+```sql
+SELECT name AS namn FROM users;
+```
+
+| namn             |
+| ---------------- |
+| Mikael Bergström |
+| Jacob Marley     |
+
 ### WHERE
 
 Gör att man kan vara mer specifik med vilken eller vilka rader man vill läsa av.
 
 ```sql
-SELECT name,email FROM users WHERE id=0;
+SELECT name,email FROM users WHERE id=1;
 ```
 
 Ovanstående hämtar bara kolumnerna name och email, och bara de rader där kolumnen id har värdet 0.
@@ -84,6 +147,14 @@ Ovanstående hämtar bara kolumnerna name och email, och bara de rader där kolu
 | name             | email             |
 | ---------------- | ----------------- |
 | Mikael Bergström | fake@bullshit.com |
+
+### AND
+
+Gör att man kan sätta ihop flera olika kriterier i en WHERE.
+
+```
+SELECT name FROM users WHERE email='fake@bullshit.com' AND password='12345';
+```
 
 ### COUNT
 
@@ -122,9 +193,74 @@ Ovanstående kod ändrar email-kolumnens data till "deep@fake.com" för alla rad
 
 ## Avancerat: Relationer
 
-```csharp
-    Avancerat
-    INNER JOIN
-    ALTER TABLE
-    DROP TABLE
+En viktig funktion i _relationella databaser_, som MySQL eller SQLite, är _relationer_. Relationer är ett sätt att slippa dubletter av data. Ett exempel kan vara en databas där man håller reda på elever och klasser. För varje elev ska databasen hålla reda på förnamn, efternamn och personnummer. För varje klass ska databasen hålla reda på klassens namn och vilken lärare som är klassens mentor.
+
+Dessutom behöver databasen hålla reda på _vilken elev som går i vilken klass_. Var lagras den informationen? Ett sätt vore att ha allting i en enda jättetabell:
+
+**students**
+
+| id🔑 | name       | surname   | pnumber     | classname | mentor           |
+| ---- | ---------- | --------- | ----------- | --------- | ---------------- |
+| 0    | Mikael     | Bergström | XXXXXX-XXXX | TE00A     | Mira Belle       |
+| 1    | Mohammad   | Mohammadi | XXXXXX-XXXX | TE00B     | Kevin McAllister |
+| 2    | Anna-Karin | Karlsson  | XXXXXX-XXXX | TE00A     | Mira Belle       |
+
+Nackdelen blir att vi får dubletter – klassnamnen och mentorernas namn står dubbelt! För att undvika detta skapar man generellt istället två olika tabeller – en för elever och en för klasser – som har en _relation_.
+
+**students**
+
+| id🔑 | name       | surname   | pnumber     | classid |
+| ---- | ---------- | --------- | ----------- | ------- |
+| 1    | Mikael     | Bergström | XXXXXX-XXXX | 1       |
+| 2    | Mohammad   | Mohammadi | XXXXXX-XXXX | 2       |
+| 3    | Anna-Karin | Karlsson  | XXXXXX-XXXX | 1       |
+
+**classes**
+
+| id🔑 | name  | mentor           |
+| ---- | ----- | ---------------- |
+| 1    | TE00A | Mira Belle       |
+| 2    | TE00B | Kevin McAllister |
+
+Här är relationen att kolumnen **classid** i tabellen **students** innehåller siffror som hör ihop med kolumnen **id** i tabellen **classes**. Observera att det är classes-tabellens **primärnyckel** som används.
+
+För att hindra användare från att lägga in icke-giltiga värden classid-kolumnen så kan relationen skrivas in i tabellens definition när den skapas (det kan också göras i efterhand via ALTER TABLE):
+
+```sql
+CREATE TABLE classes (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	name TEXT NOT NULL,
+	mentor TEXT NOT NULL
+);
+
+CREATE TABLE students (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	name TEXT NOT NULL,
+	surname TEXT NOT NULL,
+	pnumber TEXT NOT NULL,
+	class_id INTEGER NOT NULL,
+	FOREIGN KEY(classid) REFERENCES classes(id)
+);
 ```
+
+Med andra ord lägger man helt enkelt till `FOREIGN KEY(x) REFERENCES table(y)` för att koppla kolumnen x till kolumnen y i tabellen "table"
+
+## Avancerat: JOIN
+
+Joins är ett sätt att sätta ihop tabeller som har en relation, när man efterfrågar data med SELECT.
+
+<pre class="language-sql"><code class="lang-sql">SELECT students.name AS student_name, classes.name AS class
+<strong>	FROM students
+</strong>	INNER JOIN classes
+<strong>	ON students.classid = classes.id;
+</strong></code></pre>
+
+Det finns flera sorters JOIN, men INNER JOIN är den vanligaste. Man anger först som vanligt vilka kolumner man vill ha med, sedan FROM en första tabell. Sedan lägger man till INNER JOIN en annan tabell, och så ON vilka kolumner som ska kopplas ihop.
+
+| student\_name | class |
+| ------------- | ----- |
+| Mikael        | TE00A |
+| Mohammad      | TE00B |
+| Anna-Karin    | TE00A |
+
+Observera att man alltså måste specifiera vilken tabell varje kolumn kommer från i första delen av SELECT-kommandot, framför allt när kolumner i båda tabellerna har samma namn.

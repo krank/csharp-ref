@@ -1,6 +1,12 @@
 # Databaser\*
 
-(Kommer)
+När det gäller att lagra stora mängder data så används nästan alltid någon form av specialiserad mjukvara för detta. Ett vanligt exempel är MySQL, som körs som ett helt eget databas-serverprogram som olika programmeringsspråk sedan kan kontakta. Ett mer lättanvänt exempel är SQLite, där databaserna är relativt enkla textfiler som kan läsas av genom enkla anrop till ett SQLite-bibliotek. Ingen servermjukvara behöver köras på datorn.
+
+SQL står för Structured Query Language, och alla SQL-språk brukar använda liknande språk. SQLite stöder färre SQL-kommandon än MySQL, men man kan ändå göra det mesta. Se [SQLite-kommandon](sqlite-kommandon.md) för dokumentation
+
+Det finns extensions för Visual Studio Code som gör att man kan [jobba med SQLite-databaser](sqlite-och-vscode.md) utan att skriva C#-kod. Det är praktiskt för att skapa tabeller och förbereda databaser.
+
+Slutligen finns [C#-bibliotek man kan installera via NuGet Gallery](c-och-sqlite.md) för att köra SQL-kommandon mot en specifik SQLite-databas.
 
 ## Databas
 

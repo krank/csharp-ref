@@ -90,7 +90,7 @@
     * [Models/dataklasser](annat/naetverk-och-internet-.../restful-server/models.md)
     * [Tester med RESTer](annat/naetverk-och-internet-.../restful-server/tester-med-rester.md)
 * [Databaser\*](annat/databaser/README.md)
-  * [SQLite-kommandon\*](annat/databaser/sqlite-kommandon.md)
+  * [SQLite-kommandon](annat/databaser/sqlite-kommandon.md)
   * [SQLite och VSCode](annat/databaser/sqlite-och-vscode.md)
   * [C# och SQLite](annat/databaser/c-och-sqlite.md)
 * [Threading](annat/threading/README.md)
