@@ -4,6 +4,18 @@ Entity Framework Core är ett ramverk som gör att man slipper skriva SQL-komman
 
 ## Installation
 
+Kör följande kommando för att installera EF-verktygen på din dator:
+
+```powershell
+dotnet tool install --global dotnet-ef
+```
+
+Lägg till NuGet-paketet Microsoft.EntityFrameworkCore till ditt projekt via [NuGet gallery](../../grundlaeggande/anvaenda-bibliotek-using.md#nuget-gallery) eller via [kommandot](../../grundlaeggande/anvaenda-bibliotek-using.md#nuget-via-terminalen):
+
+```
+dotnet add package Microsoft.EntityFrameworkCore
+```
+
 ## DbContext
 
 ### OnConfiguring
