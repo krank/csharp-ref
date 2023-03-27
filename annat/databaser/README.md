@@ -1,4 +1,4 @@
-# Databaser\*
+# Databaser
 
 När det gäller att lagra stora mängder data så används nästan alltid någon form av specialiserad mjukvara för detta. Ett vanligt exempel är MySQL, som körs som ett helt eget databas-serverprogram som olika programmeringsspråk sedan kan kontakta. Ett mer lättanvänt exempel är SQLite, där databaserna är relativt enkla textfiler som kan läsas av genom enkla anrop till ett SQLite-bibliotek. Ingen servermjukvara behöver köras på datorn.
 
@@ -31,3 +31,23 @@ För att kunna identifiera en specifik entry i en tabell, behöver man vara säk
 ### Normalisering
 
 Normalisering kallas det när man följer ett antal regler designade att göra databasen så lätt att använda som möjligt. Till exempel försöker man att se till så att ingen data finns lagrad på flera ställen.
+
+## CRUD
+
+CRUD – Create, Read, Update och Delete – är de fyra operationer man brukar behöva göra med information som lagras i en databas.
+
+### Create
+
+Lägga till nya saker i en tabell, t.ex. nya användare.
+
+### Read
+
+Läsa av informationen om en sak i en tabell, t.ex. läsa av en användares användarnamn och lösenord för att kolla av mot inloggningsuppgifter.
+
+### Update
+
+Ändra en sak i en tabell, t.ex. byta en användares mailadress.
+
+### Delete
+
+Ta bort en sak ur en tabell, t.ex. ta bort en artikel.

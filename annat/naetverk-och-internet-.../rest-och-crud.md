@@ -1,32 +1,6 @@
 # CRUD, HTTP och REST
 
-## CRUD
-
-CRUD – Create, Read, Update och Delete – är de fyra operationer man brukar behöva göra med information som lagras i en databas.
-
-### Databaser
-
-Databaser består normalt sett av en eller flera tabeller, där varje rad beskriver en "sak". Man har kanske en tabell för användare, en för artiklar, en för kommentarer.
-
-I tabellen för användare finns t.ex. kolumner för namn, mailadress och lösenord. Det brukar också finnas en kolumn som innehåller unika användar-id's. Varje rad innehåller information om en användare.
-
-I tabellen för artiklar finns t.ex. kolumner för artiklarnas namn, text, kanske deras kategori, och så en kolumn för vilken användare som skrivit artikeln – ofta lagras här bara användarens unika id.
-
-### Create
-
-Lägga till nya saker i en tabell, t.ex. nya användare.
-
-### Read
-
-Läsa av informationen om en sak i en tabell, t.ex. läsa av en användares användarnamn och lösenord för att kolla av mot inloggningsuppgifter.
-
-### Update
-
-Ändra en sak i en tabell, t.ex. byta en användares mailadress.
-
-### Delete
-
-Ta bort en sak ur en tabell, t.ex. ta bort en artikel.
+Se [Databaser ](../databaser/)och framför allt [CRUD](../databaser/#crud).
 
 ## HTTP
 
@@ -65,7 +39,7 @@ Används för att ta bort en resurs från en server.
 
 ## REST
 
-Förenklat kan man säga att REST innebär att man utför CRUD-operationer med hjälp av HTTP-kommandon på ett standardiserat sätt.
+Förenklat kan man säga att REST innebär att man utför [CRUD-operationer](../databaser/#crud) med hjälp av HTTP-kommandon på ett standardiserat sätt.
 
 | CRUD   | HTTP   |
 | ------ | ------ |

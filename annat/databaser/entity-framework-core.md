@@ -37,6 +37,7 @@ En klass som representerar kopplingen till en databas, och som kommunikationen m
 
 Man skapar en egen databaskontext, med egna inställningar, genom att skapa en klass som ärver från DbContext.
 
+{% code title="DatabaseContext.cs" %}
 ```csharp
 public class DatabaseContext : DbContext
 {
@@ -48,6 +49,22 @@ public class DatabaseContext : DbContext
   }
 }
 ```
+{% endcode %}
+
+Sedan skapar man en instans av sin nya DbContext-klass, och via denna instans kan man sedan göra [CRUD-operationer](../naetverk-och-internet-.../rest-och-crud.md#crud) mot databasen.
+
+{% code title="program.cs" %}
+```csharp
+using (var context = new DatabaseContext())
+{
+  User user = new User() { Username = "Micke", Password = "12345" };
+
+  context.Users.Add(user);
+
+  context.SaveChanges();
+}
+```
+{% endcode %}
 
 ### DbSet
 
@@ -107,7 +124,21 @@ Om modellen uppdateras behöver alltså en ny migration skapas och därefter beh
 
 ## Hämta data
 
-### Where() och Linq
+Man hämtar data från databasen genom att använda sig av olika metoder som ingår i respektive DbSet.
+
+### Where()
+
+En metod som tar emot en delegate som beskriver ett kriterie. Delegaten tar emot en instans av den klass DbSet:et lagrar, och returnerar en bool ifall instansen uppfyller kriteriet. Normalt används ett lambda-uttryck istället för en metod för att uppfylla delegaten.
+
+Where returnerar ett resultat, som sedan kan konverteras till t.ex. en lista, en array eller någon annan typ av samling. Man kan också helt enkelt be att få det första resultatet genom att använda metoden `First()` eller `FirstOrDefault()`.
+
+```csharp
+List<User> matchingUsers =
+  context.Users.Where(u => u.BestFriend.Username == "Micke")
+  .ToList();
+```
+
+I exemplet ovan blir matchingUsers en lista som innehåller alla användare vars bästa kompis heter Micke.
 
 ### FromSql()
 
