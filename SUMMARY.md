@@ -93,7 +93,7 @@
   * [SQLite-kommandon](annat/databaser/sqlite-kommandon.md)
   * [SQLite och VSCode](annat/databaser/sqlite-och-vscode.md)
   * [C# och SQLite](annat/databaser/c-och-sqlite.md)
-  * [Entity Framework Core](annat/databaser/entity-framework-core.md)
+  * [Entity Framework Core\*](annat/databaser/entity-framework-core.md)
 * [Threading](annat/threading/README.md)
   * [Thread](annat/threading/thread.md)
   * [Task](annat/threading/task.md)

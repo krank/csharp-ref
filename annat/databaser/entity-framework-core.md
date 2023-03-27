@@ -1,4 +1,4 @@
-# Entity Framework Core
+# Entity Framework Core\*
 
 Entity Framework Core är ett ramverk som gör att man slipper skriva SQL-kommandon själv. EF fungerar som en mellanhand – vi kan säga åt EF hur datan som ska sparas ser ut och vad som ska göras med den, och EF förvandlar det till databaskommandon åt oss, och sköter interaktionen med databasen.
 
@@ -104,3 +104,20 @@ När en ny migration skapats behöver databasen uppdateras.
 </strong></code></pre>
 
 Om modellen uppdateras behöver alltså en ny migration skapas och därefter behöver databasen uppdateras.
+
+## Hämta data
+
+### Where() och Linq
+
+### FromSql()
+
+### Include()
+
+## Modifiera data
+
+### Stoppa in data
+
+### Modifiera data
+
+### Ta bort data
+
