@@ -88,7 +88,7 @@ När man skapar en lista kan man också direkt lägga in värden genom att ange 
 List<int> myList = new List<int>() {1,2,3,4,5};
 ```
 
-#### Add
+#### Add()
 
 Lägger till något i listan.
 
@@ -96,7 +96,7 @@ Lägger till något i listan.
 myList.Add("hej");
 ```
 
-#### Remove
+#### Remove()
 
 Tar bort något från listan. När man tar bort något ur listan&#x20;
 
@@ -104,12 +104,64 @@ Tar bort något från listan. När man tar bort något ur listan&#x20;
 myList.Remove("hej");
 ```
 
-#### RemoveAt
+#### RemoveAt()
 
 Tar bort något från en specifik indexposition i listan.
 
 ```
 myList.RemoveAt(0);
+```
+
+#### Find()
+
+Tar emot en [delegate ](../grundlaeggande/delegates.md)som beskriver ett kriterie. Delegaten tar emot ett objekt eller ett värde av samma datatyp som listan lagrar, och returnerar en bool ifall instansen uppfyller kriteriet. Normalt används ett [lambda-uttryck](../grundlaeggande/delegates.md#lambdas) istället för en metod för att uppfylla delegaten.
+
+Find() returnerar det första föremål (värde eller objekt) i listan som matchar kriteriet. Om inget hittas, returneras null eller defaultvärdet för datatypen (t.ex. 0 för integers).
+
+```csharp
+List<int> intList = new() { 1, 2, 3, 4, 5 };
+
+int i = intList.Find(x => x > 3); // i blir 4
+```
+
+#### FindLast()
+
+Fungerar som Find, men kollar igenom listan bakifrån  och returnerar därmed det _sista_ föremål som matchar kriteriet.
+
+```csharp
+List<int> intList = new() { 1, 2, 3, 4, 5 };
+
+int i = intList.FindLast (x => x < 3); // i blir 2
+```
+
+#### FindAll()
+
+Fungerar som Find, men returnerar en lista med _alla_ matchande föremål i listan.
+
+```csharp
+List<int> intList = new() { 1, 2, 3, 4, 5 };
+
+List<int> lowNumbers = intList.FindAll (x => x < 4); // lowNumbers blir 1,2,3
+```
+
+#### FindIndex()
+
+Fungerar som Find, men returnerar _index_ för första matchande föremål.
+
+```csharp
+List<int> intList = new() { 11, 12, 13, 14, 15 };
+
+int i = intList.FindIndex (x => x > 12); // i blir 2
+```
+
+#### FindLastIndex()
+
+Fungerar som FindIndex(), men kollar igenom listan bakifrån och returnerar därmed _index_ för det _sista_ föremål som matchar kriteriet.
+
+```csharp
+List<int> intList = new() { 11, 12, 13, 14, 15 };
+
+int i = intList.FindLastIndex (x => x < 13); // i blir 1
 ```
 
 ### Queue
