@@ -2,7 +2,7 @@
 
 ## Try och catch
 
-När man lägger in kod i ett try-block så förhindrar det att programmet avslutas när ett körtidsfel inträffar, t.ex. att man försöker konvertera något som inte kan konverteras eller komma åt ett index som inte finns i en array. Kort sagt _försöker_ C# köra koden. Istället avbryts körningen, och programmet hoppar istället ner till det catch-block som står under.
+När man lägger in kod i ett try-block så förhindrar det att programmet avslutas när ett runtime-fel inträffar, t.ex. att man försöker konvertera något som inte kan konverteras eller komma åt ett index som inte finns i en array. Kort sagt _försöker_ C# köra koden. Istället avbryts körningen, och programmet hoppar istället ner till det catch-block som står under.
 
 {% code lineNumbers="true" %}
 ```csharp
@@ -23,7 +23,7 @@ Ett Try-block måste alltid paras ihop med minst ett Catch-block.
 
 ## Att fånga specifika fel
 
-När man får ett körtidsfel så talar C# alltid om vad det är för fel.
+När man får ett runtime-fel så talar C# alltid om vad det är för fel.
 
 Om du vill skriva ett catch-block för att fånga ett specifikt fel så specificerar du feltypen inom parenteser.
 

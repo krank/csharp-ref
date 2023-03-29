@@ -4,12 +4,66 @@ En generisk klass är en klass där någon datatyp inte är fördefinierad, utan
 
 Det som skrivs mellan <> i en generisk klass kallas för en **typ-parameter**.
 
-## Färdiga generiska klasser
+## Samlingar
 
-OBS: För att dessa ska fungera om du kör äldre versioner av dotnet (t.ex. dotnet 5), så behöver du skriva in följande högst upp i din kod:
+C# innehåller ett antal färdiga generiska klasser i form av "samlingar" – helt enkelt objekt som samlar noll eller flera objekt eller värden av andra datatyper.
+
+{% hint style="info" %}
+**OBS:** För att dessa ska fungera om du kör äldre versioner av dotnet (t.ex. dotnet 5), så behöver du skriva in följande högst upp i din kod:
 
 ```csharp
 using System.Collections.Generic;
+```
+{% endhint %}
+
+### Gemensamt för samlingar
+
+Nedanstående finns i de flesta samlingar – några saknas i Dictionary, som är lite av ett specialfall.
+
+#### Count
+
+En [property ](inkapsling-och-properties.md#properties)som används istället för Length för att räkna antalet saker i samlingen.
+
+```csharp
+List<int> myList = new List<int>() {1,2,3,4,5};
+
+Console.WriteLine(myList.Count);
+```
+
+#### ToList() / ToArray()
+
+Returnerar en lista eller en array som innehåller samma saker som samlingen.
+
+```csharp
+Queue<int> myQueue = new Queue<int>();
+myQueue.Enqueue(4);
+
+List<int> myList = myQueue.ToList();
+```
+
+#### Contains()
+
+Tar emot ett värde. Om värdet finns i samlingen returnerar metoden true, annars false.
+
+```csharp
+List<int> myList = new List<int>() {4,5,6,7};
+
+if (myList.Contains(6))
+{
+  Console.WriteLine("Yes!");
+}
+```
+
+#### Clear()
+
+Rensar bort alla saker som finns i samlingen.
+
+```csharp
+List<int> myList = new List<int>() {4,5,6,7};
+
+myList.Clear();
+
+Console.WriteLine(myList.Count); // skriver ut 0
 ```
 
 ### List
@@ -27,6 +81,36 @@ Console.WriteLine(myList[0])
 List.RemoveAt(0);
 ```
 {% endcode %}
+
+När man skapar en lista kan man också direkt lägga in värden genom att ange en array efter parenteserna.
+
+```csharp
+List<int> myList = new List<int>() {1,2,3,4,5};
+```
+
+#### Add
+
+Lägger till något i listan.
+
+```
+myList.Add("hej");
+```
+
+#### Remove
+
+Tar bort något från listan. När man tar bort något ur listan&#x20;
+
+```
+myList.Remove("hej");
+```
+
+#### RemoveAt
+
+Tar bort något från en specifik indexposition i listan.
+
+```
+myList.RemoveAt(0);
+```
 
 ### Queue
 

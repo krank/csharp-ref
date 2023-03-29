@@ -128,9 +128,15 @@ Man hämtar data från databasen genom att använda sig av olika metoder som ing
 
 ### Where()
 
-En metod som tar emot en delegate som beskriver ett kriterie. Delegaten tar emot en instans av den klass DbSet:et lagrar, och returnerar en bool ifall instansen uppfyller kriteriet. Normalt används ett lambda-uttryck istället för en metod för att uppfylla delegaten.
+En metod som tar emot en [delegate ](../../grundlaeggande/delegates.md)som beskriver ett kriterie. Delegaten tar emot en instans av den klass DbSet:et lagrar, och returnerar en bool ifall instansen uppfyller kriteriet. Normalt används ett [lambda-uttryck](../../grundlaeggande/delegates.md#lambdas) istället för en metod för att uppfylla delegaten.
 
-Where returnerar ett resultat, som sedan kan konverteras till t.ex. en lista, en array eller någon annan typ av samling. Man kan också helt enkelt be att få det första resultatet genom att använda metoden `First()` eller `FirstOrDefault()`.
+Where returnerar ett resultat i form av en `IQueryable<>.`
+
+#### IQueryable<>
+
+En IQueryable<> är en sorts generisk samling
+
+som sedan kan konverteras till t.ex. en lista (`ToList()`), en array eller någon annan typ av samling. Man kan också helt enkelt be att få det första resultatet genom att använda metoden `First()` eller `FirstOrDefault()`.
 
 ```csharp
 List<User> matchingUsers =
@@ -139,6 +145,16 @@ List<User> matchingUsers =
 ```
 
 I exemplet ovan blir matchingUsers en lista som innehåller alla användare vars bästa kompis heter Micke.
+
+```csharp
+User u = 
+  context.Users.Where(u => u.Username == "micke" && u.Password == "12345")
+  .First();
+```
+
+I exemplet ovan blir u en instans av Users som innehåller informationen om den användare vars namn är "micke" och lösenord är "12345".
+
+Skillnaden mellan `First()` och `FirstOrDefault()` är att First() ger ett runtime-fel om resultatet är tomt, medan FirstOrDefault() returnerar null.
 
 ### FromSql()
 

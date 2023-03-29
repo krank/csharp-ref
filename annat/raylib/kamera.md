@@ -52,7 +52,7 @@ camera.rotation = 45; // Roterar kameran 45 grader
 
 ### BeginMode2D() / EndMode2D()
 
-Används för att, mellan Raylib.BeginDrawing() och Raylib.EndDrawing(), avgränsa vilka delar som ska ritas relativt kameran. I de flesta spel betyder det "hela själva spelet". Utanför BeginMode / EndMode ritar man ut UI-element och sådant som inte ska påverkas av kamerans rotationer och förflyttningar.
+Används för att, **mellan Raylib.BeginDrawing() och Raylib.EndDrawing()**, avgränsa vilka delar som ska ritas relativt kameran. I de flesta spel betyder det "hela själva spelet". Utanför BeginMode / EndMode ritar man ut UI-element och sådant som inte ska påverkas av kamerans rotationer och förflyttningar.
 
 BeginMode2D vill ha en kamera som första parameter.
 
