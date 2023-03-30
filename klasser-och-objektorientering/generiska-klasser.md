@@ -116,6 +116,18 @@ Tar bort något från en specifik indexposition i listan.
 myList.RemoveAt(0);
 ```
 
+#### RemoveAll()
+
+Tar emot en [delegate ](../grundlaeggande/delegates.md)som beskriver ett kriterie. Delegaten tar emot ett objekt eller ett värde av samma datatyp som listan lagrar, och returnerar en bool ifall instansen uppfyller kriteriet. Normalt används ett [lambda-uttryck](../grundlaeggande/delegates.md#lambdas) istället för en metod för att uppfylla delegaten.
+
+RemoveAll() tar bort alla element som matchar kriteriet, och returnerar ett int-värde som beskriver hur många som togs bort.
+
+```csharp
+List<int> intList = new() { 1, 2, 3, 4, 5 };
+
+int i = intList.RemoveAll(x => x > 3); // i blir 2, och 4 och 5 tas bort ur listan.
+```
+
 #### Find()
 
 Tar emot en [delegate ](../grundlaeggande/delegates.md)som beskriver ett kriterie. Delegaten tar emot ett objekt eller ett värde av samma datatyp som listan lagrar, och returnerar en bool ifall instansen uppfyller kriteriet. Normalt används ett [lambda-uttryck](../grundlaeggande/delegates.md#lambdas) istället för en metod för att uppfylla delegaten.
