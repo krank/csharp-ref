@@ -6,7 +6,9 @@ Det som skrivs mellan <> i en generisk klass kallas för en **typ-parameter**.
 
 ## Samlingar
 
-C# innehåller ett antal färdiga generiska klasser i form av "samlingar" – helt enkelt objekt som samlar noll eller flera objekt eller värden av andra datatyper.
+C# innehåller ett antal färdiga generiska klasser i form av "samlingar" – helt enkelt objekt som _samlar_ flera objekt eller värden av andra datatyper. Till exempel kan en samling innehålla integers, strings eller instanser av en klass.
+
+Några exempel på generiska samlingar är [List](generiska-klasser.md#list), [Queue](generiska-klasser.md#queue), [PriorityQueue](generiska-klasser.md#priorityqueue), [Stack](generiska-klasser.md#stack), [HashSet ](generiska-klasser.md#hashset)och [Dictionary](generiska-klasser.md#dictionary).
 
 {% hint style="info" %}
 **OBS:** För att dessa ska fungera om du kör äldre versioner av dotnet (t.ex. dotnet 5), så behöver du skriva in följande högst upp i din kod:
@@ -19,6 +21,8 @@ using System.Collections.Generic;
 ### Gemensamt för samlingar
 
 Nedanstående finns i de flesta samlingar – några saknas i Dictionary, som är lite av ett specialfall.
+
+Många samlings-datatyper kan också få ytterligare funktionalitet via [Linq-metoder](../annat/linq/linq-metoder.md).
 
 #### Count
 
@@ -186,7 +190,7 @@ int n = myQueue.Dequeue();
 ```
 {% endcode %}
 
-#### Queue
+#### Enqueue()
 
 Lägger till ett objekt i kön.
 
@@ -194,7 +198,7 @@ Lägger till ett objekt i kön.
 myQueue.Enqueue(5);
 ```
 
-#### Dequeue
+#### Dequeue()
 
 Tar bort och returnerar nästa objekt i kön.
 
@@ -202,7 +206,7 @@ Tar bort och returnerar nästa objekt i kön.
 int n = myQueue.Dequeue();
 ```
 
-#### Peek
+#### Peek()
 
 Returnerar, men tar inte bort, nästa objekt i kön.
 
