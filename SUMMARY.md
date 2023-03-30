@@ -91,7 +91,7 @@
     * [Models/dataklasser](annat/naetverk-och-internet-.../restful-server/models.md)
     * [Tester med RESTer](annat/naetverk-och-internet-.../restful-server/tester-med-rester.md)
 * [Linq\*](annat/linq/README.md)
-  * [Linq-metoder\*](annat/linq/linq-metoder.md)
+  * [Linq-metoder](annat/linq/linq-metoder.md)
   * [Linq-queries\*](annat/linq/linq-queries.md)
 * [Databaser](annat/databaser/README.md)
   * [SQLite-kommandon](annat/databaser/sqlite-kommandon.md)

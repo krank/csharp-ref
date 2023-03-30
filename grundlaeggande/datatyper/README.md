@@ -74,6 +74,14 @@ Flyttal, decimaltal.
 float y = 3.4f;
 ```
 
+## double
+
+Decimaltal som kan innehålla större tal – dubbelt så stora som floats.
+
+```csharp
+double x = 7.8
+```
+
 ## bool
 
 Boolskt värde, är antingen true eller false.

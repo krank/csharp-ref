@@ -1,4 +1,4 @@
-# Linq-metoder\*
+# Linq-metoder
 
 Linq-biblioteket bygger ut existerande [samlings-datatyper](../../klasser-och-objektorientering/generiska-klasser.md#samlingar) (som [List ](../../klasser-och-objektorientering/generiska-klasser.md#list)och även [arrayer](../../grundlaeggande/listor-och-arrayer.md#array)) med nya metoder.
 
@@ -55,9 +55,19 @@ int i = myList.FirstOrDefault(); // i blir 0
 
 ### OrderBy()
 
+Tar emot en delegate eller ett Lambda-uttryck som parameter, och använder den för att sortera samlingen. Delegaten tar emot ett föremål, och returnerar det värde som ska avgöra föremålens sortering.
+
+OrderBy returnerar en Enumerable som innehåller samma föremål som originalsamlingen, sorterade i rätt ordning.
+
+```csharp
+List<Character> sortedCharacters = 
+  characters.OrderBy(c => c.name)
+  .ToList();
+```
+
 ### Select
 
-Tar emot en delegate eller ett Lambda-uttryck, och bygger en ny samling med det som returneras från delegaten/uttrycket för varje föremål i originalsamlingen.
+Tar emot en delegate eller ett Lambda-uttryck som parameter, och bygger en ny samling med det som returneras från delegaten/uttrycket för varje föremål i originalsamlingen.
 
 Anges bara en parameter i delegaten/uttrycket så ska denna vara samma datatyp som originalsamlingens typparameter.
 
@@ -93,12 +103,54 @@ List<Character> characters =
 
 #### All()
 
+Tar emot ett kriterium i form av en delegat eller ett Lambda-uttryck, och returnerar true ifall samtliga föremål i samlingen stämmer in på kriteriet.
+
+```csharp
+List<int> intList = new() { 1, 2, 3, 4, 5 };
+
+bool allHigh = intList.All(n => n > 3); // false, för alla är inte > 3
+```
+
 #### Any()
+
+Tar emot ett kriterium i form av en delegat eller ett Lambda-uttryck, och returnerar true ifall minst ett föremål i samlingen stämmer in på kriteriet.
+
+```csharp
+List<int> intList = new() { 1, 2, 3, 4, 5 };
+
+bool hasHigh = intList.Any(n => n > 3); // true, för minst en är > 3
+```
 
 ### Matematiska
 
+Dessa fungerar bara för samlingar med tal – ints, doubles, floats och så vidare.
+
 #### Max()
+
+Returnerar det högsta värdet i samlingen.
+
+```csharp
+List<int> intList = new() { 2, 67, 23, 100, 1 };
+
+int highest = intList.Max(); // 100
+```
 
 #### Min()
 
+Returnerar det lägsta värdet i samlingen.
+
+```csharp
+List<int> intList = new() { 2, 67, 23, 100, 1 };
+
+int lowest = intList.Min(); // 1
+```
+
 #### Average()
+
+Returnerar medelvärdet av alla värden i samlingen, som en [double](../../grundlaeggande/datatyper/#double).
+
+```csharp
+List<int> intList = new() { 2, 67, 23, 100, 1 };
+
+double avg = intList.Average(); // 38.6
+```
