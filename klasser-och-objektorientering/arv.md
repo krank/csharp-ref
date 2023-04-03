@@ -1,6 +1,10 @@
 # Arv
 
-När man bygger en klass som bygger på en annan klass så kallas det **arv**. Arvet innebär att subklassen får samma variabler och metoder som basklassen.
+När man bygger en klass som bygger på en annan klass så kallas det **arv**. Arvet innebär att subklassen får samma variabler och metoder som basklassen. Arv är alltså ett sätt att _återanvända kod_.
+
+{% hint style="info" %}
+**OBSERVERA:** Arv symboliserar en "är-en-relation", det vill säga subklassen ska kunna sägas vara en underkategori till basklassen. En Hero _är en_ sorts Character. En Goomba _är en_ sorts Enemy. Ett svärd _är en_ sorts vapen.
+{% endhint %}
 
 Man skapar ett arv genom att skriva ett kolon (:) efter klassnamnet, följt av namnet på basklassen. Så om man vill att klassen Hero ska ärva från klassen Character så skriver man `class Hero: Character` när man skapar klassen.
 

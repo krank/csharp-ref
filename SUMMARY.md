@@ -54,6 +54,7 @@
 * [Klassmetoder](klasser-och-objektorientering/klassmetoder.md)
 * [Konstruktorer](klasser-och-objektorientering/kontruktorer.md)
 * [Arv](klasser-och-objektorientering/arv.md)
+* [Komposition](klasser-och-objektorientering/komposition.md)
 * [Inkapsling och properties](klasser-och-objektorientering/inkapsling-och-properties.md)
 * [Static](klasser-och-objektorientering/static.md)
 * [Polymorfism \[…\]](klasser-och-objektorientering/polymorfism/README.md)

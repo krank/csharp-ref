@@ -49,9 +49,15 @@ class Pear
 
 En klass kan [ärva ](arv.md)från en annan klass. Det betyder att subklassen får basklassens alla metoder och variabler, men den kan också lägga till egna.
 
-Man brukar också beskriva det som att subklassen är en mer specialiserad version av basklassen – ett exempel på basklass kan vara `Weapon` och en subklass till Weapon kan då vara `Sword`. Sedan kan Sword agera basklass till `LongSword` och `ShortSword`.
+Man brukar också beskriva det som att subklassen är en mer specialiserad version av basklassen – ett exempel på basklass kan vara `Weapon` och en subklass till Weapon kan då vara `Sword`. Sedan kan Sword agera basklass till `LongSword` och `ShortSword`. Relationen mellan subklass och basklass är att \[subklassen] är en sorts \[basklassen], så att ShortWord är en sorts Weapon till exempel.
 
-Alla svärd är då vapen, och har alla metoder etc som ingår i vapen – fast de kan ha egna tillägg, och de kan också delvis fungera annorlunda (se Polymorfism).
+Alla svärd är då vapen, och har alla metoder etc som ingår i vapen – fast de kan ha egna tillägg, och de kan också delvis fungera annorlunda (se [Polymorfism](polymorfism/)).
+
+## Komposition
+
+Man kan också lägga in instanser av en klass i instanser av en annan klass. Detta kallas [komposition](komposition.md).
+
+Man brukar också beskriva det som att klassernas relation blir en _har-en-relation_. En hjälte _har ett_ vapen (klassen Hero har en Weapon-variabel som innehåller instanser av den klassen eller dess subklasser).
 
 ## Inkapsling
 
