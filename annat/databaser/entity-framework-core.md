@@ -226,6 +226,7 @@ using (var context = new DatabaseContext())
     ").FirstOrDefault();
 
   u.Password = "password1";
+  context.SaveChanges();
 }
 ```
 
