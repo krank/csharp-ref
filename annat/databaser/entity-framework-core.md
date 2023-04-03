@@ -20,6 +20,7 @@ dotnet add package Microsoft.EntityFrameworkCore
 
 Skapa en klass för varje typ av objekt som ska lagras i databasen. Det enda som lagras i databasen är klassernas [properties](../../klasser-och-objektorientering/inkapsling-och-properties.md#properties). Tillsammans bildar alla dessa klasser "modellen" för databasen.
 
+{% code title="User.cs" %}
 ```csharp
 public class User
 {
@@ -28,8 +29,26 @@ public class User
   public string Password { get; set; } = "";
 }
 ```
+{% endcode %}
 
-Tabellen som skapas för att lagra användare kommer att döpas till samma sak som klassen plus en plural-ändelse (Users). Som primärnyckel används första bästa property som antingen heter Id eller klassens namn plus Id.&#x20;
+Modellen kan inkludera komposition, vilket automatiskt leder till att en [relation ](./#relation)skapas i databasen.
+
+{% code title="Group.cs" %}
+```csharp
+public class Group
+{
+  public int Id { get; set; }
+  public string Name { get; set; } = "";
+
+  // Eftersom relationen är en en-till-många-relation, skapas automatiskt en
+  // kolumn i User-tabellen som innehåller rätt grupps Id.
+  // Man kan också få samma effekt genom att ha en Group-property i User-klassen.
+  public List<User> Members { get; set; } = new();
+}
+```
+{% endcode %}
+
+Tabellen som skapas för att lagra användare kommer att döpas till samma sak som klassen plus en plural-ändelse (Users). Som primärnyckel för tabellen används första bästa property som antingen heter Id eller klassens namn plus Id.&#x20;
 
 ## DbContext
 
@@ -124,13 +143,11 @@ Om modellen uppdateras behöver alltså en ny migration skapas och därefter beh
 
 ## Hämta data
 
-Man hämtar data från databasen genom att använda sig av olika metoder som ingår i respektive DbSet. Ofta används [Linq-metoder](../linq/linq-metoder.md) eller [Linq-queries](../linq/linq-queries.md).
+Man hämtar data från databasen genom att använda sig av olika metoder som ingår i respektive DbSet. Ofta används [Linq-metoder](../linq/linq-metoder.md) eller [Linq-queries](../linq/linq-queries.md). Vanligast är [Where](../linq/linq-metoder.md#where).
 
-### Where()
+När datan som ska hämtas är lagrad i flera tabeller (dvs det finns en [relation](./#relation)), behöver man använda Include() för att den extra datan ska laddas in. Resultatet blir då att kompositionen fungerar.
 
-En metod som tar emot en [delegate ](../../grundlaeggande/delegates.md)som beskriver ett kriterie. Delegaten tar emot en instans av den klass DbSet:et lagrar, och returnerar en bool ifall instansen uppfyller kriteriet. Normalt används ett [lambda-uttryck](../../grundlaeggande/delegates.md#lambdas) istället för en metod för att uppfylla delegaten.
 
-Where returnerar ett resultat i form av en `IQueryable<>.`
 
 ### FromSql()
 

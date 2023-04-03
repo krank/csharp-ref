@@ -28,6 +28,10 @@ Varje rad i en tabell beskriver en "sak", till exempel en användare, en artikel
 
 För att kunna identifiera en specifik entry i en tabell, behöver man vara säker på att det finns något unikt med varje rad. Den delen som är unik brukar kallas "primärnyckel". I teorin kan vilken kolumn eller kombination av kolumner som helst vara primärnyckel, men i de allra flesta fall ges bara varje entry ett unikt nummer, ett ID, som deklareras som primärnyckel.
 
+### Relation
+
+Ifall man har en tabell vars information behöver refereras i en annan tabell, så säger man att de två tabellerna har en _relation_. Den enklaste formen av relation är en-till-många. Till exempel: En användare kan tillhöra en grupp, men en grupp kan innehålla många användare. Då kan man ha en tabell för grupper och en för användare, och så har man en kolumn i användar-tabellen som beskriver vilken grupp den användaren tillhör – där lagras grupptabellens primärnyckel.
+
 ### Normalisering
 
 Normalisering kallas det när man följer ett antal regler designade att göra databasen så lätt att använda som möjligt. Till exempel försöker man att se till så att ingen data finns lagrad på flera ställen.
