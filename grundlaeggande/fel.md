@@ -1,4 +1,4 @@
-# Fel\*
+# Fel
 
 ## Syntaxfel
 
@@ -19,11 +19,12 @@ När ett runtime-fel uppstår så skapas ett Exception. Detta kan fångas upp av
 
 Logiska fel är de svåraste att hitta – de hittas inte av Visual Studio (inga röda sqiggley lines), de orsakar inga felmeddelanden. De är helt enkelt resultatet av ett feltänk hos programmeraren – som leder till oönskat beteende.
 
-<pre class="language-csharp"><code class="lang-csharp"><strong>// Eftersom || används istället för &#x26;&#x26; så räcker det med att ha rätt
-</strong><strong>//  användarnamn ELLER rätt lösenord.
-</strong><strong>
-</strong><strong>if (username == "micke || password == "12345")
-</strong><strong>{
-</strong><strong>loggedIn = true;
-</strong><strong>}
-</strong></code></pre>
+```csharp
+// Eftersom || används istället för && så räcker det med att ha rätt
+//  användarnamn ELLER rätt lösenord.
+
+if (username == "micke || password == "12345")
+{
+  loggedIn = true;
+}
+```

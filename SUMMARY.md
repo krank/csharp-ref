@@ -9,7 +9,7 @@
 * [Datatyper \[…\]](grundlaeggande/datatyper/README.md)
   * [Tuples](grundlaeggande/datatyper/tuples.md)
   * [Enum](grundlaeggande/datatyper/enum.md)
-* [Fel\*](grundlaeggande/fel.md)
+* [Fel](grundlaeggande/fel.md)
 * [Typkonvertering](grundlaeggande/typkonvertering.md)
 * [Operatorer](grundlaeggande/operatorer.md)
 * [Konsolen (Console)](grundlaeggande/konsollen-console.md)
