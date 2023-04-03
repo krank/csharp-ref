@@ -50,6 +50,74 @@ public class Group
 ```
 {% endcode %}
 
+### Attribut
+
+Man kan använda _attribut_ för att få mer kontroll över databastabellerna som skapas för att motsvara modellen. För att få använda attributen måste man inkludera rätt namespaces:
+
+```csharp
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+```
+
+#### \[Table]
+
+Används för att ange tabellens namn.
+
+```csharp
+[Table("UserInfo")]
+public class User
+{
+  // ...
+}
+```
+
+#### \[Column]
+
+Används för att ange kolumnegenskaper t.ex. namn och vilken ordning kolumnen ska ha i tabellen.
+
+```csharp
+public class User
+{
+  [Column("Id", Order = 1)]
+  public int UserId { get; set; }
+  
+  [Column("Name")]
+  public string Username { get; set; } = "";
+  
+  public string Password { get; set; } = "";
+}
+```
+
+#### \[NotMapped]
+
+Används för att ange att en viss property inte ska ingå i modellen.
+
+```csharp
+public class User
+{
+  public int UserId { get; set; }
+  public string Username { get; set; } = "";
+  public string Password { get; set; } = "";
+
+  [NotMapped]
+  public string CurrentHitpoints { get; set; }
+}
+```
+
+#### \[Required]
+
+Används för att ange att en viss property måste ges ett värde och inte får vara tom. Motsvarar [NOT NULL](sqlite-kommandon.md#create-table).
+
+```csharp
+public class User
+{
+  [Required]
+  public int UserId { get; set; }
+  
+  // ... 
+}
+```
+
 ## DbContext
 
 En klass som representerar kopplingen till en databas, och som kommunikationen med database sker genom. Detta kallas en databas-kontext.
