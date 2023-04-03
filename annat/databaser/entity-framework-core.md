@@ -1,4 +1,4 @@
-# Entity Framework Core\*
+# Entity Framework Core
 
 Entity Framework Core är ett ramverk som gör att man slipper skriva SQL-kommandon själv. EF fungerar som en mellanhand – vi kan säga åt EF hur datan som ska sparas ser ut och vad som ska göras med den, och EF förvandlar det till databaskommandon åt oss, och sköter interaktionen med databasen.
 
@@ -181,9 +181,68 @@ Om man vill kan man skriva sina egna SQL-frågor istället för att gå via Linq
 
 ## Modifiera data
 
+När det gäller CUD-operationer (Create, Update och Delete) så innebär de att datan i den lokala databaskontexten först ändras, och sedan måste synkroniseras mot databasen. Synkroniseringen sker via metoden SaveChanges().
+
+```csharp
+using (var context = new DatabaseContext())
+{
+  // Kod som gör ändringar
+
+  context.SaveChanges();
+}
+```
+
+Körs inte SaveChanges så försvinner alltså ändringarna när programmet avslutas.
+
 ### Stoppa in data
+
+Eftersom DbSets är generiska samlingar så är det ganska enkelt att lägga in ny data i dem:
+
+```csharp
+using (var context = new DatabaseContext())
+{
+  User micke = new() { Username = "Micke", Password = "12345" };
+  Group group = new() { Name = "Coola klubben" };
+  group.Members.Add(micke);
+
+  context.Groups.Add(group);
+  context.Users.Add(micke);
+  
+  context.SaveChanges();
+}
+```
 
 ### Modifiera data
 
+Börja med att hämta det som ska ändras. Ändra på instansen. Det är allt som krävs! Entity Framework håller reda på objekt som hämtats ut, och ser till att synkronisera deras data med databasen automatiskt.
+
+```csharp
+using (var context = new DatabaseContext())
+{
+  User u = context.Users.FromSql(@$"
+    Select * 
+    from Users 
+    where Username = 'Amanda' 
+    ").FirstOrDefault();
+
+  u.Password = "password1";
+}
+```
+
 ### Ta bort data
 
+Börja med att hämta det som ska tas bort. Använd därefter Remove()-metoden för att ta bort det ur databasen.
+
+```csharp
+using (var context = new DatabaseContext())
+{
+    User u = context.Users.FromSql(@$"
+    Select * 
+    from Users 
+    where Username = 'Micke' 
+    ").FirstOrDefault();
+
+  context.Users.Remove(u);
+  context.SaveChanges();
+}
+```
