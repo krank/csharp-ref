@@ -23,7 +23,7 @@ Logiska fel är de svåraste att hitta – de hittas inte av Visual Studio (inga
 </strong><strong>//  användarnamn ELLER rätt lösenord.
 </strong><strong>
 </strong><strong>if (username == "micke || password == "12345")
-</strong>{
-  loggedIn = true;
-}
-</code></pre>
+</strong><strong>{
+</strong><strong>loggedIn = true;
+</strong><strong>}
+</strong></code></pre>
