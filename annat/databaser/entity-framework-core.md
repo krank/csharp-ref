@@ -31,7 +31,9 @@ public class User
 ```
 {% endcode %}
 
-Modellen kan inkludera komposition, vilket automatiskt leder till att en [relation ](./#relation)skapas i databasen.
+Tabellen som skapas för att lagra användare kommer att döpas till samma sak som klassen plus en plural-ändelse (Users). Som primärnyckel för tabellen används första bästa property som antingen heter Id eller klassens namn plus Id.
+
+Modellen kan inkludera [komposition](../../klasser-och-objektorientering/komposition.md), vilket automatiskt leder till att en [relation ](./#relation)skapas i databasen.
 
 {% code title="Group.cs" %}
 ```csharp
@@ -47,8 +49,6 @@ public class Group
 }
 ```
 {% endcode %}
-
-Tabellen som skapas för att lagra användare kommer att döpas till samma sak som klassen plus en plural-ändelse (Users). Som primärnyckel för tabellen används första bästa property som antingen heter Id eller klassens namn plus Id.&#x20;
 
 ## DbContext
 
@@ -145,13 +145,39 @@ Om modellen uppdateras behöver alltså en ny migration skapas och därefter beh
 
 Man hämtar data från databasen genom att använda sig av olika metoder som ingår i respektive DbSet. Ofta används [Linq-metoder](../linq/linq-metoder.md) eller [Linq-queries](../linq/linq-queries.md). Vanligast är [Where](../linq/linq-metoder.md#where).
 
-När datan som ska hämtas är lagrad i flera tabeller (dvs det finns en [relation](./#relation)), behöver man använda Include() för att den extra datan ska laddas in. Resultatet blir då att kompositionen fungerar.
+```csharp
+// Hämtar användaren Micke, förutsatt att hans lösenord är 12345.
+User u = context.Users.Where(
+  u => u.Username == "Micke" &&
+  u.Password == "12345")
+  .FirstOrDefault();
+```
 
+### Include()
 
+När datan som ska hämtas är lagrad i flera tabeller (dvs det finns en [relation](./#relation)), behöver man använda Include() för att den extra datan ska laddas in. Resultatet blir då att [kompositionen ](../../klasser-och-objektorientering/komposition.md)fungerar.
+
+```csharp
+// Hämtar grupp 1 & fyller dess Members-lista med instanser av User-klassen
+//  som får sin data från Users-tabellen.
+Group coolGroup = context.Groups
+  .Where(g => g.Id == 1)
+  .Include(g => g.Members)
+  .FirstOrDefault();
+```
 
 ### FromSql()
 
-### Include()
+Om man vill kan man skriva sina egna SQL-frågor istället för att gå via Linq. Det gör man då via FromSql-metoden. Den tar emot en formaterbar string som parameter, så använd $ framför första citattecknet. Lägg också till @ ifall du vill dela upp SQL-frågan på flera rader.
+
+```csharp
+  User u = context.Users.FromSql(@$"
+    Select * 
+    from Users 
+    where Username = 'Micke' 
+    and Password == '12345'
+    ").FirstOrDefault();
+```
 
 ## Modifiera data
 
