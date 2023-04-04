@@ -86,7 +86,7 @@
   * [RESTful client](annat/naetverk-och-internet-.../restful-client.md)
   * [Thunder](annat/naetverk-och-internet-.../thunder.md)
   * [RESTful server (Minimal API)](annat/naetverk-och-internet-.../restful-server-minimal-api/README.md)
-    * [Swagger och OpenAPI\*](annat/naetverk-och-internet-.../restful-server-minimal-api/swagger-och-openapi.md)
+    * [Swagger och OpenAPI](annat/naetverk-och-internet-.../restful-server-minimal-api/swagger-och-openapi.md)
   * [RESTful server (Web API) \[…\]](annat/naetverk-och-internet-.../restful-server/README.md)
     * [Controllers](annat/naetverk-och-internet-.../restful-server/controllers.md)
     * [Models/dataklasser](annat/naetverk-och-internet-.../restful-server/models.md)

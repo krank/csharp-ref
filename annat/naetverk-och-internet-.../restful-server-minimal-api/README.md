@@ -15,7 +15,7 @@ Nedanstående är ett absolut minimalt, enkelt projekt som helt enkelt skickar "
 {% code lineNumbers="true" %}
 ```csharp
 // Skapa en webbapplikation-instans
-var app = WebApplication.Create(args);
+WebApplication appapp = WebApplication.Create(args);
 
 // Använd HTTPS när det går
 app.UseHttpsRedirection();
@@ -35,7 +35,11 @@ static string GimmeHello()
 ```
 {% endcode %}
 
-## MapGet(), MapPost(), MapPut() och MapDelete()
+## WebApplication
+
+WebApplication-objektet är det som sköter kommunikationen över webben och som ser till att anropa rätt metod när rätt HTTP-request skickas till programmet.
+
+### MapGet(), MapPost(), MapPut() och MapDelete()
 
 Dessa metoder kopplar en [HTTP-metod](../rest-och-crud.md) (GET, POST, PUT eller DELETE) och en [REST-resurs](../url-er-och-rest.md#rest-resurs) till en specifik C#-metod. Detta kallas "mapping".
 
@@ -120,7 +124,7 @@ static void AddNewHero(Hero h)
 
 När en användare då skickar in JSON-kod som [body ](../rest-och-crud.md#header-och-body)i sin HTTP-request till servern, så deserialiseras koden automatiskt till en instans av klassen och resultatet hamnar i parametern när metoden anropas.
 
-## Results
+### Results
 
 För att skicka någon annan statuskod än OK, gör så att C#-metoderna returnerar Results.
 
@@ -150,6 +154,21 @@ app.Urls.Add("http://*:3000");
 ```
 
 Ovanstående gör att man kan komma åt servern både genom url:en localhost:3000 (på den lokala datorn) och genom att skriva datorns ip-nummer följt av 3000 (på den lokala datorn eller på någonnannan dator på samma nätverk).
+
+## WebApplicationBuilder
+
+Ifall man vill göra något lite mer avancerat med sin WebApplication, så använder man en WebApplicationBuilder för att konstruera den. Buildern fungerar då som en "fabrik" – man skapar den, gör inställningar, och säger sedan åt den att skapa en WebApplication.
+
+```csharp
+WebApplicationBuilder builder = WebApplication.CreateBuilder();
+
+// Lägg till funktionalitet för Swagger/OpenAPI
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+// Bygg själva applikationen
+WebApplication app = builder.Build();
+```
 
 ## Använda HTTPS
 
