@@ -1,4 +1,4 @@
-# Try-catch
+# Try-catch och Exception
 
 ## Try och catch
 
@@ -10,7 +10,7 @@ int[] nums = {4, 5, 7};
 
 try
 {
-  Console.WriteLine(nums[8]);
+  Console.WriteLine(nums[8]); // Orsakar ett IndexOutOfRange-fel
 }
 catch
 {
@@ -85,7 +85,7 @@ static int DoThing(int i)
 
 ### Kasta upp
 
-Om du catch:ar ett fel du inte vill hantera direkt, så kan du helt enkelt använda throw för att tvinga den som anropade den nuvarande metoden att hantera felet.
+Om du catch:ar ett fel du inte vill hantera direkt, så kan du helt enkelt använda **throw** för att tvinga den som anropade den nuvarande metoden att hantera felet.
 
 {% code lineNumbers="true" %}
 ```csharp

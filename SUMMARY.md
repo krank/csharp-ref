@@ -24,7 +24,7 @@
 * [Matematik (Math)](grundlaeggande/matematik-math.md)
 * [Vektorer (Numerics)](grundlaeggande/vektorer-numerics.md)
 * [Datum och tid](grundlaeggande/datum-och-tid.md)
-* [Try-catch](grundlaeggande/try-catch.md)
+* [Try-catch och Exception](grundlaeggande/try-catch.md)
 * [Namngivning](grundlaeggande/namngivning.md)
 * [Begrepp](grundlaeggande/begrepp.md)
 * [Reference vs value types](grundlaeggande/reference-vs-value-types.md)
