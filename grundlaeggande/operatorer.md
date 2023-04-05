@@ -126,6 +126,26 @@ bool z = (3 == 2) || x; // true; x är true även om 3 inte är samma som 2.
 
 ## Specialoperatorer
 
+### . Member access
+
+Används för att komma åt variabler och metoder som ingår i andra objekt. Varje string har till exempel en inbyggd egenskap, en "medlem", som heter Length.
+
+```csharp
+string s = "Hello";
+Console.WriteLine(s.Length); // 5
+Console.WriteLine("Worlds".Length); // 6
+```
+
+### .? Null conditional
+
+Används precis som Member access-operatorn men gör att man inte får ett [runtime-fel](fel.md#runtime-fel-exceptions) ifall objektet är null.
+
+```csharp
+string s = null;
+Console.WriteLine("Längd: " + s?.Length); // Längd: 
+Console.WriteLine("Längd: " + s.Length); // Runtime-fel
+```
+
 ### ? : Ternary
 
 Ternary-operatorn fungerar som en förkortad if-sats och består av tre delar – ett villkor, ett värde som gäller ifall villkoret är sant och ett värde som gäller ifall villkoret är falskt.
