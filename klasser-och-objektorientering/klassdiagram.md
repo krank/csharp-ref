@@ -18,6 +18,16 @@ I ett klassdiagram beskrivs klassen i tre sektioner:
 * \- betyder "private"
 * \# betyder "protected"
 
+```mermaid
+classDiagram
+  class Character{
+        - hp: int
+        - name: string 
+        + Hurt(amount: int) void
+        + Attack() int
+  }
+```
+
 <img src="../.gitbook/assets/image (16).png" alt="" data-size="original">&#x20;
 
 ## Arv i klassdiagram
