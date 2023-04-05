@@ -19,16 +19,19 @@ I ett klassdiagram beskrivs klassen i tre sektioner:
 * \# betyder "protected"
 
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': 
+{ 'primaryBorderColor': 'black', 
+'primaryColor': 'white'
+}}}%%
+
 classDiagram
   class Character{
-        - hp: int
-        - name: string 
-        + Hurt(amount: int) void
+        - hp : int
+        - name : string 
+        + Hurt(amount : int) void
         + Attack() int
   }
 ```
-
-<img src="../.gitbook/assets/image (16).png" alt="" data-size="original">&#x20;
 
 ## Arv i klassdiagram
 
@@ -38,7 +41,25 @@ Pilarna pekar alltid FRÅN subklassen TILL basklassen.
 
 Subklassernas diagram ritas på samma sätt som basklassens. Man skriver in klassens variabler och metoder, inklusive metoder som använder [override](polymorfism/virtual-override.md). Däremot skriver man inte in variabler eller metoder som bara ärvs från basklassen.
 
-<img src="../.gitbook/assets/image (17).png" alt="" data-size="original">&#x20;
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': 
+{ 'primaryBorderColor': 'black', 
+'primaryColor': 'white'
+}}}%%
+
+classDiagram
+  class Character{
+        -hp : int
+        -name : string 
+        +Hurt(amount : int) void
+        +Attack() int
+  }
+  class Hero{
+        -xp : int
+        +GetLevel() int
+  }
+  Character <|-- Hero
+```
 
 ## Vanliga frågor
 
