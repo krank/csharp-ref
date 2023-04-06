@@ -116,6 +116,7 @@
   * [Felsökning](mjukvara/visual-studio-code/felsoekning.md)
 * [Git & GitHub \[…\]](mjukvara/git-and-github/README.md)
   * [Git-begrepp](mjukvara/git-and-github/git-begrepp.md)
+* [Andra verktyg](mjukvara/andra-verktyg.md)
 
 ## Tekniker
 
