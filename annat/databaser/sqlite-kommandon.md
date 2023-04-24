@@ -224,7 +224,7 @@ Nackdelen blir att vi får dubletter – klassnamnen och mentorernas namn står 
 
 Här är relationen att kolumnen **classid** i tabellen **students** innehåller siffror som hör ihop med kolumnen **id** i tabellen **classes**. Observera att det är classes-tabellens **primärnyckel** som används.
 
-För att hindra användare från att lägga in icke-giltiga värden classid-kolumnen så kan relationen skrivas in i tabellens definition när den skapas (det kan också göras i efterhand via ALTER TABLE):
+För att hindra användare från att lägga in icke-giltiga värden classid-kolumnen så kan relationen skrivas in i tabellens definition när den skapas (Det kan INTE göras i efterhand!):
 
 ```sql
 CREATE TABLE classes (
@@ -239,7 +239,7 @@ CREATE TABLE students (
 	surname TEXT NOT NULL,
 	pnumber TEXT NOT NULL,
 	class_id INTEGER NOT NULL,
-	FOREIGN KEY(classid) REFERENCES classes(id)
+	FOREIGN KEY(class_id) REFERENCES classes(id)
 );
 ```
 
