@@ -3,7 +3,7 @@
 Visual Studio Code är i grunden bara ett program för att redigera text – allt annat sköts egentligen av andra, separata program. När man programmerar i C# så är ett av de programmen **dotnet**.
 
 * Varje gång ett program till exempel körs så anropar Code först dotnet för att omvandla källkoden till körbara filer.
-* Varje gång C# Toolbox används för att skapa ett nytt projekt anropas dotnet med olika tillval för att skapa en solution och ett nytt tomt C#-projekt.
+* Varje gång C# Dev Kit används för att skapa ett nytt projekt anropas dotnet med olika tillval för att skapa en solution och ett nytt tomt C#-projekt.
 
 Man kan också köra dotnet själv, manuellt i terminalen / kommandotolken. Egentligen behövs inte Visual Studio Code – man kan skriva sin kod i Anteckningar eller nästan vilket textredigeringsprogram som helst.
 

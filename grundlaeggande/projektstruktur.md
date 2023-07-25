@@ -8,7 +8,7 @@ Oftast brukar C#-projektet också ingå i en _solution_ – ett slags samling av
 
 ![](<../.gitbook/assets/image (39).png>)
 
-Mappen som skapas av C# Toolbox har följande struktur:
+Mappen som skapas av C# Dev Kit har följande struktur:
 
 * .vscode
 * Mapp med projektet
