@@ -41,12 +41,7 @@ Dessa metoder används för att skicka en request till en RESTful API-server och
 
 Välj rätt metod:
 
-| Metod     | HTTP-metod | Aktivitet               |
-| --------- | ---------- | ----------------------- |
-| PostAsync | POST       | Skapa en ny resurs      |
-| GetAsync  | GET        | Hämta data om en resurs |
-| PutAsync  | PUT        | Ändra en resurs         |
-| DelAsync  | DELETE     | Ta bort en resurs       |
+<table><thead><tr><th width="160.33333333333331">Metod</th><th width="139">HTTP-metod</th><th width="245.66666666666669">Aktivitet</th></tr></thead><tbody><tr><td>PostAsync</td><td>POST</td><td>Skapa en ny resurs</td></tr><tr><td>GetAsync</td><td>GET</td><td>Hämta data om en resurs</td></tr><tr><td>PutAsync</td><td>PUT</td><td>Ändra en resurs</td></tr><tr><td>DelAsync</td><td>DELETE</td><td>Ta bort en resurs</td></tr></tbody></table>
 
 Metoderna tar alla emot en [RestRequest](restful-client.md#restrequest)-instans och returnerar en [Task](../threading/task.md). Denna Task ger sedan ifrån sig, som Result, ett [RestResponse](restful-client.md#restresponse).
 

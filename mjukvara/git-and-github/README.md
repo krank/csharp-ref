@@ -23,7 +23,7 @@ Kan vara väldigt bra:
 ### Skapa ett projekt och göra det till ett repository + koppla till GitHub (en gång per projekt)
 
 * Se till att ha [git](https://git-scm.com/) installerat, och VSCode-tillägget "gitignore".
-* Skapa projektet [som vanligt](../visual-studio-code/nya-projekt.md#skapa-nytt-konsollprojekt).
+* Skapa projektet [som vanligt](../../lathund-skapa-projekt.md).
 * Source Control → Initialize Repository.
 * Tryck F1 och sök "add gitignore". Välj **Visual Studio**.
 * Tryck "Publish Branch"

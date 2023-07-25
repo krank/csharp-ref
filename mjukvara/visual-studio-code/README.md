@@ -1,6 +1,6 @@
 # Visual Studio Code \[…]
 
-[Extensions](extensions.md) | [Inställningar](instaellningar.md) | [Nya projekt](nya-projekt.md) | [Debugging](debugging.md) | [Snabbkommandon](snabbkommandon.md) | [Snippets](snippets.md) | [Felsökning](felsoekning.md)
+[Extensions](extensions.md) | [Inställningar](instaellningar.md) | [Debugging](debugging.md) | [Snabbkommandon](snabbkommandon.md) | [Snippets](snippets.md) | [Felsökning](felsoekning.md)
 
 Visual Studio Code (VS Code) är en ny kod-editor från Microsoft som är betydligt snabbare och enklare än vanliga Visual Studio. Den funkar också bättre till många saker, även om den saknar en del av de mer avancerade verktygen som finns i det större programmet.
 

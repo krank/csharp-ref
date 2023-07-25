@@ -109,7 +109,6 @@
 * [Visual Studio Code \[…\]](mjukvara/visual-studio-code/README.md)
   * [Extensions](mjukvara/visual-studio-code/extensions.md)
   * [Inställningar](mjukvara/visual-studio-code/instaellningar.md)
-  * [Nya projekt](mjukvara/visual-studio-code/nya-projekt.md)
   * [Debugging](mjukvara/visual-studio-code/debugging.md)
   * [Snabbkommandon](mjukvara/visual-studio-code/snabbkommandon.md)
   * [Snippets](mjukvara/visual-studio-code/snippets.md)

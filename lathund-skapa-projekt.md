@@ -4,15 +4,15 @@
 
 * Starta Visual Studio Code
 * **SKAPA PROJEKTET**
-  * Stäng nuvarande projekt: File -> Close folder
-  * Explorer -> Create .NET Project (C# Dev Kit)
+  * Stäng nuvarande projekt: File → Close folder
+  * Explorer → Create .NET Project (C# Dev Kit)
   * Välj "Console App"
   * Skapa och välj en mapp att skapa projektet i.
   * Välj ett namn på projektet.
     * Namnet bör vara i formen PlatformGame (inga mellanslag, stor bokstav i början av varje ord)
   * Öppna csproj-filen och ta bort (eller kommentera bort) raden med `<Nullable>`.
 * **GÖR SÅ PROJEKTET KAN KÖRAS**
-  * F1 -> "C#: Generate Assets for Build and Debug".
+  * F1 → "C#: Generate Assets for Build and Debug".
   * Run (ikonen med play-knapp och insekt)
     * Kugghjulet för att öppna launch.json
     * Leta rätt på "console": "internalConsole". Bör vara på rad 17.
