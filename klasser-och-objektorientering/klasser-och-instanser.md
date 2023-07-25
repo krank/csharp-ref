@@ -8,15 +8,19 @@ Sedan skapar man **instanser** av klassen - de konkreta, faktiska fienderna. All
 
 ## Skapa klasser
 
-Generellt bör varje klass läggas i sin egen fil. Med C# Toolbox of Productivity finns ett snabbt och enkelt sätt:
+Generellt bör varje klass läggas i sin egen fil. Med C# Dev Kit finns ett snabbt och enkelt sätt:
 
-* **Högerklicka på mappen** klassen/filen ska skapas i.
-* Välj **"Add a new C# Class file"**.
-* Skriv in namnet på klassen – **glöm inte stor bokstav**!
-* **Ta bort namespace**-kodblocket kring klassen; det behöver vi sällan.
+* Gå till **Explorer** och öppna **Solution Explorer**.
+* **Högerklicka på projektet** klassen/filen ska läggas till i.
+* Välj **"Add new File"**.
+* Välj **"Class"**.
+* Skriv in namnet på klassen – glöm inte [namngivning ](../grundlaeggande/namngivning.md)med **PascalCase**!
+* Skriv in skriv in **using** och namnet på klassens **namespace** högst upp i Program.cs
 
 {% code title="Goomba.cs" lineNumbers="true" %}
 ```csharp
+namespace PlumberPlatformer
+
 class Goomba
 {
   // Klassvariabler
@@ -27,9 +31,16 @@ class Goomba
 ```
 {% endcode %}
 
+{% code title="Program.cs" %}
+```csharp
+using PlumberPlatformer;
+
+```
+{% endcode %}
+
 ## Skapa instanser
 
-Kodordet `new` skapar **nya instanser** i minnet (heapen).
+Kodordet `new` skapar **nya instanser** i minnet ([heapen](../grundlaeggande/reference-vs-value-types.md#minnet-stacken-och-heapen)).
 
 Därefter behöver en [referens ](../grundlaeggande/reference-vs-value-types.md)till instansen lagras någonstans, till exempel i en variabel.
 

@@ -14,10 +14,14 @@ Om man har en länk till en extension – som de nedan – kan man helt enkelt k
 
 ### Grunduppsättning för C\#
 
-* [C#](https://www.google.com/url?q=https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3Dms-vscode.csharp\&sa=D\&sntz=1\&usg=AFQjCNGOzgSFj14Pbd9ut66JAvh0loJsEw) – Ger Visual Studio Code stöd för C#
-* [C# Toolbox of Productivity](https://marketplace.visualstudio.com/items?itemName=RichardZampieriprog.csharp-snippet-productivity) – Lägger till en del extra användbara genvägar och funktioner, t.ex. för att skapa nya projekt och klasser.
-* [gitignore](https://www.google.com/url?q=https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3Dcodezombiech.gitignore\&sa=D\&sntz=1\&usg=AFQjCNHu8aUEHuuoWIdAZQcCdvDqnSWhSQ) – Underlättar arbetet med git och Visual Studio Code. Om du söker efter den, se till att ta den av CodeZombie!
-* [NuGet Gallery](https://www.google.com/url?q=https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3Dpatcx.vscode-nuget-gallery\&sa=D\&sntz=1\&usg=AFQjCNGESnjNCe20EX\_KwyQS6\_sTUBYv5A) – Underlättar installationen av externa bibliotek och paket, t.ex. Raylib.
+* [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) – Get Visual Studio Code stöd för C# & underlättar projekthantering.
+  * **OBS:** Gå till "IntelliCode for C# Dev Kit" som automatiskt installeras, och stäng av (tryck Disable)! Den kan vara användbar, men inte medan man lär sig!
+* [gitignore](https://marketplace.visualstudio.com/items?itemName=codezombiech.gitignore) – Underlättar arbetet med git och Visual Studio Code. Om du söker efter den, se till att ta den av CodeZombie!
+* [NuGet Gallery](https://marketplace.visualstudio.com/items?itemName=patcx.vscode-nuget-gallery) – Underlättar installationen av externa bibliotek och paket, t.ex. Raylib.
+* [Hide Comments](https://marketplace.visualstudio.com/items?itemName=eliostruyf.vscode-hide-comments) – Gömmer alla kommentarer. Används när du presenterar din kod.
+* **INAKTUELLA:**
+  * [C#](https://www.google.com/url?q=https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3Dms-vscode.csharp\&sa=D\&sntz=1\&usg=AFQjCNGOzgSFj14Pbd9ut66JAvh0loJsEw) – Ger Visual Studio Code stöd för C# (Installeras automatiskt med C# Dev Kit)
+  * [C# Toolbox of Productivity](https://marketplace.visualstudio.com/items?itemName=RichardZampieriprog.csharp-snippet-productivity) – Lägger till en del extra användbara genvägar och funktioner, t.ex. för att skapa nya projekt och klasser. (Har slutat utvecklas, och C# Dev Kit funkar bättre)
 
 ### Bonus
 
