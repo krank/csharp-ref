@@ -28,7 +28,7 @@ Winget bör finnas och fungera i Windows 10 och 11; använder du en äldre versi
 {% hint style="info" %}
 **TIPS:** winget kan användas för att installera allt möjligt, och kan också hålla programmen uppdaterade.
 
-Om du skriver <mark style="color:orange;">`winget update`</mark> så får du en lista med program som kan uppdateras, och du kan då antingen skriva <mark style="color:orange;">`winget update <namnet på programmet>`</mark> för att uppdatera ett specifikt program eller <mark style="color:orange;">`winget update --all`</mark> för att uppdatera alla.
+Om du skriver <mark style="color:orange;">`winget upgrade`</mark> så får du en lista med program som kan uppdateras, och du kan då antingen skriva <mark style="color:orange;">`winget upgrade <namnet på programmet>`</mark> för att uppdatera ett specifikt program eller <mark style="color:orange;">`winget upgrade --all`</mark> för att uppdatera alla.
 {% endhint %}
 
 ## Hittat ett fel?
