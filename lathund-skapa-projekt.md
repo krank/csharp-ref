@@ -37,7 +37,7 @@
 * Projektnamnet – inga mellanslag, börja inte med siffror.
 * Location: Välj mapp för projektet.
 * Solution name: Genereras automatiskt från projektnamnet.
-* Framework: 5.0 eller 6.0
+* Framework: 5.0 eller senare
 * Tryck "Create Project"
 * När dialogrutan dyker upp och frågar, svara "Yes" på att du vill skapa filerna som krävs. Om den inte dyker upp, tryck på "Run & Debug" och klicka på den nedre knappen ("Generate assets…").
 * Dubbelkolla så OmniSharp går igång (den lilla eldsflamman nere till vänster).

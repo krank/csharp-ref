@@ -3,8 +3,10 @@
 Saker som behövs:
 
 * [Visual Studio Code](https://code.visualstudio.com/)
+  * `winget install Microsoft.VisualStudioCode`
   * [Gitignore-extension](https://marketplace.visualstudio.com/items?itemName=codezombiech.gitignore)
 * [Git-scm](https://git-scm.com/)
+  * `winget install git.git`
 * Ett konto på [GitHub](https://github.com/).
 
 Kan vara väldigt bra:

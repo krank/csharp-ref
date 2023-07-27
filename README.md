@@ -9,11 +9,27 @@ Detta är en hemsida med förenklade förklaringar och exempel för C# och Visua
 
 ## Vad behöver jag först?
 
-* Installera DotNet SDK – version 6 eller senare: [https://dotnet.microsoft.com/en-us/download](https://dotnet.microsoft.com/en-us/download)
+* Installera .NET SDK – version 6 eller senare: [https://dotnet.microsoft.com/en-us/download](https://dotnet.microsoft.com/en-us/download)
 * Installera [Visual Studio Code](mjukvara/visual-studio-code/)&#x20;
   * Och lämpliga [extensions](mjukvara/visual-studio-code/extensions.md).
 * Installera [Git-scm](mjukvara/git-and-github/) och [ställ in namn och email](mjukvara/git-and-github/#foersta-gangen-efter-ny-git-installation).
 * Kolla [lathunden ](lathund-skapa-projekt.md)för hur man skapar nya projekt.
+
+Det enklaste sättet att installera .NET SDK, Visual Studio Code och Git-scm är via **winget**. Öppna ett terminalfönster/kommandotolken och kör:
+
+```powershell
+winget install Microsoft.VisualStudioCode
+winget install git.git
+winget install Microsoft.DotNet.SDK.7
+```
+
+Winget bör finnas och fungera i Windows 10 och 11; använder du en äldre version av windows kanske du får installera manuellt istället.
+
+{% hint style="info" %}
+**TIPS:** winget kan användas för att installera allt möjligt, och kan också hålla programmen uppdaterade.
+
+Om du skriver <mark style="color:orange;">`winget update`</mark> så får du en lista med program som kan uppdateras, och du kan då antingen skriva <mark style="color:orange;">`winget update <namnet på programmet>`</mark> för att uppdatera ett specifikt program eller <mark style="color:orange;">`winget update --all`</mark> för att uppdatera alla.
+{% endhint %}
 
 ## Hittat ett fel?
 
