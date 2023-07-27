@@ -26,7 +26,7 @@ winget install Microsoft.DotNet.SDK.7
 Winget bör finnas och fungera i Windows 10 och 11; använder du en äldre version av windows kanske du får installera manuellt istället.
 
 {% hint style="info" %}
-**TIPS:** winget kan användas för att installera allt möjligt, och kan också hålla programmen uppdaterade.
+**TIPS:** winget kan användas för att installera [allt möjligt](https://winget.run/), och kan också hålla programmen uppdaterade.
 
 Om du skriver <mark style="color:orange;">`winget upgrade`</mark> så får du en lista med program som kan uppdateras, och du kan då antingen skriva <mark style="color:orange;">`winget upgrade <namnet på programmet>`</mark> för att uppdatera ett specifikt program eller <mark style="color:orange;">`winget upgrade --all`</mark> för att uppdatera alla.
 {% endhint %}
