@@ -42,7 +42,13 @@ int x = 5 % 2;
 
 x blir lika med 1, eftersom det är vad man får kvar när man delat 5 med 2.
 
-## Snabba
+## Tilldelning
+
+### = Tilldela ett värde till en variabel
+
+```csharp
+i = 6;
+```
 
 ### += Addera något till variabelns värde.
 
