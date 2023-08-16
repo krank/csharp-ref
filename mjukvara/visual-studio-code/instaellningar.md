@@ -8,6 +8,12 @@ Man kan antingen bläddra själv, eller söka efter namnet på den inställning 
 
 VS Code sparar alla inställningar i en JSON-fil, där varje inställning har ett unikt namn. Om man vill kan man redigera denna JSON-fil manuellt. För att få fram den, ta fram kommandopaletten (F1) och kör **Preferences: Open User Settings (JSON)**.
 
+## Kör/debugga i external terminal
+
+Tyvärr gäller det bara för snabbknappen uppe i högra hörnet, men man kan i varje fall göra så att program man kör den vägen startar i "external terminal".
+
+Sök efter **csharp.debug.console** och ändra inställningen till "externalTerminal".
+
 ## Få bort "references"
 
 Sök efter **csharp.referencesCodeLens.enabled**, och kryssa ur "Csharp › References Code Lens: Enabled".
@@ -43,8 +49,8 @@ I .vscode-mappen kan det finnas en "settings.json", och om det inte finns en kan
 {% code title="settings.json" %}
 ```json
 {
-  "dotnet.defaultSolution": "CsharpTest.sln",
   "csharp.referencesCodeLens.enabled": false,
+  "csharp.debug.console": "externalTerminal",
   "explorer.compactFolders": false,
   "explorer.sortOrderLexicographicOptions": "unicode",
   "git.postCommitCommand": "push"
