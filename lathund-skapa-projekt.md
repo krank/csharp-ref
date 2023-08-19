@@ -1,7 +1,5 @@
 # Lathund: Skapa projekt
 
-
-
 * Starta Visual Studio Code
 * **SKAPA PROJEKTET**
   * Stäng nuvarande projekt: File → Close folder
@@ -12,12 +10,11 @@
     * Namnet bör vara i formen PlatformGame (inga mellanslag, stor bokstav i början av varje ord)
   * Öppna csproj-filen och ta bort (eller kommentera bort) raden med `<Nullable>`.
 * **GÖR SÅ PROJEKTET KAN KÖRAS**
-  * F1 → "C#: Generate Assets for Build and Debug".
-  * Run (ikonen med play-knapp och insekt)
-    * Kugghjulet för att öppna launch.json
-    * Leta rätt på "console": "internalConsole". Bör vara på rad 17.
-    * Byt ut "internalConsole" mot "externalTerminal"
-    * Spara och stäng launch.json
+  * Gå till "run and debug" (**Ctrl+Shift+D**, eller ikonen med play-knapp och insekt).
+  * Klicka på "**create a launch.json file**". Välj ".NET 5+ and .NET Core".
+  * Leta rätt på **`console": "internalConsole"`** i filen som skapas. Bör vara på **rad 17**.
+  * Byt ut "internalConsole" mot "externalTerminal"
+  * Spara och stäng launch.json
 * **SKAPA GIT-REPOSITORY**
   * F1 → Add gitignore
     * Välj Visual Studio
