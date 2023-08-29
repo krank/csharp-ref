@@ -8,6 +8,10 @@ Man kan antingen bläddra själv, eller söka efter namnet på den inställning 
 
 VS Code sparar alla inställningar i en JSON-fil, där varje inställning har ett unikt namn. Om man vill kan man redigera denna JSON-fil manuellt. För att få fram den, ta fram kommandopaletten (F1) och kör **Preferences: Open User Settings (JSON)**.
 
+## Få bort "ghost text" för textförslag
+
+En störande sak Code börjat göra är att visa förslag som grå text mitt i ens kod. Vill man inte att det  ska funka så, så kan man söka efter **editor.suggest.preview** och kryssa ur rutan.
+
 ## Kör/debugga i external terminal
 
 Tyvärr gäller det bara för snabbknappen uppe i högra hörnet, men man kan i varje fall göra så att program man kör den vägen startar i "external terminal".
