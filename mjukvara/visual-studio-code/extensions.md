@@ -10,6 +10,18 @@ Där syns vilka som just nu är installerade, och man kan även söka efter nya 
 
 Om man har en länk till en extension – som de nedan – kan man helt enkelt klicka på länken, sedan "Install" och sedan låta webbäsaren öppna Visual Studio Code och installera extensionen.
 
+{% hint style="info" %}
+**TIPS:** Man kan installera extensions via terminalen/kommandotolken också:
+
+`code --install-extension ms-dotnettools.csdevkit`
+
+`code --install-extension codezombiech.gitignore`
+
+`code --install-extension patcx.vscode-nuget-gallery`
+
+`code --install-extension eliostruyf.vscode-hide-comments`
+{% endhint %}
+
 ## Användbara extensions
 
 ### Grunduppsättning för C\#
