@@ -1,8 +1,41 @@
-# String-manipulering
+# Strings
 
 En string är i C# alltid oföränderlig; man kan inte ändra direkt i en string. Men man kan använda olika metoder för att skapa **nya versioner** av existerande strings.
 
-## Replace()
+## Escape-sekvenser
+
+Genom att skriva \ följt av ett annat tecken kan man få vissa specialeffekter. \n är till exempel **ny rad**.
+
+```csharp
+Console.WriteLine("Detta är en rad\nDetta är en annan rad");
+```
+
+Andra användbara sekvenser är:
+
+* **`\\`** skriver ut ett faktiskt \\-tecken
+* **`\"`** skriver ut ett citattecken
+* **`\'`** skriver ut ett enkelt citattecken
+
+## String interpolation
+
+Genom att skriva $ framför citattecknet kan man lägga in variabler och även kod mitt i sina strings, mellan {}. Det viktiga är att det man skriver in antingen är en string, kan konverteras till en string eller blir en string när koden körs.
+
+```csharp
+string name = "Mikael";
+Console.WriteLine($"Hello {name} how are you today?");
+```
+
+## Bokstavliga strings
+
+Genom att skriva @ framför citattecknet stänger man av escape-sekvenser. Detta är väldigt praktiskt ifall man vill lägga in ASCII-art eller använda många '\\-tecken.
+
+```csharp
+Console.Writeline(@"\\\\\--- inga problem ---/////");
+```
+
+## String-metoder
+
+### Replace()
 
 Byter ut ett tecken eller en del-string.
 
@@ -14,7 +47,7 @@ string newString = oldString.Replace("Mikael", "Micke");
 ```
 {% endcode %}
 
-## Substring()
+### Substring()
 
 Returnerar en del av stringen. Tar emot startposition och längd som parametrar. Anges bara en parameter så antas längden vara resten av stringen.
 
@@ -28,7 +61,7 @@ string sub2 = oldString.Substring(2); // sub2 blir "tta är en string"
 ```
 {% endcode %}
 
-## Trim()
+### Trim()
 
 Returnerar en kopia av stringen där mellanslag och andra "tomma" tecken tagits bort från början och slutet.
 
@@ -38,7 +71,7 @@ string clean = oldString.Trim();
 
 Det finns också `TrimEnd` och `TrimStart` ifall man bara vill trimma slutet eller början av stringen.
 
-## Insert()
+### Insert()
 
 Returnerar en kopia av stringen där en annan string stoppats in på en angiven plats. Tar emot en position och en string som parametrar.
 
@@ -51,7 +84,7 @@ string nyFolk = folk.insert(5, " och herbert");
 ```
 {% endcode %}
 
-## Contains()
+### Contains()
 
 Kollar om en string innehåller en annan string, t.ex. ifall "haj" finns i texten "en haj hoppar över en björn". Returnerar true om den finns, false om den inte gör det.
 
@@ -67,7 +100,7 @@ if (hasAShark == true)
 ```
 {% endcode %}
 
-## IndexOf()
+### IndexOf()
 
 Returnerar positionen för den första plats i stringen där en annan string finns. Tar emot något att söka efter som parameter.
 
@@ -80,8 +113,6 @@ int mellanslagPlats = folk.IndexOf(" ");
 {% endcode %}
 
 Resultatet av ovanstående blir att variabeln kimPlats får värdet 10 och att mellanslagPlats får värdet 5. Positionssiffrorna börjar på 0.
-
-## Stora och små bokstäver
 
 ### ToUpper()
 
@@ -101,9 +132,9 @@ string small = oldString.ToLower();
 
 Denna används ofta för att till exempel förvandla strings man fått in från en användare så att det inte spelar någon roll ifall hen svarat t.ex. JA, Ja, jA eller ja.
 
-## Sätta ihop och ta isär
+### Sätta ihop och ta isär
 
-### String.Join()
+#### String.Join()
 
 Sätter ihop alla element i en array till en string. Tar emot två parametrar; en separator som placeras mellan elementen och en array med de element som ska sättas ihop.
 
@@ -116,7 +147,7 @@ string folk = String.Join(" och ", names);
 ```
 {% endcode %}
 
-### Split()
+#### Split()
 
 Returnerar en array som består av en uppdelad string. Tar emot en separator som parameter. Separatorn kan bara vara ett ensamt tecken, en **char**.
 
