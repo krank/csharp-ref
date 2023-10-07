@@ -11,10 +11,8 @@
   * Öppna csproj-filen och ta bort (eller kommentera bort) raden med `<Nullable>`.
 * **GÖR SÅ PROJEKTET KAN KÖRAS**
   * Gå till "run and debug" (**Ctrl+Shift+D**, eller ikonen med play-knapp och insekt).
-  * Klicka på "**create a launch.json file**". Välj ".NET 5+ and .NET Core".
-  * Leta rätt på **`console": "internalConsole"`** i filen som skapas. Bör vara på **rad 17**.
-  * Byt ut "internalConsole" mot "externalTerminal"
-  * Spara och stäng launch.json
+  * Klicka på "**create a launch.json file**". Välj "C#".
+    * Se till så att du [**ställt in så kod körs i ett separat fönster**](mjukvara/visual-studio-code/instaellningar.md#koer-debugga-i-external-terminal).
 * **SKAPA GIT-REPOSITORY**
   * F1 → Add gitignore
     * Välj Visual Studio

@@ -14,7 +14,7 @@ En störande sak Code börjat göra är att visa förslag som grå text mitt i e
 
 ## Kör/debugga i external terminal
 
-Tyvärr gäller det bara för snabbknappen uppe i högra hörnet, men man kan i varje fall göra så att program man kör den vägen startar i "external terminal".
+I vanliga fall visas all output från koden i Visual Studio Codes egna interna terminalfönster. Det är inte idealiskt, så den här inställningen gör så att koden istället körs i ett separat terminalfönster.
 
 Sök efter **csharp.debug.console** och ändra inställningen till "externalTerminal".
 
