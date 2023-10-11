@@ -13,6 +13,8 @@
   * Gå till "run and debug" (**Ctrl+Shift+D**, eller ikonen med play-knapp och insekt).
   * Klicka på "**create a launch.json file**". Välj "C#".
     * Se till så att du [**ställt in så kod körs i ett separat fönster**](mjukvara/visual-studio-code/instaellningar.md#koer-debugga-i-external-terminal).
+  * Alternativt: **F1 → .NET: Generate Assets for Build and Debug**
+    * I den launch.json som skapas, byt ut `internalConsole` mot `externalTerminal`.
 * **SKAPA GIT-REPOSITORY**
   * F1 → Add gitignore
     * Välj Visual Studio

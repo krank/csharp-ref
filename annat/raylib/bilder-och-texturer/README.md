@@ -18,6 +18,10 @@ Skillnaden är att Images kan _redigeras_. Textures kan _ritas ut till skärmen_
 **Observera** att det saknas stöd för jpg – detta eftersom jpg är väldigt ovanligt i spel.
 {% endhint %}
 
+{% hint style="info" %}
+**Observera** att alla bilder är [**resursfiler**](../../../filhantering/resursfiler.md). Det betyder att du måste krångla lite för att vara säker på att programmet kan hitta dem.
+{% endhint %}
+
 ## [Texture](texture.md)
 
 En Texture är en bild som är sparad i grafikkortets minne (VRAM), och är redo att ritas ut på skärmen. Man kan skapa en Texture utifrån en [Image ](./#image)eller läsa in en bildfil från hårddisken direkt.
