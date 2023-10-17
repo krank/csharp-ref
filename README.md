@@ -4,12 +4,12 @@ Detta är en hemsida med förenklade förklaringar och exempel för C# och Visua
 
 **Se även:**
 
-* [Progdocs](http://127.0.0.1:5000/s/t567cGmgFsbOXYO6QFYM/) – en portal med olika dokumentations-sajter som denna.
-* [Unity](http://127.0.0.1:5000/s/-MJTeBJlEweD3YcPwKkg/) – en sida med förenklade förklaringar och exempel för Unity och C#
+* [Progdocs](http://127.0.0.1:5000/o/z5sgNMMcAnOUt1fqvUGW/s/t567cGmgFsbOXYO6QFYM/) – en portal med olika dokumentations-sajter som denna.
+* [Unity](http://127.0.0.1:5000/o/z5sgNMMcAnOUt1fqvUGW/s/-MJTeBJlEweD3YcPwKkg/) – en sida med förenklade förklaringar och exempel för Unity och C#
 
 ## Vad behöver jag först?
 
-* Installera .NET SDK – version 6 eller senare: [https://dotnet.microsoft.com/en-us/download](https://dotnet.microsoft.com/en-us/download)
+* Installera .NET SDK – version 7 eller senare: [https://dotnet.microsoft.com/en-us/download](https://dotnet.microsoft.com/en-us/download)
 * Installera [Visual Studio Code](mjukvara/visual-studio-code/)&#x20;
   * Och lämpliga [extensions](mjukvara/visual-studio-code/extensions.md).
 * Installera [Git-scm](mjukvara/git-and-github/) och [ställ in namn och email](mjukvara/git-and-github/#foersta-gangen-efter-ny-git-installation).
@@ -23,7 +23,7 @@ winget install git.git
 winget install Microsoft.DotNet.SDK.7
 ```
 
-Winget bör finnas och fungera i Windows 10 och 11; använder du en äldre version av windows kanske du får installera manuellt istället.
+Winget bör finnas och fungera i Windows 10 och 11; använder du en äldre version av windows kanske du får installera manuellt istället. Det kan också vara bra att köra **Windows Update** först, och installera alla tillgängliga uppdateringar (inklusive de man bara får om man klickar "Sök online…"
 
 {% hint style="info" %}
 **TIPS:** winget kan användas för att installera [allt möjligt](https://winget.run/), och kan också hålla programmen uppdaterade.
