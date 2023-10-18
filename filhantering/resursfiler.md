@@ -11,18 +11,7 @@ Dessa letar programmet alltid efter i den nuvarande mappen (**current folder**).
 * Använder man en utförlig launch.json (via t.ex. [Generate assets…](../lathund-skapa-projekt.md)) så är current folder **mappen csproj-filen ligger i**.
 * Använder man den ganska tomma default-launch-json-filen som C# Dev Kit numera skapar, så är current folder mappen som den kompilerade exe/dll-filen ligger i.
 
-## Lösning 1: Generate assets
-
-* Lägg bilder etc direkt i samma mapp som csproj-filen.
-* Använd **F1 → .NET: Generate Assets for Build and Debug** för att generera en launch.json.
-
-## Lösning 2: Lägg filerna manuellt till målmappen
-
-* Lägg alla nödvändiga filer direkt till mappen där exe/dll:en ligger. Kör du dotnet 7 blir det i **bin\Debug\net7.0**.
-* Kom ihåg att inte ta bort mappen utan att vara säker på att du har kopior av filerna!
-* Kom ihåg att kopiera in samma filer i din exe-fils mapp när du [kompilerar för publicering](../kompilering-och-publicering.md)!
-
-## Lösning 3: Kopiera filerna automatiskt till målmappen
+## Lösning 1: Kopiera filerna automatiskt till målmappen
 
 Det här är **det rekommenderade sättet** att lösa problemet på.
 
@@ -74,3 +63,14 @@ Gör så att mappen, inklusive alla undermappar och filer, kopieras:
     <Content Include="Assets\**\*.*" CopyToOutputDirectory="Always"/>
   </ItemGroup>
 ```
+
+## Lösning 2: Generate assets
+
+* Lägg bilder etc direkt i samma mapp som csproj-filen.
+* Använd **F1 → .NET: Generate Assets for Build and Debug** för att generera en launch.json.
+
+## Lösning 3: Lägg filerna manuellt till målmappen
+
+* Lägg alla nödvändiga filer direkt till mappen där exe/dll:en ligger. Kör du dotnet 7 blir det i **bin\Debug\net7.0**.
+* Kom ihåg att inte ta bort mappen utan att vara säker på att du har kopior av filerna!
+* Kom ihåg att kopiera in samma filer i din exe-fils mapp när du [kompilerar för publicering](../kompilering-och-publicering.md)!
