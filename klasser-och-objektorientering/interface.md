@@ -17,12 +17,12 @@ interface IDamagable
 ```csharp
 class Character : IDamagable
 {
-  public string name;
-  public int hp = 100;
+  public string Name;
+  public int Hp = 100;
 
   public void Hurt(int amount)
   {
-    hp -= amount;
+    Hp -= amount;
   }
 }
 ```
@@ -36,12 +36,12 @@ Sedan kan man designa t.ex. metoder som kan ta emot vilken klass sim helst som i
 ```csharp
 class Character : IDamagable
 {
-  public string name;
-  public int hp = 100;
+  public string Name;
+  public int Hp = 100;
 
   public void Hurt(int amount)
   {
-     hp -= amount;
+     Hp -= amount;
   }
 
   public void Attack(IDamagable target)
@@ -82,12 +82,12 @@ interface IAttacking
 ```csharp
 class Character : IDamagable, IAttacking
 {
-  public string name;
-  public int hp = 100;
+  public string Name;
+  public int Hp = 100;
 
   public void Hurt(int amount)
   {
-     hp -= amount;
+     Hp -= amount;
   }
 
   public void Attack(Damagable target)

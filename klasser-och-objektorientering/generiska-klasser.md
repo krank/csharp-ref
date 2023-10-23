@@ -320,8 +320,8 @@ Generiska klasser är oftast "container-klasser", alltså klasser vars uppgift d
 ```csharp
 class Node<T>
 {
-  public T value;
-  public Node nextNode;
+  public T Value;
+  public Node NextNode;
 }
 ```
 {% endcode %}
@@ -333,9 +333,9 @@ Nu bestäms vilken datatyp variabeln value ska ha genom att den anges mellan <> 
 {% code lineNumbers="true" %}
 ```csharp
 Node<string> firstTextNode = new Node<string>(); // value blir en string
-firstTextNode.value = "Bananas";
+firstTextNode.Value = "Bananas";
 
 Node<int> firstNumberNode = new Node<int>(); // value blir en int
-firstNumberNode.value = 23;
+firstNumberNode.Value = 23;
 ```
 {% endcode %}

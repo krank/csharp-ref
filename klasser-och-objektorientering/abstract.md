@@ -8,12 +8,12 @@ En abstrakt klass kan aldrig instansieras, utan kan bara användas som basklass 
 ```csharp
 abstract class Character
 {
-  public string name;
-  public int hp = 100;
+  public string Name;
+  public int Hp = 100;
 
   public void Hurt(int amount)
   {
-    hp -= amount;
+    Hp -= amount;
   }
 }
 ```
@@ -62,7 +62,7 @@ class Warrior : Character
 {
   public override void LevelUp()
   {
-    _level = Xp / 10;
+    Level = Xp / 10;
     if (Level == 3)
     {
       Attacks = new string[] { "Kick", "Punch", "Bite" };
