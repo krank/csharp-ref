@@ -234,3 +234,12 @@ string[] aNamn = listNamn.ToArray();
 ```csharp
 List<string> listNamn = new List<string>(aNamn);
 ```
+
+## Skapa via collection expression (.net 8)
+
+I C# 12, som ingår i dotnet 8, tillkommer ett enhetligt sätt att skapa nya samlingar – vilket fungerar för både arrayer och listor.
+
+```csharp
+List<int> integerList = [1, 2, 3, 4];
+int[] integerArray = [5, 6, 7, 8];
+```

@@ -6,13 +6,12 @@ En konstruktor är en metod som anropas automatiskt när en instans skapas. Den 
 ```csharp
 class Fighter
 {
-  private string name = "";
-  private int strength = 0;
-  private Random generator = new Random();
+  private string _name = "";
+  private int _strength = 0;
 
   public Fighter()
   {
-    strength = generator.Next(5,10);
+    strength = Random.Shared.Next(5,10);
   }
 }
 ```
@@ -28,14 +27,13 @@ Precis som andra metoder kan konstruktorer ta emot en eller flera parametrar. De
 ```csharp
 class Fighter
 {
-  private string name = "";
-  private int strength = 0;
-  private Random generator = new Random();
+  private string _name = "";
+  private int _strength = 0;
 
-  public Fighter(string n)
+  public Fighter(string name)
   {
-    name = n;
-    strength = generator.Next(5,10);
+    _name = name;
+    strength = Random.Shared.Next(5,10);
   }
 }
 ```
@@ -48,6 +46,26 @@ Fighter enemyFighter = new Fighter("Börje");
 ```
 {% endcode %}
 
+## Kontruktorer som anropar varandra (this)
+
+Om man har flera konstruktorer så väljs vilken som körs genom samma principer som annan [metod-överlagring](../grundlaeggande/egna-metoder.md#oeverlagring). Vill man själv kalla på en annan konstruktor så kan man göra detta genom att skriva :this() efter konstruktorns parenteser. Mellan de nya parenteserna lägger man de värden som ska passeras till önskad konstruktor.
+
+```csharp
+public class Fighter
+{
+  private int _hp;
+
+  public Fighter(): this(100)
+  {
+  }
+
+  public Fighter(int hp)
+  {
+    _hp = hp;
+  }
+}
+```
+
 ## Konstruktorer i arv
 
 När en basklass och en subklass har varsin konstruktor så kommer _båda_ konstruktorerna att köras när en instans av subklassen skapas. Först körs basklassens konstruktor, därefter körs subklassens konstruktor.
@@ -56,11 +74,12 @@ När en basklass och en subklass har varsin konstruktor så kommer _båda_ konst
 ```csharp
 class Character
 {
-  int hp;
-  string name = "";
+  protected int _hp;
+  protected string _name = "";
+  
   public Character()
   {
-    hp = 100;
+    _hp = 100;
   }
 }
 ```
@@ -72,8 +91,8 @@ class Thief: Character
 {
   public Thief()
   {
-    name = "Thief";
-    hp = 20;
+    _name = "Thief";
+    _hp = 20;
   }
 }
 ```
@@ -91,12 +110,12 @@ I exemplet nedan måste Character-klassens konstruktor få ett string-värde som
 ```
 class Character
 {
-  public string name;
-  public int hp = 100;
+  public string _name;
+  public int _hp = 100;
 
-  public Character(string n)
+  public Character(string name)
   {
-    name = n;
+    _name = name;
   }
 }
 ```
@@ -108,12 +127,45 @@ För att ange vilket värde som ska skickas till basklassens konstruktor så anv
 ```csharp
 class Hero : Character
 {
-  public Hero(string na, int h) : base(na)
+  public Hero(string name, int hp) : base(name)
   {
-    hp = h;
+    _hp = hp;
   }
 }
 ```
 {% endcode %}
 
 Här tar subklassens konstruktor emot två parametrar - na och h - och skickar vidare värdet som lagras i parametern na till basklassens konstruktor.
+
+## Primära konstruktorer (.net 8)
+
+I dotnet 8 introduceras _primary constructors_ – de gör att man kan stoppa in parametervärden in i klassen utan att explicit skapa en konstruktor.
+
+```csharp
+public class Enemy (string name, int hp)
+{
+  private int _hp = hp;
+  private string _name = name;
+}
+```
+
+Om man då stoppar in andra, vanliga konstruktorer så måste man modifiera dem så att de matar "primärkonstruktorn" med rätt data.
+
+```csharp
+public class Enemy(string name, int hp)
+{
+  private int _hp = hp;
+  private string _name = name;
+
+  // Konstruktor som körs när man inte anger några parametervärden: new Enemy()
+  public Enemy() : this("Goomba", 100)
+  {
+  }
+
+  // Konstruktor som körs när man anger bara en string, som förs vidare in i
+  //  primärkonstruktorn
+  public Enemy(string name) : this(name, 50)
+  {
+  }
+}
+```
