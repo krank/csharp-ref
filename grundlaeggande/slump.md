@@ -12,6 +12,8 @@ Random generator = new Random();
 ```
 {% endcode %}
 
+I Dotnet 6 och senare finns också en färdig slumpgenerator i `Random.Shared`.
+
 ## Next – heltal (int)
 
 Används för att slumpa heltal (int).
@@ -19,7 +21,7 @@ Används för att slumpa heltal (int).
 {% code lineNumbers="true" %}
 ```csharp
 // Slumpar ett heltal mellan 0 och det största heltal int kan innehålla
-int r = generator.Next();
+int r = Random.Shared.Next();
 ```
 {% endcode %}
 
@@ -28,7 +30,7 @@ Next kan anropas med en [parameter ](egna-metoder.md#parametrar)som anger "taket
 {% code lineNumbers="true" %}
 ```csharp
 // Slumpar ett heltal som är 0, 1, 2 eller 3
-int r = generator.Next(4);
+int r = Random.Shared.Next(4);
 ```
 {% endcode %}
 
@@ -37,7 +39,7 @@ Om man anger två parametrar så tolkas den första som ett golv, och den andra 
 {% code lineNumbers="true" %}
 ```csharp
 // Slumpar ett heltal som är 2, 3 eller 4
-int r = generator.Next(2,5);
+int r = Random.Shared.Next(2,5);
 ```
 {% endcode %}
 
@@ -46,5 +48,5 @@ int r = generator.Next(2,5);
 Används för att slumpa decimaltal mellan 0 och 1. Man får värdet i form av en double, så den behöver dels multipliceras med ett tal för att bli något annat än 0–1, och dels konverteras till float.
 
 ```csharp
-float percent = (float) generator.NextDouble() * 100f;
+float percent = (float) Random.Shared.NextDouble() * 100f;
 ```
