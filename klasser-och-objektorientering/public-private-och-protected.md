@@ -32,11 +32,11 @@ För att man ska kunna få ut värdet hos en privat variabel behöver man gå vi
 ```csharp
 class Fighter
 {
-  private string name = "";
+  private string _name = "";
   
   public string GetName()
   {
-    return name;
+    return _name;
   }
 }
 ```
@@ -50,11 +50,11 @@ Fungerar som private, men metoden/variabeln kan kommas åt i klasser som _ärver
 ```csharp
 class Fighter
 {
-  protected string name = "";
+  protected string _name = "";
   
   public string GetName()
   {
-    return name;
+    return _name;
   }
 }
 ```
@@ -67,7 +67,7 @@ class StrongFighter : Fighter
   public string GetName()
   {
     // kan använda name trots att variabeln tillhör basklassen
-    return name + " The Strong";
+    return $"{_name} The Strong";
   }
 }
 ```

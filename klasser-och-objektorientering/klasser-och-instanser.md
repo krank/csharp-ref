@@ -55,10 +55,10 @@ Därefter kan man ändra på de individuella instansernas variabler separat:
 
 {% code lineNumbers="true" %}
 ```csharp
-g1.x = 60;
-g1.y = 20;
-g2.x = 80;
-g2.y = 25;
+g1.X = 60;
+g1.Y = 20;
+g2.X = 80;
+g2.Y = 25;
 ```
 {% endcode %}
 
@@ -75,7 +75,7 @@ Om man (som ovan) skapar en instans av exakt samma klass som variabeln så kan k
 {% code lineNumbers="true" %}
 ```csharp
 Goomba g4 = new();
-Goomba g5 = new() {x = 100};
+Goomba g5 = new() {X = 100};
 ```
 {% endcode %}
 

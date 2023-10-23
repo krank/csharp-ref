@@ -29,13 +29,13 @@ class Character
 ```csharp
 class Hero: Character
 {
-  int xp = 0;
-  int level = 1;
+  int _xp = 0;
+  int _level = 1;
   
   public AddExperience(int amount)
   {
-    xp += amount;
-    level = 1 + xp / 10;
+    _xp += amount;
+    _level = 1 + _xp / 10;
   }
 }
 ```

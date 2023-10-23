@@ -15,7 +15,7 @@ I ett klassdiagram beskrivs klassen i tre sektioner:
 **Synlighet:** Man anger synlighet för variabler och metoder genom att skriva +, - eller # innan namnet.
 
 * \+ betyder "public"
-* \- betyder "private"
+* − betyder "private"
 * \# betyder "protected"
 
 ```mermaid
@@ -26,8 +26,8 @@ I ett klassdiagram beskrivs klassen i tre sektioner:
 
 classDiagram
   class Character{
-        - hp : int
-        - name : string 
+        −_hp : int
+        −_name : string 
         + Hurt(amount : int) void
         + Attack() int
   }
@@ -49,13 +49,13 @@ Subklassernas diagram ritas på samma sätt som basklassens. Man skriver in klas
 
 classDiagram
   class Character{
-        -hp : int
-        -name : string 
+        −_hp : int
+        −_name : string 
         +Hurt(amount : int) void
         +Attack() int
   }
   class Hero{
-        -xp : int
+        −_xp : int
         +GetLevel() int
   }
   Character <|-- Hero

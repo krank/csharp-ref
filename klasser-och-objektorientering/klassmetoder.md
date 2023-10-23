@@ -8,10 +8,10 @@ Klassmetoders kod kan komma åt instansens variabler, properties och metoder.
 ```csharp
 class Fighter
 {
-  private string name = "";
+  private string _name = "";
   public string GetName()
   {
-    return name;
+    return _name;
   }
 }
 ```
@@ -34,11 +34,11 @@ Om man vill vara tydlig med att man använder en intern klassvariabel så kan ma
 ```csharp
 class Fighter
 {
-  private string name = "";
+  private string _name = "";
   
   public void WriteName()
   {
-    Console.WriteLine(this.name);
+    Console.WriteLine(this._name);
   }
 }
 ```
