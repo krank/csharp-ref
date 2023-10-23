@@ -12,16 +12,16 @@ Istället används metoder för att läsa av och ändra på variablerna.
 ```csharp
 class Character
 {
-  private int hp = 100;
+  private int _hp = 100;
 
-  public void SetHp(int newHp)
+  public void SetHp(int hp)
   {
-    hp = newHp;
+    _hp = hp;
   }
 
   public int GetHp()
   {
-    return hp;
+    return _hp;
   }  
 }
 ```
@@ -37,16 +37,16 @@ En annan finess är att man får mer kontroll över vilka värden som ges till e
 ```csharp
 class Character
 {
-  private int hp = 100;
+  private int _hp = 100;
 
-  public void SetHp(int newHp)
+  public void SetHp(int hp)
   {
-    hp = Math.Max(newHp, 0);
+    _hp = Math.Max(hp, 0);
   }
   
   public int GetHp()
   {
-    return hp;
+    return _hp;
   }
 }
 ```
@@ -60,16 +60,16 @@ Properties, även kallade **egenskaper**, fungerar som ett slags variabler med i
 ```csharp
 class Character
 {
-  private int hp = 100;
+  private int _hp = 100;
 
   public int Hitpoints {
     get
     {
-      return hp;
+      return _hp;
     }
     set
     {
-      hp = Math.Max(value, 0);
+      _hp = Math.Max(value, 0);
     }
   }
 }
@@ -91,9 +91,39 @@ Console.WriteLine(cha.Hitpoints);
 ```
 {% endcode %}
 
+### [Lambda](../grundlaeggande/delegates.md#lambdas)-properties
+
+Om det man vill göra med sin set resp. get är ganska enkelt, så behövs ingen fullständig kodblocks-syntax. Då kan man istället använda enkla lambdas:
+
+```csharp
+public class Character
+{
+  private int _hp = 100;
+
+  public int Hitpoints
+  {
+    get => _hp;
+    set => _hp = Math.Max(value, 0);
+  }
+}
+```
+
+### Properties som bara skickar vidare något (läsas, inte skrivas)
+
+Om man inte ens behöver en set så kan hela propertien göras om till en lambda (den får då ingen set, utan bara en get):
+
+```csharp
+class Hero: Character
+{
+  int _xp = 0;
+  
+  public int Level => 1 + _xp / 10;
+}
+```
+
 ## Auto-implementerade properties
 
-Om man inte vill lägga in någon extra logik i en property så kan man deklarera den på följande vis:
+Om man inte vill lägga in någon extra logik alls i en property så kan man deklarera den på följande vis:
 
 {% code title="Character.cs" lineNumbers="true" %}
 ```csharp
@@ -106,7 +136,7 @@ class Character
 
 Det här innebär att man blir av med den fördel properties ger jämfört med publika variabler, men å andra sidan blir det lätt att senare bygga ut propertyn till en fullvärdig sådan. På det här viset behöver man med andra ord inte i efterhand byta ut en publik variabel mot en property när man senare kommer på att man trots allt ville ha lite logik.
 
-## Properties med värden som bara får läsas, inte skrivas
+### Properties med värden som bara får läsas, inte skrivas
 
 Ett användningsområde för automatiskt implementerade properties är s.k. read only-värden. Säg t.ex. att vi vill att karaktärens hitpoints ska kunna läsas, men inte ändras, utifrån. Då skriver man så här:
 

@@ -11,14 +11,14 @@ När man läser eller ändrar på en statisk variabel utifrån skriver man klass
 class Fighter
 {
   // En statisk slumpgenerator som alla fighters delar på
-  static Random generator = new Random();
+  static Random _generator = new Random();
   
-  private int strength;
+  private int _strength;
   
   // En konstruktor där slumpgeneratorn används
   public Fighter()
   {
-    strength = generator.Next(10,20);
+    _strength = _generator.Next(10,20);
   }
 }
 ```

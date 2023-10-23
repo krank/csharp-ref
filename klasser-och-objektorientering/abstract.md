@@ -23,12 +23,12 @@ abstract class Character
 ```csharp
 class Hero: Character
 {
-  int xp = 0;
-  int level = 1;
+  int _xp = 0;
+  int _level = 1;
   public void AddExperience(int amount)
   {
-    xp += amount;
-    level = 1 + xp / 10;
+    _xp += amount;
+    _level = 1 + _xp / 10;
   }
 }
 ```
@@ -44,12 +44,12 @@ Abstrakta metoder fungerar bäst i de fall där det inte finns någon lämplig "
 ```csharp
 abstract class Character
 {
-  public string name;
-  public int hp = 100;
-  public int strength = 5;
-  public int level = 1;
-  public int xp = 0;
-  public string[] attacks = {"Kick", "Punch"}
+  public string Name;
+  public int Hp = 100;
+  public int Strength = 5;
+  public int Level = 1;
+  public int Xp = 0;
+  public string[] Attacks = {"Kick", "Punch"}
 
   public abstract void LevelUp();
 }
@@ -62,10 +62,10 @@ class Warrior : Character
 {
   public override void LevelUp()
   {
-    level = xp / 10;
-    if (level == 3)
+    _level = Xp / 10;
+    if (Level == 3)
     {
-      attacks = new string[] { "Kick", "Punch", "Bite" };
+      Attacks = new string[] { "Kick", "Punch", "Bite" };
     }
   }
 }

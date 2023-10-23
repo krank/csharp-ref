@@ -8,17 +8,17 @@ Virtual används för att markera metoder i basklassen som får "skrivas över" 
 ```csharp
 class Character
 {
-  public int hp = 100;
-  public int damage = 5;
+  protected int _hp = 100;
+  protected int _damage = 5;
   
   public int Attack()
   {
-    return damage;
+    return Random.Shared.Next(_damage);
   }
 
   public virtual void Hurt(int amount)
   {
-    hp -= amount;
+    _hp -= amount;
   }
 }
 ```
@@ -32,7 +32,7 @@ class Barbarian: Character
 {
   public override void Hurt(int amount)
   {
-    hp -= amount / 2;
+    _hp -= amount / 2;
   }
 }
 ```
@@ -50,17 +50,17 @@ Base låter en subklass få tillgång till basklassens version av en metod.
 ```csharp
 class Character
 {
-  public int hp = 100;
-  public int damage = 5;
+  protected int _hp = 100;
+  protected int _damage = 5;
 
   public virtual int Attack()
   {
-    return damage;
+    return Random.Shared.Next(_damage);
   }
 
   public virtual void Hurt(int amount)
   {
-    hp -= amount;
+    _hp -= amount;
   }
 }
 ```
