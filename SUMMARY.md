@@ -57,7 +57,7 @@
 * [Komposition](klasser-och-objektorientering/komposition.md)
 * [Inkapsling och properties](klasser-och-objektorientering/inkapsling-och-properties.md)
 * [Static](klasser-och-objektorientering/static.md)
-* [Polymorfism \[…\]](klasser-och-objektorientering/polymorfism/README.md)
+* [Polymorfism >](klasser-och-objektorientering/polymorfism/README.md)
   * [Virtual, override](klasser-och-objektorientering/polymorfism/virtual-override.md)
 * [Generiska klasser](klasser-och-objektorientering/generiska-klasser.md)
 * [Abstract](klasser-och-objektorientering/abstract.md)
