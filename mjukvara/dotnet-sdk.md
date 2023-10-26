@@ -30,6 +30,12 @@ dotnet --list-sdks
 
 Nu bör du få en lista med de versioner av .NET SDK som är installerade.
 
+Om du har Homebrew installerat kan du också installera dotnet med:
+
+```
+brew install --cask dotnet-sdk
+```
+
 ### Saker att testa om det inte funkar\*
 
 * /usr/local/share/dotnet/dotnet – funkar det?
