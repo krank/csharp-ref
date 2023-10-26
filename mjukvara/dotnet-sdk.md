@@ -41,3 +41,6 @@ brew install --cask dotnet-sdk
 * /usr/local/share/dotnet/dotnet – funkar det?
 * echo $path för att se ifall /usr/local/share/dotnet finns med
   * Om inte: cd /etc/paths.d, nano dotnet, lägg in /usr/local/share/dotnet, Ctrl+x för att avsluta
+* Avinstallera alla dotnet-versioner och börja om
+  * Med Brew är det lätt: brew uninstall dotnet-sdk
+  * Annars: [https://github.com/dotnet/cli-lab/releases](https://github.com/dotnet/cli-lab/releases)
