@@ -1,4 +1,4 @@
-# Konsollen (Console)
+# Konsolen (Console)
 
 ### Console.WriteLine()
 
@@ -14,6 +14,20 @@ Läser in en string från användaren och väntar på Enter-tryckning. Returnera
 
 ```csharp
 string answer = Console.ReadLine();
+```
+
+### Console.OutputEncoding
+
+Ändrar vilken teckenkodning som ska användas när saker skrivs ut till konsolen.
+
+```csharp
+Console.OutputEncoding = System.Text.Encoding.UTF8;
+```
+
+Med UTF-8 som teckenkodning kan man använda fler tecken – till exempel emojis som 🤖.
+
+```csharp
+Console.WriteLine("🤖");
 ```
 
 ### Console.Title
