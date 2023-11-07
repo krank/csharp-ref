@@ -1,5 +1,7 @@
 # Konsolen (Console)
 
+## Skriva text
+
 ### Console.WriteLine()
 
 Skriver ut något till konsollen.
@@ -30,14 +32,6 @@ Med UTF-8 som teckenkodning kan man använda fler tecken – till exempel emojis
 Console.WriteLine("🤖");
 ```
 
-### Console.Title
-
-Ändrar konsollfönstrets namn.
-
-```csharp
-Console.Title = "Mitt fina fönster";
-```
-
 ### Console.Clear()
 
 Rensar skärmen.
@@ -45,6 +39,8 @@ Rensar skärmen.
 ```csharp
 Console.Clear();
 ```
+
+## Färg
 
 ### Console.ForegroundColor
 
@@ -70,12 +66,44 @@ Console.BackgroundColor = ConsoleColor.Magenta;
 **OBSERVERA:** detta gäller enbart text som skrivs efter det att färgen ändrats. Text som redan skrivits ut förändras inte.
 {% endhint %}
 
-### Console.Beep()
+## Fönstret
+
+### Console.Title
+
+Ändrar konsollfönstrets namn.
+
+```csharp
+Console.Title = "Mitt fina fönster";
+```
+
+## Console.Beep()
 
 Gör ett ljud!
 
 ```csharp
 Console.Beep(294,1000) // 1 sekunds (1000 millisekunders) beep i D.
+```
+
+## Pekaren
+
+### Console.SetCursorPosition()
+
+Bestäm pekarens position i x- och y-led. Tar emot två int-värden.
+
+```csharp
+Console.SetCursorPosition(20, 10); // Plancera pekaren på column 20, rad 10
+```
+
+{% hint style="warning" %}
+**OBSERVERA:** y-axeln är **omvänd**! Med andra ord, den första raden är 0, den andra är 1, den tredje är 2… Och "origo" ligger uppe i vänstra hörnet.
+{% endhint %}
+
+### Console.GetCursorPosition()
+
+Läs av pekarens position i x- och y-led. Returnerar en [tuple ](datatyper/tuples.md)där det första värdet är x, det andra y.
+
+```csharp
+(int x, int y) = Console.GetCursorPosition();
 ```
 
 ### Console.CursorLeft
@@ -84,9 +112,6 @@ Pekarens position i x-led, räknat från fönstrets vänstra kant (den första "
 
 ```csharp
 Console.CursorLeft = 20; // Placera pekaren i kolumn 20
-```
-
-```csharp
 Console.CursorLeft -= 5; // Flytta pekaren fem steg åt vänster
 ```
 
@@ -96,12 +121,6 @@ Pekarens position i y-led, räknat från fönstrets överdel.
 
 ```csharp
 Console.CursorTop = 10; // Placera pekaren på rad 10
-```
-
-```csharp
 Console.CursorTop-- // Flytta pekaren 1 rad uppåt
 ```
 
-{% hint style="warning" %}
-**OBSERVERA:** y-axeln är **omvänd**! Med andra ord, den första raden är 0, den andra är 1, den tredje är 2…
-{% endhint %}
