@@ -5,8 +5,13 @@ Saker som behövs:
 * [Visual Studio Code](https://code.visualstudio.com/)
   * `winget install Microsoft.VisualStudioCode`
   * [Gitignore-extension](https://marketplace.visualstudio.com/items?itemName=codezombiech.gitignore)
-* [Git-scm](https://git-scm.com/)
+* [Git](https://git-scm.com/)
   * `winget install git.git`
+  * Mac
+    * Om Homebrew är installerat: `brew install git`
+    * Ingår i Xcode command line tools: `xcode-select –-install`
+      * OBS! Inte bara Git, kräver 1–2gb hårddiskutrymme
+    * Finns som [standalone installer](https://sourceforge.net/projects/git-osx-installer/files/latest/download).
 * Ett konto på [GitHub](https://github.com/).
 
 Kan vara väldigt bra:
