@@ -23,9 +23,14 @@ Man kan skapa egna snippets. Man går då till File, Preferences och User Snippe
 ```javascript
 {
   "Readline": {
-      "prefix": ["cre", "readline"],
+      "prefix": "cre",
       "body": "Console.ReadLine()",
       "description": "Inserts a console readline"
+  },
+  "Writeline":{
+    "prefix": "cw",
+    "body": "Console.WriteLine($0);",
+    "description": "Inserts a console writeline"
   },
   "Hello": {
       "prefix": "hello",
