@@ -16,7 +16,7 @@ I ett klassdiagram beskrivs klassen i tre sektioner:
 
 * \+ betyder "public"
 * − betyder "private"
-* \# betyder "protected"
+* \# betyder "protected"&#x20;
 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': 
@@ -28,7 +28,7 @@ classDiagram
   class Character{
         −_hp : int
         −_name : string 
-        + Hurt(amount : int) void
+        +  Hurt(amount : int) void
         + Attack() int
   }
 ```
