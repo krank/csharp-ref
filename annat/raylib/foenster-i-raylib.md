@@ -44,3 +44,25 @@ while (!Raylib.WindowShouldClose())
   Raylib.EndDrawing();
 }
 ```
+
+## Snippet
+
+Här är koden för en [snippet ](../../mjukvara/visual-studio-code/snippets.md)som skapar grundkoden för Raylib:
+
+```json
+"Raylib-boilerplate": {
+  "prefix": "rayl",
+  "body": [
+    "using Raylib_cs;\n",
+    "Raylib.InitWindow(${1:800}, ${2:600}, \"${3:Title}\");",
+    "Raylib.SetTargetFPS(60);\n",
+    "while (!Raylib.WindowShouldClose())",
+    "{",
+    "  $0\n",
+    "  Raylib.BeginDrawing();",
+    "  Raylib.ClearBackground(Color.WHITE);",
+    "  Raylib.EndDrawing();",
+    "}"
+  ]
+},
+```
