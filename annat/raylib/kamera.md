@@ -13,7 +13,7 @@ Camera2D camera = new Camera2D(); // Skapa ny kamera
 Hur inzoomad kameran ska vara.
 
 ```csharp
-  camera.zoom = 1f; // Bestämma zoomvärdet till 1
+  camera.Zoom = 1f; // Bestämma zoomvärdet till 1
 ```
 
 {% hint style="warning" %}
@@ -25,7 +25,7 @@ OBSERVERA: Om du inte bestämmer värdet för zoomen, så kommer kameran att bet
 Den punkt i världen som kameran ska roteras kring, och som även dess zoom fokuseras på – samt den punkt dess offset ska utgå från.
 
 ```csharp
-camera.target = new Vector2(400, 300);
+camera.Target = new Vector2(400, 300);
 ```
 
 ### offset
@@ -37,7 +37,7 @@ float screenWidth = Raylib.GetScreenWidth();
 float screenHeight = Raylib.GetScreenHeight();
 
 // Gör så att kamerans target hamnar i mitten av skärmen
-camera.offset = new Vector2(screenWidth / 2, screenHeight/2);
+camera.Offset = new Vector2(screenWidth / 2, screenHeight/2);
 ```
 
 ### rotation
@@ -45,7 +45,7 @@ camera.offset = new Vector2(screenWidth / 2, screenHeight/2);
 Hur roterad kameran ska vara.
 
 ```csharp
-camera.rotation = 45; // Roterar kameran 45 grader
+camera.Rotation = 45; // Roterar kameran 45 grader
 ```
 
 

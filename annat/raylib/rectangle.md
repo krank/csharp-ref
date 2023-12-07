@@ -17,10 +17,10 @@ bool isColliding = Raylib.CheckCollisionRecs(r1, r2);
 Man kan ändra på en rektangels egenskaper i efterhand.
 
 ```csharp
-r1.x += 3;
-r1.y = 90;
-r1.width = 50;
-r1.height = 30;
+r1.X += 3;
+r1.Y = 90;
+r1.Width = 50;
+r1.Height = 30;
 ```
 
 ## Rectangle och List
@@ -36,11 +36,11 @@ rects.Add(new Rectangle());
 rects.Add(new Rectangle());
 
 // SÅHÄR KAN MAN INTE GÖRA
-rects[1].x = 5;
+rects[1].X = 5;
 
 // GÖR SÅHÄR ISTÄLLET
 Rectangle tmp = rects[1];
-tmp.x = 5;
+tmp.X = 5;
 rects[1] = tmp;
 ```
 

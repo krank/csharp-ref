@@ -7,10 +7,10 @@ En Texture är en bild som är sparad i grafikkortets minne, och är redo att ri
 Varje texture har en width och en height.
 
 ```csharp
-Console.WriteLine($"Width: {goombaTexture.width});
-Console.WriteLine($"Height: {goombaTexture.height});
+Console.WriteLine($"Width: {goombaTexture.Width});
+Console.WriteLine($"Height: {goombaTexture.Height});
 
-Rectangle hitBox = new Rectangle(0, 0, goombaTexture.width, goombaTexture.height);
+Rectangle hitBox = new Rectangle(0, 0, goombaTexture.Width, goombaTexture.Height);
 ```
 
 ## Läsa in

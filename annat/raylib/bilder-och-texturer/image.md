@@ -9,10 +9,10 @@ För att man ska kunna rita ut den till fönstret behöver man sedan konvertera 
 Varje image har en width och en height.
 
 ```csharp
-Console.WriteLine($"Width: {filebasedImage.width});
-Console.WriteLine($"Height: {filebasedImage.height});
+Console.WriteLine($"Width: {filebasedImage.Width});
+Console.WriteLine($"Height: {filebasedImage.Height});
 
-Rectangle hitBox = new Rectangle(0, 0, filebasedImage.width, filebasedimage.height);
+Rectangle hitBox = new Rectangle(0, 0, filebasedImage.Width, filebasedimage.Height);
 ```
 
 ## Skapa eller ladda in
