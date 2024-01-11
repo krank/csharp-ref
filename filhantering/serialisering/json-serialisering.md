@@ -83,26 +83,25 @@ string json = JsonSerializer.Serialize<Pokemon>(poke);
 ```
 {% endcode %}
 
-Denna string kan sedan lagras i en textfil eller t.ex. skickas som svar på ett [REST](../../annat/naetverk-och-internet-.../restful-server/)-anrop.
+Denna string kan sedan lagras i en textfil eller t.ex. skickas som svar på ett [REST](broken-reference)-anrop.
 
-{% hint style="warning" %}
-**OBSERVERA:** Det finns inget sätt att automatiskt förvandla namnen på properties till snake\_case, vilket ju ofta används i JSON. Vill du serialisera med snake\_case så får du med andra ord använda JsonPropertyName-attributet.
-{% endhint %}
+### JsonSerializerOptions
 
-### Snygg, indenterad JSON-text
+Genom att skicka in ett JsonSerializerOptions-objekt kan man ge mer detaljerade instruktioner till serializern.
 
-Om du vill ha lite "snyggare" JSON-kod, färdigformaterad med radbrytningar och indenteringar så kan man göra det:
-
-{% code lineNumbers="true" %}
 ```csharp
-var options = new JsonSerializerOptions
+JsonSerializerOptions options = new ()
 {
-    WriteIndented = true
+  // Ger snygg, indenterad JSON-kod
+  WriteIndented = true,
+  // Omvandlar alla property-namn till snake_case
+  PropertyNamingPolicy = JsonNamingPolicy.SnakeCaseLower // döper om properties
 };
 
 string json = JsonSerializer.Serialize<Pokemon>(poke, options);
 ```
-{% endcode %}
+
+I JSON används oftast snake\_case, medan C# ju använder [camelCase eller PascalCase](../../grundlaeggande/namngivning.md#pascalcase-och-camelcase).
 
 ## JsonSerializer.Deserialize<>()
 
@@ -113,22 +112,6 @@ Används för att deserialisera ett objekt från en JSON-string.
 // jsonString innehåller json-data. Den kan t.ex. läsas in från en json-fil
 // eller hämtas från en REST-server.
 Pokemon ditto = JsonSerializer.Deserialize<Pokemon>(jsonString);
-```
-{% endcode %}
-
-### Små och stora bokstäver
-
-Properties ska döpas med stor bokstav i C#, men i json döps egenskaper nästan alltid med liten bokstav. Deserialize är känsligt för skillnader mellan stora och små bokstäver. Det går att stänga av den känsligheten:
-
-{% code lineNumbers="true" %}
-```csharp
-var options = new JsonSerializerOptions
-{
-    PropertyNameCaseInsensitive = true
-};
-
-// Nu kan property-namnen i Pokemon.cs döpas med stor bokstav
-Pokemon ditto = JsonSerializer.Deserialize<Pokemon>(jsonString, options);
 ```
 {% endcode %}
 
