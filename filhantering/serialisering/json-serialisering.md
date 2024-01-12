@@ -103,6 +103,12 @@ string json = JsonSerializer.Serialize<Pokemon>(poke, options);
 
 I JSON används oftast snake\_case, medan C# ju använder [camelCase eller PascalCase](../../grundlaeggande/namngivning.md#pascalcase-och-camelcase).
 
+
+
+{% hint style="warning" %}
+**OBS:** SnakeCaseLower introducerades i dotnet 8!
+{% endhint %}
+
 ## JsonSerializer.Deserialize<>()
 
 Används för att deserialisera ett objekt från en JSON-string.
