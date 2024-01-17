@@ -39,7 +39,7 @@ Används för att ta bort en resurs från en server.
 
 ## REST
 
-Förenklat kan man säga att REST innebär att man utför [CRUD-operationer](../databaser/#crud) med hjälp av HTTP-kommandon på ett standardiserat sätt.
+REST är en förkortning av Representational State Transfer. Förenklat kan man säga att REST innebär att man utför [CRUD-operationer](../databaser/#crud) med hjälp av HTTP-kommandon på ett standardiserat sätt.
 
 | CRUD   | HTTP   |
 | ------ | ------ |
