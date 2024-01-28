@@ -6,7 +6,7 @@ Nedan är instruktioner för att skapa en enkel API-server som svarar på GET-an
 
 ## Skapa projektet
 
-Skapa projektets solution som vanligt, men välj **Minimal Web API** som projekttyp istället för **Console application**.
+Skapa projektets solution som vanligt, men välj **ASP.NET Core Empty** som projekttyp istället för **Console application**.
 
 ## Ett minimalt projekt
 
@@ -15,7 +15,7 @@ Nedanstående är ett absolut minimalt, enkelt projekt som helt enkelt skickar "
 {% code lineNumbers="true" %}
 ```csharp
 // Skapa en webbapplikation-instans
-WebApplication appapp = WebApplication.Create(args);
+WebApplication app = WebApplication.Create(args);
 
 // Använd HTTPS när det går
 app.UseHttpsRedirection();
@@ -76,7 +76,7 @@ Detta används ofta för att välja vilken data som ska skickas – en parameter
 
 ### Returnera Objekt som JSON
 
-Om metoden som mappas returnerar ett objekt, så kommer det objektet [serialiseras ](../../../filhantering/serialisering-.../json-serialisering.md#jsonserializer.serialize-less-than-greater-than)till [JSON ](../../../filhantering/filformat/json.md)innan det skickas tillbaka som ett [HTTP-response](../rest-och-crud.md#http).
+Om metoden som mappas returnerar ett objekt, så kommer det objektet [serialiseras ](../../../filhantering/serialisering/json-serialisering.md#jsonserializer.serialize-less-than-greater-than)till [JSON ](../../../filhantering/filformat/json.md)innan det skickas tillbaka som ett [HTTP-response](../rest-och-crud.md#http).
 
 {% code title="Hero.cs" %}
 ```csharp
@@ -110,7 +110,7 @@ Resultatet om man skickar en GET-request till **/hero/superman**:
 
 ### Skicka in nya objekt via POST/PUT och JSON
 
-För att kunna hantera att nya objekt skickas till serverprogrammet, mappa POST eller PUT till en metod som har en parameter av den datatyp [JSON](../../../filhantering/filformat/json.md)-koden ska [deserialiseras ](../../../filhantering/serialisering-.../json-serialisering.md#jsonserializer.deserialize-less-than-greater-than)till.
+För att kunna hantera att nya objekt skickas till serverprogrammet, mappa POST eller PUT till en metod som har en parameter av den datatyp [JSON](../../../filhantering/filformat/json.md)-koden ska [deserialiseras ](../../../filhantering/serialisering/json-serialisering.md#jsonserializer.deserialize-less-than-greater-than)till.
 
 ```csharp
 app.MapPost("/hero/new/", AddNewHero);
@@ -171,6 +171,8 @@ WebApplication app = builder.Build();
 ```
 
 ## Använda HTTPS
+
+Om du får problem med att komma åt sin server, via webbläsare eller via klienter skrivna i C#, så kan det här behövas.
 
 Börja med att generera och lägga till ett certifikat för lokal utveckling och debuggning. Kör i terminalen:
 
