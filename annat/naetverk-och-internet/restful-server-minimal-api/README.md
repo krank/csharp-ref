@@ -172,7 +172,7 @@ WebApplication app = builder.Build();
 
 ## Använda HTTPS
 
-Om du får problem med att komma åt sin server, via webbläsare eller via klienter skrivna i C#, så kan det här behövas.
+Om du får problem med att komma åt din server, via webbläsare eller via klienter skrivna i C#, så kan det här behövas.
 
 Börja med att generera och lägga till ett certifikat för lokal utveckling och debuggning. Kör i terminalen:
 
