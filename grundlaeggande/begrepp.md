@@ -12,7 +12,7 @@ En "behållare" som kan tilldelas ett innehåll i form av ett värde. Variabler 
 
 ### Sekvens
 
-Kod som körs uppipfrån och ner.
+Kod som körs uppifrån och ner.
 
 ### Selektion
 
