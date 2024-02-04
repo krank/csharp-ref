@@ -78,7 +78,7 @@ if (enemy is Goomba g)
 
 ### int.Parse()
 
-Många datatyper kan inte konverteras direkt till t.ex. en int. Metodern int.Parse tar emot nästan vad som helst – t.ex. en string – och försöker konvertera den till en int.
+Många datatyper kan inte konverteras direkt till t.ex. en int. Metoden int.Parse tar emot nästan vad som helst – t.ex. en string – och försöker konvertera den till en int.
 
 {% code lineNumbers="true" %}
 ```csharp
