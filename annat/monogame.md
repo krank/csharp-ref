@@ -6,6 +6,24 @@ Monogame är ett ramverk för att göra spel – lite som [Raylib ](raylib/)men 
 Mer info kommer, sidan är bara påbörjad
 {% endhint %}
 
+## Installera MonoGame
+
+Kör följande kommando i terminalen:
+
+```
+dotnet new install MonoGame.Templates.CSharp
+```
+
+## Skapa nytt projekt
+
+Skapa en ny mapp och öppna den. Kör följande kommando i terminalen (dubbelkolla att terminalen är i rätt mapp):
+
+```
+/dotnet new mgdesktopgl
+```
+
+
+
 * Installation av monogame & MCGB editor
 * Skapa nytt projekt
 * Projektstruktur
