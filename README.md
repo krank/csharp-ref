@@ -4,8 +4,8 @@ Detta är en hemsida med förenklade förklaringar och exempel för C# och Visua
 
 **Se även:**
 
-* [Progdocs](http://127.0.0.1:5000/o/z5sgNMMcAnOUt1fqvUGW/s/t567cGmgFsbOXYO6QFYM/) – en portal med olika dokumentations-sajter som denna.
-* [Unity](http://127.0.0.1:5000/o/z5sgNMMcAnOUt1fqvUGW/s/-MJTeBJlEweD3YcPwKkg/) – en sida med förenklade förklaringar och exempel för Unity och C#
+* [Progdocs](https://app.gitbook.com/o/z5sgNMMcAnOUt1fqvUGW/s/t567cGmgFsbOXYO6QFYM/) – en portal med olika dokumentations-sajter som denna.
+* [Unity](https://app.gitbook.com/o/z5sgNMMcAnOUt1fqvUGW/s/-MJTeBJlEweD3YcPwKkg/) – en sida med förenklade förklaringar och exempel för Unity och C#
 
 ## Vad behöver jag först?
 
