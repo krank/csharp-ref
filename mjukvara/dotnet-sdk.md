@@ -3,7 +3,7 @@
 För att du ska kunna skapa och kompilera C#-projekt behövs .NET SDK; ladda ner från [https://dotnet.microsoft.com/download](https://www.google.com/url?q=https%3A%2F%2Fdotnet.microsoft.com%2Fdownload\&sa=D\&sntz=1\&usg=AFQjCNEZyeRMV73INiktjzYkeKEh8y7vUQ) eller använd winget:
 
 ```powershell
-winget install Microsoft.DotNet.SDK.7
+winget install Microsoft.DotNet.SDK.8
 ```
 
 När du installerat; öppna terminalen / powershell och skriv:
