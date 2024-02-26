@@ -66,6 +66,16 @@ Console.BackgroundColor = ConsoleColor.Magenta;
 **OBSERVERA:** detta gäller enbart text som skrivs efter det att färgen ändrats. Text som redan skrivits ut förändras inte.
 {% endhint %}
 
+### ANSI-färger
+
+ANSI är en gammal textstandard, med koder som fortfarande kan användas för att formatera text i konsollen. Man börjar varje kommando med `\x1b[`, följt av en siffra och sedan `m`. [En komplett lista finns här](https://gist.github.com/raghav4/48716264a0f426cf95e4342c21ada8e7).
+
+I exemplet nedan används alltså `\x1b[34m` för att aktivera blå färg, och sedan används `\x1b[0m` för att återgå till normal färg.
+
+```csharp
+Console.WriteLine("\x1b[34mBlå\x1b[0m färg");
+```
+
 ## Fönstret
 
 ### Console.Title
