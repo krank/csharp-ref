@@ -148,3 +148,17 @@ Raylib.ImageResize(ref targetImage, 400, 400);
 //Ändrar storleken på bilden "pixelartImage" till dubbla dess nuvarande storlek
 RayLib.ImageResizeNN(ref pixelartImage, pixelartImage * 2, pixelartImage * 2);
 ```
+
+## Spara till hårddisken
+
+### ExportImage
+
+Sparar en Image till hårddisken, som en png-bild.
+
+```csharp
+Raylib.ExportImage(sourceImage, "hello.png");
+```
+
+{% hint style="info" %}
+**OBS:** Filnamnet _måste_ sluta med ".png"!
+{% endhint %}
