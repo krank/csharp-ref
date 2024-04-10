@@ -2,6 +2,7 @@
 
 (Under uppbyggnad)
 
+* winget install Microsoft.WindowsAppRuntime.1.5
 * dotnet new install VijayAnand.WinUITemplates
 * Windows App SDK
   * [https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads)
