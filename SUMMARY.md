@@ -130,3 +130,7 @@
 * [Ta bort saker ur listan man går igenom](tekniker/ta-bort-saker-ur-listan-man-gar-igenom.md)
 * [2D-spelbräden](tekniker/2d-spelbraeden.md)
 * [Timers](tekniker/timers.md)
+
+***
+
+* [CONTRIBUTING](contributing.md)
