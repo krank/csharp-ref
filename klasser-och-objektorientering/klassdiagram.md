@@ -88,6 +88,38 @@ classDiagram
   Character o-- Weapon
 ```
 
+### Överkurs
+
+Ibland görs skillnad mellan _komposition_ och _aggregering_. Skillnaden är då att man med komposition menar att de kopplade klasserna bara finns i huvudklassen och är integrerade delar av den – relationen är inte bara "ingår i" utan "är en del av". Aggregering är då namnet man ger den lösare typen av koppling.
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': 
+{ 'primaryBorderColor': 'black', 
+'primaryColor': 'white'
+}}}%%
+
+classDiagram
+  class Character{
+        −_hp : int
+        −_name : string 
+        +Hurt(amount : int) void
+        +Attack() int
+  }
+  class Inventory{
+        −_item: List<Item>
+        +Add(item: Item)
+        +Remove(item: Item)
+  }
+  class Weapon{
+        −minDamage : int
+        −maxDamage : int
+        +Attack(target: Character) void
+  }
+  Character o-- Weapon
+  Character *-- Inventory
+
+```
+
 ## Vanliga frågor
 
 * **Har man med variablers värde?** Nej, bara datatyp, namn och access modifier (public, private, protected)
