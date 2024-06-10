@@ -37,7 +37,7 @@ classDiagram
 
 För att visa [arv ](arv.md)i klassdiagram används pilar.
 
-Pilarna pekar alltid FRÅN subklassen TILL basklassen.
+Pilarna pekar alltid FRÅN subklassen TILL basklassen. Man kan tänka sig att pilen betyder "är en sorts" eller "ärver från".
 
 Subklassernas diagram ritas på samma sätt som basklassens. Man skriver in klassens variabler och metoder, inklusive metoder som använder [override](polymorfism/virtual-override.md). Däremot skriver man inte in variabler eller metoder som bara ärvs från basklassen.
 
@@ -61,6 +61,33 @@ classDiagram
   Character <|-- Hero
 ```
 
+## Komposition i klassdiagram
+
+För att visa komposition i klassdiagram används en pil som avslutas i en romb.
+
+Rombpilarna pekar alltid FRÅN del-klassen TILL huvud-klassen. Man kan tänka sig att pilen betyder "ingår i", så att den ena klassen "ingår i" den andra klassen.
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': 
+{ 'primaryBorderColor': 'black', 
+'primaryColor': 'white'
+}}}%%
+
+classDiagram
+  class Character{
+        −_hp : int
+        −_name : string 
+        +Hurt(amount : int) void
+        +Attack() int
+  }
+  class Weapon{
+        −minDamage : int
+        −maxDamage : int
+        +Attack(target: Character) void
+  }
+  Character o-- Weapon
+```
+
 ## Vanliga frågor
 
 * **Har man med variablers värde?** Nej, bara datatyp, namn och access modifier (public, private, protected)
@@ -70,7 +97,7 @@ classDiagram
 
 ## NClass
 
-NClass är ett enkelt program för att skapa klassdiagram. Det är gratis och [kan laddas ner här](https://github.com/gbaychev/NClass/releases).&#x20;
+NClass är ett enkelt program för att skapa klassdiagram. Det är gratis och [kan laddas ner här](https://github.com/gbaychev/NClass/releases).
 
 {% hint style="info" %}
 **Observera:** Länken leder till en ny fork av den gamla versionen av NClass. Den nya verkar utvecklas aktivt och har t.ex. stöd för Ctrl+Z och nyare projekt i sin code generation (Visual Studio 2019… Fortfarande inte Dotnet 5/6 tyvärr)
