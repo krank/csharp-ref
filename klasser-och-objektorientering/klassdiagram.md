@@ -93,7 +93,8 @@ classDiagram
 Ibland görs skillnad mellan _komposition_ och _aggregering_. Skillnaden är då att man med komposition menar att de kopplade klasserna bara finns i huvudklassen och är integrerade delar av den – relationen är inte bara "ingår i" utan "är en del av". Aggregering är då namnet man ger den lösare typen av koppling.
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': 
+%%{init: {'theme': 'base',
+'themeVariables': 
 { 'primaryBorderColor': 'black', 
 'primaryColor': 'white'
 }}}%%
