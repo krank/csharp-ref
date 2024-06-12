@@ -123,6 +123,18 @@ class Character
 
 För att ange vilket värde som ska skickas till basklassens konstruktor så använder man base().
 
+```csharp
+class Dragon : Character
+{
+  public Dragon() : base("Dragon")
+  {
+    _hp = 200;
+  }
+}
+```
+
+Man kan också skicka vidare värden från subklassens konstruktor-parametrar till basklassens konstruktor.
+
 {% code title="Hero.cs" lineNumbers="true" %}
 ```csharp
 class Hero : Character
