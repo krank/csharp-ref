@@ -109,7 +109,7 @@
 
 ## Mjukvara
 
-* [Dotnet SDK\*](mjukvara/dotnet-sdk.md)
+* [Dotnet SDK](mjukvara/dotnet-sdk.md)
 * [Visual Studio Code \[…\]](mjukvara/visual-studio-code/README.md)
   * [Extensions](mjukvara/visual-studio-code/extensions.md)
   * [Inställningar](mjukvara/visual-studio-code/instaellningar.md)
