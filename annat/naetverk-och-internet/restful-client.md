@@ -126,7 +126,7 @@ string jsonText = response.Content;
 Console.WriteLine(jsonText);
 ```
 
-Ofta är Content JSON eller XML-format, och då kan informationen deserialiseras till ett objekt antingen via [JSON-deserialisering](../../filhantering/serialisering-.../json-serialisering.md#jsonserializer.deserialize-less-than-greater-than) eller [XML-deserialisering](../../filhantering/serialisering-.../xml-serialisering.md#deserialize).
+Ofta är Content JSON eller XML-format, och då kan informationen deserialiseras till ett objekt antingen via [JSON-deserialisering](../../filhantering/serialisering/json-serialisering.md#jsonserializer.deserialize-less-than-greater-than) eller [XML-deserialisering](../../filhantering/serialisering/xml-serialisering.md#deserialize).
 
 ## Kommunicera med en lokal server
 
