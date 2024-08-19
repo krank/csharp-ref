@@ -10,7 +10,7 @@ Detta är en hemsida med förenklade förklaringar och exempel för C# och Visua
 ## Vad behöver jag först?
 
 * Installera [.NET SDK](mjukvara/dotnet-sdk.md) – version 7 eller senare: [https://dotnet.microsoft.com/en-us/download](https://dotnet.microsoft.com/en-us/download)
-* Installera [Visual Studio Code](mjukvara/visual-studio-code/)&#x20;
+* Installera [Visual Studio Code](mjukvara/visual-studio-code/)
   * Och lämpliga [extensions](mjukvara/visual-studio-code/extensions.md).
 * Installera [Git-scm](mjukvara/git-and-github/) och [ställ in namn och email](mjukvara/git-and-github/#foersta-gangen-efter-ny-git-installation).
 * Kolla [lathunden ](lathund-skapa-projekt.md)för hur man skapar nya projekt.
@@ -20,7 +20,7 @@ Det enklaste sättet att installera .NET SDK, Visual Studio Code och Git-scm är
 ```powershell
 winget install Microsoft.VisualStudioCode
 winget install git.git
-winget install Microsoft.DotNet.SDK.7
+winget install Microsoft.DotNet.SDK.8
 ```
 
 Winget bör finnas och fungera i Windows 10 och 11; använder du en äldre version av windows kanske du får installera manuellt istället. Det kan också vara bra att köra **Windows Update** först, och installera alla tillgängliga uppdateringar (inklusive de man bara får om man klickar "Sök online…"
@@ -57,5 +57,5 @@ Vissa saker som t.ex. [Raylib ](annat/raylib/)ligger utanför tabellen – det �
 | [Egna metoder](grundlaeggande/egna-metoder.md)                  | [Generiska klasser](klasser-och-objektorientering/generiska-klasser.md)                        |                                                                        |
 | [Använda bibliotek](grundlaeggande/anvaenda-bibliotek-using.md) | [Läsa och skriva](filhantering/laesa-och-skriva.md)                                            |                                                                        |
 | [Namngivning](grundlaeggande/namngivning.md)                    | [Serialisering](filhantering/serialisering/)                                                   |                                                                        |
-| [Begrepp](grundlaeggande/begrepp.md)                            | [Nätverk och internet](broken-reference)                                                       |                                                                        |
+| [Begrepp](grundlaeggande/begrepp.md)                            | [Nätverk och internet](broken-reference/)                                                      |                                                                        |
 | [Pseudokod och diagram](annat/pseudokod-och-diagram.md)         |                                                                                                |                                                                        |
