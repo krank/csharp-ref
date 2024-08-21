@@ -25,12 +25,32 @@ string name = "Mikael";
 Console.WriteLine($"Hello {name} how are you today?");
 ```
 
-## Bokstavliga strings
+## Verbatim strings
 
-Genom att skriva @ framför citattecknet stänger man av escape-sekvenser. Detta är väldigt praktiskt ifall man vill lägga in ASCII-art eller använda många '\\-tecken.
+Genom att skriva @ framför citattecknet stänger man av escape-sekvenser. Detta är väldigt praktiskt ifall man vill lägga in ASCII-art eller använda många '\\-tecken. Detta kan dock inte kombineras med string interpolation.
 
 ```csharp
 Console.Writeline(@"\\\\\--- inga problem ---/////");
+```
+
+## Literal strings
+
+Genom att använda **tre citattecken** i början och slutet av en string kan man kombinera verbatim string-tolkning med string interpolation.
+
+Dessutom: om koden där stringen skapas är indenterad, ignoreras denna indentering när stringen skrivs ut. Mycket praktiskt för längre texter överlag!
+
+```csharp
+static void Hey()
+{
+  string name = "Luka";
+
+  string s = $"""
+    My name is {name}
+      I live on the second floor 
+  """;
+  
+  Console.WriteLine(s);
+}
 ```
 
 ## String-metoder
