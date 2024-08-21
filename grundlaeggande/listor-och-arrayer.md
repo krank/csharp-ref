@@ -13,7 +13,7 @@ I arrayer och listor är index alltid en siffra – en integer. Det första för
 
 {% code lineNumbers="true" %}
 ```csharp
-string[] names = {"Benny", "Jenny", "Kenny", "Anna"};
+string[] names = ["Benny", "Jenny", "Kenny", "Anna"];
 // I denna array har Benny index 0, Jenny 1, Kenny 2 och Anna 3.
 
 Console.WriteLine(names[2]); // Skriver ut "Kenny"
@@ -24,7 +24,7 @@ För att hänvisa till ett index räknat från slutet av arrayen så skriver man
 
 {% code lineNumbers="true" %}
 ```csharp
-string[] names = {"Benny", "Jenny", "Kenny", "Anna"};
+string[] names = ["Benny", "Jenny", "Kenny", "Anna"];
 
 Console.WriteLine(names[^2]); // Skriver ut "Jenny"
 ```
@@ -40,7 +40,7 @@ Arrayer har en **fast längd** som bestäms när arrayen skapas.
 int[] arrayHp = new int[3];
 
 // Skapa en string-array med tre platser som redan från början ges värden
-string[] choices = {"Start", "Options", "Quit"};
+string[] choices = ["Start", "Options", "Quit"];
 ```
 {% endcode %}
 
@@ -79,7 +79,7 @@ Ranges anger man genom att skriva `..` (två punkter). Innan punkten skriver man
 
 {% code lineNumbers="true" %}
 ```csharp
-string[] names = {"Benny", "Jenny", "Kenny", "Anna", "Mahmud", "Ki"};
+string[] names = ["Benny", "Jenny", "Kenny", "Anna", "Mahmud", "Ki"];
 
 string[] subNames = names[1..3]; // subNames blir en array med Jenny och Kenny
 
@@ -144,19 +144,11 @@ När listor skapas har de normalt sett en längd på 0, och de **växer dynamisk
 List<string> listNamn = new List<string>();
 
 // Skapa en string-lista som redan från början innehåller tre värden
-List<string> choices = new List<string>() {"Start", "Options", "Quit"};
+List<string> choices = ["Start", "Options", "Quit"];
 ```
 {% endcode %}
 
 Mer information om List finns under [Generiska klasser](../klasser-och-objektorientering/generiska-klasser.md).
-
-{% hint style="warning" %}
-**OBSERVERA:** Om du använder .NET 5 eller .NET Core så behöver du manuellt skriva till detta högst upp i dokumentet för att listor ska fungera:
-
-```csharp
-using System.Collections.Generic;
-```
-{% endhint %}
 
 ### Add()
 
@@ -235,11 +227,13 @@ string[] aNamn = listNamn.ToArray();
 List<string> listNamn = new List<string>(aNamn);
 ```
 
-## Skapa via collection expression (.net 8)
+## Skapa i äldre versioner (innan .net 8)
 
-I C# 12, som ingår i dotnet 8, tillkommer ett enhetligt sätt att skapa nya samlingar – vilket fungerar för både arrayer och listor.
+Innan C# 12, som ingår i dotnet 8, kunde man inte skapa nya arrayer eller listor via "collection expressions", alltså de enkla hakparenteserna.
+
+Istället var man tvungen att använda måsvingar för arrayer, och new() för List.
 
 ```csharp
-List<int> integerList = [1, 2, 3, 4];
-int[] integerArray = [5, 6, 7, 8];
+List<int> integerList = new() {1, 2, 3, 4};
+int[] integerArray = {5, 6, 7, 8};
 ```
