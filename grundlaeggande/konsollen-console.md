@@ -66,6 +66,14 @@ Console.BackgroundColor = ConsoleColor.Magenta;
 **OBSERVERA:** detta gäller enbart text som skrivs efter det att färgen ändrats. Text som redan skrivits ut förändras inte.
 {% endhint %}
 
+### Console.ResetColor
+
+Återställer för- och bakgrundsfärg till konsollens vanliga.
+
+```csharp
+Console.ResetColor();
+```
+
 ### ANSI-färger
 
 ANSI är en gammal textstandard, med koder som fortfarande kan användas för att formatera text i konsollen. Man börjar varje kommando med `\x1b[`, följt av en siffra och sedan `m`. [En komplett lista finns här](https://gist.github.com/raghav4/48716264a0f426cf95e4342c21ada8e7).
