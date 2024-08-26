@@ -1,4 +1,4 @@
-# XAML
+# XAML\*
 
 XAML är ett språk som används i bl.a WPF-program för att beskriva det grafiska gränssnittet. Det liknar delvis HTML och andra XML-släktingar, i det att man skapar element genom att använda start- och sluttagar samt attribut som (ofta) skrivs i starttaggarna.
 
@@ -202,3 +202,5 @@ if (FindName("list") is ListBox listBox)
 }
 ```
 {% endcode %}
+
+## \<Grid>\*
