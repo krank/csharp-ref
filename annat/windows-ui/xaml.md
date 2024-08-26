@@ -204,3 +204,45 @@ if (FindName("list") is ListBox listBox)
 {% endcode %}
 
 ## \<Grid>\*
+
+<pre class="language-xml"><code class="lang-xml">&#x3C;Grid>
+  &#x3C;Grid.RowDefinitions>
+    &#x3C;RowDefinition/>
+    &#x3C;RowDefinition/>
+  &#x3C;/Grid.RowDefinitions>
+  &#x3C;Grid.ColumnDefinitions>
+    &#x3C;ColumnDefinition/>
+    &#x3C;ColumnDefinition/>
+  &#x3C;/Grid.ColumnDefinitions>
+  
+  &#x3C;TextBlock Grid.Row="1" Grid.Column="1">Hello&#x3C;/TextBlock>
+<strong>&#x3C;/Grid>
+</strong></code></pre>
+
+### \<Grid.Rowdefinitions>
+
+```xml
+<Grid.RowDefinitions>
+  <RowDefinition Width="200"/>
+  <RowDefinition Width="auto"/>
+  <RowDefinition Width="*"/>
+</Grid.RowDefinitions>
+```
+
+### \<Grid.Columndefinitions>
+
+```xml
+<Grid.ColumnDefinitions>
+  <ColumnDefinition Width="200"/>
+  <ColumnDefinition Width="auto"/>
+  <ColumnDefinition Width="*"/>
+</Grid.ColumnDefinitions>
+```
+
+### Element i ett grid
+
+När man lägger in andra element i ett grid, så anger man vilken kolumn och vilken rad, alltså vilken position, elementet ska läggas i genom Grid.Row och Grid.Column.
+
+```xml
+<TextBlock Grid.Row="0" Grid.Column="1">Hello</TextBlock>
+```
