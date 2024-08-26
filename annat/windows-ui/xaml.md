@@ -118,11 +118,15 @@ if (FindName("mainButton") is Button button)
 
 ## \<Button>
 
+En knapp som man kan klicka på. Har Click-event.
+
 ```
-<Button>Click Me</Button>
+<Button Click="ClickTheButton">Click Me</Button>
 ```
 
 ## \<TextBlock>
+
+Ett block som innehåller text.
 
 ```
 <TextBlock Text="Hello" FontSize="56" />
@@ -131,29 +135,43 @@ if (FindName("mainButton") is Button button)
 
 ## \<StackPanel>
 
-```
-<StackPanel Margin="10">
+En container-panel som används för att stapla andra element.  Orientation avgör i vilken riktning; default är Vertical (elementen staplas uppifrån och ner).
+
+Man kan lägga in vilka element som helst i en StackPanel – inklusive andra StackPanels.
+
+```xml
+<StackPanel Margin="10" Orientation="Horizontal" Spacing="10">
 
 </StackPanel>
 ```
 
 ## \<CheckBox>
 
-```
-<CheckBox Checked="HandleCheck">Option 1</CheckBox>
-<CheckBox>Option 2</CheckBox>
-<CheckBox>Option 3</CheckBox>
+Kryssrutor, där flera kan vara ikryssade samtidigt. Har eventen Checked och Unchecked.
+
+```xml
+<CheckBox>Candle</CheckBox>
+<CheckBox>Sword</CheckBox>
+<CheckBox>Shield</CheckBox>
 ```
 
 ## \<RadioButton>
 
-```xaml
-<RadioButton>Radio 1</RadioButton>
-<RadioButton>Radio 2</RadioButton>
-<RadioButton>Radio 3</RadioButton>
+Liknande Checkbox, men bara en kan vara ifylld i taget. Bra när användare ska få välja mellan olika saker, och bara får välja en av dem. Har också eventen Checked och Unchecked.
+
+```xml
+<RadioButton>Warrior</RadioButton>
+<RadioButton>Mage</RadioButton>
+<RadioButton>Rogue</RadioButton>
 ```
 
 ## \<Image>
+
+Lägger in en bild! Har attributen Source, Width och Height som kan vara användbara. Source behöver deklareras som en [resursfil](../../filhantering/resursfiler.md), eller på annat sätt placeras i samma mapp som exe-filen när programmet kompilerats.
+
+```xml
+<Image Width="200" Height="200" Source="cat.jpg" />
+```
 
 ## \<ListBox>
 
