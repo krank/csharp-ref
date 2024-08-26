@@ -1,4 +1,4 @@
-# XAML\*
+# XAML
 
 XAML är ett språk som används i bl.a WPF-program för att beskriva det grafiska gränssnittet. Det liknar delvis HTML och andra XML-släktingar, i det att man skapar element genom att använda start- och sluttagar samt attribut som (ofta) skrivs i starttaggarna.
 
@@ -175,6 +175,28 @@ Lägger in en bild! Har attributen Source, Width och Height som kan vara använd
 <Image Width="200" Height="200" Source="cat.jpg" />
 ```
 
-## \<ListBox>\*
+## \<ListBox>
 
-##
+En lista med text-items dit man kan lägga in nya saker eller ta bort gamla. Det finns C#-metoder för att manipulera listans innehåll, och ett SelectionChanged-event som kan bindas till C#-kod. SelectionMode-attributet används för att göra det möjligt för användare att markera flera saker i listan samtidigt.
+
+{% code title="MainWindow.xaml" %}
+```xml
+<ListBox x:Name="list" SelectionMode="Multiple">
+  <ListBoxItem>Health Potion</ListBoxItem>
+  <ListBoxItem>Broadsword</ListBoxItem>
+  <ListBoxItem>Vase with flowers</ListBoxItem>
+</ListBox>
+```
+{% endcode %}
+
+{% code title="MainWindow.xaml.cs" %}
+```csharp
+if (FindName("list") is ListBox listBox)
+{
+  listBox.SelectionChanged += (object sender, SelectionChangedEventArgs e) =>
+  {
+    MessageBox.Show(listBox.SelectedItems.Count.ToString());
+  };
+}
+```
+{% endcode %}
