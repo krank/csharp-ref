@@ -112,7 +112,7 @@
   * [Task](annat/threading/task.md)
 * [Pseudokod och diagram](annat/pseudokod-och-diagram.md)
 * [Windows UI](annat/windows-ui/README.md)
-  * [WPF\*](annat/windows-ui/wpf.md)
+  * [WPF](annat/windows-ui/wpf.md)
   * [XAML](annat/windows-ui/xaml.md)
   * [WinUI\*](annat/windows-ui/winui.md)
 

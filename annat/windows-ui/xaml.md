@@ -2,6 +2,8 @@
 
 XAML är ett språk som används i bl.a WPF-program för att beskriva det grafiska gränssnittet. Det liknar delvis HTML och andra XML-släktingar, i det att man skapar element genom att använda start- och sluttagar samt attribut som (ofta) skrivs i starttaggarna.
 
+Installera gärna [NoesisGUI XAML-extension](../../mjukvara/visual-studio-code/extensions.md#bonus) i Visual Studio Code för extra hjälp att skriva koden.
+
 ## Element
 
 Elementen är UIts byggstenar; de är saker som knappar och textrutor. En del av dem är rena layoutelement, som t.ex. StackPanel som man lägger andra element inuti. Varje element kan olika _attribut_. Ibland kallas elementen också _kontroller_. De kan skrivas med start- och sluttagg eller som självavslutande taggar.

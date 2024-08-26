@@ -37,6 +37,7 @@ Om man har en länk till en extension – som de nedan – kan man helt enkelt k
 
 ### Bonus
 
+* [NoesisGUI XAML Tools](https://marketplace.visualstudio.com/items?itemName=NoesisTechnologies.noesisgui-tools) – hjälper till med kodkomplettering när man skriver [XAML](../../annat/windows-ui/xaml.md)-kod. Inte perfekt! Eftersom den egentligen är gjord för en väldigt specifik användning av XAML.
 * [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client) – gör att man kan testa API-anrop direkt i VScode, både mot lokala servrar som man bygger själv och servrar på det lokala nätverket eller internet.
 * [Auto-Using for C#](https://marketplace.visualstudio.com/items?itemName=Fudge.auto-using) – hjälper till att lägga in using-statements när det behövs, t.ex. för listor så lägger den till `using System.Collections.Generic`.
 * [Roslynator](https://marketplace.visualstudio.com/items?itemName=josefpihrt-vscode.roslynator) – Ger en hel del kodförslag och hjälp.
