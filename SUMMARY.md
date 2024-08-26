@@ -111,7 +111,10 @@
   * [Thread](annat/threading/thread.md)
   * [Task](annat/threading/task.md)
 * [Pseudokod och diagram](annat/pseudokod-och-diagram.md)
-* [WinUI\*](annat/winui.md)
+* [Windows UI](annat/windows-ui/README.md)
+  * [WPF\*](annat/windows-ui/wpf.md)
+  * [XAML\*](annat/windows-ui/xaml.md)
+  * [WinUI\*](annat/windows-ui/winui.md)
 
 ## Mjukvara
 
