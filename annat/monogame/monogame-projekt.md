@@ -2,11 +2,7 @@
 
 ## Skapa ett projekt
 
-Skapa en ny mapp och öppna den. Kör följande kommando i terminalen (dubbelkolla att terminalen är i rätt mapp). Byt ut "MittProjektNamn" mot ett eget namn.
-
-```
-/dotnet new mgdesktopgl -o MittProjektNamn
-```
+Skapa ett nytt ".Net Project" som vanligt, men istället för Console App väljer du **MonoGame Cross-Platform Desktop Application**.
 
 ## Projektstruktur\*
 

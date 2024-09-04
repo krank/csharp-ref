@@ -81,7 +81,7 @@
   * [Kollisioner](annat/raylib/kollisioner.md)
   * [Kamera](annat/raylib/kamera.md)
   * [Ljud](annat/raylib/ljud.md)
-* [MonoGame](annat/monogame/README.md)
+* [MonoGame \[…\]](annat/monogame/README.md)
   * [Monogame-projekt\*](annat/monogame/monogame-projekt.md)
   * [MCGB Editor\*](annat/monogame/mcgb-editor.md)
   * [Input\*](annat/monogame/input.md)
