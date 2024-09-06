@@ -1,6 +1,29 @@
 # Grafik\*
 
-## Texture2D\*
+## GraphicsDevice
+
+En abstraktion som ger tillgång till renderingssystemet.
+
+### Clear()
+
+Rensar skärmen/fönstret, använder färgen som anges som parameter.
+
+```csharp
+GraphicsDevice.Clear(Color.CornflowerBlue);
+```
+
+## Color
+
+Datatyp som MonoGame använder för att hantera förg.
+
+```csharp
+Color hotPink = new(255, 105, 180);
+Color semiTransparentWhite = new(255, 255, 255, 128);
+```
+
+Värdena som anges som parametrar är mängden rött, grönt och blått som färgen ska innehålla, på skalan 0–255. Anges ett fjärde värde så tolkas det som mängden "Alpha", alltså genomskinlighet där 0 är helt genomskinligt och 255 är helt ogenomskinligt.
+
+## Texture2D
 
 Ett Texture2D-objekt är en tvådimensionell bild. Oftast skapas de genom att man laddar in resources som man tidigare förberett i [mcgb-editor.md](mcgb-editor.md "mention").
 
@@ -15,9 +38,29 @@ Man kan också skapa nya Texture2Ds. När de skapas är de då helt tomma.
 Texture2D pixel = new Texture2D(GraphicsDevice, 1, 1);
 ```
 
-### SetData
+### GetData\<Color>()
 
-För den som verkligen&#x20;
+Avancerat – Fyller en array med färgdatan från texturen. Första parametern ska vara den array som fylls med datan; den måste ges samma storlek som det totala antalet pixlar i texturen.
+
+```csharp
+// Skapa en array av rätt storlek
+Color[] pixels = new Color[hero.Height * hero.Width]
+
+// Hämta datan in i arrayen
+hero.GetData<Color>(pixels);
+```
+
+Arrayen är endimensionell – alla pixlar ligger efter varandra. Den är organiserad i rader, så först ligger alla pixlar på bildens första rad, sedan alla på bildens andra rad, sedan tredje raden, osv.
+
+För att byta färg på en enskild pixel i arrayen används sedan vanlig indexering, och datatypen här är Color.
+
+### SetData()
+
+Avancerat – Motsvarigheten till GetData(). Används för att stoppa in en array med färgdata in i en Texture2D.
+
+```csharp
+hero.SetData<Color>(pixels);
+```
 
 ## SpriteBatch
 
