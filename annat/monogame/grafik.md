@@ -2,6 +2,23 @@
 
 ## Texture2D\*
 
+Ett Texture2D-objekt är en tvådimensionell bild. Oftast skapas de genom att man laddar in resources som man tidigare förberett i [mcgb-editor.md](mcgb-editor.md "mention").
+
+```csharp
+Texture2D hero = Content.Load<Texture2D>("heroSprite");
+```
+
+Man kan också skapa nya Texture2Ds. När de skapas är de då helt tomma.
+
+```csharp
+// Skapa en Texture2D som är 1x1 i storlek
+Texture2D pixel = new Texture2D(GraphicsDevice, 1, 1);
+```
+
+### SetData
+
+För den som verkligen&#x20;
+
 ## SpriteBatch
 
 2D-grafik i Monogame ritas ut med SpriteBatches. När man skapar ett nytt Monogame-projekt får man automatiskt en SpriteBatch-variabel i Game1-klassen:
