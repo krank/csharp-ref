@@ -8,6 +8,7 @@
 ## Grundläggande
 
 * [Datatyper \[…\]](grundlaeggande/datatyper/README.md)
+  * [String](grundlaggande/datatyper/string.md)
   * [Tuples](grundlaeggande/datatyper/tuples.md)
   * [Enum](grundlaeggande/datatyper/enum.md)
 * [Fel](grundlaeggande/fel.md)
