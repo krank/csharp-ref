@@ -27,9 +27,12 @@ public class Pokemon
 ```
 {% endcode %}
 
-Det är också enbart publika variabler samt properties med publika getters och setters som serialiseras.
+Vad som inkluderas i serialiseringen är:
 
-Om du ska deserialisera JSON-kod som du får från något annat ställe och inte designat själv, så behöver du vara noga med att matcha namnet på dina publika variabler/[properties ](../../klasser-och-objektorientering/inkapsling-och-properties.md#properties)mot JSON-kodens. Serialiseringsprocessen är normalt känslig vad gäller stora och små bokstäver, men du kan ändra på detta (rekommenderas!).
+* Publika [properties](../../klasser-och-objektorientering/inkapsling-och-properties.md#properties) med publika get och set
+* Variabler och properties som det står \[JsonInclude] framför
+
+Om du ska deserialisera JSON-kod som du får från något annat ställe och inte designat själv, så behöver du vara noga med att **matcha namnet** på dina publika variabler/[properties ](../../klasser-och-objektorientering/inkapsling-och-properties.md#properties)mot JSON-kodens. Serialiseringsprocessen är normalt känslig vad gäller stora och små bokstäver, men du kan ändra på detta (rekommenderas!).
 
 {% tabs %}
 {% tab title="Pokemon.cs" %}
@@ -44,7 +47,7 @@ public class Pokemon
 {% endtab %}
 
 {% tab title="Ditto.json" %}
-```javascript
+```json
 {
   "form_name": "",
   "form_names": [],
@@ -83,7 +86,7 @@ string json = JsonSerializer.Serialize<Pokemon>(poke);
 ```
 {% endcode %}
 
-Denna string kan sedan lagras i en textfil eller t.ex. skickas som svar på ett [REST](broken-reference)-anrop.
+Denna string kan sedan lagras i en textfil eller t.ex. skickas som svar på ett [REST](../../annat/naetverk-och-internet/restful-client.md)-anrop.
 
 ### JsonSerializerOptions
 
@@ -102,8 +105,6 @@ string json = JsonSerializer.Serialize<Pokemon>(poke, options);
 ```
 
 I JSON används oftast snake\_case, medan C# ju använder [camelCase eller PascalCase](../../grundlaeggande/namngivning.md#pascalcase-och-camelcase).
-
-
 
 {% hint style="warning" %}
 **OBS:** SnakeCaseLower introducerades i dotnet 8!
@@ -129,12 +130,29 @@ Mer om attribut [här](../../klasser-och-objektorientering/attribut.md).
 **OBS:** dessa kräver att du inkluderar `System.Text.Json.Serialization`.
 {% endhint %}
 
+### \[JsonInclude]
+
+Används för att inkludera en variabel eller property i Json-serialiseringen
+
+```csharp
+using System.Text.Json.Serialization;
+
+public class Pokemon
+{
+  [JsonInclude]
+  public string Name;
+  
+  [JsonInclude]
+  public bool IsDefault;
+}
+```
+
 ### \[JsonIgnore]
 
 Används för att se till så att en variabel eller property på C#-sidan inte serialiseras till JSON.
 
 {% code title="Pokemon.cs" lineNumbers="true" %}
-```javascript
+```csharp
 using System.Text.Json.Serialization;
 
 public class Pokemon
@@ -172,7 +190,7 @@ class Pokemon
 Ibland beskriver JSON-kod listor av objekt eller värden. De kännetecknas av att ge omges av hakparenteser `[]`.
 
 {% code lineNumbers="true" %}
-```javascript
+```json
 {
   "name": "ditto",
   "forms":
@@ -204,7 +222,7 @@ class Pokemon
 Ibland beskriver JSON-kod objekt som innehåller andra objekt.
 
 {% code lineNumbers="true" %}
-```javascript
+```json
 {
   "name": "ditto",
   "species":
@@ -219,7 +237,7 @@ Ibland beskriver JSON-kod objekt som innehåller andra objekt.
 För att deserialisera dessa, skapa klasser som beskriver de inre objekten.
 
 {% code title="PokemonSpecies.cs" lineNumbers="true" %}
-```
+```csharp
 class PokemonSpecies
 {
   [JsonPropertyName("name")]
