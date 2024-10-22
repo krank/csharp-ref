@@ -128,7 +128,7 @@ För en enkel, säker konvertering kan man använda TryParse.
 ```csharp
 string tal = "42.5";
 float f;
-bool lyckad = int.TryParse(tal, out f);
+bool lyckad = float.TryParse(tal, out f);
 ```
 {% endcode %}
 
