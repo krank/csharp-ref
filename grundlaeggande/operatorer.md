@@ -108,7 +108,7 @@ True om **båda** operanderna är true, dvs det är true på båda sidorna om &&
 bool x = true && true; // resultatet är true
 ```
 
-```
+```csharp
 bool y = true && false; // resultatet är false
 ```
 
@@ -116,17 +116,9 @@ bool y = true && false; // resultatet är false
 
 True om **minst en** av operanderna är true.
 
-{% code lineNumbers="true" %}
 ```csharp
 bool x = true || false; // true; det räcker om den ena är true.
-```
-{% endcode %}
-
-```
 bool y = false || false; // false
-```
-
-```
 bool z = (3 == 2) || x; // true; x är true även om 3 inte är samma som 2.
 ```
 

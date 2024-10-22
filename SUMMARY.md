@@ -14,6 +14,7 @@
 * [Fel](grundlaeggande/fel.md)
 * [Typkonvertering](grundlaeggande/typkonvertering.md)
 * [Operatorer](grundlaeggande/operatorer.md)
+* [Boolska satser](grundlaggande/boolska-satser.md)
 * [Konsolen (Console)](grundlaeggande/konsollen-console.md)
 * [If-satser](grundlaeggande/if-satser.md)
 * [Loopar](grundlaeggande/loopar.md)
