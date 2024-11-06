@@ -1,0 +1,178 @@
+# Minimalist\*
+
+## [WriteLine](grundlaeggande/konsollen-console.md#console.writeline), [ReadLine](grundlaeggande/konsollen-console.md#console.readline)
+
+Används för att skriva ut saker till användaren eller läsa in saker.
+
+```csharp
+Console.WriteLine("Vad heter du?");
+string name = Console.ReadLine();
+```
+
+## Kommentarer
+
+Genom att skriva // framför något så gör man så det inte tolkas som kod utan som en kommentar.
+
+```csharp
+// Det här är en kommentar.
+// Console.WriteLine("Det här är också en kommentar; en kod som inte körs");
+```
+
+## Variabler
+
+Variabler lagrar information – allt man vill kunna komma ihåg i programmet lagras i variabler.
+
+Varje variabel har en [**datatyp**](grundlaeggande/datatyper/). När man skapar en variabel så anger man vilken sorts information som ska lagras i den.
+
+```csharp
+// int är datatypen, hp namnet på variabeln
+int hp = 100;          // int = heltal
+string name = "Micke"; // string = text
+float money = 4.5f     // float = decimaltal
+```
+
+Man kan ändra på en variabels värde i efterhand. = funkar alltid, så länge variabeln är på vänster sida och det du vill ändra dess värde till är på höger.
+
+```csharp
+name = "Martin"; // Ändra name till 'Martin'
+
+hp = hp + 10; // Öka hp med 10
+
+hp += 5; // Öka hp med 5
+
+hp++ // Öka hp med 1
+hp-- // Minska hp med 1
+```
+
+### Tryparse
+
+[Tryparse ](grundlaeggande/typkonvertering.md#int.tryparse)gör att man kan göra om en string till en int.
+
+```csharp
+string pointsText = Console.ReadLine();
+int points = 0;
+bool success = int.TryParse(pointsText, out points);
+```
+
+## if-else
+
+[If ](grundlaeggande/if-satser.md)gör att man kan ha kod som bara görs om ett villkor stämmer (är _true_).
+
+```csharp
+string name = Console.ReadLine();
+if (name == "Micke")
+{
+  Console.WriteLine("Välkommen!");
+}
+```
+
+I exemplet nedan används också else if och else för att skapa en kedja.
+
+```csharp
+string name = Console.ReadLine();
+
+if (name == "Micke") // Först kollas name mot 'Micke'
+{
+  Console.WriteLine("Välkommen!");
+}
+else if (name == "Martin")  // Om det inte är 'Micke' kollas namn mot 'Martin'
+{
+  Console.WriteLine("Hej!");
+}
+else  // och om det varken är 'Micke' eller 'Martin' körs den här koden
+{
+  Console.WriteLine("Dig känner jag inte, hejdå!");
+}
+```
+
+## [Villkor](grundlaggande/boolska-satser.md) och [jämförelser](grundlaeggande/operatorer.md#boolska)
+
+Mellan parenteserna i if-satser och loopar skriver man någon form av jämförelse som blir sann eller falsk. Vanliga jämförelser kan vara:
+
+* `==` "Är exakt lika med"
+* `!=` "Är inte lika med"
+* `>` "Är större än"&#x20;
+* `<` "Är mindre än"
+* `<=` "Är större än eller lika med"
+* `>=` "Är mindre än eller lika med
+
+```csharp
+int hp = 50;
+if (hp < 10)
+{
+  Console.WriteLine("Skadad!");
+}
+
+if (hp > 100)
+{
+  Console.WriteLine("Overcharge!");
+}
+```
+
+Man kombinerar ofta jämförelser med varandra, genom att använda && (och), || (eller).&#x20;
+
+```csharp
+if (name == "Mikael" && pass == "password" && attempts < 4)
+{
+  Console.WriteLine("Välkommen!");
+}
+```
+
+## [While-loop](grundlaeggande/loopar.md#while-loop)
+
+Funkar exakt som en if-sats, utom att när koden som står under den är klar, så gör den jämförelsen igen – och om den fortfarande är _true_ så kör den en gång till.
+
+```csharp
+string name = Console.ReadLine();
+while (name != "Micke")
+{
+  name = Console.ReadLine()
+}
+```
+
+**Observera** att exemplet ovan kan användas för alla möjliga jämförelser – så fort du vill begränsa användarens input, göra så att hen inte får gå vidare förrän hen skrivit in något som är "rätt sorts input", så kan du använda en while.
+
+## For
+
+En sorts loop som är väldigt bra när man vill köra en loop ett specifikt antal gånger. For-loopar funkar egentligen som while-loopar, men inkluderar en _räknare_.
+
+```csharp
+// Räknaren heter i, börjar på 0 och ökar med 1 varje gång loopen körts.
+for (int i = 0; i < 10; i++) 
+{
+  // Det som står här inne kommer köras 10 gånger
+  // Första gången loopen körs, har i värde 0
+  // Andra gången har i värde 1
+  // Tredje gången har i värde 2...
+}
+```
+
+## List
+
+Med listor kan man ha flera värden i samma variabel.
+
+```csharp
+List<int> numbers = [2, 45, 13, 200];
+List<string> names = ["Micke", "Martin"];
+```
+
+Man kan läsa av och ändra på vad som finns på platser i en lista genom _indexering_. Varje plats i listan är numrerad från 0 och uppåt.
+
+```csharp
+List<string> names = ["Micke", "Martin"];
+Console.WriteLine(names[1]); // Skriver ut 'Martin'
+names[0] = "Mohammad"; // Byter ut 'Micke' mot 'Mohammad'
+```
+
+Man kan också kolla hur lång en lista är med Count, lägga till saker med Add och ta bort med Remove eller RemoveAt.
+
+```csharp
+List<string> names = ["Micke", "Martin"];
+Console.WriteLine(names.Count); // Skriver ut '2'
+
+names.Add("Jenny"); // Lägg till Jenny, som får index 2
+names.Remove("Martin"); // Ta bort Martin, så att Jenny får index 1
+names.RemoveAt(0); // Ta bort namnet med index 0
+```
+
+## Metoder

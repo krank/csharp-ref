@@ -4,6 +4,8 @@
 
 Fungerar och ser ut som en [if-sats](if-satser.md) utom att körningen inte fortsätter när kodblocket körts, utan "hoppar upp" till kriteriet och testar det igen.
 
+Precis som med if-satserna ska det som är mellan paranteserna vara kod som ger [boolskt](datatyper/#bool) resultat t.ex. en [jämförelse ](operatorer.md#boolska)eller en metod som [returnerar ](egna-metoder.md#returnering)ett boolskt värde.
+
 {% code lineNumbers="true" %}
 ```csharp
 int i = 10;

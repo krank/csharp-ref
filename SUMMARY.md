@@ -4,6 +4,7 @@
 * [Lathund: Skapa projekt](lathund-skapa-projekt.md)
 * [Kompilering och publicering](kompilering-och-publicering.md)
 * [Externa resurser](externa-resurser.md)
+* [Minimalist\*](minimalist.md)
 
 ## Grundläggande
 
