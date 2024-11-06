@@ -138,7 +138,7 @@ public class DatabaseContext : DbContext
 ```
 {% endcode %}
 
-Sedan skapar man en instans av sin nya DbContext-klass, och via denna instans kan man sedan göra [CRUD-operationer](broken-reference) mot databasen.
+Sedan skapar man en instans av sin nya DbContext-klass, och via denna instans kan man sedan göra [CRUD-operationer](./#crud) mot databasen.
 
 {% code title="program.cs" %}
 ```csharp
