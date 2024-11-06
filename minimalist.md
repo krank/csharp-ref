@@ -147,7 +147,7 @@ for (int i = 0; i < 10; i++)
 }
 ```
 
-## List
+## [List](grundlaeggande/listor-och-arrayer.md#list)
 
 Med listor kan man ha flera värden i samma variabel.
 
@@ -175,4 +175,57 @@ names.Remove("Martin"); // Ta bort Martin, så att Jenny får index 1
 names.RemoveAt(0); // Ta bort namnet med index 0
 ```
 
-## Metoder
+## [Metoder](grundlaeggande/egna-metoder.md#enkel-metod)
+
+En metod är en bit återanvändbar kod, som kan anropas från andra delar av koden. Metoder som är statiska är helt separata från resten av koden – de kan inte komma åt variabler som inte är deras egna. Metoder är överlag lite som Las Vegas: Det som händer i metoden stannar i metoden. Om man inte specifikt säger något annat.
+
+```csharp
+static void CountDown()
+{
+  for (int i=10; i>0; i--)
+  {
+    Console.WriteLine(i + "...");
+  }
+}
+```
+
+### Parametrar
+
+För att få _in_ data i en metod används parametrar. Det gör man generellt när man vill att en och samma metod ska kunna göra delvis olika saker beroende på vilken data den ges.
+
+```csharp
+static void CountDownFrom(int startValue)
+{
+  for (int i=startValue; i>0; i--)
+  {
+    Console.WriteLine(i + "...");
+  }
+}
+
+CountDownFrom(100); // 100 stoppas in i parametervariabeln startValue
+CountDownFrom(10);
+```
+
+### Returnering
+
+Om man vill ta med sig något från inifrån en metod så använder man _return_.
+
+```csharp
+// 'string' betyder att vi lovar att metoden returnerar en string
+//        ↓
+static string GetName() 
+{
+  string name = "";
+  while (name.Length == 0)
+  {
+    Console.WriteLine("Vad heter du?");
+    name = Console.ReadLine();
+  }
+  
+  return name; // 'return' avslutar metoden och skickar tillbaka innehållet i 'name'
+}
+
+string heroName = GetName();
+string enemyName = GetName();
+```
+

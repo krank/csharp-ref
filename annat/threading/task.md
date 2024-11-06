@@ -112,7 +112,7 @@ string result2 = await SomeLibrary.FetchThingFromInternetAsync();
 
 ## Async
 
-De flesta async-metoder får man från något existerande bibliotek, till exempel [RestSharp](broken-reference). Standard är att döpa dem till något som slutar på Async.
+De flesta async-metoder får man från något existerande bibliotek, till exempel [RestSharp](../naetverk-och-internet/restful-client.md#restsharp). Standard är att döpa dem till något som slutar på Async.
 
 En asynkron metod:
 
