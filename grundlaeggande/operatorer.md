@@ -76,11 +76,7 @@ i--;
 
 ## Boolska
 
-### > < Större än, mindre än.
 
-```csharp
-bool x = 4 > 3;
-```
 
 ### == Lika med
 
@@ -96,6 +92,20 @@ bool x = 4 == 4; // true eftersom 4 är samma som 4
 
 ```csharp
 bool x = 4 != 5; // true eftersom det stämmer att 4 och 5 är olika
+```
+
+### > < Större än, mindre än.
+
+```csharp
+bool x = 4 > 3;
+```
+
+### <= >= Större än eller lika med, Mindre än eller lika med
+
+```csharp
+bool x = 4 >= 4; // Blir true eftersom fyra är större än eller lika med fyra
+
+bool y = 3 <= 10;
 ```
 
 ## Logiska

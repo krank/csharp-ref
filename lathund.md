@@ -120,7 +120,20 @@ if (name == "Mikael" && pass == "password" && attempts < 4)
 
 ## [While-loop](grundlaeggande/loopar.md#while-loop)
 
-Funkar exakt som en if-sats, utom att när koden som står under den är klar, så gör den jämförelsen igen – och om den fortfarande är _true_ så kör den en gång till.
+Ett sätt att köra kod upprepade gånger.
+
+```csharp
+while (true) // Loop som körs för evigt
+{
+  string password = Console.ReadLine();
+  if (password == "12345")
+  {
+    break; // Avbryter loopen
+  }
+}
+```
+
+En while-loop funkar exakt som en if-sats, utom att när koden som står under den är klar, så gör den jämförelsen igen – och om den fortfarande är _true_ så kör den en gång till.
 
 ```csharp
 string name = Console.ReadLine();
