@@ -1,4 +1,4 @@
-# Minimalist\*
+# Lathund
 
 ## [WriteLine](grundlaeggande/konsollen-console.md#console.writeline), [ReadLine](grundlaeggande/konsollen-console.md#console.readline)
 
@@ -44,9 +44,9 @@ hp++ // Öka hp med 1
 hp-- // Minska hp med 1
 ```
 
-### Tryparse
+### [TryParse](grundlaeggande/typkonvertering.md#int.tryparse)
 
-[Tryparse ](grundlaeggande/typkonvertering.md#int.tryparse)gör att man kan göra om en string till en int.
+Tryparse gör att man kan göra om en string till en int.
 
 ```csharp
 string pointsText = Console.ReadLine();
@@ -54,9 +54,9 @@ int points = 0;
 bool success = int.TryParse(pointsText, out points);
 ```
 
-## if-else
+## [If-else](grundlaeggande/if-satser.md)
 
-[If ](grundlaeggande/if-satser.md)gör att man kan ha kod som bara görs om ett villkor stämmer (är _true_).
+If gör att man kan ha kod som bara görs om ett villkor stämmer (är _true_).
 
 ```csharp
 string name = Console.ReadLine();
@@ -132,7 +132,7 @@ while (name != "Micke")
 
 **Observera** att exemplet ovan kan användas för alla möjliga jämförelser – så fort du vill begränsa användarens input, göra så att hen inte får gå vidare förrän hen skrivit in något som är "rätt sorts input", så kan du använda en while.
 
-## For
+## [For-loop](grundlaeggande/loopar.md#for-loop)
 
 En sorts loop som är väldigt bra när man vill köra en loop ett specifikt antal gånger. For-loopar funkar egentligen som while-loopar, men inkluderar en _räknare_.
 
