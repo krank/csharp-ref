@@ -118,6 +118,15 @@ if (name == "Mikael" && pass == "password" && attempts < 4)
 }
 ```
 
+## [Slump](grundlaeggande/slump.md)
+
+```csharp
+// randomNumber blir ett tal som kan vara minst 0, max 99
+int randomNumber = Random.Shared.Next(100);
+
+int otherNumber = Random.Shared.Next(4,7); // Talet kan vara minst 4, max 7
+```
+
 ## [While-loop](grundlaeggande/loopar.md#while-loop)
 
 Ett sätt att köra kod upprepade gånger.
@@ -241,4 +250,17 @@ static string GetName()
 string heroName = GetName();
 string enemyName = GetName();
 ```
+
+## Klasser
+
+Varje klass läggs normalt i en egen fil.
+
+{% code title="Enemy.cs" %}
+```csharp
+class Enemy
+{
+  public string Name;
+}
+```
+{% endcode %}
 
