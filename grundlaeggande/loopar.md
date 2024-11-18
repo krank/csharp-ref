@@ -6,17 +6,6 @@ Fungerar och ser ut som en [if-sats](if-satser.md) utom att körningen inte fort
 
 Precis som med if-satserna ska det som är mellan paranteserna vara kod som ger [boolskt](datatyper/#bool) resultat t.ex. en [jämförelse ](operatorer.md#boolska)eller en metod som [returnerar ](egna-metoder.md#returnering)ett boolskt värde.
 
-{% code lineNumbers="true" %}
-```csharp
-int i = 10;
-while (i > 0)
-{
-  Console.WriteLine(i);
-  i--;
-}
-```
-{% endcode %}
-
 While-loopar används när man **inte vet** hur många gånger loopen ska köras. Till exempel:
 
 {% code lineNumbers="true" %}
