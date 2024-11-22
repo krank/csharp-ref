@@ -37,7 +37,7 @@ När listor skapas har de normalt sett en längd på 0, och de **växer dynamisk
 {% code lineNumbers="true" %}
 ```csharp
 // Skapa en tom string-lista
-List<string> listNamn = new List<string>();
+List<string> listNamn = [];
 
 // Skapa en string-lista som redan från början innehåller tre värden
 List<string> choices = ["Start", "Options", "Quit"];

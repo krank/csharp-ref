@@ -29,7 +29,7 @@ Många samlings-datatyper kan också få ytterligare funktionalitet via [Linq-me
 En [property ](inkapsling-och-properties.md#properties)som används istället för Length för att räkna antalet saker i samlingen.
 
 ```csharp
-List<int> myList = new List<int>() {1,2,3,4,5};
+List<int> myList = [1, 2, 3, 4, 5];
 
 Console.WriteLine(myList.Count);
 ```
@@ -50,7 +50,7 @@ List<int> myList = myQueue.ToList();
 Tar emot ett värde. Om värdet finns i samlingen returnerar metoden true, annars false.
 
 ```csharp
-List<int> myList = new List<int>() {4,5,6,7};
+List<int> myList = [4, 5, 6, 7];
 
 if (myList.Contains(6))
 {
@@ -63,7 +63,7 @@ if (myList.Contains(6))
 Rensar bort alla saker som finns i samlingen.
 
 ```csharp
-List<int> myList = new List<int>() {4,5,6,7};
+List<int> myList = [4, 5, 6, 7];
 
 myList.Clear();
 
@@ -76,7 +76,7 @@ Fungerar som arrayer, utom att man inte bestämmer storlek från början utan ka
 
 {% code lineNumbers="true" %}
 ```csharp
-List<string> myList = new List<string>();
+List<string> myList = [];
 
 myList.Add("hej");
 
@@ -89,7 +89,7 @@ List.RemoveAt(0);
 När man skapar en lista kan man också direkt lägga in värden genom att ange en array efter parenteserna.
 
 ```csharp
-List<int> myList = new List<int>() {1,2,3,4,5};
+List<int> myList = [1, 2, 3, 4, 5];
 ```
 
 #### Add()
@@ -123,7 +123,7 @@ Tar emot en [delegate ](../grundlaeggande/delegates.md)som beskriver ett kriteri
 RemoveAll() tar bort alla element som matchar kriteriet, och returnerar ett int-värde som beskriver hur många som togs bort.
 
 ```csharp
-List<int> intList = new() { 1, 2, 3, 4, 5 };
+List<int> intList = [1, 2, 3, 4, 5];
 
 int i = intList.RemoveAll(x => x > 3); // i blir 2, och 4 och 5 tas bort ur listan.
 ```
@@ -135,7 +135,7 @@ Tar emot en [delegate ](../grundlaeggande/delegates.md)som beskriver ett kriteri
 Find() returnerar det första föremål (värde eller objekt) i listan som matchar kriteriet. Om inget hittas, returneras null eller defaultvärdet för datatypen (t.ex. 0 för integers).
 
 ```csharp
-List<int> intList = new() { 1, 2, 3, 4, 5 };
+List<int> intList = [1, 2, 3, 4, 5];
 
 int i = intList.Find(x => x > 3); // i blir 4
 ```
@@ -145,7 +145,7 @@ int i = intList.Find(x => x > 3); // i blir 4
 Fungerar som Find, men kollar igenom listan bakifrån  och returnerar därmed det _sista_ föremål som matchar kriteriet.
 
 ```csharp
-List<int> intList = new() { 1, 2, 3, 4, 5 };
+List<int> intList = [1, 2, 3, 4, 5];
 
 int i = intList.FindLast (x => x < 3); // i blir 2
 ```
@@ -155,7 +155,7 @@ int i = intList.FindLast (x => x < 3); // i blir 2
 Fungerar som Find, men returnerar en lista med _alla_ matchande föremål i listan.
 
 ```csharp
-List<int> intList = new() { 1, 2, 3, 4, 5 };
+List<int> intList = [1, 2, 3, 4, 5];
 
 List<int> lowNumbers = intList.FindAll (x => x < 4); // lowNumbers blir 1,2,3
 ```
@@ -165,7 +165,7 @@ List<int> lowNumbers = intList.FindAll (x => x < 4); // lowNumbers blir 1,2,3
 Fungerar som Find, men returnerar _index_ för första matchande föremål.
 
 ```csharp
-List<int> intList = new() { 11, 12, 13, 14, 15 };
+List<int> intList = [11, 12, 13, 14, 15];
 
 int i = intList.FindIndex (x => x > 12); // i blir 2
 ```
@@ -175,7 +175,7 @@ int i = intList.FindIndex (x => x > 12); // i blir 2
 Fungerar som FindIndex(), men kollar igenom listan bakifrån och returnerar därmed _index_ för det _sista_ föremål som matchar kriteriet.
 
 ```csharp
-List<int> intList = new() { 11, 12, 13, 14, 15 };
+List<int> intList = [11, 12, 13, 14, 15];
 
 int i = intList.FindLastIndex (x => x < 13); // i blir 1
 ```
