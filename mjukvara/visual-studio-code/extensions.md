@@ -31,15 +31,12 @@ Om man har en länk till en extension – som de nedan – kan man helt enkelt k
 * [gitignore](https://marketplace.visualstudio.com/items?itemName=codezombiech.gitignore) – Underlättar arbetet med git och Visual Studio Code. Om du söker efter den, se till att ta den av CodeZombie!
 * [NuGet Gallery](https://marketplace.visualstudio.com/items?itemName=patcx.vscode-nuget-gallery) – Underlättar installationen av externa bibliotek och paket, t.ex. Raylib.
 * [Hide Comments](https://marketplace.visualstudio.com/items?itemName=eliostruyf.vscode-hide-comments) – Gömmer alla kommentarer. Används när du presenterar din kod.
-* **INAKTUELLA:**
-  * [C#](https://www.google.com/url?q=https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3Dms-vscode.csharp\&sa=D\&sntz=1\&usg=AFQjCNGOzgSFj14Pbd9ut66JAvh0loJsEw) – Ger Visual Studio Code stöd för C# (Installeras automatiskt med C# Dev Kit)
-  * [C# Toolbox of Productivity](https://marketplace.visualstudio.com/items?itemName=RichardZampieriprog.csharp-snippet-productivity) – Lägger till en del extra användbara genvägar och funktioner, t.ex. för att skapa nya projekt och klasser. (Har slutat utvecklas, och C# Dev Kit funkar bättre)
 
 ### Bonus
 
+* [Vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons) – ger tydligare ikoner för filer och mappar.
 * [NoesisGUI XAML Tools](https://marketplace.visualstudio.com/items?itemName=NoesisTechnologies.noesisgui-tools) – hjälper till med kodkomplettering när man skriver [XAML](../../annat/windows-ui/xaml.md)-kod. Inte perfekt! Eftersom den egentligen är gjord för en väldigt specifik användning av XAML.
 * [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client) – gör att man kan testa API-anrop direkt i VScode, både mot lokala servrar som man bygger själv och servrar på det lokala nätverket eller internet.
-* [Auto-Using for C#](https://marketplace.visualstudio.com/items?itemName=Fudge.auto-using) – hjälper till att lägga in using-statements när det behövs, t.ex. för listor så lägger den till `using System.Collections.Generic`.
 * [Roslynator](https://marketplace.visualstudio.com/items?itemName=josefpihrt-vscode.roslynator) – Ger en hel del kodförslag och hjälp.
   * Vill du ha ännu mer pedantisk "hjälp"? Använd [NuGet Gallery](../../grundlaeggande/anvaenda-bibliotek-using.md#nuget-gallery) för att lägga till StyleCop.Analyzers till ditt projekt.
 * [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare) – Realtids-samarbete; flera personer kan skriva kod tillsammans samtidigt.
