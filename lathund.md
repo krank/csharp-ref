@@ -195,6 +195,16 @@ Console.WriteLine(names.Count); // Skriver ut '2'
 names.Add("Jenny"); // Lägg till Jenny, som får index 2
 names.Remove("Martin"); // Ta bort Martin, så att Jenny får index 1
 names.RemoveAt(0); // Ta bort namnet med index 0
+
+if (names.Contains("Jenny")) // Kolla om Jenny finns i listan
+{
+  Console.WriteLine("Jenny är med!");
+}
+
+foreach (string name in names) // Loopa igenom listan
+{
+  Console.WriteLine(name);
+}
 ```
 
 ## [Metoder](grundlaeggande/egna-metoder.md#enkel-metod)
