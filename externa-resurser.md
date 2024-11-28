@@ -4,7 +4,7 @@
 
 **På svenska**
 
-* **Csharpskolan:** [https://www.youtube.com/@csharpskolan/playlists](https://www.youtube.com/@csharpskolan/playlists)
+* **Csharpskolan:** [https://www.youtube.com/playlist?list=PLGIaaBeLgSj-gR2ce4llrGt9c\_1J7JqoC](https://www.youtube.com/playlist?list=PLGIaaBeLgSj-gR2ce4llrGt9c_1J7JqoC)
 * **Distansakademin C#:** [https://www.youtube.com/playlist?list=PLI5JF23TK\_8CB6bhsiRski3W3PCFqVltx](https://www.youtube.com/playlist?list=PLI5JF23TK_8CB6bhsiRski3W3PCFqVltx)
 
 **På engelska**
