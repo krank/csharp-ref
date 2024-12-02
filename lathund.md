@@ -9,6 +9,15 @@ Console.WriteLine("Vad heter du?");
 string name = Console.ReadLine();
 ```
 
+## Svenska tecken i konsollen
+
+Ibland kan det vara problem med svenska tecken i konsollen. Om det är problem skriv följande kod i början av programmet.
+
+```csharp
+Console.InputEncoding = System.Text.Encoding.Unicode;
+Console.OutputEncoding = System.Text.Encoding.Unicode;
+```
+
 ## Kommentarer
 
 Genom att skriva // framför något så gör man så det inte tolkas som kod utan som en kommentar.
@@ -195,6 +204,16 @@ Console.WriteLine(names.Count); // Skriver ut '2'
 names.Add("Jenny"); // Lägg till Jenny, som får index 2
 names.Remove("Martin"); // Ta bort Martin, så att Jenny får index 1
 names.RemoveAt(0); // Ta bort namnet med index 0
+
+if (names.Contains("Jenny")) // Kolla om Jenny finns i listan
+{
+  Console.WriteLine("Jenny är med!");
+}
+
+foreach (string name in names) // Loopa igenom listan
+{
+  Console.WriteLine(name);
+}
 ```
 
 ## [Metoder](grundlaeggande/egna-metoder.md#enkel-metod)
