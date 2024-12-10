@@ -11,7 +11,7 @@ class Fighter
 
   public Fighter()
   {
-    strength = Random.Shared.Next(5,10);
+    _strength = Random.Shared.Next(5,10);
   }
 }
 ```
