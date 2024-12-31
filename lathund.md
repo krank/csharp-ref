@@ -41,6 +41,8 @@ hp++ // Öka hp med 1
 hp-- // Minska hp med 1
 ```
 
+## Läsa in data
+
 ### Läsa in text med [WriteLine](grundlaeggande/konsollen-console.md#console.writeline), [ReadLine](grundlaeggande/konsollen-console.md#console.readline)
 
 Används för att skriva ut saker till användaren eller läsa in saker.
@@ -134,8 +136,6 @@ int otherNumber = Random.Shared.Next(4,7); // Talet kan vara minst 4, max 7
 ```
 
 ## Upprepa med loopar
-
-Ett sätt att köra kod upprepade gånger.
 
 ### [While-loop](grundlaeggande/loopar.md#while-loop)
 
