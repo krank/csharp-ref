@@ -64,7 +64,7 @@ bool success = int.TryParse(pointsText, out points);
 
 ## [If-else](grundlaeggande/if-satser.md)
 
-If gör att man kan ha kod som bara görs om ett villkor stämmer (är _true_).
+If gör att man kan ha kod som bara körs om ett villkor stämmer (är _true_).
 
 ```csharp
 string name = Console.ReadLine();
