@@ -62,7 +62,9 @@ int points = 0;
 bool success = int.TryParse(pointsText, out points);
 ```
 
-## [If-else](grundlaeggande/if-satser.md)
+## Villkorssatser
+
+### [If-else](grundlaeggande/if-satser.md)
 
 If gör att man kan ha kod som bara körs om ett villkor stämmer (är _true_).
 
@@ -93,7 +95,7 @@ else  // och om det varken är 'Micke' eller 'Martin' körs den här koden
 }
 ```
 
-## [Villkor](grundlaggande/boolska-satser.md) och [jämförelser](grundlaeggande/operatorer.md#boolska)
+### [Villkor](grundlaggande/boolska-satser.md) och [jämförelser](grundlaeggande/operatorer.md#boolska)
 
 Mellan parenteserna i if-satser och loopar skriver man någon form av jämförelse som blir sann eller falsk. Vanliga jämförelser kan vara:
 
@@ -131,8 +133,8 @@ if (name == "Mikael" && pass == "password" && attempts < 4)
 ```csharp
 // randomNumber blir ett tal som kan vara minst 0, max 99
 int randomNumber = Random.Shared.Next(100);
-
-int otherNumber = Random.Shared.Next(4,7); // Talet kan vara minst 4, max 7
+// Talet kan vara minst 4, max 7
+int otherNumber = Random.Shared.Next(4,7);
 ```
 
 ## Upprepa med loopar
