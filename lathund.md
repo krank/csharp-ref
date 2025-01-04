@@ -48,8 +48,9 @@ hp-- // Minska hp med 1
 Används för att skriva ut saker till användaren eller läsa in saker.
 
 ```csharp
-Console.WriteLine("Vad heter du?");
+Console.Write("Vad heter du? ");
 string name = Console.ReadLine();
+Console.WriteLine($"Hej {name}! Kul att du också är här :-)");
 ```
 
 ### Läsa in tal med [TryParse](grundlaeggande/typkonvertering.md#int.tryparse)
