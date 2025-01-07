@@ -195,7 +195,8 @@ Man kan läsa av och ändra på vad som finns på platser i en lista genom _inde
 
 ```csharp
 List<string> names = ["Micke", "Martin"];
-Console.WriteLine(names[0]); // Skriver ut 'Martin'
+Console.WriteLine(names[0]); // Skriver ut 'Micke'
+Console.WriteLine(names[1]); // Skriver ut 'Martin'
 names[0] = "Mohammad"; // Byter ut 'Micke' mot 'Mohammad'
 Console.WriteLine(names[0]); // Skriver ut 'Mohammad'
 ```
