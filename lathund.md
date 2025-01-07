@@ -1,14 +1,5 @@
 # Lathund
 
-## [WriteLine](grundlaeggande/konsollen-console.md#console.writeline), [ReadLine](grundlaeggande/konsollen-console.md#console.readline)
-
-Används för att skriva ut saker till användaren eller läsa in saker.
-
-```csharp
-Console.WriteLine("Vad heter du?");
-string name = Console.ReadLine();
-```
-
 ## Svenska tecken i konsollen
 
 Ibland kan det vara problem med svenska tecken i konsollen. Om det är problem skriv följande kod i början av programmet.
@@ -44,16 +35,25 @@ Man kan ändra på en variabels värde i efterhand. = funkar alltid, så länge 
 
 ```csharp
 name = "Martin"; // Ändra name till 'Martin'
-
 hp = hp + 10; // Öka hp med 10
-
 hp += 5; // Öka hp med 5
-
 hp++ // Öka hp med 1
 hp-- // Minska hp med 1
 ```
 
-### [TryParse](grundlaeggande/typkonvertering.md#int.tryparse)
+## Läsa in data
+
+### Läsa in text med [WriteLine](grundlaeggande/konsollen-console.md#console.writeline), [ReadLine](grundlaeggande/konsollen-console.md#console.readline)
+
+Används för att skriva ut saker till användaren eller läsa in saker.
+
+```csharp
+Console.Write("Vad heter du? ");
+string name = Console.ReadLine();
+Console.WriteLine($"Hej {name}! Kul att du också är här :-)");  // Skriver ut 'Hej ...!  Kul att du också är här :-)
+```
+
+### Läsa in tal med [TryParse](grundlaeggande/typkonvertering.md#int.tryparse)
 
 Tryparse gör att man kan göra om en string till en int.
 
@@ -63,9 +63,11 @@ int points = 0;
 bool success = int.TryParse(pointsText, out points);
 ```
 
-## [If-else](grundlaeggande/if-satser.md)
+## Villkorssatser
 
-If gör att man kan ha kod som bara görs om ett villkor stämmer (är _true_).
+### [If-else](grundlaeggande/if-satser.md)
+
+If gör att man kan ha kod som bara körs om ett villkor stämmer (är _true_).
 
 ```csharp
 string name = Console.ReadLine();
@@ -94,7 +96,7 @@ else  // och om det varken är 'Micke' eller 'Martin' körs den här koden
 }
 ```
 
-## [Villkor](grundlaggande/boolska-satser.md) och [jämförelser](grundlaeggande/operatorer.md#boolska)
+### [Villkor](grundlaggande/boolska-satser.md) och [jämförelser](grundlaeggande/operatorer.md#boolska)
 
 Mellan parenteserna i if-satser och loopar skriver man någon form av jämförelse som blir sann eller falsk. Vanliga jämförelser kan vara:
 
@@ -132,13 +134,15 @@ if (name == "Mikael" && pass == "password" && attempts < 4)
 ```csharp
 // randomNumber blir ett tal som kan vara minst 0, max 99
 int randomNumber = Random.Shared.Next(100);
-
-int otherNumber = Random.Shared.Next(4,7); // Talet kan vara minst 4, max 7
+// Talet kan vara minst 4, max 7
+int otherNumber = Random.Shared.Next(4,7);
 ```
 
-## [While-loop](grundlaeggande/loopar.md#while-loop)
+## Upprepa med loopar
 
-Ett sätt att köra kod upprepade gånger.
+### [While-loop](grundlaeggande/loopar.md#while-loop)
+
+En loop när man inte vet hur många gånger koden skall köras.
 
 ```csharp
 while (true) // Loop som körs för evigt
@@ -163,7 +167,7 @@ while (name != "Micke")
 
 **Observera** att exemplet ovan kan användas för alla möjliga jämförelser – så fort du vill begränsa användarens input, göra så att hen inte får gå vidare förrän hen skrivit in något som är "rätt sorts input", så kan du använda en while.
 
-## [For-loop](grundlaeggande/loopar.md#for-loop)
+### [For-loop](grundlaeggande/loopar.md#for-loop)
 
 En sorts loop som är väldigt bra när man vill köra en loop ett specifikt antal gånger. For-loopar funkar egentligen som while-loopar, men inkluderar en _räknare_.
 
@@ -191,8 +195,9 @@ Man kan läsa av och ändra på vad som finns på platser i en lista genom _inde
 
 ```csharp
 List<string> names = ["Micke", "Martin"];
-Console.WriteLine(names[1]); // Skriver ut 'Martin'
+Console.WriteLine(names[0]); // Skriver ut 'Martin'
 names[0] = "Mohammad"; // Byter ut 'Micke' mot 'Mohammad'
+Console.WriteLine(names[0]); // Skriver ut 'Mohammad'
 ```
 
 Man kan också kolla hur lång en lista är med Count, lägga till saker med Add och ta bort med Remove eller RemoveAt.
