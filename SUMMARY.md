@@ -96,7 +96,7 @@
 * [Nätverk och internet \[…\]](annat/naetverk-och-internet/README.md)
   * [CRUD, HTTP och REST](annat/naetverk-och-internet/rest-och-crud.md)
   * [URL:er och REST](annat/naetverk-och-internet/url-er-och-rest.md)
-  * [RESTful client](annat/naetverk-och-internet/restful-client.md)
+  * [RESTful client\*](annat/naetverk-och-internet/restful-client.md)
   * [Thunder](annat/naetverk-och-internet/thunder.md)
   * [RESTful server (Minimal API)](annat/naetverk-och-internet/restful-server-minimal-api/README.md)
     * [Swagger och OpenAPI](annat/naetverk-och-internet/restful-server-minimal-api/swagger-och-openapi.md)

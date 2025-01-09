@@ -1,4 +1,4 @@
-# RESTful client
+# RESTful client\*
 
 ## Snabbstart
 
@@ -13,6 +13,21 @@ RestRequest request = new RestRequest("pokemon/ditto");
 RestResponse response = client.GetAsync(request).Result;
 Pokemon p = JsonSerializer.Deserialize<Pokemon>(response.Content);
 
+```
+
+Nytt sätt:
+
+```csharp
+using System.Text.Json;
+
+HttpClient client = new HttpClient();
+client.BaseAddress = new Uri("https://pokeapi.co/api/v2/");
+HttpResponseMessage result = client.GetAsync("pokemon/ditto").Result;
+Pokemon p = JsonSerializer.Deserialize<Pokemon>(result.Content.ReadAsStringAsync().Result);
+
+// Alternativ till de två sista raderna:
+
+Pokemon p = result.Content.ReadAsAsync<Pokemon>().Result);
 ```
 
 ## RestSharp
