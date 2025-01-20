@@ -2,7 +2,8 @@
 
 Skapa ett nytt konsollprojekt som vanligt.
 
-* Ta fram kommandopaletten (F1) och sök efter NuGet Gallery (som du såklart [behöver ha installerat](https://marketplace.visualstudio.com/items?itemName=patcx.vscode-nuget-gallery)).
+* Ta fram **NuGet-fliken** i Visual Studio Codes nedre panel (bredvid Terminal). Du behöver [ha tillägget NuGet Gallery installerat](https://marketplace.visualstudio.com/items?itemName=patcx.vscode-nuget-gallery).
+  * Om du inte ser den fliken, tryck F1 och sök efter "nuget", välj "Focus on NuGet view".
 * I galleriet, sök efter Raylib. Välj senaste versionen av "Raylib\_cs".
 * Kryssa i ditt projekt, klicka Install.
 * Om du vill använda bilder eller andra filer i ditt spel, se till att [konfigurera din csproj för att hantera resursfiler](../../filhantering/resursfiler.md#loesning-3-kopiera-filerna-automatiskt-till-malmappen).
