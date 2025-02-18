@@ -1,4 +1,4 @@
-# Lathund - programmering i konsolen
+# Lathund - koda i konsolen
 
 ## Svenska tecken i konsollen
 

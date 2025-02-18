@@ -1,27 +1,22 @@
-# Lathund – WPF och vanliga kontroller
+# Lathund – koda WPF-applikationer
 
 ## Appens fönster
 
-Fönstret är den översta behållaren i en WPF-applikation. Här definieras fönstrets titel, storlek och hur innehållet hanteras. Exempel:
-- **Title:** Sätter fönstrets titel, t.ex. `Title="MinApp"`.
+Vanliga attribut för fönstret i XAML:
+- **Title:** Sätter fönstrets titel.
 - **MaxWidth** och **MaxHeight:** Anger maximal storlek för fönstret.
 - **SizeToContent:** Bestämmer hur fönstret anpassar sig efter innehållet. Exempel: `SizeToContent="WidthAndHeight"` innebär att fönstret anpassar både bredd och höjd.
 
 ```xml
-<Window x:Class="MelloApp.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+<Window ...
         Title="MinApp"
         MaxWidth="800" MaxHeight="450"
-        SizeToContent="WidthAndHeight"
-        mc:Ignorable="d">
+        SizeToContent="WidthAndHeight">
     <!-- Innehållet i fönstret -->
 </Window>
 ```
 
-## Vanliga kontroller och attribut
+## Vanliga kontroller och attribut i XAML
 
 ### Layoutkontroller – StackPanel
 
@@ -81,7 +76,7 @@ Visar en bild. Vanliga attribut:
 <Image Width="200" Source="bilder/melodifestivalen.png" />
 ```
 
-Kom ihåg att lägga bildfilen i rätt mapp i projektet och i cproj-filen ange:
+Bildfilen skall ligga i rätt mapp i projektet, och i **.cproj**-filen skall mappen inkluderas som en resurs:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
