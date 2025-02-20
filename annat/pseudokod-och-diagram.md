@@ -14,19 +14,41 @@ Ett exempel:
 >
 > Kolla om siffran är lägre än talet
 >
-> &#x20; Säg att spelaren måste gissa högre
+> &#x20;   Säg att spelaren måste gissa högre
 >
 > Kolla om siffran är högre än talet
 >
-> &#x20; Säg att spelaren måste gissa högre
+> &#x20;   Säg att spelaren måste gissa högre
 >
 > Kolla om siffran är exakt rätt
 >
-> &#x20; Gratulera spelaren
+> &#x20;   Gratulera spelaren
 >
 > Om den inte är rätt, läs in en ny siffra
 
 Ingenstans finns några if-satser eller några WriteLines, men det är ändå tydligt att det är en algoritm – och att den skulle kunna skrivas, med lite modifikationer, i C# eller valfritt annat programmeringsspråk.
+
+### Mer formell pseudokod
+
+Det finns de som vill ha mer formaliserad pseudokod. Man lägger sig då närmare "riktig" kod.
+
+> **WHILE** tal ≠ siffra
+>
+> &#x20;   tal = slump()
+>
+> &#x20;   **INPUT** siffra
+>
+> &#x20;   **IF** siffra < tal **THEN**
+>
+> &#x20;       **OUTPUT** "Du måste gissa högre!
+>
+> &#x20;   **ELSE IF** siffra > tal **THEN**
+>
+> &#x20;       **OUTPUT** "Du måste gissa lägre!"
+>
+> &#x20;   **ELSE**
+>
+> &#x20;       **OUTPUT** "Grattis!
 
 ## Flödesscheman / aktivitetsdiagram
 

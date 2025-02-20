@@ -11,7 +11,7 @@ class Fighter
 
   public Fighter()
   {
-    strength = Random.Shared.Next(5,10);
+    _strength = Random.Shared.Next(5,10);
   }
 }
 ```
@@ -147,7 +147,7 @@ class Hero : Character
 ```
 {% endcode %}
 
-Här tar subklassens konstruktor emot två parametrar - na och h - och skickar vidare värdet som lagras i parametern na till basklassens konstruktor.
+Här tar subklassens konstruktor emot två parametrar – name och hp – och skickar vidare värdet som lagras i parametern name till basklassens konstruktor.
 
 ## Primära konstruktorer (.net 8)
 

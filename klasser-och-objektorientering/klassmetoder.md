@@ -2,7 +2,7 @@
 
 Det går utmärkt att lägga in metoder i klasser. De anropas då genom att man skriver instansens namn följt av metodens namn, och lägger in parametrar och hanterar returneringar som vanligt.
 
-Klassmetoders kod kan komma åt instansens variabler, properties och metoder.
+Klassmetoders kod kan komma åt instansens variabler, properties och metoder. Det gäller även sådana den fått genom [arv](arv.md).
 
 {% code title="Fighter.cs" lineNumbers="true" %}
 ```csharp

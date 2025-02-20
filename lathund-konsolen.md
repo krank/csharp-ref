@@ -102,7 +102,7 @@ Mellan parenteserna i if-satser och loopar skriver man någon form av jämförel
 
 * `==` "Är exakt lika med"
 * `!=` "Är inte lika med"
-* `>` "Är större än"&#x20;
+* `>` "Är större än"
 * `<` "Är mindre än"
 * `<=` "Är större än eller lika med"
 * `>=` "Är mindre än eller lika med
@@ -120,7 +120,7 @@ if (hp > 100)
 }
 ```
 
-Man kombinerar ofta jämförelser med varandra, genom att använda && (och), || (eller).&#x20;
+Man kombinerar ofta jämförelser med varandra, genom att använda && (och), || (eller).
 
 ```csharp
 if (name == "Mikael" && pass == "password" && attempts < 4)
@@ -195,7 +195,8 @@ Man kan läsa av och ändra på vad som finns på platser i en lista genom _inde
 
 ```csharp
 List<string> names = ["Micke", "Martin"];
-Console.WriteLine(names[0]); // Skriver ut 'Martin'
+Console.WriteLine(names[0]); // Skriver ut 'Micke'
+Console.WriteLine(names[1]); // Skriver ut 'Martin'
 names[0] = "Mohammad"; // Byter ut 'Micke' mot 'Mohammad'
 Console.WriteLine(names[0]); // Skriver ut 'Mohammad'
 ```
@@ -214,7 +215,11 @@ if (names.Contains("Jenny")) // Kolla om Jenny finns i listan
 {
   Console.WriteLine("Jenny är med!");
 }
+```
 
+Med en [foreach-loop](grundlaeggande/loopar.md#foreach-loop) kan man gå igenom listan och läsa av varje sak i den i tur och ordning.
+
+```csharp
 foreach (string name in names) // Loopa igenom listan
 {
   Console.WriteLine(name);
@@ -287,4 +292,3 @@ class Enemy
 }
 ```
 {% endcode %}
-
