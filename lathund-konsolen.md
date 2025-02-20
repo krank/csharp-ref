@@ -1,4 +1,4 @@
-# Lathund
+# Lathund - koda i konsolen
 
 ## Svenska tecken i konsollen
 
@@ -22,7 +22,7 @@ Genom att skriva // framför något så gör man så det inte tolkas som kod uta
 
 Variabler lagrar information – allt man vill kunna komma ihåg i programmet lagras i variabler.
 
-Varje variabel har en [**datatyp**](grundlaeggande/datatyper/). När man skapar en variabel så anger man vilken sorts information som ska lagras i den.
+Varje variabel har en [**datatyp**](grundlaeggande/datatyper). När man skapar en variabel så anger man vilken sorts information som ska lagras i den.
 
 ```csharp
 // int är datatypen, hp namnet på variabeln
