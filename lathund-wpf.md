@@ -2,11 +2,6 @@
 
 ## Appens fönster
 
-Vanliga attribut för fönstret i XAML:
-- **Title:** Sätter fönstrets titel.
-- **MaxWidth** och **MaxHeight:** Anger maximal storlek för fönstret.
-- **SizeToContent:** Bestämmer hur fönstret anpassar sig efter innehållet. Exempel: `SizeToContent="WidthAndHeight"` innebär att fönstret anpassar både bredd och höjd.
-
 ```xml
 <Window ...
         Title="MinApp"
@@ -21,9 +16,6 @@ Vanliga attribut för fönstret i XAML:
 ### Layoutkontroller – StackPanel
 
 StackPanel är en layoutkontroll som ordnar sina barnkontroller i en vertikal eller horisontell stapel.  
-Vanliga attribut:
-- **Background:** Anger bakgrundsfärg.
-- **Orientation:** Bestämmer stapelns riktning, t.ex. `Orientation="Vertical"` eller `Orientation="Horizontal"`.
 
 ```xml
 <Window ...>
@@ -35,22 +27,14 @@ Vanliga attribut:
 
 ### Label
 
-Används för att visa text. Vanliga attribut:
-- **Margin:** Anger yttre marginal.
-- **FontSize:** Bestämmer teckenstorlek.
-- **Foreground:** Sätter textfärg.
-
+Används för att visa text.
 ```xml
 <Label Margin="10" FontSize="24" Foreground="#FFF">Ange ditt namn</Label>
 ```
 
 ### Button
 
-En klickbar knapp. Vanliga attribut:
-- **Margin** och **Padding:** Anger yttre och inre marginal.
-- **Background:** Anger knappens bakgrundsfärg.
-- **FontWeight:** T.ex. `FontWeight="Bold"` för fet stil.
-- **Foreground:** Sätter textfärg.
+En klickbar knapp.
 
 ```xml
 <Button Margin="10" Padding="10" Background="Red" FontWeight="Bold">Spara</Button>
@@ -58,9 +42,7 @@ En klickbar knapp. Vanliga attribut:
 
 ### TextBox
 
-Används för att visa eller låta användaren skriva in text. Vanliga attribut:
-- **Margin** och **Padding:** Styr layouten.
-- **IsReadOnly:** Anger om textfältet är skrivskyddat.
+Används för att visa eller låta användaren skriva in text.
 
 ```xml
 <TextBox Margin="10" Padding="10"></TextBox>
@@ -91,7 +73,7 @@ Bildfilen skall ligga i rätt mapp i projektet, och i **.cproj**-filen skall map
 
 ## Vanliga attribut för kontroller
 
-Alla kontroller i XAML kan ha följande attribut:
+Alla kontroller i XAML kan ha följande vanliga attribut:
 
 - **Margin:** Anger yttre marginal.
 - **Padding:** Anger inre marginal.
@@ -106,7 +88,7 @@ Alla kontroller i XAML kan ha följande attribut:
 
 ### click-event och event-metoder
 
-När en användare klickar på en knapp utlöses ett ```click```-event. I XAML kopplar du eventet till en metod genom att använda attributet **Click**. Exempel:
+När en användare klickar på en knapp utlöses ett ```click```-event. 
 
 ```xml
 <Button Click="KlickSpara" Margin="10" Padding="10">Spara</Button>
@@ -123,7 +105,7 @@ void KlickSpara(object sender, RoutedEventArgs e)
 
 ### Referens till kontroller: Name-attributet
 
-Name-attributet i XAML ger varje kontroll ett unikt namn, vilket gör att du kan referera till den direkt i din C#-logik. När du exempelvis anger:
+Name-attributet i XAML ger varje kontroll ett unikt namn, vilket gör att du kan referera till den direkt i din C#-logik.
 
 ```xml
 <TextBox Name="txbResultat" Margin="10" Padding="10"></TextBox>
