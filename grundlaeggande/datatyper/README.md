@@ -16,55 +16,7 @@ En string är en text – en serie tecken efter varandra.
 string s = "Hello";
 ```
 
-### Length
-
-Length är en egenskap alla strings har. Det är en int som innehåller det antal tecken stringen har.
-
-```csharp
-Console.WriteLine($"Texten {s} har {s.Length} tecken");
-```
-
-### All()
-
-All() är en del av **Linq-biblioteket** så man måste först ha med `using System.Linq`. All har en [delegate ](../delegates.md)som parameter, och förväntar sig då en metod (eller ett lambda-uttryck) som tar emot en `char` och returnerar `true` eller `false`. All stoppar sedan i var och ett av stringens tecken in i den angivna metoden. Om resultatet för alla blir `true` så returnerar All också `true`.
-
-```csharp
-using System.Linq;
-
-string s1 = "12345";
-string s2 = "123a45;
-
-bool b1 = s1.All(char.IsDigit); // b1 = true
-bool b2 = s2.All(char.IsDigit); // b2 = false
-```
-
-### \ – specialtecken
-
-Om man skriver \ i en string så kommer tecknet efter att tolkas som ett specialtecken. Det vanligaste är \n, som är en newline (ny rad).
-
-```csharp
-Console.WriteLine("Detta är första raden.\nDetta är andra raden.");
-```
-
-### $ – interpolated strings
-
-Om man skriver $ framför en string, så kan man sedan stoppa in variabler och metodanrop och annat inuti måsvingar i stringen. Det som står innanför måsvingarna utvärderas och blir en del av stringen.
-
-OBS: utvärderingen sker bara en gång. Så i exemplet nedan spelar det ingen roll att hp-variabeln minskar med 50 på rad 3, stringen s innehåller fortfarande bara "Du har 100 hit points kvar".
-
-```csharp
-int hp = 100;
-string s = $"Du har {hp} hit points kvar";
-hp -= 50;
-```
-
-### @ – literal strings
-
-Om man skriver @ framför en string, så kommer varje tecken i denna string sedan att tolkas väldigt bokstavligt. Framför allt används detta när man inte vill att \ ska tolkas, utan bara skrivas ut som just \\. Det är praktiskt när man ska göra ASCII-art eller sökvägar i Windows.
-
-```
-Console.WriteLine(@"Detta är första raden.\nDetta är också första rader.");
-```
+[Mer om strings finns här](../string-manipulering.md)
 
 ## float
 
@@ -116,10 +68,10 @@ Observera att definitionen av "siffra" här inte bara inkluderar tecknen 0–9 u
 
 Överkurs: det finns ett antal olika sätt att spara heltal, och de har olika min- och maxvärden.
 
-* int, eller int32, är en 32-bitars integer. Den använder 32 ettor och nollor (bits/bitar) för att lagra ett heltal som kan vara positivt eller negativt. En av bitarna används för att avgöra ifall talet är positivt eller negativt.
-* long, eller int64, är en 64-bitars integer.
-* short, eller int16, är en 16-bitars integer.
-* uint, ulong och ushort är versioner av int, long och short som inte kan bli negativa – men i gengäld kan mäta större positiva tal. Eftersom ingen bit används för att avgöra om talet är positivt/negativt.
+* **int**, eller int32, är en 32-bitars integer. Den använder 32 ettor och nollor (bits/bitar) för att lagra ett heltal som kan vara positivt eller negativt. En av bitarna används för att avgöra ifall talet är positivt eller negativt.
+* **long**, eller int64, är en 64-bitars integer.
+* **short**, eller int16, är en 16-bitars integer.
+* **uint**, **ulong** och **ushort** är versioner av int, long och short som inte kan bli negativa – men i gengäld kan mäta större positiva tal. Eftersom ingen bit används för att avgöra om talet är positivt/negativt.
 
 Vilken som är lämplig vid vilket tillfälle beror på hur höga tal man behöver lagra samt hur viktigt det är att spara på minnesutrymmet.
 
