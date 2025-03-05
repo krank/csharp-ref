@@ -23,7 +23,9 @@ string s = "Hello";
 Flyttal, decimaltal.
 
 ```csharp
-float y = 3.4f;
+float y = 3.4692f;
+
+Console.WriteLine(y:N2) // Skriver ut talet med 2 decimaler
 ```
 
 ## double
@@ -31,7 +33,9 @@ float y = 3.4f;
 Decimaltal som kan innehålla större tal – dubbelt så stora som floats.
 
 ```csharp
-double x = 7.8
+double x = 7.892
+
+Console.WriteLine(x:N2) // Skriver ut talet med 2 decimaler
 ```
 
 ## bool
