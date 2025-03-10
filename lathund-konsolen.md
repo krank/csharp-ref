@@ -1,6 +1,8 @@
-# Lathund - koda i konsolen
+# Lathund: koda i konsolen
 
-## Svenska tecken i konsollen
+<details>
+
+<summary>Problem med svenska tecken i konsollen?</summary>
 
 Ibland kan det vara problem med svenska tecken i konsollen. Om det är problem skriv följande kod i början av programmet.
 
@@ -8,6 +10,8 @@ Ibland kan det vara problem med svenska tecken i konsollen. Om det är problem s
 Console.InputEncoding = System.Text.Encoding.Unicode;
 Console.OutputEncoding = System.Text.Encoding.Unicode;
 ```
+
+</details>
 
 ## Kommentarer
 
@@ -22,7 +26,7 @@ Genom att skriva // framför något så gör man så det inte tolkas som kod uta
 
 Variabler lagrar information – allt man vill kunna komma ihåg i programmet lagras i variabler.
 
-Varje variabel har en [**datatyp**](grundlaeggande/datatyper). När man skapar en variabel så anger man vilken sorts information som ska lagras i den.
+Varje variabel har en [**datatyp**](grundlaeggande/datatyper/). När man skapar en variabel så anger man vilken sorts information som ska lagras i den.
 
 ```csharp
 // int är datatypen, hp namnet på variabeln
