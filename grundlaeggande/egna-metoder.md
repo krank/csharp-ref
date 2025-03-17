@@ -1,4 +1,4 @@
-# Egna metoder
+# Metoder
 
 ## Enkel metod
 
@@ -42,7 +42,7 @@ För att deklarera värdet av parametern vars namn är text anropas metoden ovan
 PrettyPrint("Horsies!");
 ```
 
-Resultatet blir att följande skrivs ut till konsollen:
+Resultatet blir att följande skrivs ut till konsolen:
 
 ```
 --~~== Horsies! ==~~--

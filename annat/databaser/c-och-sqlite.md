@@ -1,6 +1,6 @@
 # C# och SQLite
 
-Börja med att lägga till NuGet-paketet **Microsoft.Data.Sqlite**. Antingen genom att använda NuGet Gallery eller genom att köra i konsollen:
+Börja med att lägga till NuGet-paketet **Microsoft.Data.Sqlite**. Antingen genom att använda NuGet Gallery eller genom att köra i konsolen:
 
 ```powershell
 dotnet add package Microsoft.Data.Sqlite

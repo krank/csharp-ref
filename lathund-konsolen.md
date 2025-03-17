@@ -2,9 +2,9 @@
 
 <details>
 
-<summary>Problem med svenska tecken i konsollen?</summary>
+<summary>Problem med svenska tecken i konsolen?</summary>
 
-Ibland kan det vara problem med svenska tecken i konsollen. Om det är problem skriv följande kod i början av programmet.
+Ibland kan det vara problem med svenska tecken i konsolen. Om det är problem skriv följande kod i början av programmet.
 
 ```csharp
 Console.InputEncoding = System.Text.Encoding.Unicode;

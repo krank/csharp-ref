@@ -4,7 +4,7 @@
 
 ### Console.WriteLine()
 
-Skriver ut något till konsollen, med en radbrytning i slutet.
+Skriver ut något till konsolen, med en radbrytning i slutet.
 
 ```csharp
 Console.WriteLine("Hello!");
@@ -72,7 +72,7 @@ Console.WriteLine("🤖");
 
 ### Console.ForegroundColor
 
-Variabel vars värde avgör färgen på texten i konsollfönstret.
+Variabel vars värde avgör färgen på texten i konsolfönstret.
 
 ```csharp
 Console.ForegroundColor = ConsoleColor.Cyan;
@@ -84,7 +84,7 @@ Console.ForegroundColor = ConsoleColor.Cyan;
 
 ### Console.BackgroundColor
 
-Variabel vars värde avgör färgen på texten i konsollfönstret.
+Variabel vars värde avgör färgen på texten i konsolfönstret.
 
 ```csharp
 Console.BackgroundColor = ConsoleColor.Magenta;
@@ -96,7 +96,7 @@ Console.BackgroundColor = ConsoleColor.Magenta;
 
 ### Console.ResetColor
 
-Återställer för- och bakgrundsfärg till konsollens vanliga.
+Återställer för- och bakgrundsfärg till konsolens vanliga.
 
 ```csharp
 Console.ResetColor();
@@ -104,7 +104,7 @@ Console.ResetColor();
 
 ### ANSI-färger
 
-ANSI är en gammal textstandard, med koder som fortfarande kan användas för att formatera text i konsollen. Man börjar varje kommando med `\x1b[`, följt av en siffra och sedan `m`. [En komplett lista finns här](https://gist.github.com/raghav4/48716264a0f426cf95e4342c21ada8e7).
+ANSI är en gammal textstandard, med koder som fortfarande kan användas för att formatera text i konsolen. Man börjar varje kommando med `\x1b[`, följt av en siffra och sedan `m`. [En komplett lista finns här](https://gist.github.com/raghav4/48716264a0f426cf95e4342c21ada8e7).
 
 I exemplet nedan används alltså `\x1b[34m` för att aktivera blå färg, och sedan används `\x1b[0m` för att återgå till normal färg.
 
@@ -116,7 +116,7 @@ Console.WriteLine("\x1b[34mBlå\x1b[0m färg");
 
 ### Console.Title
 
-Ändrar konsollfönstrets namn.
+Ändrar konsolfönstrets namn.
 
 ```csharp
 Console.Title = "Mitt fina fönster";
