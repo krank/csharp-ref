@@ -1,13 +1,30 @@
 # Konsolen (Console)
 
-## Skriva text
+## Skriva ut och läsa in text
 
 ### Console.WriteLine()
 
-Skriver ut något till konsollen.
+Skriver ut något till konsollen, med en radbrytning i slutet.
 
 ```csharp
 Console.WriteLine("Hello!");
+```
+
+### Console.Write()
+
+Skriver ut något till konsolen, utan radbrytning efteråt.
+
+```csharp
+Console.Write("Hello");
+Console.Write("World");
+```
+
+### Console.Clear()
+
+Rensar skärmen.
+
+```csharp
+Console.Clear();
 ```
 
 ### Console.ReadLine()
@@ -16,6 +33,25 @@ Läser in en string från användaren och väntar på Enter-tryckning. Returnera
 
 ```csharp
 string answer = Console.ReadLine();
+```
+
+### Console.ReadKey()
+
+Läser in ett knapptryck från användaren. Pausar körningen av programmet tills en knapptryckning sker.
+
+```csharp
+ConsoleKey key = Console.ReadKey();
+```
+
+### Console.KeyAvailable
+
+Kollar om en knapptryckning skett sedan förra gången ReadLine eller ReadKey kördes. Praktisk för när man t.ex. inte vill att körningen av programmet ska pausas när man kör en ReadKey().
+
+```csharp
+if (Console.KeyAvailable)
+{
+  ConsoleKey key = Console.ReadKey();
+}
 ```
 
 ### Console.OutputEncoding
@@ -30,14 +66,6 @@ Med UTF-8 som teckenkodning kan man använda fler tecken – till exempel emojis
 
 ```csharp
 Console.WriteLine("🤖");
-```
-
-### Console.Clear()
-
-Rensar skärmen.
-
-```csharp
-Console.Clear();
 ```
 
 ## Färg
@@ -63,7 +91,7 @@ Console.BackgroundColor = ConsoleColor.Magenta;
 ```
 
 {% hint style="warning" %}
-**OBSERVERA:** detta gäller enbart text som skrivs efter det att färgen ändrats. Text som redan skrivits ut förändras inte.
+**OBSERVERA:** detta gäller enbart text som skrivs efter det att färgen ändrats. Text som redan skrivits ut förändras inte. Man kan använda Console.Clear() för att fylla skärmen med den nya bakgrundsfärgen.
 {% endhint %}
 
 ### Console.ResetColor
