@@ -79,4 +79,7 @@ List<string> namnLista =["Anna", "Bertil", "Cecilia"];
 
 // Sätt listan som källa för ListBox-kontrollen
 lbResultat.ItemsSource = namnLista;
+
+// Uppdatera ListBox-kontrollen med ny data
+lbResultat.Items.Refresh();
 ```
