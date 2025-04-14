@@ -9,7 +9,7 @@ Detta är en hemsida med förenklade förklaringar och exempel för C# och Visua
 
 ## Vad behöver jag först?
 
-* Installera [.NET SDK](mjukvara/dotnet-sdk.md) – version 7 eller senare: [https://dotnet.microsoft.com/en-us/download](https://dotnet.microsoft.com/en-us/download)
+* Installera [.NET SDK](mjukvara/dotnet-sdk.md) – version 8 eller senare: [https://dotnet.microsoft.com/en-us/download](https://dotnet.microsoft.com/en-us/download)
 * Installera [Visual Studio Code](mjukvara/visual-studio-code/)
   * Och lämpliga [extensions](mjukvara/visual-studio-code/extensions.md).
 * Installera [Git-scm](mjukvara/git-and-github/) och [ställ in namn och email](mjukvara/git-and-github/#foersta-gangen-efter-ny-git-installation).
