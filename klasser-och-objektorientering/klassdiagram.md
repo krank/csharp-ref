@@ -77,6 +77,7 @@ classDiagram
   class Character{
         −_hp : int
         −_name : string 
+        -_weapon : Weapon
         +Hurt(amount : int) void
         +Attack() int
   }
