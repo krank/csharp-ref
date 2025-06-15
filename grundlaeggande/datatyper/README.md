@@ -8,6 +8,12 @@ Integer, heltal.
 int x = 3;
 ```
 
+Man kan använda understreck för att göra heltalen mer lättlästa.
+
+```csharp
+int million = 1_000_000;
+```
+
 ## string
 
 En string är en text – en serie tecken efter varandra.
@@ -25,7 +31,7 @@ Flyttal, decimaltal.
 ```csharp
 float y = 3.4692f;
 
-Console.WriteLine(y:N2) // Skriver ut talet med 2 decimaler
+Console.WriteLine(y:N2); // Skriver ut talet med 2 decimaler
 ```
 
 ## double
@@ -33,9 +39,9 @@ Console.WriteLine(y:N2) // Skriver ut talet med 2 decimaler
 Decimaltal som kan innehålla större tal – dubbelt så stora som floats.
 
 ```csharp
-double x = 7.892
+double x = 7.892;
 
-Console.WriteLine(x:N2) // Skriver ut talet med 2 decimaler
+Console.WriteLine(x:N2); // Skriver ut talet med 2 decimaler
 ```
 
 ## bool

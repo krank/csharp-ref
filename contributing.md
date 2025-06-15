@@ -10,7 +10,7 @@ Kolla först ifall det du vill rapportera/föreslå inte redan finns som en issu
 
 Om inte – skapa en ny Issue, ge den en titel och en beskrivning. Ju tydligare desto bättre och desto större sannolikhet att den fixas inom rimlig tid!
 
-Skicka in din issue och vänta på att någon ska svara på den och/eller fixa den. När issuen 'r färdigbehandlas blir den "stängd".
+Skicka in din issue och vänta på att någon ska svara på den och/eller fixa den. När issuen är färdigbehandlad blir den "stängd".
 
 ## Forks och pull requests
 
