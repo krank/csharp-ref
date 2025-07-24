@@ -102,12 +102,12 @@ I exemplet ovan kommer med andra ord en instans av Thief först 100 i hp när ba
 
 ## Konstruktorer med parametrar i arv
 
-Etersom både basklassens och subklassens konstruktor körs, så betyder det att om basklassens konstruktor kräver ett parametervärde så måste det värdet stoppas in på något sätt även när det är subklassen som instansieras.
+Eftersom både basklassens och subklassens konstruktor körs, så betyder det att om basklassens konstruktor kräver ett parametervärde så måste det värdet stoppas in på något sätt även när det är subklassen som instansieras.
 
 I exemplet nedan måste Character-klassens konstruktor få ett string-värde som parameter.
 
 {% code title="Character.cs" lineNumbers="true" %}
-```
+```csharp
 class Character
 {
   public string _name;
