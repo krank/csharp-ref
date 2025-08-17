@@ -20,7 +20,7 @@ Det enklaste sättet att installera .NET SDK, Visual Studio Code och Git-scm är
 ```powershell
 winget install Microsoft.VisualStudioCode
 winget install git.git
-winget install Microsoft.DotNet.SDK.8
+winget install Microsoft.DotNet.SDK.9
 ```
 
 Winget bör finnas och fungera i Windows 10 och 11; använder du en äldre version av windows kanske du får installera manuellt istället. Det kan också vara bra att köra **Windows Update** först, och installera alla tillgängliga uppdateringar (inklusive de man bara får om man klickar "Sök online…"
