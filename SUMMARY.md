@@ -10,13 +10,13 @@
 ## Grundläggande
 
 * [Datatyper \[…\]](grundlaeggande/datatyper/README.md)
-  * [String](grundlaggande/datatyper/string.md)
+  * [String](grundlaeggande/datatyper/string.md)
   * [Tuples](grundlaeggande/datatyper/tuples.md)
   * [Enum](grundlaeggande/datatyper/enum.md)
 * [Fel](grundlaeggande/fel.md)
 * [Typkonvertering](grundlaeggande/typkonvertering.md)
 * [Operatorer](grundlaeggande/operatorer.md)
-* [Boolska satser](grundlaggande/boolska-satser.md)
+* [Boolska satser](grundlaeggande/boolska-satser.md)
 * [Konsolen (Console)](grundlaeggande/konsollen-console.md)
 * [If-satser](grundlaeggande/if-satser.md)
 * [Loopar](grundlaeggande/loopar.md)
