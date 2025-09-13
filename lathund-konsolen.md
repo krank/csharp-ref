@@ -100,7 +100,7 @@ else  // och om det varken är 'Micke' eller 'Martin' körs den här koden
 }
 ```
 
-### [Villkor](grundlaggande/boolska-satser.md) och [jämförelser](grundlaeggande/operatorer.md#boolska)
+### [Villkor](grundlaeggande/boolska-satser.md) och [jämförelser](grundlaeggande/operatorer.md#boolska)
 
 Mellan parenteserna i if-satser och loopar skriver man någon form av jämförelse som blir sann eller falsk. Vanliga jämförelser kan vara:
 
