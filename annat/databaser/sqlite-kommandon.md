@@ -21,7 +21,9 @@ Ovanstående skapar tabellen **users** med kolumnerna **id**, **name**, **passwo
 * **AUTOINCREMENT** betyder att om man lägger till en rad i tabellen utan att ange ett värde för denna kolumn så ges den ett automatiskt nytt värde.
 * **NOT NULL** betyder att man inte får lämna kolumnen tom.
 
-<table><thead><tr><th width="86">id🔑</th><th width="134">name</th><th width="153">password</th><th>email</th></tr></thead><tbody><tr><td></td><td></td><td></td><td></td></tr></tbody></table>
+| id🔑 | name | password | email |
+| ---- | ---- | -------- | ----- |
+|      |      |          |       |
 
 ## DROP TABLE
 
@@ -87,7 +89,9 @@ Ovanstående stoppar in en rad i tabellen **users**.
 
 En av tabellens fyra kolumner, "id", anges inte och får inget värde. Eftersom den är AUTOINCREMENT får den ändå ett värde, automatiskt.
 
-<table><thead><tr><th width="86">id🔑</th><th width="166">name</th><th width="153">password</th><th>email</th></tr></thead><tbody><tr><td>1</td><td>Mikael Bergström</td><td>12345</td><td>fake@bullshit.com</td></tr></tbody></table>
+| id🔑 | name             | password | email             |
+| ---- | ---------------- | -------- | ----------------- |
+| 1    | Mikael Bergström | 12345    | fake@bullshit.com |
 
 Observera att man använder ' för att avgränsa texter (strings).&#x20;
 
@@ -101,7 +105,10 @@ SELECT * FROM users;
 
 Ovanstående hämtar alla rader och alla kolumner från tabellen.
 
-<table><thead><tr><th width="86">id🔑</th><th width="166">name</th><th width="153">password</th><th>email</th></tr></thead><tbody><tr><td>1</td><td>Mikael Bergström</td><td>12345</td><td>fake@bullshit.com</td></tr><tr><td>2</td><td>Jacob Marley</td><td>money$</td><td>moneyman@scroogemarley.com</td></tr></tbody></table>
+| id🔑 | name             | password | email                      |
+| ---- | ---------------- | -------- | -------------------------- |
+| 1    | Mikael Bergström | 12345    | fake@bullshit.com          |
+| 2    | Jacob Marley     | money$   | moneyman@scroogemarley.com |
 
 ```sql
 SELECT name,email FROM users;
@@ -119,7 +126,10 @@ Gör att kolumner kan ges nya namn i resultatet.
 SELECT name AS namn FROM users;
 ```
 
-<table><thead><tr><th width="199">namn</th></tr></thead><tbody><tr><td>Mikael Bergström</td></tr><tr><td>Jacob Marley</td></tr></tbody></table>
+| namn             |
+| ---------------- |
+| Mikael Bergström |
+| Jacob Marley     |
 
 ### WHERE
 
@@ -131,7 +141,9 @@ SELECT name,email FROM users WHERE id=1;
 
 Ovanstående hämtar bara kolumnerna name och email, och bara de rader där kolumnen id har värdet 0.
 
-<table><thead><tr><th width="218">name</th><th>email</th></tr></thead><tbody><tr><td>Mikael Bergström</td><td>fake@bullshit.com</td></tr></tbody></table>
+| name             | email             |
+| ---------------- | ----------------- |
+| Mikael Bergström | fake@bullshit.com |
 
 ### AND
 
@@ -171,7 +183,10 @@ WHERE id=0;
 
 Ovanstående kod ändrar email-kolumnens data till "deep@fake.com" för alla rader där id-kolumnen innehåller en nolla.
 
-<table><thead><tr><th width="86">id🔑</th><th width="166">name</th><th width="153">password</th><th>email</th></tr></thead><tbody><tr><td>0</td><td>Mikael Bergström</td><td>12345</td><td>deep@fake.com</td></tr><tr><td>1</td><td>Jacob Marley</td><td>money$</td><td>moneyman@scroogemarley.com</td></tr></tbody></table>
+| id🔑 | name             | password | email                      |
+| ---- | ---------------- | -------- | -------------------------- |
+| 0    | Mikael Bergström | 12345    | deep@fake.com              |
+| 1    | Jacob Marley     | money$   | moneyman@scroogemarley.com |
 
 ## Avancerat: Relationer
 
@@ -181,17 +196,28 @@ Dessutom behöver databasen hålla reda på _vilken elev som går i vilken klass
 
 **students**
 
-<table><thead><tr><th width="83.33333333333331">id🔑</th><th width="123">name</th><th width="134">surname</th><th width="144">pnumber</th><th width="87">classname</th><th>mentor</th></tr></thead><tbody><tr><td>0</td><td>Mikael</td><td>Bergström</td><td>XXXXXX-XXXX</td><td>TE00A</td><td>Mira Belle</td></tr><tr><td>1</td><td>Mohammad</td><td>Mohammadi</td><td>XXXXXX-XXXX</td><td>TE00B</td><td>Kevin McAllister</td></tr><tr><td>2</td><td>Anna-Karin</td><td>Karlsson</td><td>XXXXXX-XXXX</td><td>TE00A</td><td>Mira Belle</td></tr></tbody></table>
+| id🔑 | name       | surname   | pnumber     | classname | mentor           |
+| ---- | ---------- | --------- | ----------- | --------- | ---------------- |
+| 0    | Mikael     | Bergström | XXXXXX-XXXX | TE00A     | Mira Belle       |
+| 1    | Mohammad   | Mohammadi | XXXXXX-XXXX | TE00B     | Kevin McAllister |
+| 2    | Anna-Karin | Karlsson  | XXXXXX-XXXX | TE00A     | Mira Belle       |
 
 Nackdelen blir att vi får dubletter – klassnamnen och mentorernas namn står dubbelt! För att undvika detta skapar man generellt istället två olika tabeller – en för elever och en för klasser – som har en _relation_.
 
 **students**
 
-<table><thead><tr><th width="85.33333333333331">id🔑</th><th width="132">name</th><th width="134">surname</th><th>pnumber</th><th>classid</th></tr></thead><tbody><tr><td>1</td><td>Mikael</td><td>Bergström</td><td>XXXXXX-XXXX</td><td>1</td></tr><tr><td>2</td><td>Mohammad</td><td>Mohammadi</td><td>XXXXXX-XXXX</td><td>2</td></tr><tr><td>3</td><td>Anna-Karin</td><td>Karlsson</td><td>XXXXXX-XXXX</td><td>1</td></tr></tbody></table>
+| id🔑 | name       | surname   | pnumber     | classid |
+| ---- | ---------- | --------- | ----------- | ------- |
+| 1    | Mikael     | Bergström | XXXXXX-XXXX | 1       |
+| 2    | Mohammad   | Mohammadi | XXXXXX-XXXX | 2       |
+| 3    | Anna-Karin | Karlsson  | XXXXXX-XXXX | 1       |
 
 **classes**
 
-<table><thead><tr><th width="88.33333333333331">id🔑</th><th width="141">name</th><th>mentor</th></tr></thead><tbody><tr><td>1</td><td>TE00A</td><td>Mira Belle</td></tr><tr><td>2</td><td>TE00B</td><td>Kevin McAllister</td></tr></tbody></table>
+| id🔑 | name  | mentor           |
+| ---- | ----- | ---------------- |
+| 1    | TE00A | Mira Belle       |
+| 2    | TE00B | Kevin McAllister |
 
 Här är relationen att kolumnen **classid** i tabellen **students** innehåller siffror som hör ihop med kolumnen **id** i tabellen **classes**. Observera att det är classes-tabellens **primärnyckel** som används.
 

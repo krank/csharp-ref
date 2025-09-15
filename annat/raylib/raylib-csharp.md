@@ -31,11 +31,27 @@ while (!Window.ShouldClose())
 
 
 
-<table><thead><tr><th width="331">Raylib-cs</th><th width="258">Raylib-CSharp</th><th>Bibliotek</th></tr></thead><tbody><tr><td>Raylib.InitWindow</td><td>Window.Init</td><td>Windowing</td></tr><tr><td>Raylib.SetTargetFPS</td><td>Time.SetTargetFPS</td><td>Raylib_CSharp</td></tr><tr><td>Raylib.WindowShouldClose</td><td>Window.ShouldClose</td><td>Windowing</td></tr><tr><td>Raylib.BeginDrawing</td><td>Graphics.BeginDrawing</td><td>Rendering</td></tr><tr><td>Raylib.EndDrawing</td><td>Graphics.EndDrawing</td><td>Rendering</td></tr><tr><td>Raylib.ClearBackground</td><td>Graphics.ClearBackground</td><td>Rendering</td></tr><tr><td>Raylib.DrawRectangle</td><td>Graphics.DrawRectangle</td><td>Rendering</td></tr><tr><td>Raylib.DrawCircle</td><td>Graphics.DrawCircle</td><td>Rendering</td></tr><tr><td>Raylib.DrawLine</td><td>Graphics.DrawLine</td><td>Rendering</td></tr><tr><td></td><td></td><td></td></tr></tbody></table>
+| Raylib-cs                | Raylib-CSharp            | Bibliotek      |
+| ------------------------ | ------------------------ | -------------- |
+| Raylib.InitWindow        | Window.Init              | Windowing      |
+| Raylib.SetTargetFPS      | Time.SetTargetFPS        | Raylib\_CSharp |
+| Raylib.WindowShouldClose | Window.ShouldClose       | Windowing      |
+| Raylib.BeginDrawing      | Graphics.BeginDrawing    | Rendering      |
+| Raylib.EndDrawing        | Graphics.EndDrawing      | Rendering      |
+| Raylib.ClearBackground   | Graphics.ClearBackground | Rendering      |
+| Raylib.DrawRectangle     | Graphics.DrawRectangle   | Rendering      |
+| Raylib.DrawCircle        | Graphics.DrawCircle      | Rendering      |
+| Raylib.DrawLine          | Graphics.DrawLine        | Rendering      |
+|                          |                          |                |
 
 Varianter av funktionerna – DrawRectangleRec, DrawRectangleLines osv finns såklart också.
 
 ## Datatyper
 
-<table><thead><tr><th width="592">Struct</th><th>Bibliotek</th></tr></thead><tbody><tr><td>Rectangle</td><td>Transformations</td></tr><tr><td>Color</td><td>Colors</td></tr><tr><td>Texture</td><td>Textures</td></tr><tr><td>Image</td><td>Images</td></tr></tbody></table>
+| Struct    | Bibliotek       |
+| --------- | --------------- |
+| Rectangle | Transformations |
+| Color     | Colors          |
+| Texture   | Textures        |
+| Image     | Images          |
 
