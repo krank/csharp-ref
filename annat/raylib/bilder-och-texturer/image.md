@@ -2,7 +2,7 @@
 
 En Image är en bild som är sparad i datorns arbetsminne, och kan manipuleras på olika sätt.
 
-För att man ska kunna rita ut den till fönstret behöver man sedan konvertera den till en [texture](image.md#texture). Det gör man genom [LoadTextureFromImage](image.md#loadtexturefromimage).
+För att man ska kunna rita ut den till fönstret behöver man sedan konvertera den till en [texture](texture.md). Det gör man genom [LoadTextureFromImage](texture.md#loadtexturefromimage).
 
 ## Width och height
 

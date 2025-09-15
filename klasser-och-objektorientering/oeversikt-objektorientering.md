@@ -14,13 +14,13 @@ _Exempel på klasser: Svärd, fiende, bok, bana, päron, kund._
 
 En klass fungerar också som en datatyp, så varje gång kod förväntar sig en datatyp (t.ex. string eller int) kan man istället skriva dit en klass.
 
-[Mer om klasser.](klasser-och-instanser.md#skapa-klasser-i-visual-studio-code)
+[Mer om klasser.](klasser-och-instanser.md#skapa-klasser)
 
 ## Instans
 
 En instans är ett _objekt_ man skapat utifrån en _klass_.
 
-[Mer om instanser.](klasser-och-instanser.md#skapa-klasser-i-visual-studio-code)
+[Mer om instanser.](klasser-och-instanser.md#skapa-instanser)
 
 ## Klassvariabler och klassmetoder
 

@@ -19,7 +19,7 @@ Ett bra namn är tydligt och beskriver informationen variabeln innehåller, elle
 
 ## Understreck
 
-Understreck används i början av [privata/protected](../klasser-och-objektorientering/public-private-och-protected.md) variabler i [klasser](broken-reference), och _ingen annanstans._
+Understreck används i början av [privata/protected](../klasser-och-objektorientering/public-private-och-protected.md) variabler i [klasser](../klasser-och-objektorientering/klasser-och-instanser.md), och _ingen annanstans._
 
 ```csharp
 public class Fighter

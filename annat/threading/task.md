@@ -36,7 +36,7 @@ Oftast får man dock Tasks från metoder man inte själv skrivit, t.ex. från bi
 
 Används för att köra en vanlig (icke-async) metod som en Task. Praktiskt framför allt för CPU-intensiva aktiviteter, som massiva och tidsintensiva beräkningar.
 
-Task.Run tar emot en [Action ](../../grundlaeggande/delegates.md#h.p\_qt3arehin8yt)som parameter, och kör den som en Task. Run() returnerar en referens till task:en som körs. Som vanligt kan man ange antingen en existerande metod eller en [anonym metod](../../grundlaeggande/delegates.md#anonyma-metoder-i-delegatvariabler) som sin Action.
+Task.Run tar emot en [Action ](../../grundlaeggande/delegates.md#h.p_qt3arehin8yt)som parameter, och kör den som en Task. Run() returnerar en referens till task:en som körs. Som vanligt kan man ange antingen en existerande metod eller en [anonym metod](../../grundlaeggande/delegates.md#anonyma-metoder-i-delegatvariabler) som sin Action.
 
 ```csharp
 static void RegularWork()
@@ -112,7 +112,7 @@ string result2 = await SomeLibrary.FetchThingFromInternetAsync();
 
 ## Async
 
-De flesta async-metoder får man från något existerande bibliotek, till exempel [RestSharp](../naetverk-och-internet/restful-client.md#restsharp). Standard är att döpa dem till något som slutar på Async.
+De flesta async-metoder får man från något existerande bibliotek, till exempel [HttpClient](../naetverk-och-internet/restful-client.md#httpclient). Standard är att döpa dem till något som slutar på Async.
 
 En asynkron metod:
 
