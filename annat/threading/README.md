@@ -17,10 +17,8 @@ Om det arbete en tråd utför är väldigt tungt så begränsas tråden av sin p
 
 ## Debugging
 
-När man debuggar ett program som använder threading, så kan man under Call Stack se alla trådar som körs. Standard är att huvudtråden för programmet heter "Main Thread". Andra trådar visas som "\<No Name>" om man inte gett dem ett namn via [Name](./#name)-propertyn.
+När man debuggar ett program som använder threading, så kan man under Call Stack se alla trådar som körs. Standard är att huvudtråden för programmet heter "Main Thread". Andra trådar visas som "\<No Name>" om man inte gett dem ett namn via [Name](thread.md#name)-propertyn.
 
 ![](<../../.gitbook/assets/image (37).png>)
 
 Om trådarna inte syns under Call Stack, testa att klicka på några av variablerna under Variables så bör de dyka upp.
-
-##
