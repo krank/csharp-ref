@@ -6,11 +6,7 @@ Namnen i ett projekt bör alla vara **på samma språk** och följa samma mönst
 
 Ett bra namn är tydligt och beskriver informationen variabeln innehåller, eller den handling metoden gör. "hitPoints" är ett bättre namn än "x".
 
-| Kategori                                                                                        | Grundtanke                                          | Bra exempelnamn                                                                |
-| ----------------------------------------------------------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------------------------------ |
-| <p><strong>Variabler</strong><br><strong>Parametrar</strong><br><strong>Properties</strong></p> | Den data som lagras                                 | <p>_hitPoints<br>movementX<br>hasBeenHit<br>weaponDamage<br>moneyOwed</p>      |
-| **Metoder**                                                                                     | <p>Den handling som utförs<br>Ett <em>verb</em></p> | <p>CheckCollision<br>Draw<br>Update<br>LoadSavegame<br>ApplyMovementVector</p> |
-| **Klasser**                                                                                     | Kategorinamn i singular                             | <p>Enemy<br>Level<br>Powerup<br>Button<br>Book</p>                             |
+<table><thead><tr><th width="212.333251953125">Kategori</th><th>Grundtanke</th><th>Bra exempelnamn</th></tr></thead><tbody><tr><td><strong>Variabler</strong><br><strong>Parametrar</strong><br><strong>Properties</strong></td><td>Den data som lagras</td><td>_hitPoints<br>movementX<br>hasBeenHit<br>weaponDamage<br>moneyOwed</td></tr><tr><td><strong>Metoder</strong></td><td>Den handling som utförs<br>Ett <em>verb</em></td><td>CheckCollision<br>Draw<br>Update<br>LoadSavegame<br>ApplyMovementVector</td></tr><tr><td><strong>Klasser</strong></td><td>Kategorinamn i singular</td><td>Enemy<br>Level<br>Powerup<br>Button<br>Book</td></tr></tbody></table>
 
 ## PascalCase och camelCase
 
