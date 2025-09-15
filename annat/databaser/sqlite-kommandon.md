@@ -116,7 +116,10 @@ SELECT name,email FROM users;
 
 Ovanstående hämtar alla rader, men bara kolumnerna **name** och **email**.
 
-<table><thead><tr><th width="199">name</th><th>email</th></tr></thead><tbody><tr><td>Mikael Bergström</td><td>fake@bullshit.com</td></tr><tr><td>Jacob Marley</td><td>moneyman@scroogemarley.com</td></tr></tbody></table>
+| name             | email                      |
+| ---------------- | -------------------------- |
+| Mikael Bergström | fake@bullshit.com          |
+| Jacob Marley     | moneyman@scroogemarley.com |
 
 ### AS
 
