@@ -4,6 +4,15 @@ hidden: true
 
 # Test
 
+##
+
+```
+<p></p>
+<div></div>
+{% endcode %}
+{% file src=".gitbook/assets/Humanoid.pdf" %}
+```
+
 ## PDF
 
 {% file src=".gitbook/assets/Humanoid.pdf" %}
