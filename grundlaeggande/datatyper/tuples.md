@@ -1,7 +1,5 @@
 # Tuples
 
-_OBS: Detta fungerar bara i lite nyare C#. Om du arbetar i Visual Studio 2017 finns risk att Tuples inte fungerar om du inte krånglar lite (det går eventuellt att lägga till stöd för tuples genom att lägga till det NuGet-paket som heter ValueTuples)_
-
 Tuples är ett sätt att lagra flera bitar information i samma variabel.
 
 Datatypen för variabeln anges då som en parentes, och i den parentesen skriver man datatyperna som ska ingå, i ordning.
