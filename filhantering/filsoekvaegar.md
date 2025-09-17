@@ -23,7 +23,7 @@ Eftersom \ redan används som "escape"-tecken i C#, för att t.ex. göra radbryt
 string path = @"c:\temp\exempel.txt";
 ```
 
-@-tecknet gör att \\-tecknen inte tolkas, utan [tas bokstavligt](../grundlaeggande/datatyper/#literal-strings).
+@-tecknet gör att \\-tecknen inte tolkas, utan [tas bokstavligt](../grundlaeggande/string-manipulering.md#literal-strings).
 
 ### Filer i samma mapp som programmet <a href="#h.p_gkvdjqel-lgi" id="h.p_gkvdjqel-lgi"></a>
 

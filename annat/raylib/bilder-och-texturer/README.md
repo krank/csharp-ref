@@ -30,7 +30,7 @@ En Texture är en bild som är sparad i grafikkortets minne (VRAM), och är redo
 
 En Image är en bild som är sparad i datorns arbetsminne (RAM), och kan redigeras på olika sätt.
 
-För att man ska kunna rita ut den till fönstret behöver man sedan konvertera den till en [texture](./#texture). Det gör man genom [LoadTextureFromImage](./#loadtexturefromimage).
+För att man ska kunna rita ut den till fönstret behöver man sedan konvertera den till en [texture](./#texture). Det gör man genom [LoadTextureFromImage](texture.md#loadtexturefromimage).
 
 
 
