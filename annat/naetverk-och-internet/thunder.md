@@ -2,6 +2,8 @@
 
 VSCode-pluginet [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client) låter oss göra REST-anrop till servrar utan att programmera en klient.
 
+<figure><img src="../../.gitbook/assets/image (36).png" alt=""><figcaption></figcaption></figure>
+
 Den är ganska enkel att använda.
 
 * Gå till Thunder client i VSCode.
