@@ -26,13 +26,11 @@ Sök efter **csharp.referencesCodeLens.enabled**, och kryssa ur "Csharp › Refe
 
 VS Code gillar att visa mappar "kompakt". Det betyder att den "sammanfattar" mappstrukturer i vissa fall, så att trädet under Explore blir konstigt.
 
-> <img src="../../.gitbook/assets/image (26).png" alt="" data-size="original"> \
-> &#xNAN;_&#x4D;ed compact folders_
+För att stänga av det – sök efter **explorer.compactFolders** och kryssa ur "Explorer: Compact Folders".
 
-> <img src="../../.gitbook/assets/image (27).png" alt="" data-size="original"> \
-> &#xNAN;_&#x55;tan compact folders_
+<figure><img src="../../.gitbook/assets/image (26).png" alt=""><figcaption><p>Med compact folders</p></figcaption></figure>
 
-* För att stänga av det – sök efter **explorer.compactFolders** och kryssa ur "Explorer: Compact Folders".
+<figure><img src="../../.gitbook/assets/image (27).png" alt=""><figcaption><p>Utan compact folders</p></figcaption></figure>
 
 ## Sortera filer enligt svensk bokstavsordning
 
