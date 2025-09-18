@@ -6,28 +6,25 @@ Models, eller modeller, är helt enkelt klasser som används av t.ex. en REST-se
 
 Alla egenskaper som ska returneras av API:t måste vara publika [properties](../../../klasser-och-objektorientering/inkapsling-och-properties.md#properties).
 
-{% tabs %}
-{% tab title="Pokemon.cs" %}
+{% code title="Pokemon.cs" %}
 ```csharp
 public class Pokemon
 {
   public string Name {get; set;}
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ## Returnera instanser som svar på requests
 
 ### JSON-serialiserade instanser
 
-För att en \[HttpGet]-metod ska returnera en JSON-serialiserad version av en instans av en modellklass, behövs två saker: 
+För att en \[HttpGet]-metod ska returnera en JSON-serialiserad version av en instans av en modellklass, behövs två saker:
 
 * När man deklarerar metoden säger man att den ska returnera ActionResult\<Something>, där Something är namnet på klassen vars instanser ska serialiseras.
 * När man kör Ok, så lägger man in en instans av den klassen inom parenteserna.
 
-{% tabs %}
-{% tab title="PokemonController.cs" %}
+{% code title="PokemonController.cs" %}
 ```csharp
 namespace WebApplication1.Controllers
 {
@@ -46,8 +43,7 @@ namespace WebApplication1.Controllers
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Resultatet av ovanstående blir att följande JSON-kod skickas med i HTTP-response-bodyn:
 
@@ -61,6 +57,7 @@ Resultatet av ovanstående blir att följande JSON-kod skickas med i HTTP-respon
 
 Nedanstående kod skapar en lista med två pokemons, och returnerar den listan till klienter som anropar servern med ett GET-anrop.
 
+{% code title="PokemonController.cs" %}
 ```javascript
 namespace WebApplication1.Controllers
 {
@@ -82,6 +79,7 @@ namespace WebApplication1.Controllers
   }
 }
 ```
+{% endcode %}
 
 ### Mer specifika frågor
 
@@ -93,6 +91,7 @@ Det som står inom {} kommer att tolkas som data, som stoppas in som parameter i
 
 Hade det stått `[Route("/find/{num}")]` istället, så hade routen matchat t.ex. `/api/pokemon/find/23`. 23 hade fortfarande omvandlats till int-parametern num.
 
+{% code title="PokemonController.cs" %}
 ```javascript
 namespace WebApplication1.Controllers
 {
@@ -128,4 +127,4 @@ namespace WebApplication1.Controllers
   }
 }
 ```
-
+{% endcode %}

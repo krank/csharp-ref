@@ -17,12 +17,11 @@ Nackdelar:
 
 En länkad lista består av **noder**. Varje nod innehåller (minst) ett **värde** samt en **pekare** till nästa nod. Det finns ingen samling av alla noder någonstans; allt som finns är pekaren från en nod till en annan.
 
- 
+&#x20;
 
 ![](<../.gitbook/assets/image (20).png>)
 
-{% tabs %}
-{% tab title="Node.cs" %}
+{% code title="Node.cs" %}
 ```csharp
 class Node
 {
@@ -30,37 +29,29 @@ class Node
   public Node nextNode;
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
-**Program.cs**
-
-{% tabs %}
-{% tab title="Program.cs" %}
+{% code title="Program.cs" %}
 ```csharp
-static void Main(string[] args)
+Node firstNode = new Node();
+firstNode.value = 3;
+Node currentNode = firstNode;
+
+// Lägg till 10 noder till den länkade listan
+for (int i = 0; i < 10; i++)
 {
-  Node firstNode = new Node();
-  firstNode.value = 3;
-  Node currentNode = firstNode;
-
-  // Lägg till 10 noder till den länkade listan
-  for (int i = 0; i < 10; i++)
-  {
-    firstNode.nextNode = new Node();
-    currentNode = firstNode.nextNode;
-    currentNode.value = 10 - i;
-  }
-
-  // Stoppa in en nod mellan den första och den andra
-  Node newNode = new Node();
-  newNode.value = 9;
-  newNode.nextNode = firstNode.nextNode;
-  firstNode.nextNode = newNode;
+  firstNode.nextNode = new Node();
+  currentNode = firstNode.nextNode;
+  currentNode.value = 10 - i;
 }
+
+// Stoppa in en nod mellan den första och den andra
+Node newNode = new Node();
+newNode.value = 9;
+newNode.nextNode = firstNode.nextNode;
+firstNode.nextNode = newNode;
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ## Tvåvägs länkade listor, träd och nätverk
 
@@ -70,8 +61,7 @@ Flera pekare kan peka på samma objekt. Det gör att man kan skapa mer komplexa 
 
 ![En tvåvägs länkad lista](<../.gitbook/assets/image (21).png>)
 
-{% tabs %}
-{% tab title="Node.cs" %}
+{% code title="Node.cs" %}
 ```csharp
 class Node
 {
@@ -80,15 +70,13 @@ class Node
   public Node prevNode;
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ### Träd
 
 ![](<../.gitbook/assets/image (22).png>)
 
-{% tabs %}
-{% tab title="Node.cs" %}
+{% code title="Node.cs" %}
 ```csharp
 class Node
 {
@@ -96,15 +84,13 @@ class Node
   public List<Node> children = new List<Node>();
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ### Nätverk
 
 ![](<../.gitbook/assets/image (23).png>)
 
-{% tabs %}
-{% tab title="Node.cs" %}
+{% code title="Node.cs" %}
 ```csharp
 class Node
 {
@@ -112,5 +98,4 @@ class Node
   public List<Node> connections = new List<Node>();
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
