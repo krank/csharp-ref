@@ -25,7 +25,7 @@ Texture2D goombaTexture = Raylib.LoadTexture(@"goomba.png");
 
 ### LoadTextureFromImage()
 
-Skapar en ny texture baserat på en [Image](texture.md#image).
+Skapar en ny texture baserat på en [Image](image.md).
 
 ```csharp
 Texture2D heroTexture = Raylib.LoadTextureFromImage(originalImage);
