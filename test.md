@@ -11,7 +11,18 @@ hidden: true
 <div></div>
 {% endcode %}
 {% file src=".gitbook/assets/Humanoid.pdf" %}
+
+
+
 ```
+
+Hello \<div>
+
+Hello \<p>
+
+Hello \<span>
+
+Hello \<table>\<th>Header\</th>\</table
 
 ## PDF
 
