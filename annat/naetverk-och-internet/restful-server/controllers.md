@@ -27,8 +27,7 @@ Mer om attribut [här](../../../klasser-och-objektorientering/attribut.md).
 
 Dekorerar en klass. Meddelar API-serversystemet att denna klass är en API Controller och ska kunna ta emot requests.
 
-{% tabs %}
-{% tab title="PokemonController.cs" %}
+{% code title="PokemonController.cs" %}
 ```csharp
 [ApiController]
 public class PokemonController : ControllerBase
@@ -36,8 +35,7 @@ public class PokemonController : ControllerBase
 
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ### \[Route("thing")]
 
@@ -47,8 +45,7 @@ Dekorerar en klass eller en metod. Meddelar API-serversystemet att klassen eller
 * https://www.test.com/hello/world → routen är "hello/world"
 * [https://192.168.1.100/number](https://www.google.com/url?q=https%3A%2F%2F192.168.1.100%2Fnumber\&sa=D\&sntz=1\&usg=AFQjCNHmakUtrDd1CIEFI8sA-zNgZhw2XA) → routen är "number"
 
-{% tabs %}
-{% tab title="PokemonController.cs" %}
+{% code title="PokemonController.cs" %}
 ```csharp
 [ApiController]
 [route("hello/world")]
@@ -57,13 +54,11 @@ public class PokemonController : ControllerBase
 
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 När man dekorerar metoder med en Route, så läggs denna till klassens route med snedstreck mellan. I exemplet nedan blir routen som leder till metoden alltså hello/world.
 
-{% tabs %}
-{% tab title="PokemonController.cs" %}
+{% code title="PokemonController.cs" %}
 ```csharp
 [ApiController]
 [route("hello")]
@@ -77,15 +72,13 @@ public class PokemonController : ControllerBase
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ### \[Route("\[controller]")]
 
 När man dekorerar en klass, kan man skriva \[controller] inom hakparenteser inuti sin route. Det betyder att \[controller] i praktiken byts ut mot det som står innan Controller i klassens namn. Övrig text står kvar oförändrad.
 
-{% tabs %}
-{% tab title="AngelController.cs" %}
+{% code title="AngelController.cs" %}
 ```csharp
 [ApiController]
 [route("creatures/[controller]")]
@@ -94,8 +87,7 @@ public class AngelController : ControllerBase
   // Routen för denna klass blir creatures/angel.
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ### \[HttpGet]
 
@@ -111,6 +103,7 @@ public ActionResult Get()
 
 Man kan också ange olika unika routes för olika Get-metoder. Det gör man genom att skriva in routen inom parenteser direkt i \[HttpGet].
 
+{% code title="" %}
 ```csharp
 [ApiController]
 [route("creatures/[controller]")]
@@ -144,6 +137,7 @@ public class AngelController : ControllerBase
     return Ok("Response for your request for " + name);
   }
 ```
+{% endcode %}
 
 En \[HttpGet]-metod brukar normalt returnera via Ok(), NotFound(), NoContent() eller BadRequest().
 
