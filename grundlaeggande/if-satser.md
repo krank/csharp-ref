@@ -4,7 +4,7 @@
 
 Ett villkorat kodblock. Koden i blocket körs bara om det som är mellan parenteserna är _sant_.
 
-Man kan bara lägga in kod som ger [boolskt](datatyper/#bool) resultat mellan parenteserna, t.ex. en [jämförelse ](operatorer.md#boolska)eller en metod som [returnerar ](egna-metoder.md#returnering)ett boolskt värde.
+Man kan bara lägga in kod som ger [boolskt](datatyper/#bool) resultat mellan parenteserna, t.ex. en [jämförelse ](operatorer.md#boolska)eller en metod som [returnerar ](../grundlaggande/metoder.md#returnering)ett boolskt värde.
 
 {% code lineNumbers="true" %}
 ```csharp

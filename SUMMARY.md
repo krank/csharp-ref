@@ -23,7 +23,7 @@
 * [Listor och arrayer](grundlaeggande/listor-och-arrayer.md)
 * [Slump (Random)](grundlaeggande/slump.md)
 * [Strings](grundlaeggande/string-manipulering.md)
-* [Metoder](grundlaeggande/egna-metoder.md)
+* [Metoder](grundlaggande/metoder.md)
 * [Använda bibliotek (using)](grundlaeggande/anvaenda-bibliotek-using.md)
 * [Delegates, events och lambdas](grundlaeggande/delegates.md)
 * [Matematik (Math)](grundlaeggande/matematik-math.md)

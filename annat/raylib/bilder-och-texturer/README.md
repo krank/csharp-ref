@@ -19,7 +19,7 @@ Skillnaden är att Images kan _redigeras_. Textures kan _ritas ut till skärmen_
 {% endhint %}
 
 {% hint style="info" %}
-**Observera** att alla bilder är [**resursfiler**](../../../filhantering/resursfiler.md). Det betyder att du måste[ krångla lite](../../../filhantering/resursfiler.md#loesning-3-kopiera-filerna-automatiskt-till-malmappen) för att vara säker på att programmet kan hitta dem.&#x20;
+**Observera** att alla bilder är [**resursfiler**](../../../filhantering/resursfiler.md). Det betyder att du måste[ krångla lite](../../../filhantering/resursfiler.md#losning-1-kopiera-filerna-automatiskt-till-malmappen) för att vara säker på att programmet kan hitta dem.&#x20;
 {% endhint %}
 
 ## [Texture](texture.md)

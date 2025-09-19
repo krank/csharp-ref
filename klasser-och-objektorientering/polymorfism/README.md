@@ -4,7 +4,7 @@ Se också [Virtual och Override](virtual-override.md).
 
 Polymorfism inom programmering är när flera olika saker liknar varandra så pass mycket att de kan ersätta varandra, eller när man kan använda ett och samma namn för att referera till flera olika saker.
 
-Ett exempel på detta är [metodöverlagring](../../grundlaeggande/egna-metoder.md#oeverlagring), där man använder samma namn på flera olika metoder, och C# använder parametervärden för att avgöra vilken metod som ska köras.
+Ett exempel på detta är [metodöverlagring](../../grundlaggande/metoder.md#overlagring), där man använder samma namn på flera olika metoder, och C# använder parametervärden för att avgöra vilken metod som ska köras.
 
 ## Polymorfism, klasser och arv
 

@@ -22,7 +22,7 @@ Ett bra namn är tydligt och beskriver informationen variabeln innehåller, elle
 | Typ                                                                                | Modell     | Exempel                                                          |
 | ---------------------------------------------------------------------------------- | ---------- | ---------------------------------------------------------------- |
 | **Projekt**                                                                        | PascalCase | <p>SpaceShooter</p><p>PacMan</p><p>BreakoutClone</p>             |
-| [**Metoder**](egna-metoder.md)                                                     | PascalCase | <p>TakeDamage()</p><p>RestoreOriginalPosition()</p><p>Rest()</p> |
+| [**Metoder**](../grundlaggande/metoder.md)                                         | PascalCase | <p>TakeDamage()</p><p>RestoreOriginalPosition()</p><p>Rest()</p> |
 | [**Klasser**](../klasser-och-objektorientering/klasser-och-instanser.md)           | PascalCase | <p>Enemy</p><p>ProjectileTarget</p><p>PowerupBox</p>             |
 | [**Properties**](../klasser-och-objektorientering/inkapsling-och-properties.md)    | PascalCase | HitPoints                                                        |
 | <p><strong>Klassvariabler:</strong> <br><strong>public, protected</strong></p>     | PascalCase | IsAlive                                                          |

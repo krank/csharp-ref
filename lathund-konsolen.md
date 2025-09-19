@@ -230,7 +230,7 @@ foreach (string name in names) // Loopa igenom listan
 }
 ```
 
-## [Metoder](grundlaeggande/egna-metoder.md#enkel-metod)
+## [Metoder](grundlaggande/metoder.md#enkel-metod)
 
 En metod är en bit återanvändbar kod, som kan anropas från andra delar av koden. Metoder som är statiska är helt separata från resten av koden – de kan inte komma åt variabler som inte är deras egna. Metoder är överlag lite som Las Vegas: Det som händer i metoden stannar i metoden. Om man inte specifikt säger något annat.
 

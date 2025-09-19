@@ -6,7 +6,7 @@ Skapa ett nytt konsollprojekt som vanligt.
   * Om du inte ser den fliken, tryck F1 och sök efter "nuget", välj "Focus on NuGet view".
 * I galleriet, sök efter Raylib. Välj senaste versionen av "Raylib\_cs".
 * Kryssa i ditt projekt, klicka Install.
-* Om du vill använda bilder eller andra filer i ditt spel, se till att [konfigurera din csproj för att hantera resursfiler](../../filhantering/resursfiler.md#loesning-3-kopiera-filerna-automatiskt-till-malmappen).
+* Om du vill använda bilder eller andra filer i ditt spel, se till att [konfigurera din csproj för att hantera resursfiler](../../filhantering/resursfiler.md#losning-1-kopiera-filerna-automatiskt-till-malmappen).
 
 ### Inkludera Raylib <a href="#h.p_juwpvkt-mpln" id="h.p_juwpvkt-mpln"></a>
 

@@ -104,7 +104,7 @@ Console.WriteLine(ushort.MinValue); // 0
 
 ## Void
 
-Void är egentligen inte en datatyp – det är mer ett ord som används när man specifikt inte förväntar sig någon data. Void används bara som returdatatyp för [metoder ](../egna-metoder.md)som inte ska returnera något.
+Void är egentligen inte en datatyp – det är mer ett ord som används när man specifikt inte förväntar sig någon data. Void används bara som returdatatyp för [metoder ](../../grundlaggande/metoder.md)som inte ska returnera något.
 
 ## Null
 

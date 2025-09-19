@@ -25,7 +25,7 @@ int r = Random.Shared.Next();
 ```
 {% endcode %}
 
-Next kan anropas med en [parameter ](egna-metoder.md#parametrar)som anger "taket" för slumpen. Taket är exklusivt, dvs det tal som anges kommer aldrig att slumpas - bara lägre tal.
+Next kan anropas med en [parameter ](../grundlaggande/metoder.md#parametrar)som anger "taket" för slumpen. Taket är exklusivt, dvs det tal som anges kommer aldrig att slumpas - bara lägre tal.
 
 {% code lineNumbers="true" %}
 ```csharp

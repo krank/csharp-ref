@@ -48,7 +48,7 @@ Fighter enemyFighter = new Fighter("Börje");
 
 ## Kontruktorer som anropar varandra (this)
 
-Om man har flera konstruktorer så väljs vilken som körs genom samma principer som annan [metod-överlagring](../grundlaeggande/egna-metoder.md#oeverlagring). Vill man själv kalla på en annan konstruktor så kan man göra detta genom att skriva :this() efter konstruktorns parenteser. Mellan de nya parenteserna lägger man de värden som ska passeras till önskad konstruktor.
+Om man har flera konstruktorer så väljs vilken som körs genom samma principer som annan [metod-överlagring](../grundlaggande/metoder.md#overlagring). Vill man själv kalla på en annan konstruktor så kan man göra detta genom att skriva :this() efter konstruktorns parenteser. Mellan de nya parenteserna lägger man de värden som ska passeras till önskad konstruktor.
 
 ```csharp
 public class Fighter
