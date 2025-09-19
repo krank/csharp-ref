@@ -76,7 +76,7 @@ Detta används ofta för att välja vilken data som ska skickas – en parameter
 
 ### Returnera Objekt som JSON
 
-Om metoden som mappas returnerar ett objekt, så kommer det objektet [serialiseras ](../../../filhantering/serialisering/json-serialisering.md#jsonserializer.serialize-less-than-greater-than)till [JSON ](../../../filhantering/filformat/json.md)innan det skickas tillbaka som ett [HTTP-response](../rest-och-crud.md#http).
+Om metoden som mappas returnerar ett objekt, så kommer det objektet [serialiseras](../../../filhantering/serialisering/json-serialisering.md#jsonserializer.serialize) till [JSON](../../../filhantering/filformat/json.md) innan det skickas tillbaka som ett [HTTP-response](../rest-och-crud.md#http).
 
 {% code title="Hero.cs" %}
 ```csharp
@@ -110,7 +110,7 @@ Resultatet om man skickar en GET-request till **/hero/superman**:
 
 ### Skicka in nya objekt via POST/PUT och JSON
 
-För att kunna hantera att nya objekt skickas till serverprogrammet, mappa POST eller PUT till en metod som har en parameter av den datatyp [JSON](../../../filhantering/filformat/json.md)-koden ska [deserialiseras ](../../../filhantering/serialisering/json-serialisering.md#jsonserializer.deserialize-less-than-greater-than)till.
+För att kunna hantera att nya objekt skickas till serverprogrammet, mappa POST eller PUT till en metod som har en parameter av den datatyp [JSON](../../../filhantering/filformat/json.md)-koden ska [deserialiseras ](../../../filhantering/serialisering/json-serialisering.md#jsonserializer.deserialize)till.
 
 ```csharp
 app.MapPost("/hero/new/", AddNewHero);
