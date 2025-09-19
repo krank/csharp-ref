@@ -47,7 +47,7 @@ När man skapat sin delegat används den alltså som om den vore en datatyp. Nä
 DelegateOne test = MethodOne;
 ```
 
-## Action <a href="#h.p_qt3arehin8yt" id="h.p_qt3arehin8yt"></a>
+## Action <a href="#action" id="action"></a>
 
 En Action är en generisk delegat som passar in på metoder som inte returnerar ett värde. Om man vill matcha metoder som tar emot parametrar kan dessa anges mellan <>.
 
