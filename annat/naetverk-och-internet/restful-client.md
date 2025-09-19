@@ -108,7 +108,7 @@ string jsonText = response.Content.ReadAsStringAsync().Result;
 Console.WriteLine(jsonText);
 ```
 
-Ofta är Content JSON eller XML-format, och då kan informationen deserialiseras till ett objekt antingen via [JSON-deserialisering](../../filhantering/serialisering/json-serialisering.md#jsonserializer.deserialize-less-than-greater-than) eller [XML-deserialisering](../../filhantering/serialisering/xml-serialisering.md#deserialize).
+Ofta är Content JSON eller XML-format, och då kan informationen deserialiseras till ett objekt antingen via [JSON-deserialisering](../../filhantering/serialisering/json-serialisering.md#jsonserializer.deserialize) eller [XML-deserialisering](../../filhantering/serialisering/xml-serialisering.md#deserialize).
 
 Om det är JSON så finns ett enklare sätt – inkludera `System.Net.Http.Json` och använd `ReadFromJsonAsync` istället för `ReadAsStringAsync`.
 
