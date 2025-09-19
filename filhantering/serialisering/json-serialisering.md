@@ -65,7 +65,7 @@ public class Pokemon
 {% endtab %}
 {% endtabs %}
 
-## JsonSerializer.Serialize<>()
+## JsonSerializer.Serialize<>() <a href="#jsonserializer.serialize" id="jsonserializer.serialize"></a>
 
 Används för att serialisera ett objekt till en JSON-string.
 
@@ -110,7 +110,7 @@ I JSON används oftast snake\_case, medan C# ju använder [camelCase eller Pasca
 **OBS:** SnakeCaseLower introducerades i dotnet 8!
 {% endhint %}
 
-## JsonSerializer.Deserialize<>()
+## JsonSerializer.Deserialize<>() <a href="#jsonserializer.deserialize" id="jsonserializer.deserialize"></a>
 
 Används för att deserialisera ett objekt från en JSON-string.
 
