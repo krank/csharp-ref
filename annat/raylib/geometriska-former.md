@@ -39,7 +39,7 @@ Parametrarna är, i tur och ordning: X- och Y-position för cirkelns mitt, cirke
 
 ### DrawCircleV()
 
-Ritar en cirkel men använder en [Vector2 ](../../grundlaeggande/vektorer-numerics.md#vector2)som mittpunkt.
+Ritar en cirkel men använder en [Vector2 ](../../grundlaggande/vektorer-numerics.md#vector2)som mittpunkt.
 
 ```csharp
 Vector2 midPoint = new Vector2(100, 100);
@@ -69,7 +69,7 @@ Raylib.DrawEllipse(100, 250, 50, 200, Color.PINK);
 
 ### DrawTriangle()
 
-Ritar ut en triangel. Parametrarna är triangelns tre hörn som [Vector2](../../grundlaeggande/vektorer-numerics.md#vector2) samt den färg triangeln ska ha.
+Ritar ut en triangel. Parametrarna är triangelns tre hörn som [Vector2](../../grundlaggande/vektorer-numerics.md#vector2) samt den färg triangeln ska ha.
 
 ```csharp
 Vector2 top = new Vector2(150, 100);
@@ -103,7 +103,7 @@ Raylib.DrawLine(10, 10, 10, 20, Color.PINK);
 
 ### DrawLineV()
 
-Ritar en linje mellan två punkter. Parametrarna är en [vektor2 ](../../grundlaeggande/vektorer-numerics.md#vector2)för startpunkten, en vektor2 för slutpunkten, samt färgen.
+Ritar en linje mellan två punkter. Parametrarna är en [vektor2 ](../../grundlaggande/vektorer-numerics.md#vector2)för startpunkten, en vektor2 för slutpunkten, samt färgen.
 
 ```csharp
   Vector2 start = new Vector2(10,10);

@@ -1,8 +1,8 @@
 # Linq-metoder
 
-Linq-biblioteket bygger ut existerande [samlings-datatyper](../../klasser-och-objektorientering/generiska-klasser.md#samlingar) (som [List ](../../klasser-och-objektorientering/generiska-klasser.md#list)och även [arrayer](../../grundlaeggande/listor-och-arrayer.md#array)) med nya metoder.
+Linq-biblioteket bygger ut existerande [samlings-datatyper](../../klasser-och-objektorientering/generiska-klasser.md#samlingar) (som [List ](../../klasser-och-objektorientering/generiska-klasser.md#list)och även [arrayer](../../grundlaggande/listor-och-arrayer.md#array)) med nya metoder.
 
-Ofta tar metoderna emot [delegater ](../../grundlaeggande/delegates.md)som parametrar, och ofta används då istället [Lambda-uttryck](../../grundlaeggande/delegates.md#lambdas).
+Ofta tar metoderna emot [delegater ](../../grundlaggande/delegates.md)som parametrar, och ofta används då istället [Lambda-uttryck](../../grundlaggande/delegates.md#lambdas).
 
 Flera av metoderna returnerar en generisk samling av den Linq-specifika datatypen _Enumerable_, som i sin tur kan omvandlas till en lista genom att man anropar ToList().
 
@@ -36,7 +36,7 @@ List<Enemy> enemies = objects.OfType<Enemy>().ToList();
 
 #### First() / Last()
 
-Returnerar det första/sista värdet i samlingen. Om samlingen är tom så skapas ett [runtime-fel](../../grundlaeggande/fel.md#runtime-fel-exceptions).
+Returnerar det första/sista värdet i samlingen. Om samlingen är tom så skapas ett [runtime-fel](../../grundlaggande/fel.md#runtime-fel-exceptions).
 
 ```csharp
 List<int> myList = new List<int>() {4,3,2,1};
@@ -147,7 +147,7 @@ int lowest = intList.Min(); // 1
 
 #### Average()
 
-Returnerar medelvärdet av alla värden i samlingen, som en [double](../../grundlaeggande/datatyper/#double).
+Returnerar medelvärdet av alla värden i samlingen, som en [double](../../grundlaggande/datatyper/#double).
 
 ```csharp
 List<int> intList = new() { 2, 67, 23, 100, 1 };

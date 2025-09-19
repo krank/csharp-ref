@@ -10,7 +10,7 @@ Kör följande kommando för att installera EF-verktygen på din dator:
 dotnet tool install --global dotnet-ef
 ```
 
-Lägg till NuGet-paketet Microsoft.EntityFrameworkCore till ditt projekt via [NuGet gallery](../../grundlaeggande/anvaenda-bibliotek-using.md#nuget-gallery) eller via [kommandot](../../grundlaeggande/anvaenda-bibliotek-using.md#nuget-via-terminalen):
+Lägg till NuGet-paketet Microsoft.EntityFrameworkCore till ditt projekt via [NuGet gallery](../../grundlaggande/anvaenda-bibliotek-using.md#nuget-gallery) eller via [kommandot](../../grundlaggande/anvaenda-bibliotek-using.md#nuget-via-terminalen):
 
 ```
 dotnet add package Microsoft.EntityFrameworkCore

@@ -98,7 +98,7 @@ För att helt separera kod från XAML kan man sköta bindningen i C# istället. 
 
 Man behöver en referens till objektet; den kan man t.ex. skaffa genom att använda FindName för att hitta objektet man vill lägga till en bindning till, och casta objektet till rätt datatyp.
 
-Sedan utnyttjar man att alla events ligger inlagda i datatypen som [delegates](../../grundlaeggande/delegates.md).
+Sedan utnyttjar man att alla events ligger inlagda i datatypen som [delegates](../../grundlaggande/delegates.md).
 
 ```csharp
 if (FindName("mainButton") is Button button)

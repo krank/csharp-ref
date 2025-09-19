@@ -66,7 +66,7 @@ int rowsAffected = command.ExecuteNonQuery();
 
 ### ExecuteScalar()
 
-Kör kommandot, och returnerar resultatet – men bara första cellen (första kolumnen i första raden). Resultatet returneras som ett object, som dessutom kan vara null ifall operationen inte returnerade något. Med andra ord behövs både [casting ](../../grundlaeggande/typkonvertering.md#casting)och något sätt att hantera nullvärden t.ex. via [null-coalescing](../../grundlaeggande/operatorer.md#null-coalescing).
+Kör kommandot, och returnerar resultatet – men bara första cellen (första kolumnen i första raden). Resultatet returneras som ett object, som dessutom kan vara null ifall operationen inte returnerade något. Med andra ord behövs både [casting ](../../grundlaggande/typkonvertering.md#casting)och något sätt att hantera nullvärden t.ex. via [null-coalescing](../../grundlaggande/operatorer.md#null-coalescing).
 
 ```csharp
 SqliteCommand countCommand = connection.CreateCommand();

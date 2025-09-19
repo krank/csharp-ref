@@ -83,7 +83,7 @@ Ett HttpResponseMessage-objekt innehåller det svar servern skickat tillbaka.
 
 ### StatusCode
 
-I response-objektet ingår en StatusCode. Dess datatyp är en [Enum](../../grundlaeggande/datatyper/enum.md) som heter HttpStatusCode och finns i biblioteket System.Net. Dess möjliga värden är alla existerande, definierade statuskoder från HTTP-standarden. Till exempel Ok och NotFound.
+I response-objektet ingår en StatusCode. Dess datatyp är en [Enum](../../grundlaggande/datatyper/enum.md) som heter HttpStatusCode och finns i biblioteket System.Net. Dess möjliga värden är alla existerande, definierade statuskoder från HTTP-standarden. Till exempel Ok och NotFound.
 
 ```csharp
   if (response.StatusCode == System.Net.HttpStatusCode.NotFound)

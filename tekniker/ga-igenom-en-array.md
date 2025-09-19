@@ -28,7 +28,7 @@ while (i < choices.Length)
 
 Detta gör att även om man skulle lägga till tio nya namn till arrayen så kommer alla de nya namnen att skrivas ut tillsammans med de gamla.
 
-Detta kan även göras med listor och givetvis fungerar en [for-loop](../grundlaeggande/loopar.md#for-loop) lika bra (om inte bättre).
+Detta kan även göras med listor och givetvis fungerar en [for-loop](../grundlaggande/loopar.md#for-loop) lika bra (om inte bättre).
 
 ```csharp
 string[] choices = {"Start", "Options", "Quit"};
@@ -39,7 +39,7 @@ for (int i = 0; i < choices.length; i++)
 }
 ```
 
-[Foreach-loopar](../grundlaeggande/loopar.md#foreach-loop) är i princip skapade för exakt det här:
+[Foreach-loopar](../grundlaggande/loopar.md#foreach-loop) är i princip skapade för exakt det här:
 
 ```csharp
 string[] choices = {"Start", "Options", "Quit"};

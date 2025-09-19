@@ -51,7 +51,7 @@ Om någon sedan gör en request till serverns adress, och requesten har metoden 
 
 MapGet kopplar till GET-requests, MapPost till POST-requests, MapPut till PUT-requests och MapDelete till DELETE-requests.
 
-C#-metoden kan vara en statisk metod, en instansmetod eller ett [Lambda-uttryck](../../../grundlaeggande/delegates.md#lambdas).
+C#-metoden kan vara en statisk metod, en instansmetod eller ett [Lambda-uttryck](../../../grundlaggande/delegates.md#lambdas).
 
 ```csharp
 app.MapGet("/hello/", () => "Say hello!");

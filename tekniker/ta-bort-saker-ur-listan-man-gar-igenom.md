@@ -43,7 +43,7 @@ numbersToRemove.Clear();
 
 ## Lambda
 
-RemoveAll()-metoden i List-klassen ger oss ett enklare sätt att lösa saken på ­med ett [Lambda-uttryck](../grundlaeggande/delegates.md#lambdas):
+RemoveAll()-metoden i List-klassen ger oss ett enklare sätt att lösa saken på ­med ett [Lambda-uttryck](../grundlaggande/delegates.md#lambdas):
 
 ```csharp
 List<int> numbers = new List<int>() {1,2,3,4,5,6};

@@ -45,7 +45,7 @@ while (!validAnswer)
 }
 ```
 
-Vill man vara lite mer avancerad kan man använda en [lista ](../grundlaeggande/listor-och-arrayer.md#list)med giltiga svar:
+Vill man vara lite mer avancerad kan man använda en [lista ](../grundlaggande/listor-och-arrayer.md#list)med giltiga svar:
 
 ```csharp
 string answer = "";

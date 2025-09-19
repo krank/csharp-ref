@@ -118,7 +118,7 @@ myList.RemoveAt(0);
 
 #### RemoveAll()
 
-Tar emot en [delegate ](../grundlaeggande/delegates.md)som beskriver ett kriterie. Delegaten tar emot ett objekt eller ett värde av samma datatyp som listan lagrar, och returnerar en bool ifall instansen uppfyller kriteriet. Normalt används ett [lambda-uttryck](../grundlaeggande/delegates.md#lambdas) istället för en metod för att uppfylla delegaten.
+Tar emot en [delegate ](../grundlaggande/delegates.md)som beskriver ett kriterie. Delegaten tar emot ett objekt eller ett värde av samma datatyp som listan lagrar, och returnerar en bool ifall instansen uppfyller kriteriet. Normalt används ett [lambda-uttryck](../grundlaggande/delegates.md#lambdas) istället för en metod för att uppfylla delegaten.
 
 RemoveAll() tar bort alla element som matchar kriteriet, och returnerar ett int-värde som beskriver hur många som togs bort.
 
@@ -130,7 +130,7 @@ int i = intList.RemoveAll(x => x > 3); // i blir 2, och 4 och 5 tas bort ur list
 
 #### Find()
 
-Tar emot en [delegate ](../grundlaeggande/delegates.md)som beskriver ett kriterie. Delegaten tar emot ett objekt eller ett värde av samma datatyp som listan lagrar, och returnerar en bool ifall instansen uppfyller kriteriet. Normalt används ett [lambda-uttryck](../grundlaeggande/delegates.md#lambdas) istället för en metod för att uppfylla delegaten.
+Tar emot en [delegate ](../grundlaggande/delegates.md)som beskriver ett kriterie. Delegaten tar emot ett objekt eller ett värde av samma datatyp som listan lagrar, och returnerar en bool ifall instansen uppfyller kriteriet. Normalt används ett [lambda-uttryck](../grundlaggande/delegates.md#lambdas) istället för en metod för att uppfylla delegaten.
 
 Find() returnerar det första föremål (värde eller objekt) i listan som matchar kriteriet. Om inget hittas, returneras null eller defaultvärdet för datatypen (t.ex. 0 för integers).
 

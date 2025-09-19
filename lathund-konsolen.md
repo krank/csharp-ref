@@ -26,7 +26,7 @@ Genom att skriva // framför något så gör man så det inte tolkas som kod uta
 
 Variabler lagrar information – allt man vill kunna komma ihåg i programmet lagras i variabler.
 
-Varje variabel har en [**datatyp**](grundlaeggande/datatyper/). När man skapar en variabel så anger man vilken sorts information som ska lagras i den.
+Varje variabel har en [**datatyp**](grundlaggande/datatyper/). När man skapar en variabel så anger man vilken sorts information som ska lagras i den.
 
 ```csharp
 // int är datatypen, hp namnet på variabeln
@@ -47,7 +47,7 @@ hp-- // Minska hp med 1
 
 ## Läsa in data
 
-### Läsa in text med [WriteLine](grundlaeggande/konsollen-console.md#console.writeline), [ReadLine](grundlaeggande/konsollen-console.md#console.readline)
+### Läsa in text med [WriteLine](grundlaggande/konsollen-console.md#console.writeline), [ReadLine](grundlaggande/konsollen-console.md#console.readline)
 
 Används för att skriva ut saker till användaren eller läsa in saker.
 
@@ -57,7 +57,7 @@ string name = Console.ReadLine();
 Console.WriteLine($"Hej {name}! Kul att du också är här :-)");  // Skriver ut 'Hej ...!  Kul att du också är här :-)
 ```
 
-### Läsa in tal med [TryParse](grundlaeggande/typkonvertering.md#int.tryparse)
+### Läsa in tal med [TryParse](grundlaggande/typkonvertering.md#int.tryparse)
 
 Tryparse gör att man kan göra om en string till en int.
 
@@ -69,7 +69,7 @@ bool success = int.TryParse(pointsText, out points);
 
 ## Villkorssatser
 
-### [If-else](grundlaeggande/if-satser.md)
+### [If-else](grundlaggande/if-satser.md)
 
 If gör att man kan ha kod som bara körs om ett villkor stämmer (är _true_).
 
@@ -100,7 +100,7 @@ else  // och om det varken är 'Micke' eller 'Martin' körs den här koden
 }
 ```
 
-### [Villkor](grundlaeggande/boolska-satser.md) och [jämförelser](grundlaeggande/operatorer.md#boolska)
+### [Villkor](grundlaggande/boolska-satser.md) och [jämförelser](grundlaggande/operatorer.md#boolska)
 
 Mellan parenteserna i if-satser och loopar skriver man någon form av jämförelse som blir sann eller falsk. Vanliga jämförelser kan vara:
 
@@ -133,7 +133,7 @@ if (name == "Mikael" && pass == "password" && attempts < 4)
 }
 ```
 
-## [Slump](grundlaeggande/slump.md)
+## [Slump](grundlaggande/slump.md)
 
 ```csharp
 // randomNumber blir ett tal som kan vara minst 0, max 99
@@ -144,7 +144,7 @@ int otherNumber = Random.Shared.Next(4,7);
 
 ## Upprepa med loopar
 
-### [While-loop](grundlaeggande/loopar.md#while-loop)
+### [While-loop](grundlaggande/loopar.md#while-loop)
 
 En loop när man inte vet hur många gånger koden skall köras.
 
@@ -171,7 +171,7 @@ while (name != "Micke")
 
 **Observera** att exemplet ovan kan användas för alla möjliga jämförelser – så fort du vill begränsa användarens input, göra så att hen inte får gå vidare förrän hen skrivit in något som är "rätt sorts input", så kan du använda en while.
 
-### [For-loop](grundlaeggande/loopar.md#for-loop)
+### [For-loop](grundlaggande/loopar.md#for-loop)
 
 En sorts loop som är väldigt bra när man vill köra en loop ett specifikt antal gånger. For-loopar funkar egentligen som while-loopar, men inkluderar en _räknare_.
 
@@ -186,7 +186,7 @@ for (int i = 0; i < 10; i++)
 }
 ```
 
-## [List](grundlaeggande/listor-och-arrayer.md#list)
+## [List](grundlaggande/listor-och-arrayer.md#list)
 
 Med listor kan man ha flera värden i samma variabel.
 
@@ -221,7 +221,7 @@ if (names.Contains("Jenny")) // Kolla om Jenny finns i listan
 }
 ```
 
-Med en [foreach-loop](grundlaeggande/loopar.md#foreach-loop) kan man gå igenom listan och läsa av varje sak i den i tur och ordning.
+Med en [foreach-loop](grundlaggande/loopar.md#foreach-loop) kan man gå igenom listan och läsa av varje sak i den i tur och ordning.
 
 ```csharp
 foreach (string name in names) // Loopa igenom listan

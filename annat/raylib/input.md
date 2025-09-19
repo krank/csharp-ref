@@ -72,7 +72,7 @@ int mouseY = Raylib.GetMouseY();
 
 ### GetMousePosition()
 
-Hämtar musens nuvarande position i form av en tvådimensionell [vektor](../../grundlaeggande/vektorer-numerics.md).
+Hämtar musens nuvarande position i form av en tvådimensionell [vektor](../../grundlaggande/vektorer-numerics.md).
 
 ```csharp
 Vector2 mousePos = Raylib.GetMousePosition();

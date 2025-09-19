@@ -91,7 +91,7 @@ Console.WriteLine(cha.Hitpoints);
 ```
 {% endcode %}
 
-### [Lambda](../grundlaeggande/delegates.md#lambdas)-properties
+### [Lambda](../grundlaggande/delegates.md#lambdas)-properties
 
 Om det man vill göra med sin set resp. get är ganska enkelt, så behövs ingen fullständig kodblocks-syntax. Då kan man istället använda enkla lambdas:
 

@@ -47,7 +47,7 @@ Raylib.DrawTexture(heroTexture, 40, 300, Color.WHITE)
 
 ### DrawTextureEx()
 
-Ritar ut en texture till fönstret, med andra parametrar: En [Vector2 ](../../../grundlaeggande/vektorer-numerics.md#vector2)för att ange x och y-positionen den ska ritas ut på, och floats som anger rotation och skalning av texturen.
+Ritar ut en texture till fönstret, med andra parametrar: En [Vector2 ](../../../grundlaggande/vektorer-numerics.md#vector2)för att ange x och y-positionen den ska ritas ut på, och floats som anger rotation och skalning av texturen.
 
 Rotationen anges i grader och skalningen i decimalform.
 
@@ -60,7 +60,7 @@ Raylib.DrawTexture(heroTexture, position, 0, 0.5f, Color.WHITE)
 ```
 
 {% hint style="info" %}
-**OBSERVERA:** För att kunna använda [Vector2 ](../../../grundlaeggande/vektorer-numerics.md)så måste du lägga in detta bland dina using-statements:
+**OBSERVERA:** För att kunna använda [Vector2 ](../../../grundlaggande/vektorer-numerics.md)så måste du lägga in detta bland dina using-statements:
 
 ```csharp
 using System.Numerics;

@@ -59,7 +59,7 @@ Image redImage = Raylib.GenImageColor(200, 200, Color.RED);
 
 ## Redigera
 
-De flesta metoder här använder nyckelordet [ref ](../../../grundlaeggande/reference-vs-value-types.md#out-och-ref)för att ange att den bild man stoppar in som parameter inte returneras i förändrad form, utan ändras på plats i minnet.
+De flesta metoder här använder nyckelordet [ref ](../../../grundlaggande/reference-vs-value-types.md#out-och-ref)för att ange att den bild man stoppar in som parameter inte returneras i förändrad form, utan ändras på plats i minnet.
 
 ### ImageDrawPixel()
 

@@ -14,7 +14,7 @@ Generellt bör varje klass läggas i sin egen fil. Med C# Dev Kit finns ett snab
 * **Högerklicka på projektet** klassen/filen ska läggas till i.
 * Välj **"Add new File"**.
 * Välj **"Class"**.
-* Skriv in namnet på klassen – glöm inte [namngivning ](../grundlaeggande/namngivning.md)med **PascalCase**!
+* Skriv in namnet på klassen – glöm inte [namngivning ](../grundlaggande/namngivning.md)med **PascalCase**!
 * Skriv in skriv in **using** och namnet på klassens **namespace** högst upp i Program.cs
 
 {% code title="Goomba.cs" lineNumbers="true" %}
@@ -40,9 +40,9 @@ using PlumberPlatformer;
 
 ## Skapa instanser
 
-Kodordet `new` skapar **nya instanser** i minnet ([heapen](../grundlaeggande/reference-vs-value-types.md#minnet-stacken-och-heapen)).
+Kodordet `new` skapar **nya instanser** i minnet ([heapen](../grundlaggande/reference-vs-value-types.md#minnet-stacken-och-heapen)).
 
-Därefter behöver en [referens ](../grundlaeggande/reference-vs-value-types.md)till instansen lagras någonstans, till exempel i en variabel.
+Därefter behöver en [referens ](../grundlaggande/reference-vs-value-types.md)till instansen lagras någonstans, till exempel i en variabel.
 
 {% code lineNumbers="true" %}
 ```csharp

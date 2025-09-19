@@ -15,7 +15,7 @@ int hp = 100;
 string s = $"Du har {hp} hit points kvar";
 ```
 
-Om man har ett decimaltal ([float](../../grundlaeggande/datatyper/#float) eller [double](../../grundlaeggande/datatyper/#double)) så kan man skriva : och sedan ett format med t.ex. antal decimaler.
+Om man har ett decimaltal ([float](../../grundlaggande/datatyper/#float) eller [double](../../grundlaggande/datatyper/#double)) så kan man skriva : och sedan ett format med t.ex. antal decimaler.
 
 ```csharp
 float c = 23;
@@ -95,7 +95,7 @@ Console.WriteLine(@"Detta är första raden.\nDetta är också första rader.");
 
 ## All()
 
-All() är en del av **Linq-biblioteket** så man måste först ha med `using System.Linq`. All har en [delegate ](../../grundlaeggande/delegates.md)som parameter, och förväntar sig då en metod (eller ett lambda-uttryck) som tar emot en `char` och returnerar `true` eller `false`. All stoppar sedan i var och ett av stringens tecken in i den angivna metoden. Om resultatet för alla blir `true` så returnerar All också `true`.
+All() är en del av **Linq-biblioteket** så man måste först ha med `using System.Linq`. All har en [delegate ](../../grundlaggande/delegates.md)som parameter, och förväntar sig då en metod (eller ett lambda-uttryck) som tar emot en `char` och returnerar `true` eller `false`. All stoppar sedan i var och ett av stringens tecken in i den angivna metoden. Om resultatet för alla blir `true` så returnerar All också `true`.
 
 ```csharp
 using System.Linq;

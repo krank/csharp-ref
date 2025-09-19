@@ -104,7 +104,7 @@ JsonSerializerOptions options = new ()
 string json = JsonSerializer.Serialize<Pokemon>(poke, options);
 ```
 
-I JSON används oftast snake\_case, medan C# ju använder [camelCase eller PascalCase](../../grundlaeggande/namngivning.md#pascalcase-och-camelcase).
+I JSON används oftast snake\_case, medan C# ju använder [camelCase eller PascalCase](../../grundlaggande/namngivning.md#pascalcase-och-camelcase).
 
 {% hint style="warning" %}
 **OBS:** SnakeCaseLower introducerades i dotnet 8!
@@ -202,7 +202,7 @@ Ibland beskriver JSON-kod listor av objekt eller värden. De kännetecknas av at
 ```
 {% endcode %}
 
-För att deserialisera dessa, skapa helt enkelt publika [listor ](../../grundlaeggande/listor-och-arrayer.md#list)i klassen.
+För att deserialisera dessa, skapa helt enkelt publika [listor ](../../grundlaggande/listor-och-arrayer.md#list)i klassen.
 
 {% code title="Pokemon.cs" lineNumbers="true" %}
 ```csharp

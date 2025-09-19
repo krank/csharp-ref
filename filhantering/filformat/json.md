@@ -50,7 +50,7 @@ En array kan innehålla flera värden. Värdena är oftast av samma datatyp, men
 
 I Javascript kommer man sedan åt varje position i arrayen genom att hänvisa till dess position, som anges som ett heltal. Den första saken i listan får nummer 0.
 
-Skillnaden mellan en array och ett objekt är med andra ord att arrayer är [indexerade ](../../grundlaeggande/listor-och-arrayer.md#indexering)med _heltal_ – så varje sak i listan identifieras med ett nummer – medan objects är indexerade med _strings_.
+Skillnaden mellan en array och ett objekt är med andra ord att arrayer är [indexerade ](../../grundlaggande/listor-och-arrayer.md#indexering)med _heltal_ – så varje sak i listan identifieras med ett nummer – medan objects är indexerade med _strings_.
 
 ## Nästling
 

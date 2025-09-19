@@ -63,7 +63,7 @@ Därför är det en bra idé att tillföra så få nya metoder som behöver anro
 
 ## Tvingad tolkning
 
-[As](../../grundlaeggande/typkonvertering.md#as) och framför allt [Is](../../grundlaeggande/typkonvertering.md#is) ger praktiska verktyg att arbeta med polymorfa klasser. Det är användbart framför allt när subklasser till exempel lägger till nya metoder eller properties.
+[As](../../grundlaggande/typkonvertering.md#as) och framför allt [Is](../../grundlaggande/typkonvertering.md#is) ger praktiska verktyg att arbeta med polymorfa klasser. Det är användbart framför allt när subklasser till exempel lägger till nya metoder eller properties.
 
 {% code lineNumbers="true" %}
 ```csharp

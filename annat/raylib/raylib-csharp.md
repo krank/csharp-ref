@@ -4,7 +4,7 @@ Raylib är från början ett bibliotek till C++, och Raylib-cs är inte det enda
 
 ## Separata bibliotek
 
-Raylib-CSharp är mer uppdelat än Raylib-cs. Varje kategori av funktioner har sitt eget bibliotek, som man måste inkludera via [using](../../grundlaeggande/anvaenda-bibliotek-using.md).
+Raylib-CSharp är mer uppdelat än Raylib-cs. Varje kategori av funktioner har sitt eget bibliotek, som man måste inkludera via [using](../../grundlaggande/anvaenda-bibliotek-using.md).
 
 ```csharp
 using System.Numerics;

@@ -1,6 +1,6 @@
 # Struct
 
-Structs är som klasser men skiljer sig på en viktig punkt: de är [value types snarare än reference types](../grundlaeggande/reference-vs-value-types.md).
+Structs är som klasser men skiljer sig på en viktig punkt: de är [value types snarare än reference types](../grundlaggande/reference-vs-value-types.md).
 
 ```csharp
 Hero h1 = new() { Name = "A1" };
