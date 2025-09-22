@@ -1,5 +1,18 @@
 # Konsolen (Console)
 
+<details>
+
+<summary>Problem med svenska (eller t.ex. japanska) tecken i konsolen?</summary>
+
+Ibland kan det vara problem med tecken i konsolen; de kanske skrivs ut som ? eller �. Om det är problem skriv följande kod i början av programmet.
+
+```csharp
+Console.OutputEncoding = System.Text.Encoding.Unicode;
+Console.InputEncoding = System.Text.Encoding.Unicode;
+```
+
+</details>
+
 ## Skriva ut och läsa in text
 
 ### Console.WriteLine()
@@ -169,4 +182,3 @@ Pekarens position i y-led, räknat från fönstrets överdel.
 Console.CursorTop = 10; // Placera pekaren på rad 10
 Console.CursorTop-- // Flytta pekaren 1 rad uppåt
 ```
-
