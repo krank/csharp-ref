@@ -22,3 +22,5 @@
   * Klicka på "Publish Branch".
   * Välj "Publish to GitHub **public** repository"
   * Om du behöver logga in eller göra något annat kommer VSCode att säga till. Följ instruktionerna.
+
+(Test: [testlänk](test.md))
