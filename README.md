@@ -12,6 +12,7 @@ Detta är en hemsida med förenklade förklaringar och exempel för C# och Visua
 * Installera [.NET SDK](mjukvara/dotnet-sdk.md) – version 8 eller senare: [https://dotnet.microsoft.com/en-us/download](https://dotnet.microsoft.com/en-us/download)
 * Installera [Visual Studio Code](mjukvara/visual-studio-code/)
   * Och lämpliga [extensions](mjukvara/visual-studio-code/extensions.md).
+  * Ställ in så program [körs i ett eget fönster](mjukvara/visual-studio-code/instaellningar.md#kor-debugga-i-external-terminal)
 * Installera [Git-scm](mjukvara/git-and-github/) och [ställ in namn och email](mjukvara/git-and-github/#forsta-gangen-efter-ny-git-installation).
 * Kolla [lathunden ](lathund-skapa-projekt.md)för hur man skapar nya projekt.
 
@@ -43,19 +44,19 @@ Den här sidan är byggd för kurserna Programmering 1 och 2, och detta är den 
 
 Vissa saker som t.ex. [Raylib ](annat/raylib/)ligger utanför tabellen – det är inte ett obligatoriskt moment i någon kurs men är heller inte riktigt "överkurs".
 
-| Programmering 1                                                 | Programmering 2                                                                                | Överkurs                                                               |
-| --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| Programmering 1                                                | Programmering 2                                                                                | Överkurs                                                              |
+| -------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
 | [Datatyper](grundlaggande/datatyper/)                          | [Klasser och instanser](klasser-och-objektorientering/klasser-och-instanser.md)                | [Delegates, events och lambdas](grundlaggande/delegates.md)           |
 | [Typkonvertering](grundlaggande/typkonvertering.md)            | [Public, private och protected](klasser-och-objektorientering/public-private-och-protected.md) | [Reference vs value types](grundlaggande/reference-vs-value-types.md) |
-| [Operatorer](grundlaggande/operatorer.md)                      | [Klassdiagram](klasser-och-objektorientering/klassdiagram.md)                                  | [Abstract](klasser-och-objektorientering/abstract.md)                  |
-| [Konsolen](grundlaggande/konsollen-console.md)                 | [Klassmetoder](klasser-och-objektorientering/klassmetoder.md)                                  | [Interface](klasser-och-objektorientering/interface.md)                |
-| [If-satser](grundlaggande/if-satser.md)                        | [Konstruktorer](klasser-och-objektorientering/kontruktorer.md)                                 | [Threading](annat/threading/)                                          |
-| [Loopar](grundlaggande/loopar.md)                              | [Arv](klasser-och-objektorientering/arv.md)                                                    |                                                                        |
-| [Listor och arrayer](grundlaggande/listor-och-arrayer.md)      | [Inkapsling och properties](klasser-och-objektorientering/inkapsling-och-properties.md)        |                                                                        |
-| [Slump](grundlaggande/slump.md)                                | [Static](klasser-och-objektorientering/static.md)                                              |                                                                        |
-| [String-manipulering](grundlaggande/string-manipulering.md)    | [Polymorfism](klasser-och-objektorientering/polymorfism/)                                      |                                                                        |
-| [Egna metoder](grundlaggande/metoder.md)                        | [Generiska klasser](klasser-och-objektorientering/generiska-klasser.md)                        |                                                                        |
-| [Använda bibliotek](grundlaggande/anvaenda-bibliotek-using.md) | [Läsa och skriva](filhantering/laesa-och-skriva.md)                                            |                                                                        |
-| [Namngivning](grundlaggande/namngivning.md)                    | [Serialisering](filhantering/serialisering/)                                                   |                                                                        |
-| [Begrepp](grundlaggande/begrepp.md)                            | [Nätverk och internet](annat/naetverk-och-internet/)                                           |                                                                        |
-| [Pseudokod och diagram](annat/pseudokod-och-diagram.md)         |                                                                                                |                                                                        |
+| [Operatorer](grundlaggande/operatorer.md)                      | [Klassdiagram](klasser-och-objektorientering/klassdiagram.md)                                  | [Abstract](klasser-och-objektorientering/abstract.md)                 |
+| [Konsolen](grundlaggande/konsollen-console.md)                 | [Klassmetoder](klasser-och-objektorientering/klassmetoder.md)                                  | [Interface](klasser-och-objektorientering/interface.md)               |
+| [If-satser](grundlaggande/if-satser.md)                        | [Konstruktorer](klasser-och-objektorientering/kontruktorer.md)                                 | [Threading](annat/threading/)                                         |
+| [Loopar](grundlaggande/loopar.md)                              | [Arv](klasser-och-objektorientering/arv.md)                                                    |                                                                       |
+| [Listor och arrayer](grundlaggande/listor-och-arrayer.md)      | [Inkapsling och properties](klasser-och-objektorientering/inkapsling-och-properties.md)        |                                                                       |
+| [Slump](grundlaggande/slump.md)                                | [Static](klasser-och-objektorientering/static.md)                                              |                                                                       |
+| [String-manipulering](grundlaggande/string-manipulering.md)    | [Polymorfism](klasser-och-objektorientering/polymorfism/)                                      |                                                                       |
+| [Egna metoder](grundlaggande/metoder.md)                       | [Generiska klasser](klasser-och-objektorientering/generiska-klasser.md)                        |                                                                       |
+| [Använda bibliotek](grundlaggande/anvaenda-bibliotek-using.md) | [Läsa och skriva](filhantering/laesa-och-skriva.md)                                            |                                                                       |
+| [Namngivning](grundlaggande/namngivning.md)                    | [Serialisering](filhantering/serialisering/)                                                   |                                                                       |
+| [Begrepp](grundlaggande/begrepp.md)                            | [Nätverk och internet](annat/naetverk-och-internet/)                                           |                                                                       |
+| [Pseudokod och diagram](annat/pseudokod-och-diagram.md)        |                                                                                                |                                                                       |

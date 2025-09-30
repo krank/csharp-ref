@@ -1,5 +1,7 @@
 # Lathund: Skapa projekt
 
+
+
 * Starta Visual Studio Code
 * **SKAPA PROJEKTET**
   * Stäng nuvarande projekt: File → Close folder
@@ -8,11 +10,14 @@
   * Skapa och välj en mapp att skapa projektet i.
   * Välj ett namn på projektet.
     * Namnet bör vara i formen PlatformGame (inga mellanslag, stor bokstav i början av varje ord)
+  * Om du får välja mellan "sln" eller "slnx", välj "slnx" (spelar egentligen ingen stor roll)
   * Öppna csproj-filen och ta bort (eller kommentera bort) raden med `<Nullable>`.
 * **GÖR SÅ PROJEKTET KAN KÖRAS**
   * Gå till "run and debug" (**Ctrl+Shift+D**, eller ikonen med play-knapp och insekt).
   * Tryck på "Run and Debug".
-  * Välj "C#" och sedan projektets namn (bör vara enda i listan).
+    * Eller tryck på **F5**
+  * Välj "C#".
+  * Välj "Launch startup project" och sedan projektets namn (bör vara enda i listan).
 * **SKAPA GIT-REPOSITORY**
   * F1 → Add gitignore
     * Välj Visual Studio
