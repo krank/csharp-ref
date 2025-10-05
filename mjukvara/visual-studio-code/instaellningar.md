@@ -8,15 +8,21 @@ Man kan antingen bläddra själv, eller söka efter namnet på den inställning 
 
 VS Code sparar alla inställningar i en JSON-fil, där varje inställning har ett unikt namn. Om man vill kan man redigera denna JSON-fil manuellt. För att få fram den, ta fram kommandopaletten (F1) och kör **Preferences: Open User Settings (JSON)**.
 
-## Få bort "ghost text" för textförslag
-
-En störande sak Code börjat göra är att visa förslag som grå text mitt i ens kod. Vill man inte att det  ska funka så, så kan man söka efter **editor.suggest.preview** och kryssa ur rutan.
-
 ## Kör/debugga i external terminal
 
 I vanliga fall visas all output från koden i Visual Studio Codes egna interna terminalfönster. Det är inte idealiskt, så den här inställningen gör så att koden istället körs i ett separat terminalfönster.
 
 Sök efter **csharp.debug.console** och ändra inställningen till "externalTerminal".
+
+## Slippa ha en sln/slnx
+
+Sök efter **dotnet.previewSolution-freeWorkspaceMode** och kryssa i den.
+
+Nu behöver du inte längre skapa en mapp för varje projekt, utan kan välja din generella Programmering-mapp direkt när du ska skapa ett nytt. En ny undermapp skapas automatiskt med projektets namn och en csproj; däremot ingen sln-fil.
+
+## Stänga av AI-grejer
+
+För att stänga av AI-saker kan man söka rätt på inställningen **chat.disableAIFeatures** och kryssa i den.
 
 ## Få bort "references"
 
