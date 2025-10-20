@@ -22,7 +22,6 @@
 * [Loopar](grundlaggande/loopar.md)
 * [Listor och arrayer](grundlaggande/listor-och-arrayer.md)
 * [Slump (Random)](grundlaggande/slump.md)
-* [Strings](grundlaggande/string-manipulering.md)
 * [Metoder](grundlaggande/metoder.md)
 * [Använda bibliotek (using)](grundlaggande/anvaenda-bibliotek-using.md)
 * [Delegates, events och lambdas](grundlaggande/delegates.md)
