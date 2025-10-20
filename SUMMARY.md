@@ -19,6 +19,7 @@
 * [Boolska satser](grundlaggande/boolska-satser.md)
 * [Konsolen (Console)](grundlaggande/konsollen-console.md)
 * [If-satser](grundlaggande/if-satser.md)
+* [Switch-case](grundlaggande/switch-case.md)
 * [Loopar](grundlaggande/loopar.md)
 * [Listor och arrayer](grundlaggande/listor-och-arrayer.md)
 * [Slump (Random)](grundlaggande/slump.md)
