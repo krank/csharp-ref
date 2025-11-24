@@ -22,7 +22,7 @@ En string är en text – en serie tecken efter varandra.
 string s = "Hello";
 ```
 
-[Mer om strings finns här](broken-reference)
+[Mer om strings finns här](string.md)
 
 ## float
 
@@ -46,7 +46,7 @@ Console.WriteLine(x:N2); // Skriver ut talet med 2 decimaler
 
 ## bool
 
-Boolskt värde, är antingen true eller false.
+Ett booleskt värde, är antingen true eller false.
 
 ```csharp
 bool z = true;
