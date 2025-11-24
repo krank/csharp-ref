@@ -121,6 +121,7 @@
   * [WPF](annat/windows-ui/wpf.md)
   * [XAML\*](annat/windows-ui/xaml.md)
   * [WinUI\*](annat/windows-ui/winui.md)
+* [NAudio](annat/naudio.md)
 
 ## Mjukvara
 
