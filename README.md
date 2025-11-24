@@ -12,7 +12,7 @@ Detta är en hemsida med förenklade förklaringar och exempel för C# och Visua
 * Installera [.NET SDK](mjukvara/dotnet-sdk.md) – version 8 eller senare: [https://dotnet.microsoft.com/en-us/download](https://dotnet.microsoft.com/en-us/download)
 * Installera [Visual Studio Code](mjukvara/visual-studio-code/)
   * Och lämpliga [extensions](mjukvara/visual-studio-code/extensions.md).
-  * Ställ in så program [körs i ett eget fönster](mjukvara/visual-studio-code/instaellningar.md#kor-debugga-i-external-terminal)
+  * Ställ in så program [körs i ett eget fönster](mjukvara/visual-studio-code/instaellningar.md#kor-eller-debugga-i-separat-fonster)
 * Installera [Git-scm](mjukvara/git-and-github/) och [ställ in namn och email](mjukvara/git-and-github/#forsta-gangen-efter-ny-git-installation).
 * Kolla [lathunden ](lathund-skapa-projekt.md)för hur man skapar nya projekt.
 
