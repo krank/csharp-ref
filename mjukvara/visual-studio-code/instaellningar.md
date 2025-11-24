@@ -8,7 +8,7 @@ Man kan antingen bläddra själv, eller söka efter namnet på den inställning 
 
 VS Code sparar alla inställningar i en JSON-fil, där varje inställning har ett unikt namn. Om man vill kan man redigera denna JSON-fil manuellt. För att få fram den, ta fram kommandopaletten (F1) och kör **Preferences: Open User Settings (JSON)**.
 
-## Kör/debugga i external terminal
+## Kör eller debugga i separat fönster
 
 I vanliga fall visas all output från koden i Visual Studio Codes egna interna terminalfönster. Det är inte idealiskt, så den här inställningen gör så att koden istället körs i ett separat terminalfönster.
 
