@@ -47,11 +47,43 @@ Mappen som skapas av C# Dev Kit har följande struktur:
 ```
 {% endcode %}
 
-En csproj-fil är en XML-fil med information om C#-projektet. Några viktiga delar är:
+En csproj-fil är en XML-fil med information om C#-projektet. Varje bit information kallas för en _property_.
 
+### Properties
+
+Properties som är ifyllda från början:
+
+* **OutputType** – vilken sorts fil projektet ska kompileras till. Här: en exe-fil (körbar fil i windows).
 * **TargetFramework** – vilken version av dotnet / C# som ska användas. I exemplet är det dotnet 6.
 * **ImplicitUsings** – huruvida man vill använda [implicita usings](anvaenda-bibliotek-using.md#implicit-using-.net-6).
 * **Nullable** – Dotnet 6 introducerar "nullable reference types", något som mestadels märks i att man får varningar vid vanliga strings… Enklaste lösningen att hantera detta är att helt enkelt stänga av Nullable genom att kommentera bort raden eller ändra "enable" till "disable".
+
+Man kan också lägga till fler properties, till exempel:
+
+```xml
+  <PublishSingleFile>true</PublishSingleFile>
+  <PublishTrimmed>true</PublishTrimmed>
+```
+
+Dessa två gör så att när man kompilerar projektet så samlas allt man behöver i en enda exe-fil, och så att den filen bara innehåller det som absolut behövs för att köra programmet.
+
+### PropertyGroup
+
+I en csproj används \<PropertyGroup>-element för att klumpa ihop egenskaper (properties).
+
+### ItemGroup
+
+ItemGroup-element används för att gruppera properties som beskriver filer eller grupper av filer som ska inkluderas i projektet. Till exempel [externa bibliotek som lagts till via nuget](anvaenda-bibliotek-using.md#nuget-gallery) och [Resursfiler](../filhantering/resursfiler.md#losning-1-kopiera-filerna-automatiskt-till-malmappen).
+
+```xml
+  <ItemGroup>
+    <PackageReference Include="Raylib-cs" Version="4.5.0.4" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Content Include="*.png" CopyToOutputDirectory="Always"/>
+  </ItemGroup>
+```
 
 ## Dotnet-solutions (sln)
 

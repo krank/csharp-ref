@@ -64,12 +64,7 @@ Gör så att mappen, inklusive alla undermappar och filer, kopieras:
   </ItemGroup>
 ```
 
-## Lösning 2: Generate assets
-
-* Lägg bilder etc direkt i samma mapp som csproj-filen.
-* Använd **F1 → .NET: Generate Assets for Build and Debug** för att generera en launch.json.
-
-## Lösning 3: Lägg filerna manuellt till målmappen
+## Lösning 2: Lägg filerna manuellt till målmappen
 
 * Lägg alla nödvändiga filer direkt till mappen där exe/dll:en ligger. Kör du dotnet 7 blir det i **bin\Debug\net7.0**.
 * Kom ihåg att inte ta bort mappen utan att vara säker på att du har kopior av filerna!
