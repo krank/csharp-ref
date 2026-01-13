@@ -139,9 +139,10 @@
 
 ## Tekniker
 
+* [Grundläggande](tekniker/grundlaggande.md)
+* [Ojektorienterade mönster](tekniker/ojektorienterade-monster.md)
 * [Begränsa input](tekniker/begraensa-input.md)
 * [Game states](tekniker/game-states.md)
-* [Gå igenom en array (eller lista)](tekniker/ga-igenom-en-array.md)
 * [Länkade listor och andra strukturer](tekniker/laenkade-listor-och-andra-strukturer.md)
 * [Ta bort saker ur listan man går igenom](tekniker/ta-bort-saker-ur-listan-man-gar-igenom.md)
 * [2D-spelbräden](tekniker/2d-spelbraeden.md)

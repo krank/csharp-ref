@@ -27,13 +27,11 @@ Om man bara vill göra sin jämförelse en gång så kan man använda en bool-va
 
 ```csharp
 string answer = "";
-
 bool validAnswer = false;
 
 while (!validAnswer)
 {
   Console.Write("Välj a eller b:");
-  
   answer = Console.ReadLine();
   
   validAnswer = answer == "a" || answer == "b";
