@@ -6,12 +6,12 @@ Nedan är instruktioner för att skapa en enkel API-server som svarar på GET-an
 
 ## Skapa projektet
 
-Skapa projektets solution som vanligt, men välj .NET Core Web API som projekttyp istället för Console application.
+Skapa projektets solution som vanligt, men välj **.NET Core Web API** som projekttyp istället för **Console application**.
 
 ### Rensa bort Weather Forecast-delarna
 
-* Ta bort WeatherForecast.cs
-* Ta bort WeatherForecastController, som ligger i Controllers-mappen.
+* Ta bort **WeatherForecast.cs**
+* Ta bort **WeatherForecastController.cs**, som ligger i Controllers-mappen.
 
 ## Controller
 
@@ -32,7 +32,7 @@ public class SomethingController : ControllerBase
 }
 ```
 
-Route och ApiController är decorators. De talar om att den här klassen är en API-controller och att den ska kopplas till url:en api/Something. \[controller] i Routen byts alltså ut automatiskt mot det som står innan Controller i klassens namn.
+Route och ApiController är _decorators_. De talar om att den här klassen är en API-controller och att den ska kopplas till url:en api/Something. \[controller] i Routen byts alltså ut automatiskt mot det som står innan Controller i klassens namn.
 
 HttpGet är också en decorator, som talar om att metoden Get ska anropas när någon försöker hämta data från controllern (via url:en).
 
