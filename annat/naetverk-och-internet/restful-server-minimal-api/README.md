@@ -118,7 +118,7 @@ app.MapPost("/hero/new/", AddNewHero);
 static void AddNewHero(Hero h)
 {
   heroList.Add(h);
-  Console.WriteLine($"Added hero {h.name} to the list"
+  Console.WriteLine($"Added hero {h.Name} to the list"
 }
 ```
 
