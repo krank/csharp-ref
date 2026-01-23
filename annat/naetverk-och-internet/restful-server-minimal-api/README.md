@@ -189,3 +189,7 @@ app.Urls.Add("https://*:3000");
 ```
 
 Nu bör HTTPS fungera – åtminstone på din egna dator.
+
+## LaunchSettings.json
+
+(Kommer…)
