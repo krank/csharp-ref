@@ -1,4 +1,4 @@
-# XAML\*
+# XAML
 
 XAML är ett språk som används i bl.a WPF-program för att beskriva det grafiska gränssnittet. Det liknar delvis HTML och andra XML-släktingar, i det att man skapar element genom att använda start- och sluttagar samt attribut som (ofta) skrivs i starttaggarna.
 
@@ -16,6 +16,17 @@ Elementen är UIts byggstenar; de är saker som knappar och textrutor. En del av
 ```xml
 <TextBlock Text="Kolla här!" />
 <Button Content="Klicka på mig!" />
+```
+
+### Container-element
+
+Ett container-element är ett element som kan innehålla andra element (inklusive container-element).
+
+```xml
+<StackPanel Margin="10" Orientation="Horizontal" Spacing="10">
+  <TextBlock Text="Text ett" />
+  <TextBlock Text="Text två" />
+</StackPanel>
 ```
 
 ## Attribut
@@ -77,11 +88,14 @@ Ett sätt att göra detta är genom att ange event i XAML och sedan ha en matcha
 ```
 {% endcode %}
 
-<pre class="language-csharp" data-title="MainWindow.xaml.cs"><code class="lang-csharp"><strong>private void OnMainClick(object sender, RoutedEventArgs e)
-</strong>{
+{% code title="MainWindow.xaml.cs" %}
+```csharp
+private void OnMainClick(object sender, RoutedEventArgs e)
+{
   MessageBox.Show("Yes");
 }
-</code></pre>
+```
+{% endcode %}
 
 Genom att analysera **sender** kan man få veta mer – om t.ex. en och samma metod anropas från flera olika objekt kan det vara bra att veta vilket.
 
@@ -139,7 +153,7 @@ Ett block som innehåller text.
 
 ## \<StackPanel>
 
-En container-panel som används för att stapla andra element.  Orientation avgör i vilken riktning; default är Vertical (elementen staplas uppifrån och ner).
+En container-panel som används för att stapla andra element. Orientation avgör i vilken riktning; default är Vertical (elementen staplas uppifrån och ner).
 
 Man kan lägga in vilka element som helst i en StackPanel – inklusive andra StackPanels.
 
@@ -203,33 +217,48 @@ if (FindName("list") is ListBox listBox)
 ```
 {% endcode %}
 
-## \<Grid>\*
+## \<Grid>
 
-<pre class="language-xml"><code class="lang-xml">&#x3C;Grid>
-  &#x3C;Grid.RowDefinitions>
-    &#x3C;RowDefinition/>
-    &#x3C;RowDefinition/>
-  &#x3C;/Grid.RowDefinitions>
-  &#x3C;Grid.ColumnDefinitions>
-    &#x3C;ColumnDefinition/>
-    &#x3C;ColumnDefinition/>
-  &#x3C;/Grid.ColumnDefinitions>
+Ett container-element som är ett _rutnät_ som man kan lägga in andra element i.
+
+I varje grid finns ett RowDefinitions-element och ett ColumnDefinitions-element. I dem finns sedan RowDefinition- och ColumnDefinition-element. Tillsammans bestämmer de vilka rader och kolumner som ska finnas.
+
+Element som läggs in i Grid-elementet kan sedan ges Grid.Row-attribut och Grid.Column-attribut för att bestämma vilken cell (ruta) i rutnätet de ska placeras i.
+
+```xml
+<Grid>
+  <Grid.RowDefinitions>
+    <RowDefinition/>
+    <RowDefinition/>
+  </Grid.RowDefinitions>
+  <Grid.ColumnDefinitions>
+    <ColumnDefinition/>
+    <ColumnDefinition/>
+  </Grid.ColumnDefinitions>
   
-  &#x3C;TextBlock Grid.Row="1" Grid.Column="1">Hello&#x3C;/TextBlock>
-<strong>&#x3C;/Grid>
-</strong></code></pre>
+  <TextBlock Grid.Row="1" Grid.Column="1">Hello</TextBlock>
+</Grid>
+```
 
-### \<Grid.Rowdefinitions>
+### \<Grid.Rowdefinitions> / \<Grid.Rowdefinition>
+
+Beskriver ett Grid-elements rader. Genom attributet Height bestäms varje rads höjd, antingen i pixlar eller genom "auto" (expandera så allt får plats) eller "\*" (expanderar för att fylla resterande utrymme).
+
+Har man två rader och deras höjder anges som "5\*" och "3\*" så delas det tillgängliga utrymmet upp mellan dem med proportionerna 5:3.
 
 ```xml
 <Grid.RowDefinitions>
-  <RowDefinition Width="200"/>
-  <RowDefinition Width="auto"/>
-  <RowDefinition Width="*"/>
+  <RowDefinition Height="200"/>
+  <RowDefinition Height="auto"/>
+  <RowDefinition Hwight="*"/>
 </Grid.RowDefinitions>
 ```
 
 ### \<Grid.Columndefinitions>
+
+Beskriver ett Grid-elements kolumner. Genom attributet Width bestäms varje kolumns bredd, antingen i pixlar eller genom "auto" (expandera så allt får plats) eller "\*" (expanderar för att fylla resterande utrymme).
+
+Har man två kolumner och deras bredder anges som "5\*" och "3\*" så delas det tillgängliga utrymmet upp mellan dem med proportionerna 5:3.
 
 ```xml
 <Grid.ColumnDefinitions>
