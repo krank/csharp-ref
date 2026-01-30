@@ -1,5 +1,9 @@
 # Grundläggande
 
+{% hint style="danger" %}
+**OBSERVERA:** Om du är elev och genomför praktiskt prov i programmering, så kan denna sida innebära fusk. Dubbelkolla med din lärare!
+{% endhint %}
+
 ## Swap
 
 ```csharp
