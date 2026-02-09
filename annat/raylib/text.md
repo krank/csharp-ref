@@ -18,6 +18,10 @@ Laddar in en typsnittsfil (ttf eller otf-format)
 Font f1 = Raylib.LoadFont(@"Metrophobic.ttf");
 ```
 
+{% hint style="info" %}
+**OBSERVERA:** För att få å, ä och ö att fungera eller för att kunna använda typsnittet i en specifik storlek, använd LoadFontEx istället.
+{% endhint %}
+
 ## LoadFontEx()
 
 Laddar in en typsnittsfil (ttf eller otf-format) med extra parametrar
@@ -25,8 +29,8 @@ Laddar in en typsnittsfil (ttf eller otf-format) med extra parametrar
 ```csharp
 // Ladda in typsnittsfilen Lato-Regular.ttf, i storleken 36.
 //  Vi anger null eftersom vi inte vill ange exakt vilka tecken som ska laddas in.
-//  VI anger -1 eftersom vi inte vill ange ett maxantal tecken att ladda in.
-Font f2 = Raylib.LoadFontEx(@"Lato-Regular.ttf", 36, null, -1);
+//  Vi anger 256 eftersom vi vill ladda in de 256 första tecknen – vilket inkluderar åäö
+Font f2 = Raylib.LoadFontEx(@"Lato-Regular.ttf", 36, null, 256);
 ```
 
 ## DrawTextEx()
