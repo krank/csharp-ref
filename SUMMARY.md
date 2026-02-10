@@ -137,16 +137,16 @@
   * [Git-begrepp](mjukvara/git-and-github/git-begrepp.md)
 * [Andra verktyg](mjukvara/andra-verktyg.md)
 
-## Tekniker
+## Tekniker och designmönster
 
-* [Grundläggande](tekniker/grundlaggande.md)
-* [Ojektorienterade mönster](tekniker/ojektorienterade-monster.md)
-* [Begränsa input](tekniker/begraensa-input.md)
-* [Game states](tekniker/game-states.md)
-* [Länkade listor och andra strukturer](tekniker/laenkade-listor-och-andra-strukturer.md)
-* [Ta bort saker ur listan man går igenom](tekniker/ta-bort-saker-ur-listan-man-gar-igenom.md)
-* [2D-spelbräden](tekniker/2d-spelbraeden.md)
-* [Timers](tekniker/timers.md)
+* [Bastekniker](tekniker-och-designmonster/bastekniker.md)
+* [Ojektorienterade mönster](tekniker-och-designmonster/ojektorienterade-monster.md)
+* [Begränsa input](tekniker-och-designmonster/begraensa-input.md)
+* [Game states](tekniker-och-designmonster/game-states.md)
+* [Länkade listor och andra strukturer](tekniker-och-designmonster/laenkade-listor-och-andra-strukturer.md)
+* [Ta bort saker ur listan man går igenom](tekniker-och-designmonster/ta-bort-saker-ur-listan-man-gar-igenom.md)
+* [2D-spelbräden](tekniker-och-designmonster/2d-spelbraeden.md)
+* [Timers](tekniker-och-designmonster/timers.md)
 
 ***
 

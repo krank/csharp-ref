@@ -1,6 +1,6 @@
 # Boolska satser
 
-En boolsk sats är en formel som resulterar i antingen ett sant eller ett falskt värde – ett [bool](../grundlaggande/datatyper/#bool)-värde.
+En boolsk sats är en formel som resulterar i antingen ett sant eller ett falskt värde – ett [bool](datatyper/#bool)-värde.
 
 ```csharp
 int i = Random.Shared.Next(10);
@@ -10,7 +10,7 @@ int i = Random.Shared.Next(10);
 bool result = i > 2 && i < 8;
 ```
 
-Man kan inkludera allt möjligt – jämförelser med [boolska ](../grundlaggande/operatorer.md#boolska)och [logiska ](../grundlaggande/operatorer.md#logiska)operatorer, bool-variabler, metoder som returnerar boolska värden.
+Man kan inkludera allt möjligt – jämförelser med [boolska ](operatorer.md#boolska)och [logiska ](operatorer.md#logiska)operatorer, bool-variabler, metoder som returnerar boolska värden.
 
 ```csharp
 bool jumpThisFrame = IsGrounded() && hasReleasedJumpButton && jumpCharge > 0;
@@ -27,4 +27,4 @@ while (r < 2 || r > 8)
 }
 ```
 
-Det är en teknik som ofta används som del av när man vill [begränsa input](../tekniker/begraensa-input.md) för användaren
+Det är en teknik som ofta används som del av när man vill [begränsa input](../tekniker-och-designmonster/begraensa-input.md) för användaren
