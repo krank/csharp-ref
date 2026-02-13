@@ -4,7 +4,7 @@ State pattern är…
 
 {% code title="Program.cs" lineNumbers="true" %}
 ```csharp
-State currentState = new Menu();
+State currentState = new MenuState();
 
 while (true)
 {
@@ -22,27 +22,7 @@ abstract class State
 ```
 {% endcode %}
 
-{% code title="State.cs" lineNumbers="true" %}
-```csharp
-abstract class State
-{
-  public abstract State Invoke();
-}
-```
-{% endcode %}
-
-{% code title="Program.cs" lineNumbers="true" %}
-```csharp
-State currentState = new Menu();
-
-while (true)
-{
-  currentState = currentState.Invoke();
-}
-```
-{% endcode %}
-
-{% code title="Menu.cs" lineNumbers="true" %}
+{% code title="MenuState.cs" lineNumbers="true" %}
 ```csharp
 class MenuState : State
 {
