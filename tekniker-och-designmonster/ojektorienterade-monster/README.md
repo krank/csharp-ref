@@ -2,8 +2,6 @@
 
 ## Factory pattern
 
-## State pattern
-
 ## Observer pattern
 
 ## Singleton pattern
