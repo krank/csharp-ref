@@ -140,7 +140,7 @@
 ## Tekniker och designmönster
 
 * [Bastekniker](tekniker-och-designmonster/bastekniker.md)
-* [Ojektorienterade mönster](tekniker-och-designmonster/ojektorienterade-monster.md)
+* [Ojektorienterade mönster\*](tekniker-och-designmonster/ojektorienterade-monster.md)
   * [State pattern](tekniker-och-designmonster/ojektorienterade-monster/state-pattern.md)
 * [Begränsa input](tekniker-och-designmonster/begraensa-input.md)
 * [Game states](tekniker-och-designmonster/game-states.md)
