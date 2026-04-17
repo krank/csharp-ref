@@ -18,7 +18,7 @@ Ett exempel:
 >
 > Kolla om siffran är högre än talet
 >
-> &#x20;   Säg att spelaren måste gissa högre
+> &#x20;   Säg att spelaren måste gissa lägre
 >
 > Kolla om siffran är exakt rätt
 >
