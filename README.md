@@ -9,7 +9,7 @@ Detta är en hemsida med förenklade förklaringar och exempel för C# och Visua
 
 ## Vad behöver jag först?
 
-* Installera [.NET SDK](mjukvara/dotnet-sdk.md) – version 8 eller senare: [https://dotnet.microsoft.com/en-us/download](https://dotnet.microsoft.com/en-us/download)
+* Installera [.NET SDK](mjukvara/dotnet-sdk.md) – version 9 eller senare: [https://dotnet.microsoft.com/en-us/download](https://dotnet.microsoft.com/en-us/download)
 * Installera [Visual Studio Code](mjukvara/visual-studio-code/)
   * Och lämpliga [extensions](mjukvara/visual-studio-code/extensions.md).
   * Ställ in så program [körs i ett eget fönster](mjukvara/visual-studio-code/instaellningar.md#kor-eller-debugga-i-separat-fonster)
@@ -21,7 +21,7 @@ Det enklaste sättet att installera .NET SDK, Visual Studio Code och Git-scm är
 ```powershell
 winget install Microsoft.VisualStudioCode
 winget install git.git
-winget install Microsoft.DotNet.SDK.9
+winget install Microsoft.DotNet.SDK.10
 ```
 
 Winget bör finnas och fungera i Windows 10 och 11; använder du en äldre version av windows kanske du får installera manuellt istället. Det kan också vara bra att köra **Windows Update** först, och installera alla tillgängliga uppdateringar (inklusive de man bara får om man klickar "Sök online…"

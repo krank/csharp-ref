@@ -10,9 +10,11 @@ Sedan skapar man **instanser** av klassen - de konkreta, faktiska fienderna. All
 
 Generellt bör varje klass läggas i sin egen fil. Med C# Dev Kit finns ett snabbt och enkelt sätt:
 
-* Gå till **Explorer** och öppna **Solution Explorer**.
-* **Högerklicka på projektet** klassen/filen ska läggas till i.
-* Välj **"Add new File"**.
+* **Variant 1:** Tryck **Ctrl+Alt+Win+n**
+  * Välj **.NET new file** i listan
+* **Variant 2:** Gå till **kommandopaletten** (F1 eller **Ctrl+Shift+p**)&#x20;
+  * Sök efter **.NET new file**
+* Tryck **Enter** för att välja att lägga den nya filen **i ditt projekt**.
 * Välj **"Class"**.
 * Skriv in namnet på klassen – glöm inte [namngivning ](../grundlaggande/namngivning.md)med **PascalCase**!
 * Skriv in skriv in **using** och namnet på klassens **namespace** högst upp i Program.cs
@@ -78,6 +80,3 @@ Goomba g4 = new();
 Goomba g5 = new() {X = 100};
 ```
 {% endcode %}
-
-
-
