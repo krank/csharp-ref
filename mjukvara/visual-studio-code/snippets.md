@@ -95,7 +95,7 @@ Man kan läsa mer om att skriva egna snippets [här](https://www.google.com/url?
       "{",
       "  for (int x = 0; x < $2; x++)",
       "  {",
-      "    ",
+      "    $0",
       "  }",
       "}"
     ]
@@ -113,13 +113,13 @@ De här gör det enkelt att använda [resursfiler](../../filhantering/resursfile
 {
   "Include content": {
     "prefix": "include",
-    "body": "<Content Include=\"$1\" CopyToOutputDirectory=\"Always\"/>",
+    "body": "<Content Include=\"$0\" CopyToOutputDirectory=\"Always\"/>",
   },
   "Item group": {
     "prefix": "ig",
     "body": [
       "<ItemGroup>",
-      "  $1",
+      "  $0",
       "</ItemGroup>"
     ]
   }
