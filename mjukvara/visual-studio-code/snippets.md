@@ -29,23 +29,100 @@ Man kan skapa egna snippets. Man går då till File, Preferences och User Snippe
   },
   "Writeline":{
     "prefix": "cw",
-    "body": "Console.WriteLine($0);",
+    "body": "Console.WriteLine(\"$0\");",
     "description": "Inserts a console writeline"
-  },
-  "Hello": {
-      "prefix": "hello",
-      "body": "Console.WriteLine(\"Hello, World\")",
-      "description": "Inserts a nice greeting"
   }
 }
 ```
 
-"Readline" och "Hello" är namnen på de två snippets som deklareras ovan.
+"Readline" och "Writeline" är namnen på de två snippets som deklareras ovan.
 
 **Prefixen** är de saker man kan skriva för att aktivera dem.
 
 **Bodyn** är det som infogas.
 
+$0 betyder att det är där textmarkören hamnar när man använt snippeten.
+
 Allt du behöver göra sedan är att spara filen.
 
 Man kan läsa mer om att skriva egna snippets [här](https://www.google.com/url?q=https%3A%2F%2Fcode.visualstudio.com%2Fdocs%2Feditor%2Fuserdefinedsnippets\&sa=D\&sntz=1\&usg=AFQjCNHxi86ymlDUghJiBvyTVgMRy2aJsg).
+
+## Exempel-snippetfiler
+
+### C\#
+
+{% code title="csharp.json" expandable="true" %}
+```json
+{
+  "Readline": {
+    "prefix": "cre",
+    "body": "Console.ReadLine();"
+  },
+  "Writeline": {
+    "prefix": "cw",
+    "body": "Console.WriteLine($0);",
+    "description": "Inserts a console writeline"
+  },
+  "Clear": {
+    "prefix": "cc",
+    "body": "Console.Clear();",
+    "description": "Inserts a console clear"
+  },
+  "Random integer": {
+    "prefix": "rnd",
+    "body": "Random.Shared.Next($0);",
+    "description": "Inserts a random next int"
+  },
+  "Raylib-boilerplate": {
+    "prefix": "rayl",
+    "body": [
+      "using Raylib_cs;\n",
+      "Raylib.InitWindow(${1:800}, ${2:600}, \"${3:Title}\");",
+      "Raylib.SetTargetFPS(60);\n",
+      "while (!Raylib.WindowShouldClose())",
+      "{",
+      "  $0\n",
+      "  Raylib.BeginDrawing();",
+      "  Raylib.ClearBackground(Color.White);",
+      "  Raylib.EndDrawing();",
+      "}"
+    ]
+  },
+  "For-nested": {
+    "prefix": "forn",
+    "body": [
+      "for (int y = 0; y < $1; y++)",
+      "{",
+      "  for (int x = 0; x < $2; x++)",
+      "  {",
+      "    ",
+      "  }",
+      "}"
+    ]
+  }
+}
+```
+{% endcode %}
+
+### XML (för csproj)
+
+De här gör det enkelt att använda [resursfiler](../../filhantering/resursfiler.md).
+
+{% code title="xml.json" expandable="true" %}
+```json
+{
+  "Include content": {
+    "prefix": "include",
+    "body": "<Content Include=\"$1\" CopyToOutputDirectory=\"Always\"/>",
+  },
+  "Item group": {
+    "prefix": "ig",
+    "body": [
+      "<ItemGroup>",
+      "  $1",
+      "</ItemGroup>"
+    ]
+  }
+}
+```
+{% endcode %}
