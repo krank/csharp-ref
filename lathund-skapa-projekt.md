@@ -10,7 +10,7 @@
   * Skapa och välj en mapp att skapa projektet i.
   * Välj ett namn på projektet.
     * Namnet bör vara i formen PlatformGame (inga mellanslag, stor bokstav i början av varje ord)
-  * Om du får välja mellan "sln" eller "slnx", välj "slnx" (spelar egentligen ingen stor roll)
+  * Om du får välja mellan "sln" eller "slnx", välj "sln"
   * Öppna csproj-filen och ta bort (eller kommentera bort) raden med `<Nullable>`.
 * **GÖR SÅ PROJEKTET KAN KÖRAS**
   * Gå till "run and debug" (**Ctrl+Shift+D**, eller ikonen med play-knapp och insekt).
