@@ -14,11 +14,11 @@ I vanliga fall visas all output från koden i Visual Studio Codes egna interna t
 
 Sök efter **csharp.debug.console** och ändra inställningen till "externalTerminal".
 
-## Slippa ha en sln/slnx
+## Mer kompakt utseende
 
-Sök efter **dotnet.previewSolution-freeWorkspaceMode** och kryssa i den.
+Nyligen infördes ett nytt utseende med mjukare former och annat utseende på flikar osv i VS Code. För att återgå till det gamla utseendet:
 
-Nu behöver du inte längre skapa en mapp för varje projekt, utan kan välja din generella Programmering-mapp direkt när du ska skapa ett nytt. En ny undermapp skapas automatiskt med projektets namn och en csproj; däremot ingen sln-fil.
+Sök efter **workbench.experimental.modernUI** och kryssa ur rutan.
 
 ## Stänga av AI-grejer
 
