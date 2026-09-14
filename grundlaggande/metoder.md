@@ -90,13 +90,13 @@ Resultatet blir att 3 multipliceras med 4 inuti metoden, och resultatet (12) ret
 
 ## Överlagring
 
-Att överlagra metoder innebär att man döper flera metoder till samma namn, men låter dem ha olika parametrar.
+Att överlagra metoder innebär att man döper flera metoder till samma namn, men låter dem ha olika parametrar. **Detta kan bara göras med klassmetoder**, alltså inte med metoder som skrivs direkt i program.cs.
 
 Effekten blir att när man anropar metodnamnet så används de parametervärden man anger för att avgöra vilken av de olika metoderna som ska köras.
 
 {% code lineNumbers="true" %}
 ```csharp
-static void Shout()
+static void Shout() // Version 1, utan parametrar
 {
   Console.WriteLine("AAAAAAAAH!");
 }
@@ -105,28 +105,21 @@ static void Shout()
 
 {% code lineNumbers="true" %}
 ```csharp
-static void Shout(string exclamation)
+static void Shout(string exclamation) // Version 2, med en parameter
 {
   Console.WriteLine(exclamation.ToUpper());
 }
 ```
 {% endcode %}
 
-De två Shout-metoderna ovan har samma namn, men den ena tar emot en parameter. Om man nu anropar så här:
+De två Shout-metoderna ovan har samma namn, men den ena tar emot en parameter.
 
 ```csharp
-Shout();
+Shout(); // Version 1 anropas
+Shout("abracadabra!"); // Version 2 anropas
 ```
 
-Så kommer den övre versionen att köras. Inget parametervärde angavs, och det finns en version av Shout som inte behöver några parametrar, alltså körs den.
-
-Om man däremot anropar så här:
-
-```csharp
-Shout("abracadabra!");
-```
-
-Så kommer den nedre versionen att köras. Ett string-värde angavs som parametervärde, och det finns en version av Shout som behöver ett string-värde, alltså körs den.
+När de anropas, väljer C# _den version som bäst matchar anropet_.
 
 ## Generiska metoder
 
