@@ -36,6 +36,16 @@ Kryssa ur **csharp.referencesCodeLens.enabled** för att slippa få "references"
 
 <details>
 
+<summary><strong>Stänga av "Workspace trust"</strong></summary>
+
+Om du ofta laddar ner kod från nätet som du vill hindra vs code från att kunna köras, så är workspace trust en bra idé, alltså att man som default inte litar på mappar utan måste säga till att "ja, du får köra saker här".
+
+Vi andra som inte gillar funktionen kan söka efter **security.workspace.trust.enabled** och kryssa ur den.
+
+</details>
+
+<details>
+
 <summary><strong>Mer kompakt/klassiskt utseende</strong></summary>
 
 Nyligen infördes ett nytt utseende med mjukare former och annat utseende på flikar osv i VS Code. För att återgå till det gamla utseendet:
@@ -84,6 +94,7 @@ VS Code sparar alla inställningar i en [JSON-fil](../../filhantering/filformat/
   "csharp.debug.console": "externalTerminal",
   "chat.disableAIFeatures": true,
   "csharp.referencesCodeLens.enabled": false,
+  "security.workspace.trust.enabled": false,
   "workbench.experimental.modernUI": false,
   "workbench.layoutControl.enabled": false,
   "explorer.compactFolders": false,
