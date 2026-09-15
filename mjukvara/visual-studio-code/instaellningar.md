@@ -6,62 +6,89 @@ Under Settings (Kugghjulet och sen Settings, eller kortkommandot Ctrl+, ) finns 
 
 Man kan antingen bläddra själv, eller söka efter namnet på den inställning man vill ändra.
 
-VS Code sparar alla inställningar i en JSON-fil, där varje inställning har ett unikt namn. Om man vill kan man redigera denna JSON-fil manuellt. För att få fram den, ta fram kommandopaletten (F1) och kör **Preferences: Open User Settings (JSON)**.
+Inställningarna har unika namn som man kan söka efter. Några exempel:
 
-## Kör eller debugga i separat fönster
+<details>
+
+<summary><strong>Kör eller debugga i separat fönster</strong></summary>
 
 I vanliga fall visas all output från koden i Visual Studio Codes egna interna terminalfönster. Det är inte idealiskt, så den här inställningen gör så att koden istället körs i ett separat terminalfönster.
 
 Sök efter **csharp.debug.console** och ändra inställningen till "externalTerminal".
 
-## Mer kompakt utseende
+</details>
+
+<details>
+
+<summary><strong>Stänga av AI-grejer</strong></summary>
+
+Kryssa i **chat.disableAIFeatures** för att stänga av AI-grejer
+
+</details>
+
+<details>
+
+<summary><strong>Få bort "references"</strong></summary>
+
+Kryssa ur **csharp.referencesCodeLens.enabled** för att slippa få "references" ovanför alla variabler.
+
+</details>
+
+<details>
+
+<summary><strong>Mer kompakt/klassiskt utseende</strong></summary>
 
 Nyligen infördes ett nytt utseende med mjukare former och annat utseende på flikar osv i VS Code. För att återgå till det gamla utseendet:
 
 Sök efter **workbench.experimental.modernUI** och kryssa ur rutan.
 
-## Stänga av AI-grejer
+</details>
 
-För att stänga av AI-saker kan man söka rätt på inställningen **chat.disableAIFeatures**.
+<details>
 
-## Få bort "references"
+<summary><strong>Färre knappar i title bar</strong></summary>
 
-Sök efter **csharp.referencesCodeLens.enabled**, och kryssa ur "Csharp › References Code Lens: Enabled".
+Kryssa ur **workbench.layoutControl.enabled** för att få bort de fyra knapparna som ändrar fönsterlayouten, alltså de här:
 
-## Visa mappar ordentligt
+<figure><img src="../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
+
+</details>
+
+<details>
+
+<summary><strong>Visa mappar ordentligt</strong></summary>
 
 VS Code gillar att visa mappar "kompakt". Det betyder att den "sammanfattar" mappstrukturer i vissa fall, så att trädet under Explore blir konstigt.
 
 För att stänga av det – sök efter **explorer.compactFolders** och kryssa ur "Explorer: Compact Folders".
 
-<figure><img src="../../.gitbook/assets/image (26).png" alt=""><figcaption><p>Med compact folders</p></figcaption></figure>
+</details>
 
-<figure><img src="../../.gitbook/assets/image (27).png" alt=""><figcaption><p>Utan compact folders</p></figcaption></figure>
+<details>
 
-## Sortera filer enligt svensk bokstavsordning
-
-VS Code sorterar normalt sett å och ä som om de vore "a" och ö som om det vore "o".
-
-Sök på **explorer.sortOrderLexicographicOptions** och välj "unicode" i dropdown-listan. DÅ sorteras istället å, ä och ö som de ska längst ner i listan.
-
-## Automatiskt pusha commits
+<summary><strong>Automatiskt pusha commits</strong></summary>
 
 För att få VS Code att automatiskt göra en Git Push direkt efter varje Commit (se [Git](../git-and-github/) för mer info om commit och push):
 
 Sök efter **git.postCommitCommand** och välj Push eller Sync istället för None.
 
-## Settings.json
+</details>
 
-I .vscode-mappen kan det finnas en "settings.json", och om det inte finns en kan du skapa en. Där kan du samla inställningar du vill spara. Man kan alltså ha inställningar antingen per dator eller per projekt.
+## settings.json
+
+VS Code sparar alla inställningar i en [JSON-fil](../../filhantering/filformat/json.md), där varje inställning har ett unikt namn. Om man vill kan man redigera denna JSON-fil manuellt. För att få fram den, gå till Settings och tryck på ![](<../../.gitbook/assets/image (41).png>).
 
 {% code title="settings.json" %}
 ```json
 {
-  "csharp.referencesCodeLens.enabled": false,
   "csharp.debug.console": "externalTerminal",
+  "chat.disableAIFeatures": true,
+  "csharp.referencesCodeLens.enabled": false,
+  "workbench.experimental.modernUI": false,
+  "workbench.layoutControl.enabled": false,
   "explorer.compactFolders": false,
-  "explorer.sortOrderLexicographicOptions": "unicode",
   "git.postCommitCommand": "push"
 }
 ```
 {% endcode %}
+
