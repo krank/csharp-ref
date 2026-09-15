@@ -84,6 +84,19 @@ Sök efter **git.postCommitCommand** och välj Push eller Sync istället för No
 
 </details>
 
+<details>
+
+<summary><strong>Uppdateringar</strong></summary>
+
+Vill man begränsa Visual Studio Code från att uppdatera sig och sina extensions så kan man ha dessa inställningar avslagna. Rekommendation: **låt dem vara**. Om du ser dem i din settings.json, plocka bort dem, eller se till så uppdateringar är igångslagna/tillåtna.
+
+* **update.mode** är om man får automatiska uppdateringar; standard värdet är "default" medan "none" gör att man inte får uppdateringar alls
+* **update.enableWindowsBackgroundUpdates** är ifall Code får ladda ner uppdateringar i bakgrunden medan man arbetar
+* **extensions.autoCheckUpdates** är ifall VS Code ska kolla efter uppdateringar till extensions
+* **extensions.autoUpdate** är ifall uppdateringar till extensions installerad automatiskt.
+
+</details>
+
 ## settings.json
 
 VS Code sparar alla inställningar i en [JSON-fil](../../filhantering/filformat/json.md), där varje inställning har ett unikt namn. Om man vill kan man redigera denna JSON-fil manuellt. För att få fram den, gå till Settings och tryck på ![](<../../.gitbook/assets/image (41).png>).
@@ -98,7 +111,11 @@ VS Code sparar alla inställningar i en [JSON-fil](../../filhantering/filformat/
   "workbench.experimental.modernUI": false,
   "workbench.layoutControl.enabled": false,
   "explorer.compactFolders": false,
-  "git.postCommitCommand": "push"
+  "git.postCommitCommand": "push",
+  "update.mode": "default",
+  "update.enableWindowsBackgroundUpdates": true,
+  "extensions.autoCheckUpdates": true,
+  "extensions.autoUpdate": true
 }
 ```
 {% endcode %}
