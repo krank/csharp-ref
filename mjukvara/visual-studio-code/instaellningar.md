@@ -22,7 +22,7 @@ Sök efter **workbench.experimental.modernUI** och kryssa ur rutan.
 
 ## Stänga av AI-grejer
 
-För att stänga av AI-saker kan man söka rätt på inställningen **chat.disableAIFeatures** och kryssa i den.
+För att stänga av AI-saker kan man söka rätt på inställningen **chat.disableAIFeatures**.
 
 ## Få bort "references"
 
