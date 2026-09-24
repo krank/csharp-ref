@@ -4,7 +4,7 @@ NAudio är ett bibliotek för att spela upp ljud, och som funkar i konsolen.
 
 ## Setup
 
-Lägg till [NAudio](https://www.nuget.org/packages/NAudio/) via [NuGet Gallery](../grundlaggande/anvaenda-bibliotek-using.md#nuget-gallery).
+Lägg till [**NAudio**](https://www.nuget.org/packages/NAudio/) via [NuGet Gallery](../grundlaggande/anvaenda-bibliotek-using.md#nuget-gallery). Lägg också till **NAudio.Wasapi** om du gör det här i ett konsolprojekt.
 
 Lägg till de ljudfiler du vill använda i din csproj som [resursfiler](../filhantering/resursfiler.md).
 
@@ -14,7 +14,11 @@ Lägg till de ljudfiler du vill använda i din csproj som [resursfiler](../filha
 </ItemGroup>
 ```
 
-Skriv `using NAudio.Wave` högst upp i ditt program.
+Skriv högst upp i programmet:
+
+```csharp
+using NAudio.Wave
+```
 
 ## Komplett exempel
 
@@ -22,12 +26,12 @@ Skriv `using NAudio.Wave` högst upp i ditt program.
 using NAudio.Wave;
 
 AudioFileReader reader = new AudioFileReader("music/BitBitLoop.mp3");
-WaveOutEvent output = new();
+WasapiPlayr player = new WasapiPlayrBuilder().Build();
 
-output.Init(reader);
-output.Play();
+player.Init(reader);
+player.Play();
 
-while (output.PlaybackState == PlaybackState.Playing)
+while (player.PlaybackState == PlaybackState.Playing)
 {
   Thread.Sleep(100);
 }
@@ -49,9 +53,28 @@ while (output.PlaybackState == PlaybackState.Playing)
 }
 ```
 
-## WaveOutEvent
+## WasapiPlayer
 
 En klass som används för att spela upp ljudfiler.
+
+Finns bara om man lagt till NAudio.wasapi-paketet manuellt, eller ändrat i sin csproj så att ens `targetFramework` är `netXX-windows`, t.ex. så här:
+
+```xml
+<TargetFramework>net11.0-windows</TargetFramework>
+```
+
+Man skapar en WasapiPlayer-instans genom att först skapa en WasapiPlayerBuilder, och låta den skapa playern:
+
+```csharp
+WasapiPlayerBuilder builder = new WasapiPlayerBuilder();
+WasapiPlayer player = builder.Build();
+```
+
+Eller kortare:
+
+```csharp
+WasapiPlayer player = new WasapiPlayerBuilder().Build();
+```
 
 ### Init()
 
@@ -59,8 +82,8 @@ Initierar objektet med en källa till ljuddata (ofta en AudioFileReader).
 
 ```csharp
 AudioFileReader reader = new AudioFileReader("music/BitBitLoop.mp3");
-WaveOutEvent output = new();
-output.Init(reader);
+WasapiPlayer player = new WasapiPlayerBuilder().Build();
+player.Init(reader);
 ```
 
 ### Play()
@@ -68,7 +91,7 @@ output.Init(reader);
 Påbörjar uppspelningen.
 
 ```csharp
-output.Play();
+player.Play();
 ```
 
 ### Pause()
@@ -76,7 +99,7 @@ output.Play();
 Pausar uppspelningen
 
 ```csharp
-output.Pause();
+player.Pause();
 ```
 
 ### Stop()
@@ -84,7 +107,7 @@ output.Pause();
 Stoppar uppspelningen
 
 ```csharp
-output.Stop();
+player.Stop();
 ```
 
 ### PlaybackState()
@@ -92,7 +115,7 @@ output.Stop();
 Läser av WaveOutEventets nuvarande läge. Resultatet kommer att vara någon av `PlaybackState.Playing`, `PlaybackState.Stopped` och `PlaybackState.Paused`.
 
 ```csharp
-while (output.PlaybackState == PlaybackState.Playing)
+while (player.PlaybackState == PlaybackState.Playing)
 {
   Thread.Sleep(100);
   Console.WriteLine(reader.CurrentTime);
