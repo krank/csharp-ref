@@ -8,6 +8,7 @@
   * Explorer → Create .NET Project (C# Dev Kit)
   * Välj "Console App"
   * Skapa och välj en mapp att skapa projektet i.
+    * **OBS: Undvik namn med åäö eller andra "udda" tecken!**
   * Välj ett namn på projektet.
     * Namnet bör vara i formen PlatformGame (inga mellanslag, stor bokstav i början av varje ord)
   * Om du får välja mellan "sln" eller "slnx", välj "sln"
