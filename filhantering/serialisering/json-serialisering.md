@@ -217,6 +217,20 @@ class Pokemon
 ```
 {% endcode %}
 
+## Deserialisering av subklasser
+
+(In progress)
+
+```csharp
+[JsonPolymorphic]
+[JsonDerivedType(typeof(Goomba), typeDiscriminator:"isGoomba")]
+public class Enemy 
+{
+  public int Hitpoints { get; set; }
+  public string Name { get; set; }
+}
+```
+
 ## Deserialisering av objekt i flera led
 
 Ibland beskriver JSON-kod objekt som innehåller andra objekt.
