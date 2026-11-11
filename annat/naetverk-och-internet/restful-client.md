@@ -61,8 +61,6 @@ JsonContent jsonBody = JsonContent.Create<Pokemon>(snorlax);
 HttpResponseMessage response = client.PostAsync("pokemon/snorlax", jsonBody).Result;
 ```
 
-
-
 Många metoder här är [asynkrona metod](../threading/task.md). Med andra ord går det att använda await istället för .Result om man är i en asynkron metod.
 
 ```csharp
@@ -108,7 +106,7 @@ string jsonText = response.Content.ReadAsStringAsync().Result;
 Console.WriteLine(jsonText);
 ```
 
-Ofta är Content JSON eller XML-format, och då kan informationen deserialiseras till ett objekt antingen via [JSON-deserialisering](../../filhantering/serialisering/json-serialisering.md#jsonserializer.deserialize) eller [XML-deserialisering](../../filhantering/serialisering/xml-serialisering.md#deserialize).
+Ofta är Content JSON eller XML-format, och då kan informationen deserialiseras till ett objekt antingen via [JSON-deserialisering](../../filhantering/serialisering/json-serialisering/#jsonserializer.deserialize) eller [XML-deserialisering](../../filhantering/serialisering/xml-serialisering.md#deserialize).
 
 Om det är JSON så finns ett enklare sätt – inkludera `System.Net.Http.Json` och använd `ReadFromJsonAsync` istället för `ReadAsStringAsync`.
 

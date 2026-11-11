@@ -43,7 +43,9 @@
 * [Filer och mappar](filhantering/filer-och-mappar.md)
 * [Open, close, using](filhantering/open-close-using.md)
 * [Serialisering \[…\]](filhantering/serialisering/README.md)
-  * [JSON-serialisering](filhantering/serialisering/json-serialisering.md)
+  * [JSON-serialisering](filhantering/serialisering/json-serialisering/README.md)
+    * [Serialisera subklasser](filhantering/serialisering/json-serialisering/serialisera-subklasser.md)
+    * [Serialisera listor](filhantering/serialisering/json-serialisering/serialisera-listor.md)
   * [XML-serialisering](filhantering/serialisering/xml-serialisering.md)
 * [Resursfiler](filhantering/resursfiler.md)
 * [Filformat](filhantering/filformat/README.md)
@@ -67,6 +69,7 @@
   * [Virtual, override](klasser-och-objektorientering/polymorfism/virtual-override.md)
 * [Generiska klasser](klasser-och-objektorientering/generiska-klasser.md)
 * [Abstract](klasser-och-objektorientering/abstract.md)
+* [Closed](klasser-och-objektorientering/closed.md)
 * [Interface](klasser-och-objektorientering/interface.md)
 * [Attribut](klasser-och-objektorientering/attribut.md)
 

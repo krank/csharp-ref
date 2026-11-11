@@ -1,6 +1,6 @@
 # Serialisering \[…]
 
-[JSON-serialisering](json-serialisering.md) | [XML-serialisering](xml-serialisering.md)
+[JSON-serialisering](json-serialisering/) | [XML-serialisering](xml-serialisering.md)
 
 Serialisering handlar om att ta ett objekt – en [instans ](../../klasser-och-objektorientering/klasser-och-instanser.md)– och göra om objektet till ren text (s.k. "plain text") som kan lagras i en fil eller till exempel skickas via internet.
 
